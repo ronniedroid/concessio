@@ -1,6 +1,8 @@
 import Adw from 'gi://Adw';
 import GObject from 'gi://GObject';
 
+import './Form.js'
+import './CheckBoxes.js'
 import { CncWindow } from './Window.js'
 
 export const CncApplication = GObject.registerClass({

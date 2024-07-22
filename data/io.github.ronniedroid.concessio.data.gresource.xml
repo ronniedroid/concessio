@@ -2,5 +2,13 @@
 <gresources>
     <gresource prefix="/io/github/ronniedroid/concessio">
         <file>ui/Window.ui</file>
+        <file>ui/Form.ui</file>
+        <file>ui/CheckBoxes.ui</file>
+    </gresource>
+    <gresource prefix="/io/github/ronniedroid/concessio/icons/scalable/actions">
+        <file alias="concessio-keyboard-enter-symbolic.svg">icons/keyboard-enter-symbolic.svg</file>
+        <file alias="concessio-checkbox-checked-symbolic.svg">icons/checkbox-checked-symbolic.svg</file>
+        <file alias="concessio-dialpad-symbolic.svg">icons/dialpad-symbolic.svg</file>
+        <file alias="concessio-text-insert-symbolic.svg">icons/text-insert-symbolic.svg</file>
     </gresource>
 </gresources>

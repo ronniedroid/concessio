@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <template class="CncForm">
+        <property name="layout-manager">
+            <object class="GtkBoxLayout">
+                <property name="orientation">vertical</property>
+                <property name="spacing">18</property>
+            </object>
+        </property>
+        <child>
+            <object class="GtkLabel">
+                <property name="label" bind-source="CncForm" bind-property="title" bind-flags="sync-create" />
+                <property name="halign">center</property>
+                <style>
+                    <class name="heading" />
+                </style>
+            </object>
+        </child>
+        <child>
+            <object class="GtkLabel">
+                <property name="label" bind-source="CncForm" bind-property="subtitle" bind-flags="sync-create" />
+                <property name="margin-bottom">12</property>
+                <property name="wrap">true</property>
+                <property name="justify">center</property>
+                <style>
+                    <class name="dim-label" />
+                </style>
+            </object>
+        </child>
+        <child>
+            <object class="GtkBox">
+                <property name="orientation">horizontal</property>
+                <property name="spacing">12</property>
+                <property name="halign">center</property>
+                <child>
+                    <object class="GtkEntry" id="entery">
+                        <property name="placeholder-text" bind-source="CncForm" bind-property="placeholder" bind-flags="sync-create" />
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkButton">
+                        <property name="name">convert</property>
+                        <property name="icon-name">concessio-keyboard-enter-symbolic</property>
+                        <style>
+                            <class name="circular" />
+                            <class name="suggested-action" />
+                        </style>
+                    </object>
+                </child>
+            </object>
+        </child>
+        <child>
+            <object class="GtkLabel">
+                <property name="label">Results</property>
+            </object>
+        </child>
+        <child>
+            <object class="CncCheckBoxes">
+                <property name="valign">center</property>
+                <property name="halign">center</property>
+            </object>
+        </child>
+    </template>
+</interface>
