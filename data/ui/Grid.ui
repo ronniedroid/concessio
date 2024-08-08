@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="CncGrid">
+    <property name="layout-manager">
+      <object class="GtkGridLayout">
+        <property name="column-homogeneous">true</property>
+        <property name="row-spacing">6</property>
+        <property name="column-spacing">12</property>
+      </object>
+    </property>
+    <child>
+      <object class="GtkLabel">
+        <property name="label">User</property>
+        <layout>
+          <property name="row">0</property>
+          <property name="column">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLabel">
+        <property name="label">Group</property>
+        <layout>
+          <property name="row">0</property>
+          <property name="column">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLabel">
+        <property name="label">Other</property>
+        <layout>
+          <property name="row">0</property>
+          <property name="column">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="CncCell">
+        <layout>
+          <property name="row">1</property>
+          <property name="column">0</property>
+        </layout>
+        <property name="label">R</property>
+      </object>
+    </child>
+    <child>
+      <object class="CncCell">
+        <layout>
+          <property name="row">1</property>
+          <property name="column">1</property>
+        </layout>
+        <property name="label">R</property>
+      </object>
+    </child>
+    <child>
+      <object class="CncCell">
+        <layout>
+          <property name="row">1</property>
+          <property name="column">2</property>
+        </layout>
+        <property name="label">R</property>
+      </object>
+    </child>
+    <child>
+      <object class="CncCell">
+        <layout>
+          <property name="row">2</property>
+          <property name="column">0</property>
+        </layout>
+        <property name="label">W</property>
+      </object>
+    </child>
+    <child>
+      <object class="CncCell">
+        <layout>
+          <property name="row">2</property>
+          <property name="column">1</property>
+        </layout>
+        <property name="label">W</property>
+      </object>
+    </child>
+    <child>
+      <object class="CncCell">
+        <layout>
+          <property name="row">2</property>
+          <property name="column">2</property>
+        </layout>
+        <property name="label">W</property>
+      </object>
+    </child>
+    <child>
+      <object class="CncCell">
+        <layout>
+          <property name="row">3</property>
+          <property name="column">0</property>
+        </layout>
+        <property name="label">X</property>
+      </object>
+    </child>
+    <child>
+      <object class="CncCell">
+        <layout>
+          <property name="row">3</property>
+          <property name="column">1</property>
+        </layout>
+        <property name="label">X</property>
+      </object>
+    </child>
+    <child>
+      <object class="CncCell">
+        <layout>
+          <property name="row">3</property>
+          <property name="column">2</property>
+        </layout>
+        <property name="label">X</property>
+      </object>
+    </child>
+  </template>
+</interface>

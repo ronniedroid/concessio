@@ -3,7 +3,9 @@
     <gresource prefix="/io/github/ronniedroid/concessio">
         <file>ui/Window.ui</file>
         <file>ui/Form.ui</file>
-        <file>ui/CheckBoxes.ui</file>
+        <file>ui/Grid.ui</file>
+        <file>ui/Cell.ui</file>
+        <file>css/style.css</file>
     </gresource>
     <gresource prefix="/io/github/ronniedroid/concessio/icons/scalable/actions">
         <file alias="concessio-keyboard-enter-symbolic.svg">icons/keyboard-enter-symbolic.svg</file>

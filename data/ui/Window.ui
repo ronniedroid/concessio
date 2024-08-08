@@ -3,102 +3,41 @@
     <template class="CncWindow">
         <property name="title" translatable="true">Concessio</property>
         <property name="width-request">360</property>
-        <property name="height-request">500</property>
-        <child>
-            <object class="AdwBreakpoint">
-                <condition>max-width: 550sp</condition>
-                <setter object="header_bar" property="title-widget"></setter>
-                <setter object="switcher_bar" property="reveal">true</setter>
-            </object>
+        <property name="height-request">400</property>
+    <child>
+      <object class="AdwToolbarView" id="toolbar_view">
+        <property name="extend-content-to-top-edge">true</property>
+        <child type="top">
+          <object class="AdwHeaderBar" id="header_bar">
+            <property name="title-widget">
+              <object class="AdwWindowTitle">
+                <property name="title" translatable="true">Concessio</property>
+              </object>
+            </property>
+          </object>
         </child>
         <property name="content">
-            <object class="GtkBox">
+          <object class="AdwStatusPage">
+            <child>
+              <object class="GtkBox">
+                <property name="halign">3</property>
                 <property name="orientation">1</property>
+                <property name="spacing">18</property>
                 <child>
-                    <object class="AdwHeaderBar" id="header_bar">
-                        <property name="title-widget">
-                            <object class="AdwViewSwitcher">
-                                <property name="stack">viewStack</property>
-                                <property name="policy">1</property>
-                            </object>
-                        </property>
-                    </object>
+                  <object class="AdwClamp">
+                    <property name="maximum-size">300</property>
+                    <child>
+                      <object class="CncForm">
+                        <property name="valign">start</property>
+                      </object>
+                    </child>
+                  </object>
                 </child>
-                <child>
-                    <object class="AdwViewStack" id="viewStack">
-                        <property name="vexpand">true</property>
-                        <child>
-                            <object class="AdwViewStackPage" id="simple">
-                                <property name="name">simple</property>
-                                <property name="title" translatable="true">Simple</property>
-                                <property name="icon-name">concessio-checkbox-checked-symbolic</property>
-                                <property name="use-underline">true</property>
-                                <property name="child">
-                                    <object class="GtkLabel">
-                                        <property name="label" bind-source="simple"
-                                            bind-property="title" bind-flags="sync-create" />
-                                    </object>
-                                </property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="AdwViewStackPage" id="symbolic">
-                                <property name="name">symbolic</property>
-                                <property name="title" translatable="true">Symbolic</property>
-                                <property name="icon-name">concessio-text-insert-symbolic</property>
-                                <property name="use-underline">true</property>
-                                <property name="child">
-                                    <object class="AdwClamp">
-                                        <property name="maximum-size">400</property>
-                                        <child>
-                                            <object class="CncForm">
-                                                <property name="title">Symbolic -> Numeric</property>
-                                                <property name="subtitle">Enter a symbolic representation of a file permission</property>
-                                                <property name="placeholder">--rwx-rwx-rwx</property>
-                                                <property name="margin-top">36</property>
-                                                <property name="margin-bottom">36</property>
-                                                <property name="margin-start">36</property>
-                                                <property name="margin-end">36</property>
-                                                <property name="valign">start</property>
-                                            </object>
-                                        </child>
-                                    </object>
-                                </property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="AdwViewStackPage" id="numeric">
-                                <property name="name">numeric</property>
-                                <property name="title" translatable="true">Numeric</property>
-                                <property name="icon-name">concessio-dialpad-symbolic</property>
-                                <property name="use-underline">true</property>
-                                <property name="child">
-                                    <object class="AdwClamp">
-                                        <property name="maximum-size">400</property>
-                                        <child>
-                                            <object class="CncForm">
-                                                <property name="title">Numeric -> Symbolic</property>
-                                                <property name="subtitle">Enter a nemeric representation of a file permission</property>
-                                                <property name="placeholder">777</property>
-                                                <property name="margin-top">36</property>
-                                                <property name="margin-bottom">36</property>
-                                                <property name="margin-start">36</property>
-                                                <property name="margin-end">36</property>
-                                                <property name="valign">start</property>
-                                            </object>
-                                        </child>
-                                    </object>
-                                </property>
-                            </object>
-                        </child>
-                    </object>
-                </child>
-                <child>
-                    <object class="AdwViewSwitcherBar" id="switcher_bar">
-                        <property name="stack">viewStack</property>
-                    </object>
-                </child>
-            </object>
+              </object>
+            </child>
+          </object>
         </property>
+      </object>
+    </child>
     </template>
 </interface>

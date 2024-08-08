@@ -5,6 +5,7 @@
         <file>Application.js</file>
         <file>Window.js</file>
         <file>Form.js</file>
-        <file>CheckBoxes.js</file>
+        <file>Grid.js</file>
+        <file>Cell.js</file>
     </gresource>
 </gresources>
