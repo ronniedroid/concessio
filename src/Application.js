@@ -21,13 +21,13 @@ export const CncApplication = GObject.registerClass({
     }
 
     #loadStylesheet() {
-		const provider = new Gtk.CssProvider();
-		provider.load_from_resource('/io/github/ronniedroid/concessio/css/style.css');
-
-		Gtk.StyleContext.add_provider_for_display(
-			Gdk.Display.get_default(),
-			provider,
-			Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-		);
-	}
-})
+	const provider = new Gtk.CssProvider();
+	provider.load_from_resource('/io/github/ronniedroid/concessio/css/style.css');
+        
+	Gtk.StyleContext.add_provider_for_display(
+	    Gdk.Display.get_default(),
+	    provider,
+	    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+	);
+    }
+});
