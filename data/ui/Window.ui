@@ -2,33 +2,40 @@
 <interface>
     <template class="CncWindow">
         <property name="title" translatable="true">Concessio</property>
-        <property name="width-request">360</property>
+        <property name="width-request">500</property>
         <property name="height-request">400</property>
     <child>
       <object class="AdwToolbarView" id="toolbar_view">
         <property name="extend-content-to-top-edge">true</property>
         <child type="top">
           <object class="AdwHeaderBar" id="header_bar">
-            <property name="title-widget">
-              <object class="AdwWindowTitle">
-                <property name="title" translatable="true">Concessio</property>
-              </object>
-            </property>
+            <child type="end">
+		<object class="GtkMenuButton">
+		  <property name="tooltip-text">Main Menu</property>
+		  <property name="primary">true</property>
+		  <property name="direction">none</property>
+		  <property name="menu-model">main_menu</property>
+		</object>
+	      </child>
           </object>
         </child>
         <property name="content">
           <object class="AdwStatusPage">
             <child>
-              <object class="GtkBox">
-                <property name="halign">3</property>
-                <property name="orientation">1</property>
-                <property name="spacing">18</property>
+              <object class="AdwClamp">
+                <property name="maximum-size">450</property>
                 <child>
-                  <object class="AdwClamp">
-                    <property name="maximum-size">300</property>
+                  <object class="GtkBox">
+                    <property name="halign">3</property>
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">18</property>
                     <child>
                       <object class="CncForm">
                         <property name="valign">start</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="CncBoxedList">
                       </object>
                     </child>
                   </object>
@@ -40,4 +47,16 @@
       </object>
     </child>
     </template>
+    <menu id="main_menu">
+      <section>
+        <item>
+          <attribute name="label" translatable="true">Help</attribute>
+          <attribute name="action">app.help</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="true">About</attribute>
+          <attribute name="action">app.about</attribute>
+        </item>
+      </section>
+    </menu>
 </interface>

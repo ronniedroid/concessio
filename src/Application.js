@@ -4,8 +4,7 @@ import Gdk from 'gi://Gdk';
 import Gtk from 'gi://Gtk';
 
 import './Form.js';
-import './Grid.js';
-import './Cell.js';
+import './BoxedList.js';
 import { CncWindow } from './Window.js';
 
 export const CncApplication = GObject.registerClass({

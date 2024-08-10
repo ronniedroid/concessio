@@ -3,14 +3,13 @@
     <gresource prefix="/io/github/ronniedroid/concessio">
         <file>ui/Window.ui</file>
         <file>ui/Form.ui</file>
-        <file>ui/Grid.ui</file>
-        <file>ui/Cell.ui</file>
+        <file>ui/BoxedList.ui</file>
         <file>css/style.css</file>
     </gresource>
     <gresource prefix="/io/github/ronniedroid/concessio/icons/scalable/actions">
-        <file alias="concessio-keyboard-enter-symbolic.svg">icons/keyboard-enter-symbolic.svg</file>
-        <file alias="concessio-checkbox-checked-symbolic.svg">icons/checkbox-checked-symbolic.svg</file>
-        <file alias="concessio-dialpad-symbolic.svg">icons/dialpad-symbolic.svg</file>
-        <file alias="concessio-text-insert-symbolic.svg">icons/text-insert-symbolic.svg</file>
+      <file alias="concessio-read-symbolic.svg">icons/open-book-symbolic.svg</file>
+      <file alias="concessio-write-symbolic.svg">icons/edit-symbolic.svg</file>
+      <file alias="concessio-execute-symbolic.svg">icons/execute-from-symbolic.svg</file>
+      <file alias="concessio-copy-symbolic.svg">icons/copy-symbolic.svg</file>
     </gresource>
 </gresources>

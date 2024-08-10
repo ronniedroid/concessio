@@ -3,43 +3,54 @@
     <template class="CncForm">
         <property name="layout-manager">
             <object class="GtkBoxLayout">
-                <property name="orientation">vertical</property>
+                <property name="orientation">horizontal</property>
                 <property name="spacing">18</property>
             </object>
         </property>
         <child>
-          <object class="GtkLabel">
-            <property name="label">Numeric</property>
-            <property name="halign">1</property>
-            <style>
-              <class name="heading" />
-            </style>
+          <object class="GtkBox">
+            <property name="spacing">12</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Numeric</property>
+                <style>
+                  <class name="heading" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="numeric">
+                <property name="secondary-icon-name">concessio-copy-symbolic</property>
+                <!-- <property name="primary-icon-activatable">true</property> -->
+                <property name="secondary-icon-tooltip-text" translatable="true">Copy value</property>
+                <property name="placeholder-text">777</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>
-          <object class="GtkEntry" id="numeric">
-            <property name="placeholder-text">777</property>
+          <object class="GtkBox">
+            <property name="spacing">12</property>
+            <property name="orientation">vertical</property>
+            <property name="halign">3</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Symbolic</property>
+                <style>
+                  <class name="heading" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="symbolic">
+                <property name="secondary-icon-name">concessio-copy-symbolic</property>
+                <!-- <property name="primary-icon-activatable">true</property> -->
+                <property name="secondary-icon-tooltip-text" translatable="true">Copy value</property>
+                <property name="placeholder-text">-rwxrwxrwx</property>
+              </object>
+            </child>
           </object>
-        </child>
-        <child>
-          <object class="GtkLabel">
-            <property name="label">symbolic</property>
-            <property name="halign">1</property>
-            <style>
-              <class name="heading" />
-            </style>
-          </object>
-        </child>
-        <child>
-          <object class="GtkEntry" id="symbolic">
-            <property name="placeholder-text">-rwx-rwx-rwx</property>
-          </object>
-        </child>
-        <child>
-            <object class="CncGrid">
-                <property name="valign">center</property>
-                <property name="halign">center</property>
-            </object>
         </child>
     </template>
 </interface>
