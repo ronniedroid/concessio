@@ -3,7 +3,7 @@ import GObject from 'gi://GObject';
 import Gdk from 'gi://Gdk';
 import Gtk from 'gi://Gtk';
 
-import './Form.js';
+import {CncForm} from './Form.js';
 import './BoxedList.js';
 import { CncWindow } from './Window.js';
 

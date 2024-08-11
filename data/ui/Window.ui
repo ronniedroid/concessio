@@ -30,12 +30,12 @@
                     <property name="orientation">vertical</property>
                     <property name="spacing">18</property>
                     <child>
-                      <object class="CncForm">
+                      <object class="CncForm" id="form">
                         <property name="valign">start</property>
                       </object>
                     </child>
                     <child>
-                      <object class="CncBoxedList">
+                      <object class="CncBoxedList" id="boxedList">
                       </object>
                     </child>
                   </object>
