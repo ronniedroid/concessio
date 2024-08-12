@@ -45,7 +45,6 @@
             <child>
               <object class="GtkEntry" id="symbolic">
                 <property name="secondary-icon-name">concessio-copy-symbolic</property>
-                <!-- <property name="primary-icon-activatable">true</property> -->
                 <property name="secondary-icon-tooltip-text" translatable="true">Copy value</property>
                 <property name="placeholder-text">rwxr--r--</property>
               </object>

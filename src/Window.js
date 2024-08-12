@@ -1,5 +1,7 @@
 import GObject from 'gi://GObject';
 import Adw from 'gi://Adw';
+import Gio from 'gi://Gio';
+import GLib from 'gi://GLib';
 
 export const CncWindow = GObject.registerClass({
     GTypeName: 'CncWindow',
@@ -11,33 +13,50 @@ export const CncWindow = GObject.registerClass({
 }, class extends Adw.ApplicationWindow {
     constructor(params = {}) {
         super(params);
+        this.#setupActions();
+    }
 
-        const form = this._form;
-        const boxedList = this._boxedList;
+    #setupActions() {
+        ['u1', 'u2', 'u4', 'g1', 'g2', 'g4', 'o1', 'o2', 'o4'].forEach(id => {
+            const action = Gio.SimpleAction.new_stateful(id, null, new GLib.Variant('b', false));
+            action.connect('activate', () => this._onActionActivated(id));
+            this.add_action(action);
+        });
 
-        boxedList.setForm(form);
-
-        form._symbolic.connect('activate', () => {
-            const symbolicValue = form._symbolic.get_text();
-            if (form._validateSymbolic(symbolicValue)) {
+        this._form._symbolic.connect('activate', () => {
+            const symbolicValue = this._form._symbolic.get_text();
+            if (this._form._validateSymbolic(symbolicValue)) {
                 const numericValue = symbolicToNumeric(symbolicValue);
-                form._numeric.set_text(numericValue);
-                boxedList.updateFromSymbolic(symbolicValue);
+                this._form._numeric.set_text(numericValue);
+                this._boxedList.updateFromSymbolic(symbolicValue);
             } else {
-                form._symbolic.add_css_class("error");
+                this._form._symbolic.add_css_class("error");
             }
         });
 
-        form._numeric.connect('activate', () => {
-            const numericValue = form._numeric.get_text();
-            if (form._validateNumeric(numericValue)) {
+        this._form._numeric.connect('activate', () => {
+            const numericValue = this._form._numeric.get_text();
+            if (this._form._validateNumeric(numericValue)) {
                 const symbolicValue = numericToSymbolic(numericValue);
-                form._symbolic.set_text(symbolicValue);
-                boxedList.updateFromSymbolic(symbolicValue);
+                this._form._symbolic.set_text(symbolicValue);
+                this._boxedList.updateFromSymbolic(symbolicValue);
             } else {
-                form._numeric.add_css_class("error");
+                this._form._numeric.add_css_class("error");
             }
         });
+    }
+
+    _onActionActivated(id) {
+        const action = this.lookup_action(id);
+        const currentState = action.get_state().get_boolean();
+        const newState = !currentState;
+
+        action.change_state(new GLib.Variant('b', newState));
+        
+        const symbolicValue = this._boxedList.getSymbolicValue();
+        const numericValue = symbolicToNumeric(symbolicValue);
+        this._form._symbolic.set_text(symbolicValue);
+        this._form._numeric.set_text(numericValue);
     }
 
     vfunc_close_request() {
@@ -68,4 +87,4 @@ function numericToSymbolic(numeric) {
             .split('')
             .map(digit => permMap[parseInt(digit)])
             .join('');
-    };
+};
