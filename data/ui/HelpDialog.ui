@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="CncHelpDialog">
+    <property name="content-height">500</property>
+    <child>
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar"></object>
+        </child>
+        <property name="content">
+          <object class="AdwClamp">
+            <property name="maximum-size">450</property>
+            <child>
+              <object class="GtkScrolledWindow">
+                <child>
+                  <object class="GtkBox">
+                    <property name="halign">3</property>
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">18</property>
+                    <property name="margin-start">12</property>
+                    <property name="margin-end">12</property>
+                    <property name="margin-bottom">18</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">How unix permessions work</property>
+                        <style>
+                          <class name="title-2" />
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="wrap">true</property>
+                        <property name="label">The Unix permissions system is used to grant granulated access to file and directories on a Unix-like operating system.</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="wrap">true</property>
+                        <property name="label">Permissions are granted to three groups:</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkListBox">
+                        <property name="selection-mode">0</property>
+                        <style>
+                          <class name="boxed-list"/>
+                        </style>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="true">User</property>
+                            <property name="subtitle" translatable="true">The owner of the file.</property>
+                            <child type="prefix">
+                              <object class="GtkImage">
+                                <property name="icon-name">concessio-user-symbolic</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="true">Group</property>
+                            <property name="subtitle" translatable="true">A group of users who share access to the file.</property>
+                            <child type="prefix">
+                              <object class="GtkImage">
+                                <property name="icon-name">concessio-group-symbolic</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="true">Others</property>
+                            <property name="subtitle" translatable="true">All other users on the system.</property>
+                            <child type="prefix">
+                              <object class="GtkImage">
+                                <property name="icon-name">concessio-others-symbolic</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="wrap">true</property>
+                        <property name="label">For each category, there are three types of permissions::</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkListBox">
+                        <property name="selection-mode">0</property>
+                        <style>
+                          <class name="boxed-list"/>
+                        </style>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="true">Read (Symbolic: r, Numeric: 4)</property>
+                            <property name="subtitle" translatable="true">Allows viewing the file's contents or listing a directory's contents.</property>
+                            <child type="prefix">
+                              <object class="GtkImage">
+                                <property name="icon-name">concessio-read-symbolic</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="true">Write (Symbolically: 2, Numerically: 2)</property>
+                            <property name="subtitle" translatable="true">Allows modifying the file's contents or creating/deleting files within a directory.</property>
+                            <child type="prefix">
+                              <object class="GtkImage">
+                                <property name="icon-name">concessio-write-symbolic</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="true">Execute (Symbolically: x, Numerically: 1)</property>
+                            <property name="subtitle" translatable="true">Allows running the file as a program.</property>
+                            <child type="prefix">
+                              <object class="GtkImage">
+                                <property name="icon-name">concessio-execute-symbolic</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="wrap">true</property>
+                        <property name="label">Permissions can either be represented symbolically or numerically. Symbolic permissions are represented as a string of ten characters, and numeric is represented by three numbers (octal notation) for Example:</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="wrap">true</property>
+                        <property name="label">Symbolic: -rwxr-xr--</property>
+                        <style>
+                          <class name="heading" />
+                          <class name="monospace" />
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="wrap">true</property>
+                        <property name="label">Numeric: 754</property>
+                        <style>
+                          <class name="heading" />
+                          <class name="monospace" />
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkListBox">
+                        <property name="selection-mode">0</property>
+                        <style>
+                          <class name="boxed-list"/>
+                        </style>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="true">First character, the file type</property>
+                            <property name="subtitle" translatable="true">can either be '-' for file or 'd' for directory</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="true">First three positions (after file type)</property>
+                            <property name="subtitle" translatable="true">The read, write and execute permessions for the user, here we have 'rwx', which translated to 4+2+1 and adds to 7 </property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="true">Second three positions</property>
+                            <property name="subtitle" translatable="true">The read, write and execute permessions for the group, here we have 'r-x', which translated to 4+0+1 and adds to 5 </property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="true">Third three positions</property>
+                            <property name="subtitle" translatable="true">The read, write and execute permessions for other users, here we have 'r--', which translated to 4+0+0 and adds to 4 </property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="wrap">true</property>
+                        <property name="label">Example command</property>
+                        <style>
+                          <class name="heading" />
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label" translatable="true">chmod 754 (file or directory name)</property>
+                        <style>
+                          <class name="card" />
+                          <class name="monospace" />
+                          <class name="command-card" />
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </property>
+      </object>
+    </child>
+  </template>
+</interface>

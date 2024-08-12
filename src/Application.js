@@ -7,6 +7,7 @@ import Gio from 'gi://Gio';
 import {CncForm} from './Form.js';
 import './BoxedList.js';
 import { CncWindow } from './Window.js';
+import { CncHelpDialog } from "./HelpDialog.js";
 
 export const CncApplication = GObject.registerClass({
     GTypeName: 'CncApplication'
@@ -23,9 +24,14 @@ export const CncApplication = GObject.registerClass({
     }
 
     #setupActions() {
+        const HelpDialog = new CncHelpDialog();
+
+        const helpAction = new Gio.SimpleAction({name: 'help'});
         const aboutAction = new Gio.SimpleAction({name: 'about'});
         aboutAction.connect("activate", () => this._openAboutDialog());
+        helpAction.connect("activate", () => HelpDialog.present(this.get_active_window()));
         this.add_action(aboutAction);
+        this.add_action(helpAction);
     }
 
     #loadStylesheet() {

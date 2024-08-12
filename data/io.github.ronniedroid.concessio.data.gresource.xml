@@ -4,6 +4,7 @@
         <file>ui/Window.ui</file>
         <file>ui/Form.ui</file>
         <file>ui/BoxedList.ui</file>
+        <file>ui/HelpDialog.ui</file>
         <file>css/style.css</file>
     </gresource>
     <gresource prefix="/io/github/ronniedroid/concessio/icons/scalable/actions">
@@ -11,5 +12,8 @@
       <file alias="concessio-write-symbolic.svg">icons/edit-symbolic.svg</file>
       <file alias="concessio-execute-symbolic.svg">icons/execute-from-symbolic.svg</file>
       <file alias="concessio-copy-symbolic.svg">icons/copy-symbolic.svg</file>
+      <file alias="concessio-user-symbolic.svg">icons/person-symbolic.svg</file>
+      <file alias="concessio-group-symbolic.svg">icons/people-symbolic.svg</file>
+      <file alias="concessio-others-symbolic.svg">icons/train-load-extreme-symbolic.svg</file>
     </gresource>
 </gresources>

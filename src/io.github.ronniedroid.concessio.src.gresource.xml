@@ -6,5 +6,6 @@
         <file>Window.js</file>
         <file>Form.js</file>
         <file>BoxedList.js</file>
+        <file>HelpDialog.js</file>
     </gresource>
 </gresources>

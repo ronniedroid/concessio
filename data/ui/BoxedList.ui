@@ -117,7 +117,7 @@
     </child>
     <child>
       <object class="AdwActionRow">
-        <property name="title" translatable="true">Other</property>
+        <property name="title" translatable="true">Others</property>
         <child type="suffix">
           <object class="GtkBox">
             <property name="orientation">horizontal</property>
