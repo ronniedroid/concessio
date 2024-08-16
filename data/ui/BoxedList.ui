@@ -1,167 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <template class="CncBoxedList">
-    <property name="selection-mode">0</property>
-    <style>
-      <class name="boxed-list"/>
-    </style>
     <child>
-      <object class="AdwActionRow">
-        <property name="title" translatable="true">User</property>
-        <child type="suffix">
-          <object class="GtkBox">
-            <property name="orientation">horizontal</property>
-            <child>
-              <object class="GtkToggleButton" id="u4">
-                <property name="action-name">win.u4</property>
-                <property name="valign">3</property>
-                <property name="tooltip-text">Read</property>
-                <style>
-                  <class name="flat" />
-                </style>
+      <object class="GtkListBox">
+        <property name="selection-mode">0</property>
+        <style>
+          <class name="boxed-list"/>
+        </style>
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="true">User</property>
+            <child type="suffix">
+              <object class="GtkBox">
+                <property name="orientation">horizontal</property>
                 <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">concessio-read-symbolic</property>
+                  <object class="GtkToggleButton" id="u4">
+                    <property name="action-name">win.u4</property>
+                    <property name="valign">3</property>
+                    <property name="tooltip-text">Read</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">concessio-read-symbolic</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkToggleButton" id="u2">
-                <property name="action-name">win.u2</property>
-                <property name="valign">3</property>
-                <property name="tooltip-text">Write</property>
-                <style>
-                  <class name="flat" />
-                </style>
                 <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">concessio-write-symbolic</property>
+                  <object class="GtkToggleButton" id="u2">
+                    <property name="action-name">win.u2</property>
+                    <property name="valign">3</property>
+                    <property name="tooltip-text">Write</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">concessio-write-symbolic</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkToggleButton" id="u1">
-                <property name="action-name">win.u1</property>
-                <property name="valign">3</property>
-                <property name="tooltip-text">Execute</property>
-                <style>
-                  <class name="flat" />
-                </style>
                 <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">concessio-execute-symbolic</property>
+                  <object class="GtkToggleButton" id="u1">
+                    <property name="action-name">win.u1</property>
+                    <property name="valign">3</property>
+                    <property name="tooltip-text">Execute</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">concessio-execute-symbolic</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>
             </child>
           </object>
         </child>
-      </object>
-    </child>
-    <child>
-      <object class="AdwActionRow">
-        <property name="title" translatable="true">Group</property>
-        <child type="suffix">
-          <object class="GtkBox">
-            <property name="orientation">horizontal</property>
-            <child>
-              <object class="GtkToggleButton" id="g4">
-                <property name="action-name">win.g4</property>
-                <property name="valign">3</property>
-                <property name="tooltip-text">Read</property>
-                <style>
-                  <class name="flat" />
-                </style>
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="true">Group</property>
+            <child type="suffix">
+              <object class="GtkBox">
+                <property name="orientation">horizontal</property>
                 <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">concessio-read-symbolic</property>
+                  <object class="GtkToggleButton" id="g4">
+                    <property name="action-name">win.g4</property>
+                    <property name="valign">3</property>
+                    <property name="tooltip-text">Read</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">concessio-read-symbolic</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkToggleButton" id="g2">
-                <property name="action-name">win.g2</property>
-                <property name="valign">3</property>
-                <property name="tooltip-text">Write</property>
-                <style>
-                  <class name="flat" />
-                </style>
                 <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">concessio-write-symbolic</property>
+                  <object class="GtkToggleButton" id="g2">
+                    <property name="action-name">win.g2</property>
+                    <property name="valign">3</property>
+                    <property name="tooltip-text">Write</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">concessio-write-symbolic</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkToggleButton" id="g1">
-                <property name="action-name">win.g1</property>
-                <property name="valign">3</property>
-                <property name="tooltip-text">Execute</property>
-                <style>
-                  <class name="flat" />
-                </style>
                 <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">concessio-execute-symbolic</property>
+                  <object class="GtkToggleButton" id="g1">
+                    <property name="action-name">win.g1</property>
+                    <property name="valign">3</property>
+                    <property name="tooltip-text">Execute</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">concessio-execute-symbolic</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>
             </child>
           </object>
         </child>
-      </object>
-    </child>
-    <child>
-      <object class="AdwActionRow">
-        <property name="title" translatable="true">Others</property>
-        <child type="suffix">
-          <object class="GtkBox">
-            <property name="orientation">horizontal</property>
-            <child>
-              <object class="GtkToggleButton" id="o4">
-                <property name="action-name">win.o4</property>
-                <property name="valign">3</property>
-                <property name="tooltip-text">Read</property>
-                <style>
-                  <class name="flat" />
-                </style>
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="true">Others</property>
+            <child type="suffix">
+              <object class="GtkBox">
+                <property name="orientation">horizontal</property>
                 <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">concessio-read-symbolic</property>
+                  <object class="GtkToggleButton" id="o4">
+                    <property name="action-name">win.o4</property>
+                    <property name="valign">3</property>
+                    <property name="tooltip-text">Read</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">concessio-read-symbolic</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkToggleButton" id="o2">
-                <property name="action-name">win.o2</property>
-                <property name="valign">3</property>
-                <property name="tooltip-text">Write</property>
-                <style>
-                  <class name="flat" />
-                </style>
                 <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">concessio-write-symbolic</property>
+                  <object class="GtkToggleButton" id="o2">
+                    <property name="action-name">win.o2</property>
+                    <property name="valign">3</property>
+                    <property name="tooltip-text">Write</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">concessio-write-symbolic</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkToggleButton" id="o1">
-                <property name="action-name">win.o1</property>
-                <property name="valign">3</property>
-                <property name="tooltip-text">Execute</property>
-                <style>
-                  <class name="flat" />
-                </style>
                 <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">concessio-execute-symbolic</property>
+                  <object class="GtkToggleButton" id="o1">
+                    <property name="action-name">win.o1</property>
+                    <property name="valign">3</property>
+                    <property name="tooltip-text">Execute</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">concessio-execute-symbolic</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>

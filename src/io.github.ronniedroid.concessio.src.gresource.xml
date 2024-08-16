@@ -2,10 +2,10 @@
 <gresources>
     <gresource prefix="/io/github/ronniedroid/concessio/js">
         <file>main.js</file>
-        <file>Application.js</file>
-        <file>Window.js</file>
-        <file>Form.js</file>
-        <file>BoxedList.js</file>
-        <file>HelpDialog.js</file>
+        <file>application.js</file>
+        <file>window.js</file>
+        <file>form.js</file>
+        <file>boxedList.js</file>
+        <file>helpDialog.js</file>
     </gresource>
 </gresources>

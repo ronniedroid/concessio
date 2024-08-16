@@ -1,0 +1,10 @@
+data/ui/BoxedList.ui
+data/ui/Form.ui
+data/ui/HelpDialog.ui
+data/ui/Window.ui
+
+src/Application.js
+src/BoxedList.js
+src/Form.js
+src/HelpDialog.js
+src/Window.js

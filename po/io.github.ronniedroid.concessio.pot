@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.ronniedroid.concessio package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.ronniedroid.concessio\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-14 20:54+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/ui/BoxedList.ui:12 data/ui/HelpDialog.ui:51
+msgid "User"
+msgstr ""
+
+#: data/ui/BoxedList.ui:67 data/ui/HelpDialog.ui:62
+msgid "Group"
+msgstr ""
+
+#: data/ui/BoxedList.ui:122 data/ui/HelpDialog.ui:73
+msgid "Others"
+msgstr ""
+
+#: data/ui/Form.ui:25 data/ui/Form.ui:49
+msgid "Copy value"
+msgstr ""
+
+#: data/ui/HelpDialog.ui:52
+msgid "The owner of the file."
+msgstr ""
+
+#: data/ui/HelpDialog.ui:63
+msgid "A group of users who share access to the file."
+msgstr ""
+
+#: data/ui/HelpDialog.ui:74
+msgid "All other users on the system."
+msgstr ""
+
+#: data/ui/HelpDialog.ui:98
+msgid "Read (Symbolic: r, Numeric: 4)"
+msgstr ""
+
+#: data/ui/HelpDialog.ui:99
+msgid "Allows viewing the file's contents or listing a directory's contents."
+msgstr ""
+
+#: data/ui/HelpDialog.ui:109
+msgid "Write (Symbolically: 2, Numerically: 2)"
+msgstr ""
+
+#: data/ui/HelpDialog.ui:110
+msgid ""
+"Allows modifying the file's contents or creating/deleting files within a "
+"directory."
+msgstr ""
+
+#: data/ui/HelpDialog.ui:120
+msgid "Execute (Symbolically: x, Numerically: 1)"
+msgstr ""
+
+#: data/ui/HelpDialog.ui:121
+msgid "Allows running the file as a program."
+msgstr ""
+
+#: data/ui/HelpDialog.ui:165
+msgid "First character, the file type"
+msgstr ""
+
+#: data/ui/HelpDialog.ui:166
+msgid "can either be '-' for file or 'd' for directory"
+msgstr ""
+
+#: data/ui/HelpDialog.ui:171
+msgid "First three positions (after file type)"
+msgstr ""
+
+#: data/ui/HelpDialog.ui:172
+msgid ""
+"The read, write and execute permessions for the user, here we have 'rwx', "
+"which translated to 4+2+1 and adds to 7 "
+msgstr ""
+
+#: data/ui/HelpDialog.ui:177
+msgid "Second three positions"
+msgstr ""
+
+#: data/ui/HelpDialog.ui:178
+msgid ""
+"The read, write and execute permessions for the group, here we have 'r-x', "
+"which translated to 4+0+1 and adds to 5 "
+msgstr ""
+
+#: data/ui/HelpDialog.ui:183
+msgid "Third three positions"
+msgstr ""
+
+#: data/ui/HelpDialog.ui:184
+msgid ""
+"The read, write and execute permessions for other users, here we have 'r--', "
+"which translated to 4+0+0 and adds to 4 "
+msgstr ""
+
+#: data/ui/HelpDialog.ui:200
+msgid "chmod 754 (file or directory name)"
+msgstr ""
+
+#: data/ui/Window.ui:4
+msgid "Concessio"
+msgstr ""
+
+#: data/ui/Window.ui:53
+msgid "Help"
+msgstr ""
+
+#: data/ui/Window.ui:57
+msgid "About"
+msgstr ""
+
+#: src/Application.js:55
+msgid ""
+"Concessio helps you understand and convert between unix permessions "
+"representations"
+msgstr ""
+
+#: src/Application.js:67
+msgid "Special thanks to"
+msgstr ""
+
+#: src/Application.js:67
+msgid "GNOME Desgin Team"
+msgstr ""

@@ -10,6 +10,8 @@ imports.package.init({
     libdir: '@LIBDIR@',
 });
 
+imports.package.initGettext();
+
 // Import the main module and run the main function
 const loop = new GLib.MainLoop(null, false);
 import('resource:///io/github/ronniedroid/concessio/js/main.js')

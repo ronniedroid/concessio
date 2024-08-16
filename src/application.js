@@ -4,10 +4,10 @@ import Gdk from 'gi://Gdk';
 import Gtk from 'gi://Gtk';
 import Gio from 'gi://Gio';
 
-import {CncForm} from './Form.js';
-import './BoxedList.js';
-import { CncWindow } from './Window.js';
-import { CncHelpDialog } from "./HelpDialog.js";
+import './form.js';
+import './boxedList.js';
+import { CncWindow } from './window.js';
+import { CncHelpDialog } from "./helpDialog.js";
 
 export const CncApplication = GObject.registerClass({
     GTypeName: 'CncApplication'
@@ -51,17 +51,21 @@ export const CncApplication = GObject.registerClass({
             application_name: "Concessio",
             developer_name: "Ronnie Nissan",
             version: pkg.version,
-            comments: (
-                "Typeset is an app that doesn’t exist and is used as an example content for About Dialog."
+            comments: (_(
+                "Concessio helps you understand and convert between unix permessions representations"
+            )
             ),
             website: "https://github.com/ronniedroid/concessio",
-            issue_url: "https://github.com/ronniedroid/concessio/issues",
+            issue_url: "https://github.com/ronniedroid/concessio/issues/new",
             copyright: "© 2024 Ronnie Nissan",
             license_type: Gtk.License.GPL_3_0,
             developers: ["Ronnie Nissan <ronnie.nissan@proton.me>"],
-            designers: ["Brage Fuglseth <bragefuglseth@gnome.org>"],
+            designers: ["Brage Fuglseth https://bragefuglseth.dev"],
+            artists: ["Domenik https://github.com/drpetrikov"],
         });
 
+        dialog.add_acknowledgement_section(_("Special thanks to"), [_("GNOME Desgin Team")]);
+        
         dialog.present(this.get_active_window());
     }
 });

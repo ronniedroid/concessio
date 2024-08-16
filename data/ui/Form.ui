@@ -22,9 +22,10 @@
             <child>
               <object class="GtkEntry" id="numeric">
                 <property name="secondary-icon-name">concessio-copy-symbolic</property>
-                <!-- <property name="primary-icon-activatable">true</property> -->
                 <property name="secondary-icon-tooltip-text" translatable="true">Copy value</property>
                 <property name="placeholder-text">644</property>
+                <signal name="changed" handler="_removeErrorClass" />
+                <signal name="icon-press" handler="_copyToClipboard" />
               </object>
             </child>
           </object>
@@ -47,6 +48,8 @@
                 <property name="secondary-icon-name">concessio-copy-symbolic</property>
                 <property name="secondary-icon-tooltip-text" translatable="true">Copy value</property>
                 <property name="placeholder-text">rwxr--r--</property>
+                <signal name="changed" handler="_removeErrorClass" />
+                <signal name="icon-press" handler="_copyToClipboard" />
               </object>
             </child>
           </object>

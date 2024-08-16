@@ -3,3 +3,6 @@ builddir
 build-dir
 .vscode
 .flatpak
+node-modules/
+.eslintcache
+/node_modules/

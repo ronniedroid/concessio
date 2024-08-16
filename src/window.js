@@ -2,26 +2,47 @@ import GObject from 'gi://GObject';
 import Adw from 'gi://Adw';
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
+import Gdk from 'gi://Gdk';
+import GdkPixbuf from 'gi://GdkPixbuf';
 
 export const CncWindow = GObject.registerClass({
     GTypeName: 'CncWindow',
     Template: 'resource:///io/github/ronniedroid/concessio/ui/Window.ui',
     InternalChildren: [
+        "toastOverlay",
         'form',
-        "boxedList"
+        "boxedList",
+        "stack",
+        "welcomePage"
     ]
 }, class extends Adw.ApplicationWindow {
     constructor(params = {}) {
         super(params);
         this.#setupActions();
+        this.#setWelcomePaintable();
+
+        this._form.setOverlay(this._toastOverlay);
     }
 
     #setupActions() {
         ['u1', 'u2', 'u4', 'g1', 'g2', 'g4', 'o1', 'o2', 'o4'].forEach(id => {
-            const action = Gio.SimpleAction.new_stateful(id, null, new GLib.Variant('b', false));
-            action.connect('activate', () => this._onActionActivated(id));
+            const action = new Gio.SimpleAction({name: id, state: GLib.Variant.new_boolean(false)});
+            action.connect('notify::state', (act) => {
+                this._onActionActivated(act);
+            });
             this.add_action(action);
         });
+
+        const changeViewAction = new Gio.SimpleAction({
+            name: "changeView",
+            parameterType: GLib.VariantType.new('s')
+        });
+
+        changeViewAction.connect("activate", (_action, params) => {
+            this._stack.visibleChildName = params.unpack();
+        });
+
+        this.add_action(changeViewAction);
 
         this._form._symbolic.connect('activate', () => {
             const symbolicValue = this._form._symbolic.get_text();
@@ -46,12 +67,20 @@ export const CncWindow = GObject.registerClass({
         });
     }
 
-    _onActionActivated(id) {
-        const action = this.lookup_action(id);
-        const currentState = action.get_state().get_boolean();
-        const newState = !currentState;
+    #setWelcomePaintable() {
+        const pixbuf = GdkPixbuf.Pixbuf.new_from_resource('/io/github/ronniedroid/concessio/welcome.svg');
+        const texture = Gdk.Texture.new_for_pixbuf(pixbuf);
 
-        action.change_state(new GLib.Variant('b', newState));
+        this._welcomePage.set_paintable(texture);
+    }
+
+    _onActionActivated(act) {
+        const button = this._boxedList[`_${act.name}`];
+        button.active = act.state.unpack();
+
+        button.connect('toggled', () => {
+            act.set_state(GLib.Variant.new_boolean(button.active));
+        });
         
         const symbolicValue = this._boxedList.getSymbolicValue();
         const numericValue = symbolicToNumeric(symbolicValue);

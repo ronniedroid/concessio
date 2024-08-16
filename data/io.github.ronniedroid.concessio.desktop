@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Concessio
+Comment= Understand File Permissions.
+Icon=@APP_ID@
+Exec=@BINDIR@/@APP_ID@
+Type=Application
+DBusActivatable=true
+Categories=System;Utility;
+Keywords=Permissions;Convertor;Calculator;

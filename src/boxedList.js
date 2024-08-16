@@ -1,5 +1,5 @@
 import GObject from 'gi://GObject';
-import Gtk from 'gi://Gtk';
+import Adw from 'gi://Adw';
 import Gio from 'gi://Gio';
 
 export const CncBoxedList = GObject.registerClass({
@@ -10,7 +10,7 @@ export const CncBoxedList = GObject.registerClass({
         'g1', 'g2', 'g4',  // Group permissions buttons
         'o1', 'o2', 'o4'   // Other permissions buttons
     ]
-}, class extends Gtk.ListBox {
+}, class extends Adw.Bin {
     getSymbolicValue() {
         return [
             this._u4.get_active() ? 'r' : '-',

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <template class="CncHelpDialog">
-    <property name="content-height">500</property>
+    <property name="content-height">1000</property>
     <child>
       <object class="AdwToolbarView">
         <child type="top">
