@@ -13,7 +13,7 @@
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkLabel">
-                <property name="label">Numeric</property>
+                <property name="label" translatable="true">Numeric</property>
                 <style>
                   <class name="heading" />
                 </style>
@@ -37,7 +37,7 @@
             <property name="halign">3</property>
             <child>
               <object class="GtkLabel">
-                <property name="label">Symbolic</property>
+                <property name="label" translatable="true">Symbolic</property>
                 <style>
                   <class name="heading" />
                 </style>

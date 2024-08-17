@@ -13,13 +13,11 @@ export const CncWindow = GObject.registerClass({
         'form',
         "boxedList",
         "stack",
-        "welcomePage"
     ]
 }, class extends Adw.ApplicationWindow {
     constructor(params = {}) {
         super(params);
         this.#setupActions();
-        this.#setWelcomePaintable();
 
         this._form.setOverlay(this._toastOverlay);
     }
@@ -65,13 +63,6 @@ export const CncWindow = GObject.registerClass({
                 this._form._numeric.add_css_class("error");
             }
         });
-    }
-
-    #setWelcomePaintable() {
-        const pixbuf = GdkPixbuf.Pixbuf.new_from_resource('/io/github/ronniedroid/concessio/welcome.svg');
-        const texture = Gdk.Texture.new_for_pixbuf(pixbuf);
-
-        this._welcomePage.set_paintable(texture);
     }
 
     _onActionActivated(act) {

@@ -1,103 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-    <template class="CncWindow">
-        <property name="title" translatable="true">Concessio</property>
-        <property name="width-request">500</property>
-        <property name="height-request">400</property>
+  <template class="CncWindow">
+    <property name="title" translatable="true">Concessio</property>
+    <property name="default-width">500</property>
+    <property name="default-height">600</property>
+    <property name="width-request">360</property>
+    <property name="height-request">296</property>
+    <child>
+      <object class="AdwToastOverlay" id="toastOverlay">
         <child>
-          <object class="AdwToastOverlay" id="toastOverlay">
+          <object class="GtkStack" id="stack">
+            <property name="transition-type">3</property>
             <child>
-              <object class="AdwToolbarView" id="toolbar_view">
-                <property name="extend-content-to-top-edge">true</property>
-                <child type="top">
-                  <object class="AdwHeaderBar" id="header_bar">
-                    <child type="end">
-		      <object class="GtkMenuButton">
-		        <property name="tooltip-text">Main Menu</property>
-		        <property name="primary">true</property>
-		        <property name="direction">none</property>
-		        <property name="menu-model">main_menu</property>
-		      </object>
-	            </child>
+              <object class="GtkStackPage">
+                <property name="name">welcomePage</property>
+                <property name="child">
+                  <object class="AdwToolbarView">
+                    <property name="extend-content-to-top-edge">true</property>
+                    <child type="top">
+                      <object class="AdwHeaderBar">
+                        <property name="show-title">false</property>
+                      </object>
+                    </child>
+                    <property name="content">
+                      <object class="AdwClamp">
+                        <property name="maximum-size">320</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="halign">3</property>
+                            <property name="valign">3</property>
+                            <property name="spacing">12</property>
+                            <child>
+                              <object class="GtkPicture">
+                                <property name="file">resource:///io/github/ronniedroid/concessio/welcome.svg</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="true">Concessio</property>
+                                <style>
+                                  <class name="title-1" />
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="true">Understand file permissions</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton">
+                                <property name="label" translatable="true">Get started</property>
+                                <property name="action-name">win.changeView</property>
+                                <property name="action-target">'mainPage'</property>
+                                <style>
+                                  <class name="suggested-action" />
+                                  <class name="pill" />
+                                </style>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
                   </object>
-                </child>
-                <property name="content">
-                  <object class="GtkStack" id="stack">
-                    <child>
-                      <object class="GtkStackPage">
-                        <property name="name">welcomePage</property>
-                        <property name="child">
-                          <object class="AdwStatusPage" id="welcomePage">
-                            <property name="title" translatable="true">Concessio</property>
-                            <property name="description" translatable="true">Helps you convert between numeric and symbolic representations of a unix file permission, and a help page to explain said permissions</property>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkStackPage">
+                <property name="name">mainPage</property>
+                <property name="child">
+                  <object class="AdwToolbarView">
+                    <property name="extend-content-to-top-edge">false</property>
+                    <child type="top">
+                      <object class="AdwHeaderBar">
+                        <child type="end">
+		          <object class="GtkMenuButton">
+		            <property name="tooltip-text" translatable="true">Main Menu</property>
+		            <property name="primary">true</property>
+		            <property name="direction">none</property>
+		            <property name="menu-model">main_menu</property>
+		          </object>
+	                </child>
+                      </object>
+                    </child>
+                    <property name="content">
+                      <object class="AdwClamp">
+                        <property name="maximum-size">320</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="halign">3</property>
+                            <property name="valign">3</property>
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">18</property>
                             <child>
-                              <object class="GtkBox">
-                                <property name="orientation">vertical</property>
-                                <property name="halign">3</property>
-                                <child>
-                                  <object class="GtkButton">
-                                    <property name="label">Get started</property>
-                                    <property name="action-name">win.changeView</property>
-                                    <property name="action-target">'mainPage'</property>
-                                    <style>
-                                      <class name="suggested-action" />
-                                      <class name="pill" />
-                                    </style>
-                                  </object>
-                                </child>
+                              <object class="GtkPicture">
+                                <property name="file">resource:///io/github/ronniedroid/concessio/welcome.svg</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="CncForm" id="form">
+                                <property name="valign">1</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="CncBoxedList" id="boxedList">
                               </object>
                             </child>
                           </object>
-                        </property>
+                        </child>
                       </object>
-                    </child>
-                    <child>
-                      <object class="GtkStackPage">
-                        <property name="name">mainPage</property>
-                        <property name="child">
-                          <object class="AdwStatusPage">
-                            <child>
-                              <object class="AdwClamp">
-                                <property name="maximum-size">450</property>
-                                <child>
-                                  <object class="GtkBox">
-                                    <property name="halign">3</property>
-                                    <property name="orientation">vertical</property>
-                                    <property name="spacing">18</property>
-                                    <child>
-                                      <object class="CncForm" id="form">
-                                        <property name="valign">start</property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="CncBoxedList" id="boxedList">
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                          </object>
-                        </property>
-                      </object>
-                    </child>
+                    </property>
                   </object>
                 </property>
               </object>
             </child>
           </object>
         </child>
-    </template>
-    <menu id="main_menu">
-      <section>
-        <item>
-          <attribute name="label" translatable="true">Help</attribute>
-          <attribute name="action">app.help</attribute>
-        </item>
-        <item>
-          <attribute name="label" translatable="true">About</attribute>
-          <attribute name="action">app.about</attribute>
-        </item>
-      </section>
-    </menu>
+      </object>
+    </child>
+  </template>
+  <menu id="main_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="true">Help</attribute>
+        <attribute name="action">app.help</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="true">About</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
 </interface>

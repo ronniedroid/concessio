@@ -17,7 +17,7 @@
                   <object class="GtkToggleButton" id="u4">
                     <property name="action-name">win.u4</property>
                     <property name="valign">3</property>
-                    <property name="tooltip-text">Read</property>
+                    <property name="tooltip-text" translatable="true">Read</property>
                     <style>
                       <class name="flat" />
                     </style>
@@ -32,7 +32,7 @@
                   <object class="GtkToggleButton" id="u2">
                     <property name="action-name">win.u2</property>
                     <property name="valign">3</property>
-                    <property name="tooltip-text">Write</property>
+                    <property name="tooltip-text" translatable="true">Write</property>
                     <style>
                       <class name="flat" />
                     </style>
@@ -47,7 +47,7 @@
                   <object class="GtkToggleButton" id="u1">
                     <property name="action-name">win.u1</property>
                     <property name="valign">3</property>
-                    <property name="tooltip-text">Execute</property>
+                    <property name="tooltip-text" translatable="true">Execute</property>
                     <style>
                       <class name="flat" />
                     </style>
@@ -72,7 +72,7 @@
                   <object class="GtkToggleButton" id="g4">
                     <property name="action-name">win.g4</property>
                     <property name="valign">3</property>
-                    <property name="tooltip-text">Read</property>
+                    <property name="tooltip-text" translatable="true">Read</property>
                     <style>
                       <class name="flat" />
                     </style>
@@ -87,7 +87,7 @@
                   <object class="GtkToggleButton" id="g2">
                     <property name="action-name">win.g2</property>
                     <property name="valign">3</property>
-                    <property name="tooltip-text">Write</property>
+                    <property name="tooltip-text" translatable="true">Write</property>
                     <style>
                       <class name="flat" />
                     </style>
@@ -102,7 +102,7 @@
                   <object class="GtkToggleButton" id="g1">
                     <property name="action-name">win.g1</property>
                     <property name="valign">3</property>
-                    <property name="tooltip-text">Execute</property>
+                    <property name="tooltip-text" translatable="true">Execute</property>
                     <style>
                       <class name="flat" />
                     </style>
@@ -127,7 +127,7 @@
                   <object class="GtkToggleButton" id="o4">
                     <property name="action-name">win.o4</property>
                     <property name="valign">3</property>
-                    <property name="tooltip-text">Read</property>
+                    <property name="tooltip-text" translatable="true">Read</property>
                     <style>
                       <class name="flat" />
                     </style>
@@ -142,7 +142,7 @@
                   <object class="GtkToggleButton" id="o2">
                     <property name="action-name">win.o2</property>
                     <property name="valign">3</property>
-                    <property name="tooltip-text">Write</property>
+                    <property name="tooltip-text" translatable="true">Write</property>
                     <style>
                       <class name="flat" />
                     </style>
@@ -157,7 +157,7 @@
                   <object class="GtkToggleButton" id="o1">
                     <property name="action-name">win.o1</property>
                     <property name="valign">3</property>
-                    <property name="tooltip-text">Execute</property>
+                    <property name="tooltip-text" translatable="true">Execute</property>
                     <style>
                       <class name="flat" />
                     </style>

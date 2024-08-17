@@ -21,8 +21,14 @@
                     <property name="margin-end">12</property>
                     <property name="margin-bottom">18</property>
                     <child>
+                      <object class="GtkPicture">
+                        <property name="file">resource:///io/github/ronniedroid/concessio/help.svg</property>
+                        <property name="can-shrink">false</property>
+                      </object>
+                    </child>
+                    <child>
                       <object class="GtkLabel">
-                        <property name="label">How unix permessions work</property>
+                        <property name="label">Unix Permissions</property>
                         <style>
                           <class name="title-2" />
                         </style>
@@ -38,6 +44,10 @@
                       <object class="GtkLabel">
                         <property name="wrap">true</property>
                         <property name="label">Permissions are granted to three groups:</property>
+                        <property name="halign">1</property>
+                        <style>
+                          <class name="heading"/>
+                        </style>
                       </object>
                     </child>
                     <child>
@@ -83,8 +93,11 @@
                     </child>
                     <child>
                       <object class="GtkLabel">
-                        <property name="wrap">true</property>
-                        <property name="label">For each category, there are three types of permissions::</property>
+                        <property name="label">The types of permissions are:</property>
+                        <property name="halign">1</property>
+                        <style>
+                          <class name="heading"/>
+                        </style>
                       </object>
                     </child>
                     <child>
