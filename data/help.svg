@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    height="200"
-   viewBox="0 0 320 200"
-   width="320"
+   viewBox="0 0 260 200"
+   width="260"
    version="1.1"
    id="svg20"
    sodipodi:docname="help.svg"
@@ -28,7 +28,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.4041707"
-     inkscape:cx="131.39428"
+     inkscape:cx="101.48339"
      inkscape:cy="127.83346"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
@@ -293,7 +293,7 @@
      id="metadata1"><rdf:RDF><cc:Work
          rdf:about=""><dc:title>Adwaita Icon Template</dc:title></cc:Work></rdf:RDF></metadata><g
      id="g1"
-     transform="matrix(0.13290484,0,0,0.13290484,23.381222,-24.309011)"><g
+     transform="matrix(0.13281955,0,0,0.13290484,-6.5311009,-24.309013)"><g
        id="g54"
        transform="matrix(8.1780962,-2.9765835,2.9765835,8.1780962,211.68209,391.82378)"><path
          id="rect25"

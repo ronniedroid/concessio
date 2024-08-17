@@ -6,6 +6,8 @@
     <property name="default-height">600</property>
     <property name="width-request">360</property>
     <property name="height-request">296</property>
+    <property name="margin-start">12</property>
+    <property name="margin-end">12</property>
     <child>
       <object class="AdwToastOverlay" id="toastOverlay">
         <child>
@@ -34,6 +36,7 @@
                             <child>
                               <object class="GtkPicture">
                                 <property name="file">resource:///io/github/ronniedroid/concessio/welcome.svg</property>
+                                <property name="can-shrink">false</property>
                               </object>
                             </child>
                             <child>
@@ -98,6 +101,7 @@
                             <child>
                               <object class="GtkPicture">
                                 <property name="file">resource:///io/github/ronniedroid/concessio/welcome.svg</property>
+                                <property name="can-shrink">false</property>
                               </object>
                             </child>
                             <child>

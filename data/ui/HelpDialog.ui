@@ -2,16 +2,15 @@
 <interface>
   <template class="CncHelpDialog">
     <property name="content-height">1000</property>
+    <property name="content-width">600</property>
     <child>
       <object class="AdwToolbarView">
         <child type="top">
           <object class="AdwHeaderBar"></object>
         </child>
         <property name="content">
-          <object class="AdwClamp">
-            <property name="maximum-size">450</property>
-            <child>
               <object class="GtkScrolledWindow">
+                <property name="hscrollbar-policy">never</property>
                 <child>
                   <object class="GtkBox">
                     <property name="halign">3</property>
@@ -38,6 +37,7 @@
                       <object class="GtkLabel">
                         <property name="wrap">true</property>
                         <property name="label">The Unix permissions system is used to grant granulated access to file and directories on a Unix-like operating system.</property>
+                        <property name="halign">1</property>
                       </object>
                     </child>
                     <child>
@@ -94,7 +94,6 @@
                     <child>
                       <object class="GtkLabel">
                         <property name="label">The types of permissions are:</property>
-                        <property name="halign">1</property>
                         <style>
                           <class name="heading"/>
                         </style>
@@ -210,7 +209,7 @@
                     </child>
                     <child>
                       <object class="GtkLabel">
-                        <property name="label" translatable="true">chmod 754 (file or directory name)</property>
+                        <property name="label" translatable="true">chmod 754 (file name)</property>
                         <style>
                           <class name="card" />
                           <class name="monospace" />
@@ -221,8 +220,6 @@
                   </object>
                 </child>
               </object>
-            </child>
-          </object>
         </property>
       </object>
     </child>
