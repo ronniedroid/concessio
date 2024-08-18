@@ -2,6 +2,7 @@ import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
 import Gdk from 'gi://Gdk';
 import Adw from 'gi://Adw';
+import GLib from 'gi://GLib';
 
 export const CncForm = GObject.registerClass({
     GTypeName: 'CncForm',
@@ -24,18 +25,9 @@ export const CncForm = GObject.registerClass({
     }
 
     _copyToClipboard(_entry) {
-        const display = Gdk.Display.get_default();
-        const clipboard = display.get_clipboard();
-
         if (_entry.get_text().length > 0 && !_entry.has_css_class("error")) {
-            const content = Gdk.ContentProvider.new_for_value(_entry.get_text());
-            clipboard.set_content(content);
-            const toast = new Adw.Toast({ title: _("Copied to clipboard!") });
-            this.toastOverlay.add_toast(toast);
+            const text = GLib.Variant.new_string(_entry.get_text());
+            this.activate_action("win.copyToClipboard", text);
         }
-    }
-
-    setOverlay(overlay) {
-        this.toastOverlay = overlay;
     }
 });

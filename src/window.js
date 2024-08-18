@@ -18,8 +18,6 @@ export const CncWindow = GObject.registerClass({
     constructor(params = {}) {
         super(params);
         this.#setupActions();
-
-        this._form.setOverlay(this._toastOverlay);
     }
 
     #setupActions() {
@@ -41,6 +39,18 @@ export const CncWindow = GObject.registerClass({
         });
 
         this.add_action(changeViewAction);
+
+        const copyToClipboardAction = new Gio.SimpleAction({
+            name: "copyToClipboard",
+            parameterType: GLib.VariantType.new('s')
+        });
+
+        copyToClipboardAction.connect("activate", (_action, params) => {
+            this._copyToClipboard(params.unpack());
+            console.log("here");
+        });
+
+        this.add_action(copyToClipboardAction);
 
         this._form._symbolic.connect('activate', () => {
             const symbolicValue = this._form._symbolic.get_text();
@@ -77,6 +87,16 @@ export const CncWindow = GObject.registerClass({
         const numericValue = symbolicToNumeric(symbolicValue);
         this._form._symbolic.set_text(symbolicValue);
         this._form._numeric.set_text(numericValue);
+    }
+
+    _copyToClipboard(text) {
+        const display = Gdk.Display.get_default();
+        const clipboard = display.get_clipboard();
+
+        const content = Gdk.ContentProvider.new_for_value(text);
+        clipboard.set_content(content);
+        const toast = new Adw.Toast({ title: _("Copied to clipboard!") });
+        this._toastOverlay.add_toast(toast);
     }
 
     vfunc_close_request() {
