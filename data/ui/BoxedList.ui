@@ -13,6 +13,7 @@
             <child type="suffix">
               <object class="GtkBox">
                 <property name="orientation">horizontal</property>
+                <property name="spacing">12</property>
                 <child>
                   <object class="GtkToggleButton" id="u4">
                     <property name="action-name">win.u4</property>
@@ -68,6 +69,7 @@
             <child type="suffix">
               <object class="GtkBox">
                 <property name="orientation">horizontal</property>
+                <property name="spacing">12</property>
                 <child>
                   <object class="GtkToggleButton" id="g4">
                     <property name="action-name">win.g4</property>
@@ -123,6 +125,7 @@
             <child type="suffix">
               <object class="GtkBox">
                 <property name="orientation">horizontal</property>
+                <property name="spacing">12</property>
                 <child>
                   <object class="GtkToggleButton" id="o4">
                     <property name="action-name">win.o4</property>

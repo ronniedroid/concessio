@@ -82,11 +82,13 @@
                       <object class="AdwHeaderBar">
                         <child type="start">
 		          <object class="GtkButton">
-		            <property name="label" translatable="true">Open</property>
+                            <child>
+                              <object class="AdwButtonContent">
+                                <property name="label" translatable="true">open</property>
+                                <property name="icon-name">document-open-symbolic</property>
+                              </object>
+                            </child>
                             <property name="action-name">win.open</property>
-                            <style>
-                              <class name="flat" />
-                            </style>
 		          </object>
 	                </child>
                         <child type="end">
