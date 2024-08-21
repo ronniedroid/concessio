@@ -3,7 +3,7 @@ import Adw from 'gi://Adw';
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import Gdk from 'gi://Gdk';
-import GdkPixbuf from 'gi://GdkPixbuf';
+import Gtk from 'gi://Gtk';
 
 export const CncWindow = GObject.registerClass({
     GTypeName: 'CncWindow',
@@ -18,13 +18,15 @@ export const CncWindow = GObject.registerClass({
     constructor(params = {}) {
         super(params);
         this.#setupActions();
+
+        Gio._promisify(Gtk.FileDialog.prototype, "open", "open_finish");
     }
 
     #setupActions() {
         ['u1', 'u2', 'u4', 'g1', 'g2', 'g4', 'o1', 'o2', 'o4'].forEach(id => {
             const action = new Gio.SimpleAction({name: id, state: GLib.Variant.new_boolean(false)});
             action.connect('notify::state', (act) => {
-                this._onActionActivated(act);
+                this._onButtonToggleAction(act);
             });
             this.add_action(action);
         });
@@ -40,6 +42,16 @@ export const CncWindow = GObject.registerClass({
 
         this.add_action(changeViewAction);
 
+        const openAction = new Gio.SimpleAction({
+            name: "open"
+        });
+
+        openAction.connect("activate", () => {
+            this._openFileChooser();
+        });
+
+        this.add_action(openAction);
+
         const copyToClipboardAction = new Gio.SimpleAction({
             name: "copyToClipboard",
             parameterType: GLib.VariantType.new('s')
@@ -47,7 +59,6 @@ export const CncWindow = GObject.registerClass({
 
         copyToClipboardAction.connect("activate", (_action, params) => {
             this._copyToClipboard(params.unpack());
-            console.log("here");
         });
 
         this.add_action(copyToClipboardAction);
@@ -75,7 +86,7 @@ export const CncWindow = GObject.registerClass({
         });
     }
 
-    _onActionActivated(act) {
+    _onButtonToggleAction(act) {
         const button = this._boxedList[`_${act.name}`];
         button.active = act.state.unpack();
 
@@ -83,10 +94,7 @@ export const CncWindow = GObject.registerClass({
             act.set_state(GLib.Variant.new_boolean(button.active));
         });
         
-        const symbolicValue = this._boxedList.getSymbolicValue();
-        const numericValue = symbolicToNumeric(symbolicValue);
-        this._form._symbolic.set_text(symbolicValue);
-        this._form._numeric.set_text(numericValue);
+        this._updateFormValues(this._boxedList.getSymbolicValue());
     }
 
     _copyToClipboard(text) {
@@ -97,6 +105,37 @@ export const CncWindow = GObject.registerClass({
         clipboard.set_content(content);
         const toast = new Adw.Toast({ title: _("Copied to clipboard!") });
         this._toastOverlay.add_toast(toast);
+    }
+
+    async _openFileChooser() {
+        const file_dialog = new Gtk.FileDialog();
+
+        try {
+            const file = await file_dialog.open(this, null);
+
+            const numeric = getFilePermission(file);
+            const symbolic = numericToSymbolic(numeric);
+            this._updateFormValues(symbolic);
+            this._boxedList.updateFromSymbolic(symbolic);
+
+        } catch (error) {
+            if (error instanceof Gtk.DialogError) {
+                const toast = new Adw.Toast({ title: _("No file selected.") });
+                this._toastOverlay.add_toast(toast);
+                return;
+            } else {
+                console.error("Error opening file dialog:", error.message);
+                const toast = new Adw.Toast({ title: _("Failed to open file.") });
+                this._toastOverlay.add_toast(toast);
+            }
+        }
+    }
+
+    _updateFormValues(symbolic) {
+        const numeric = symbolicToNumeric(symbolic);
+
+        this._form._symbolic.set_text(symbolic);
+        this._form._numeric.set_text(numeric);
     }
 
     vfunc_close_request() {
@@ -128,3 +167,9 @@ function numericToSymbolic(numeric) {
             .map(digit => permMap[parseInt(digit)])
             .join('');
 };
+
+function getFilePermission(file) {
+  const info = file.query_info("unix::mode", Gio.FileQueryInfoFlags.NONE, null);
+  const mode = info.get_attribute_uint32("unix::mode") & 0o777;
+  return mode.toString(8);
+}

@@ -80,6 +80,15 @@
                     <property name="extend-content-to-top-edge">false</property>
                     <child type="top">
                       <object class="AdwHeaderBar">
+                        <child type="start">
+		          <object class="GtkButton">
+		            <property name="label" translatable="true">Open</property>
+                            <property name="action-name">win.open</property>
+                            <style>
+                              <class name="flat" />
+                            </style>
+		          </object>
+	                </child>
                         <child type="end">
 		          <object class="GtkMenuButton">
 		            <property name="tooltip-text" translatable="true">Main Menu</property>
