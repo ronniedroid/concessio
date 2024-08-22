@@ -18,8 +18,18 @@ export const CncWindow = GObject.registerClass({
     constructor(params = {}) {
         super(params);
         this.#setupActions();
+        this.#setupWelcomeScreen();
 
         Gio._promisify(Gtk.FileDialog.prototype, "open", "open_finish");
+    }
+
+    #setupWelcomeScreen() {
+        if (globalThis.settings.get_boolean('welcome-screen-shown')) {
+            this._stack.set_visible_child_name('mainPage');
+        } else {
+            this._stack.set_visible_child_name('welcomePage');
+            globalThis.settings.set_boolean('welcome-screen-shown', true);
+        }
     }
 
     #setupActions() {

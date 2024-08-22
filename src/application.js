@@ -14,6 +14,7 @@ export const CncApplication = GObject.registerClass({
 }, class extends Adw.Application {
     vfunc_startup() {
 	super.vfunc_startup();
+        this.#loadSettings();
 	this.#loadStylesheet();
         this.#setupActions();
     }
@@ -21,6 +22,10 @@ export const CncApplication = GObject.registerClass({
     vfunc_activate() {
         const window = new CncWindow({ application: this });
         window.present();
+    }
+
+    #loadSettings() {
+	globalThis.settings = new Gio.Settings({ schemaId: this.applicationId });
     }
 
     #setupActions() {

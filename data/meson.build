@@ -7,6 +7,13 @@ gnome.compile_resources(
 	install_dir: get_option('datadir') / APP_ID
 )
 
+# Install the settings schema
+install_data(
+	APP_ID + '.gschema.xml',
+	install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
+)
+
+
 # Install the application icons
 install_data(
 	'icons' / APP_ID + '.svg',
