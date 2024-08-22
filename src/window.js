@@ -129,7 +129,14 @@ export const CncWindow = GObject.registerClass({
             this._boxedList.updateFromSymbolic(symbolic);
 
         } catch (error) {
-            console.error("Error opening file dialog:", error.message);
+            if (error instanceof Gtk.DialogError) {
+                if (error.code === Gtk.DialogError.DISMISSED) {
+                }
+            } else {
+                console.error("Error opening file dialog:", error.message);
+                const toast = new Adw.Toast({ title: _("Failed to open file.") });
+                this._toastOverlay.add_toast(toast);
+            }
         }
     }
 
