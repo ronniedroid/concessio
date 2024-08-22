@@ -8,6 +8,7 @@
         <file>css/style.css</file>
         <file>welcome.svg</file>
         <file>help.svg</file>
+        <file alias="gtk/help-overlay.ui">ui/ShortcutsWindow.ui</file>
     </gresource>
     <gresource prefix="/io/github/ronniedroid/concessio/icons/scalable/actions">
       <file alias="concessio-read-symbolic.svg">icons/open-book-symbolic.svg</file>

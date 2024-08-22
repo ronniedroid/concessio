@@ -17,6 +17,7 @@ export const CncApplication = GObject.registerClass({
         this.#loadSettings();
 	this.#loadStylesheet();
         this.#setupActions();
+        this.#setupAccelerators()
     }
     
     vfunc_activate() {
@@ -29,14 +30,25 @@ export const CncApplication = GObject.registerClass({
     }
 
     #setupActions() {
-        const HelpDialog = new CncHelpDialog();
+        const quitAction = new Gio.SimpleAction({name: "quit"});
+        quitAction.connect("activate", () => this.quit());
+        this.add_action(quitAction);
 
+        const HelpDialog = new CncHelpDialog();
         const helpAction = new Gio.SimpleAction({name: 'help'});
+        helpAction.connect("activate", () => HelpDialog.present(this.get_active_window()));
+        this.add_action(helpAction);
+
         const aboutAction = new Gio.SimpleAction({name: 'about'});
         aboutAction.connect("activate", () => this._openAboutDialog());
-        helpAction.connect("activate", () => HelpDialog.present(this.get_active_window()));
         this.add_action(aboutAction);
-        this.add_action(helpAction);
+    }
+
+    #setupAccelerators() {
+	this.set_accels_for_action('app.help', ['<Control>h']);
+        this.set_accels_for_action('app.quit', ['<Control>q']);
+	this.set_accels_for_action('window.close', ['<Control>w']);
+        this.set_accels_for_action('win.open', ['<Control>o']);
     }
 
     #loadStylesheet() {

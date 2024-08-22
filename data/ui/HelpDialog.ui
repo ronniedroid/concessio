@@ -36,7 +36,7 @@
                 <child>
                   <object class="GtkLabel">
                     <property name="wrap">true</property>
-                    <property name="label" translatable="true">The Unix permissions system is used to grant granulated access to file and directories on a Unix-like operating system.</property>
+                    <property name="label" translatable="true">The Unix permissions system is used to grant granulated access to file and directories on a Unix-like operating system</property>
                   </object>
                 </child>
                 <child>
@@ -58,7 +58,7 @@
                     <child>
                       <object class="AdwActionRow">
                         <property name="title" translatable="true">User</property>
-                        <property name="subtitle" translatable="true">The owner of the file.</property>
+                        <property name="subtitle" translatable="true">The owner of the file</property>
                         <child type="prefix">
                           <object class="GtkImage">
                             <property name="icon-name">concessio-user-symbolic</property>
@@ -69,7 +69,7 @@
                     <child>
                       <object class="AdwActionRow">
                         <property name="title" translatable="true">Group</property>
-                        <property name="subtitle" translatable="true">A group of users who share access to the file.</property>
+                        <property name="subtitle" translatable="true">A group of users who share access to the file</property>
                         <child type="prefix">
                           <object class="GtkImage">
                             <property name="icon-name">concessio-group-symbolic</property>
@@ -80,7 +80,7 @@
                     <child>
                       <object class="AdwActionRow">
                         <property name="title" translatable="true">Others</property>
-                        <property name="subtitle" translatable="true">All other users on the system.</property>
+                        <property name="subtitle" translatable="true">All other users on the system</property>
                         <child type="prefix">
                           <object class="GtkImage">
                             <property name="icon-name">concessio-others-symbolic</property>
@@ -107,7 +107,7 @@
                     <child>
                       <object class="AdwActionRow">
                         <property name="title" translatable="true">Read (Symbolic: r, Numeric: 4)</property>
-                        <property name="subtitle" translatable="true">Allows viewing the file's contents or listing a directory's contents.</property>
+                        <property name="subtitle" translatable="true">Allows viewing the file's contents or listing a directory's contents</property>
                         <child type="prefix">
                           <object class="GtkImage">
                             <property name="icon-name">concessio-read-symbolic</property>
@@ -118,7 +118,7 @@
                     <child>
                       <object class="AdwActionRow">
                         <property name="title" translatable="true">Write (Symbolically: 2, Numerically: 2)</property>
-                        <property name="subtitle" translatable="true">Allows modifying the file's contents or creating/deleting files within a directory.</property>
+                        <property name="subtitle" translatable="true">Allows modifying the file's contents or creating/deleting files within a directory</property>
                         <child type="prefix">
                           <object class="GtkImage">
                             <property name="icon-name">concessio-write-symbolic</property>
@@ -129,7 +129,7 @@
                     <child>
                       <object class="AdwActionRow">
                         <property name="title" translatable="true">Execute (Symbolically: x, Numerically: 1)</property>
-                        <property name="subtitle" translatable="true">Allows running the file as a program.</property>
+                        <property name="subtitle" translatable="true">Allows running the file as a program</property>
                         <child type="prefix">
                           <object class="GtkImage">
                             <property name="icon-name">concessio-execute-symbolic</property>
@@ -191,7 +191,7 @@
                     </child>
                     <child>
                       <object class="AdwActionRow">
-                        <property name="title" translatable="true">Third three positions</property>
+                        <property name="title" translatable="true">Last three positions</property>
                         <property name="subtitle" translatable="true">The read, write and execute permessions for other users, here we have 'r--', which translated to 4+0+0 and adds to 4 </property>
                       </object>
                     </child>

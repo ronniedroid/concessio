@@ -2,9 +2,11 @@ data/ui/BoxedList.ui
 data/ui/Form.ui
 data/ui/HelpDialog.ui
 data/ui/Window.ui
+data/io.github.ronniedroid.concessio.desktop
+data/io.github.ronniedroid.concessio.metainfo.xml
 
-src/Application.js
-src/BoxedList.js
-src/Form.js
-src/HelpDialog.js
-src/Window.js
+src/application.js
+src/boxedList.js
+src/form.js
+src/helpDialog.js
+src/window.js
