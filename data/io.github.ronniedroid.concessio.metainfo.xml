@@ -3,12 +3,12 @@
 	<id>@APP_ID@</id>
 
 	<name>Concessio</name>
-	<summary>Understand file permessions</summary>
+	<summary>Understand file permissions</summary>
         <developer id="io.github.ronniedroid">
           <name translatable="no">ronniedroid</name>
         </developer>
 	<description>
-		<p>Concessio helps you understand and convert between unix permessions representations</p>
+		<p>Concessio helps you understand and convert between unix permissions representations</p>
 	</description>
 
         <content_rating type="oars-1.1" />
@@ -21,7 +21,7 @@
         <screenshots>
           <screenshot type="default">
             <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/Screenshots/main-page.png</image>
-            <caption>Application main page converrting between numeric and symbolic permission</caption>
+            <caption>Application main page converting between numeric and symbolic permission</caption>
           </screenshot>
           <screenshot>
             <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/Screenshots/help-page.png</image>
@@ -51,7 +51,7 @@
 
         <releases>
           <release version="v0.1.0" date="2024-08-15">
-            <url>https://github.com/ronniedoir/concessio/releases/tag/v0.1.0</url>
+            <url>https://github.com/ronniedroid/concessio/releases/tag/v0.1.0</url>
           </release>
         </releases>
 </component>

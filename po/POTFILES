@@ -2,6 +2,7 @@ data/ui/BoxedList.ui
 data/ui/Form.ui
 data/ui/HelpDialog.ui
 data/ui/Window.ui
+data/ui/ShortcutsWindow.ui
 data/io.github.ronniedroid.concessio.desktop
 data/io.github.ronniedroid.concessio.metainfo.xml
 

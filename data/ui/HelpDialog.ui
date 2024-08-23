@@ -6,10 +6,17 @@
     <child>
       <object class="AdwToolbarView">
         <child type="top">
-          <object class="AdwHeaderBar"></object>
+          <object class="AdwHeaderBar" id="helpHeaderBar">
+            <property name="show-title">false</property>
+              <property name="title-widget">
+                <object class="AdwWindowTitle">
+                  <property name="title" translatable="yes">Help</property>
+                </object>
+              </property>
+          </object>
         </child>
         <property name="content">
-          <object class="GtkScrolledWindow">
+          <object class="GtkScrolledWindow" id="scrolledWindow">
             <property name="hscrollbar-policy">never</property>
             <child>
               <object class="GtkBox">
@@ -180,19 +187,19 @@
                     <child>
                       <object class="AdwActionRow">
                         <property name="title" translatable="true">First three positions (after file type)</property>
-                        <property name="subtitle" translatable="true">The read, write and execute permessions for the user, here we have 'rwx', which translated to 4+2+1 and adds to 7 </property>
+                        <property name="subtitle" translatable="true">The read, write and execute permissions for the user, here we have 'rwx', which translated to 4+2+1 and adds to 7 </property>
                       </object>
                     </child>
                     <child>
                       <object class="AdwActionRow">
                         <property name="title" translatable="true">Second three positions</property>
-                        <property name="subtitle" translatable="true">The read, write and execute permessions for the group, here we have 'r-x', which translated to 4+0+1 and adds to 5 </property>
+                        <property name="subtitle" translatable="true">The read, write and execute permissions for the group, here we have 'r-x', which translated to 4+0+1 and adds to 5 </property>
                       </object>
                     </child>
                     <child>
                       <object class="AdwActionRow">
                         <property name="title" translatable="true">Last three positions</property>
-                        <property name="subtitle" translatable="true">The read, write and execute permessions for other users, here we have 'r--', which translated to 4+0+0 and adds to 4 </property>
+                        <property name="subtitle" translatable="true">The read, write and execute permissions for other users, here we have 'r--', which translated to 4+0+0 and adds to 4 </property>
                       </object>
                     </child>
                   </object>

@@ -9,7 +9,7 @@
             <child>
 	      <object class="GtkShortcutsShortcut">
 	        <property name="title" translatable="true">Open File</property>
-	        <property name="subtitle translatable="true"">Open file chooser dialog</property>
+	        <property name="subtitle" translatable="true">Open file chooser dialog</property>
 	        <property name="action-name">win.open</property>
 	      </object>
 	    </child>

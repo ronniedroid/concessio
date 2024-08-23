@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-22 18:12+0300\n"
+"POT-Creation-Date: 2024-08-23 22:32+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/ui/BoxedList.ui:12 data/ui/HelpDialog.ui:60
+#: data/ui/BoxedList.ui:12 data/ui/HelpDialog.ui:67
 msgid "User"
 msgstr ""
 
@@ -33,11 +33,11 @@ msgstr ""
 msgid "Execute"
 msgstr ""
 
-#: data/ui/BoxedList.ui:68 data/ui/HelpDialog.ui:71
+#: data/ui/BoxedList.ui:68 data/ui/HelpDialog.ui:78
 msgid "Group"
 msgstr ""
 
-#: data/ui/BoxedList.ui:124 data/ui/HelpDialog.ui:82
+#: data/ui/BoxedList.ui:124 data/ui/HelpDialog.ui:89
 msgid "Others"
 msgstr ""
 
@@ -53,120 +53,124 @@ msgstr ""
 msgid "Symbolic"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:30
+#: data/ui/HelpDialog.ui:13 data/ui/Window.ui:140
+msgid "Help"
+msgstr ""
+
+#: data/ui/HelpDialog.ui:37
 msgid "Unix Permissions"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:39
+#: data/ui/HelpDialog.ui:46
 msgid ""
 "The Unix permissions system is used to grant granulated access to file and "
 "directories on a Unix-like operating system"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:45
+#: data/ui/HelpDialog.ui:52
 msgid "Permissions are granted to three groups:"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:61
+#: data/ui/HelpDialog.ui:68
 msgid "The owner of the file"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:72
+#: data/ui/HelpDialog.ui:79
 msgid "A group of users who share access to the file"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:83
+#: data/ui/HelpDialog.ui:90
 msgid "All other users on the system"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:95
+#: data/ui/HelpDialog.ui:102
 msgid "The types of permissions are:"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:109
+#: data/ui/HelpDialog.ui:116
 msgid "Read (Symbolic: r, Numeric: 4)"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:110
+#: data/ui/HelpDialog.ui:117
 msgid "Allows viewing the file's contents or listing a directory's contents"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:120
+#: data/ui/HelpDialog.ui:127
 msgid "Write (Symbolically: 2, Numerically: 2)"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:121
+#: data/ui/HelpDialog.ui:128
 msgid ""
 "Allows modifying the file's contents or creating/deleting files within a "
 "directory"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:131
+#: data/ui/HelpDialog.ui:138
 msgid "Execute (Symbolically: x, Numerically: 1)"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:132
+#: data/ui/HelpDialog.ui:139
 msgid "Allows running the file as a program"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:145
+#: data/ui/HelpDialog.ui:152
 msgid ""
 "Permissions can either be represented symbolically or numerically. Symbolic "
 "permissions are represented as a string of ten characters, and numeric is "
 "represented by three numbers (octal notation) for Example:"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:151
+#: data/ui/HelpDialog.ui:158
 msgid "Symbolic: -rwxr-xr--"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:161
+#: data/ui/HelpDialog.ui:168
 msgid "Numeric: 754"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:176
+#: data/ui/HelpDialog.ui:183
 msgid "First character, the file type"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:177
+#: data/ui/HelpDialog.ui:184
 msgid "can either be '-' for file or 'd' for directory"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:182
+#: data/ui/HelpDialog.ui:189
 msgid "First three positions (after file type)"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:183
+#: data/ui/HelpDialog.ui:190
 msgid ""
-"The read, write and execute permessions for the user, here we have 'rwx', "
+"The read, write and execute permissions for the user, here we have 'rwx', "
 "which translated to 4+2+1 and adds to 7 "
 msgstr ""
 
-#: data/ui/HelpDialog.ui:188
+#: data/ui/HelpDialog.ui:195
 msgid "Second three positions"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:189
+#: data/ui/HelpDialog.ui:196
 msgid ""
-"The read, write and execute permessions for the group, here we have 'r-x', "
+"The read, write and execute permissions for the group, here we have 'r-x', "
 "which translated to 4+0+1 and adds to 5 "
 msgstr ""
 
-#: data/ui/HelpDialog.ui:194
+#: data/ui/HelpDialog.ui:201
 msgid "Last three positions"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:195
+#: data/ui/HelpDialog.ui:202
 msgid ""
-"The read, write and execute permessions for other users, here we have 'r--', "
+"The read, write and execute permissions for other users, here we have 'r--', "
 "which translated to 4+0+0 and adds to 4 "
 msgstr ""
 
-#: data/ui/HelpDialog.ui:203
+#: data/ui/HelpDialog.ui:210
 msgid "Example command"
 msgstr ""
 
-#: data/ui/HelpDialog.ui:211
+#: data/ui/HelpDialog.ui:218
 msgid "chmod 754 (file name)"
 msgstr ""
 
@@ -176,7 +180,8 @@ msgstr ""
 msgid "Concessio"
 msgstr ""
 
-#: data/ui/Window.ui:52
+#: data/ui/Window.ui:52 data/io.github.ronniedroid.concessio.desktop:4
+#: data/io.github.ronniedroid.concessio.metainfo.xml:6
 msgid "Understand file permissions"
 msgstr ""
 
@@ -192,11 +197,7 @@ msgstr ""
 msgid "Main Menu"
 msgstr ""
 
-#: data/ui/Window.ui:140
-msgid "Help"
-msgstr ""
-
-#: data/ui/Window.ui:144
+#: data/ui/Window.ui:144 data/ui/ShortcutsWindow.ui:42
 msgid "Keyboard Shortcuts"
 msgstr ""
 
@@ -204,38 +205,66 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: data/io.github.ronniedroid.concessio.desktop:4
-msgid "Understand File Permissions"
+#: data/ui/ShortcutsWindow.ui:8
+msgid "File"
+msgstr ""
+
+#: data/ui/ShortcutsWindow.ui:11
+msgid "Open File"
+msgstr ""
+
+#: data/ui/ShortcutsWindow.ui:12
+msgid "Open file chooser dialog"
+msgstr ""
+
+#: data/ui/ShortcutsWindow.ui:20
+msgid "General"
+msgstr ""
+
+#: data/ui/ShortcutsWindow.ui:23
+msgid "Quit App"
+msgstr ""
+
+#: data/ui/ShortcutsWindow.ui:29
+msgid "Close Window"
+msgstr ""
+
+#: data/ui/ShortcutsWindow.ui:35
+msgid "Help dialog"
+msgstr ""
+
+#: data/ui/ShortcutsWindow.ui:36
+msgid "Display the help dialog"
+msgstr ""
+
+#: data/ui/ShortcutsWindow.ui:43
+msgid "Display this keyboard shortcuts window"
 msgstr ""
 
 #: data/io.github.ronniedroid.concessio.desktop:9
 msgid "Permissions;Convertor;Calculator;"
 msgstr ""
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:6
-msgid "Understand file permessions"
-msgstr ""
-
-#: data/io.github.ronniedroid.concessio.metainfo.xml:11 src/application.js:72
+#: data/io.github.ronniedroid.concessio.metainfo.xml:11 src/application.js:74
 msgid ""
-"Concessio helps you understand and convert between unix permessions "
+"Concessio helps you understand and convert between unix permissions "
 "representations"
 msgstr ""
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:24
 msgid ""
-"Application main page converrting between numeric and symbolic permission"
+"Application main page converting between numeric and symbolic permission"
 msgstr ""
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:28
 msgid "Application help page, explaining unix permissions"
 msgstr ""
 
-#: src/application.js:84
+#: src/application.js:86
 msgid "Special thanks to"
 msgstr ""
 
-#: src/application.js:84
+#: src/application.js:86
 msgid "GNOME Desgin Team"
 msgstr ""
 

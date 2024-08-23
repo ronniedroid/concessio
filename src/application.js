@@ -17,7 +17,7 @@ export const CncApplication = GObject.registerClass({
         this.#loadSettings();
 	this.#loadStylesheet();
         this.#setupActions();
-        this.#setupAccelerators()
+        this.#setupAccelerators();
     }
     
     vfunc_activate() {
@@ -34,9 +34,11 @@ export const CncApplication = GObject.registerClass({
         quitAction.connect("activate", () => this.quit());
         this.add_action(quitAction);
 
-        const HelpDialog = new CncHelpDialog();
         const helpAction = new Gio.SimpleAction({name: 'help'});
-        helpAction.connect("activate", () => HelpDialog.present(this.get_active_window()));
+        helpAction.connect("activate", () => {
+            const HelpDialog = new CncHelpDialog();
+            HelpDialog.present(this.get_active_window());
+        });
         this.add_action(helpAction);
 
         const aboutAction = new Gio.SimpleAction({name: 'about'});
@@ -69,7 +71,7 @@ export const CncApplication = GObject.registerClass({
             developer_name: "Ronnie Nissan",
             version: pkg.version,
             comments: (_(
-                "Concessio helps you understand and convert between unix permessions representations"
+                "Concessio helps you understand and convert between unix permissions representations"
             )
             ),
             website: "https://github.com/ronniedroid/concessio",
