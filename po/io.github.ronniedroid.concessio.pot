@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 22:32+0300\n"
+"POT-Creation-Date: 2024-08-23 23:17+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -176,7 +176,7 @@ msgstr ""
 
 #: data/ui/Window.ui:4 data/ui/Window.ui:44
 #: data/io.github.ronniedroid.concessio.desktop:3
-#: data/io.github.ronniedroid.concessio.metainfo.xml:5
+#: data/io.github.ronniedroid.concessio.metainfo.xml:5 src/application.js:70
 msgid "Concessio"
 msgstr ""
 
@@ -260,12 +260,8 @@ msgstr ""
 msgid "Application help page, explaining unix permissions"
 msgstr ""
 
-#: src/application.js:86
+#: src/application.js:85
 msgid "Special thanks to"
-msgstr ""
-
-#: src/application.js:86
-msgid "GNOME Desgin Team"
 msgstr ""
 
 #: src/window.js:116

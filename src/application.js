@@ -67,12 +67,11 @@ export const CncApplication = GObject.registerClass({
     _openAboutDialog() {
         const dialog = new Adw.AboutDialog({
             application_icon: "io.github.ronniedroid.concessio",
-            application_name: "Concessio",
+            application_name: _("Concessio"),
             developer_name: "Ronnie Nissan",
             version: pkg.version,
-            comments: (_(
+            comments: _(
                 "Concessio helps you understand and convert between unix permissions representations"
-            )
             ),
             website: "https://github.com/ronniedroid/concessio",
             issue_url: "https://github.com/ronniedroid/concessio/issues/new",
@@ -83,7 +82,7 @@ export const CncApplication = GObject.registerClass({
             artists: ["Domenik https://github.com/drpetrikov"],
         });
 
-        dialog.add_acknowledgement_section(_("Special thanks to"), [_("GNOME Desgin Team")]);
+        dialog.add_acknowledgement_section(_("Special thanks to"), ["Alice Mikhaylenko", "Jakub Steiner https://jimmac.eu/"]);
         
         dialog.present(this.get_active_window());
     }
