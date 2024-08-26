@@ -1,63 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-	<id>@APP_ID@</id>
+  <id>@APP_ID@</id>
 
-	<name>Concessio</name>
-	<summary>Understand file permissions</summary>
-        <developer id="io.github.ronniedroid">
-          <name translatable="no">Ronnie Nissan</name>
-        </developer>
-	<description>
-	  <p>Concessio helps you understand and convert between unix permissions representations</p>
-          <ul>
-            <li>Convert between symbolic and numeric representations of UNIX file permessions</li>
-            <li>Use toggle buttons to update the symbolic and numeric fields</li>
-            <li>Open a file to read it's permessions and convert them</li>
-            <li>Open the help dialog to read and understand the UNIX permessions system</li>
-          </ul>
-	</description>
+  <name>Concessio</name>
+  <summary>Understand file permissions</summary>
+  <developer id="io.github.ronniedroid">
+    <name translatable="no">Ronnie Nissan</name>
+  </developer>
+  <description>
+    <p>Concessio helps you understand and convert between unix permissions representations</p>
+    <ul>
+      <li>Convert between symbolic and numeric representations of UNIX file permessions</li>
+      <li>Use toggle buttons to update the symbolic and numeric fields</li>
+      <li>Open a file to read it's permessions and convert them</li>
+      <li>Open the help dialog to read and understand the UNIX permessions system</li>
+    </ul>
+  </description>
 
-        <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1" />
 
-        <branding>
-          <color type="primary" scheme_preference="light">#8ff0a4</color>
-          <color type="primary" scheme_preference="dark">#2ec27e</color>
-        </branding>
+  <branding>
+    <color type="primary" scheme_preference="light">#8ff0a4</color>
+    <color type="primary" scheme_preference="dark">#2ec27e</color>
+  </branding>
 
-        <screenshots>
-          <screenshot type="default">
-            <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/main-page.png</image>
-            <caption>Application main page converting between numeric and symbolic permission</caption>
-          </screenshot>
-          <screenshot>
-            <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/help-page.png</image>
-            <caption>Application help page, explaining unix permissions</caption>
-          </screenshot>
-        </screenshots>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/main-page.png</image>
+      <caption>Application main page converting between numeric and symbolic permission</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/help-page.png</image>
+      <caption>Application help page, explaining unix permissions</caption>
+    </screenshot>
+  </screenshots>
 
-	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
 
-	<launchable type="desktop-id">@APP_ID@.desktop</launchable>
-	<provides>
-		<binary>@APP_ID@</binary>
-		<dbus type="user">@APP_ID@</dbus>
-	</provides>
-	<translation type="gettext">@APP_ID@</translation>
+  <launchable type="desktop-id">@APP_ID@.desktop</launchable>
+  <provides>
+    <binary>@APP_ID@</binary>
+    <dbus type="user">@APP_ID@</dbus>
+  </provides>
+  <translation type="gettext">@APP_ID@</translation>
 
-        <supports>
-          <control>pointing</control>
-          <control>keyboard</control>
-          <control>touch</control>
-        </supports>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </supports>
 
-        <url type="homepage">https://github.com/ronniedroid/concessio</url>
-        <url type="vcs-browser">https://github.com/ronniedroid/concessio</url>
-        <url type="bugtracker">https://github.com/ronniedroid/concessio/issues</url>
+  <url type="homepage">https://github.com/ronniedroid/concessio</url>
+  <url type="vcs-browser">https://github.com/ronniedroid/concessio</url>
+  <url type="bugtracker">https://github.com/ronniedroid/concessio/issues</url>
 
-        <releases>
-          <release version="v0.1.0" date="2024-08-26">
-            <url>https://github.com/ronniedroid/concessio/releases/tag/v0.1.0</url>
-          </release>
-        </releases>
+  <releases>
+    <release version="v0.1.2" date="2024-08-26">
+      <description>
+        <p>Initial release</p>
+      </description>
+    </release>
+  </releases>
 </component>
