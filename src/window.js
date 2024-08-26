@@ -98,7 +98,10 @@ export const CncWindow = GObject.registerClass({
 
     _onButtonToggleAction(act) {
         const button = this._boxedList[`_${act.name}`];
-        button.active = act.state.unpack();
+
+        if (button.active !== act.state.unpack()) {
+            button.active = act.state.unpack();
+        }
 
         button.connect('toggled', () => {
             act.set_state(GLib.Variant.new_boolean(button.active));
