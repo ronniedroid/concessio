@@ -8,7 +8,13 @@
           <name translatable="no">Ronnie Nissan</name>
         </developer>
 	<description>
-		<p>Concessio helps you understand and convert between unix permissions representations</p>
+	  <p>Concessio helps you understand and convert between unix permissions representations</p>
+          <ul>
+            <li>Convert between symbolic and numeric representations of UNIX file permessions</li>
+            <li>Use toggle buttons to update the symbolic and numeric fields</li>
+            <li>Open a file to read it's permessions and convert them</li>
+            <li>Open the help dialog to read and understand the UNIX permessions system</li>
+          </ul>
 	</description>
 
         <content_rating type="oars-1.1" />
