@@ -14,8 +14,8 @@
         <content_rating type="oars-1.1" />
 
         <branding>
-          <color type="primary" scheme_preference="light">#f9f06f</color>
-          <color type="primary" scheme_preference="dark">#f5c211</color>
+          <color type="primary" scheme_preference="light">#8ff0a4</color>
+          <color type="primary" scheme_preference="dark">#2ec27e</color>
         </branding>
 
         <screenshots>
@@ -50,7 +50,7 @@
         <url type="bugtracker">https://github.com/ronniedroid/concessio/issues</url>
 
         <releases>
-          <release version="v0.1.0" date="2024-08-15">
+          <release version="v0.1.0" date="2024-08-26">
             <url>https://github.com/ronniedroid/concessio/releases/tag/v0.1.0</url>
           </release>
         </releases>
