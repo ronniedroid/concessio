@@ -84,7 +84,7 @@
 		          <object class="GtkButton">
                             <child>
                               <object class="AdwButtonContent">
-                                <property name="label" translatable="true">open</property>
+                                <property name="label" translatable="true">Open</property>
                                 <property name="icon-name">document-open-symbolic</property>
                               </object>
                             </child>

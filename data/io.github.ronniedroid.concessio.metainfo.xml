@@ -20,11 +20,11 @@
 
         <screenshots>
           <screenshot type="default">
-            <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/Screenshots/main-page.png</image>
+            <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/main-page.png</image>
             <caption>Application main page converting between numeric and symbolic permission</caption>
           </screenshot>
           <screenshot>
-            <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/Screenshots/help-page.png</image>
+            <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/help-page.png</image>
             <caption>Application help page, explaining unix permissions</caption>
           </screenshot>
         </screenshots>
