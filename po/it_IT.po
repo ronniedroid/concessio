@@ -1,0 +1,294 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.ronniedroid.concessio package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.ronniedroid.concessio\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-23 23:17+0300\n"
+"PO-Revision-Date: 2024-08-27 22:33+0200\n"
+"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
+"Language-Team: Albano Battistella \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.3\n"
+
+#: data/ui/BoxedList.ui:12 data/ui/HelpDialog.ui:67
+msgid "User"
+msgstr "Utente"
+
+#: data/ui/BoxedList.ui:21 data/ui/BoxedList.ui:77 data/ui/BoxedList.ui:133
+msgid "Read"
+msgstr "Lettura"
+
+#: data/ui/BoxedList.ui:36 data/ui/BoxedList.ui:92 data/ui/BoxedList.ui:148
+msgid "Write"
+msgstr "Scrittura"
+
+#: data/ui/BoxedList.ui:51 data/ui/BoxedList.ui:107 data/ui/BoxedList.ui:163
+msgid "Execute"
+msgstr "Eseguire"
+
+#: data/ui/BoxedList.ui:68 data/ui/HelpDialog.ui:78
+msgid "Group"
+msgstr "Gruppo"
+
+#: data/ui/BoxedList.ui:124 data/ui/HelpDialog.ui:89
+msgid "Others"
+msgstr "Altri"
+
+#: data/ui/Form.ui:16
+msgid "Numeric"
+msgstr "Numerico"
+
+#: data/ui/Form.ui:25 data/ui/Form.ui:49
+msgid "Copy value"
+msgstr "Copia valore"
+
+#: data/ui/Form.ui:40
+msgid "Symbolic"
+msgstr "Simbolico"
+
+#: data/ui/HelpDialog.ui:13 data/ui/Window.ui:140
+msgid "Help"
+msgstr "Aiuto"
+
+#: data/ui/HelpDialog.ui:37
+msgid "Unix Permissions"
+msgstr "Permessi Unix"
+
+#: data/ui/HelpDialog.ui:46
+msgid ""
+"The Unix permissions system is used to grant granulated access to file and "
+"directories on a Unix-like operating system"
+msgstr ""
+"Il sistema di permessi Unix viene utilizzato per concedere un accesso "
+"granulare a file e directory su un sistema operativo di tipo Unix"
+
+#: data/ui/HelpDialog.ui:52
+msgid "Permissions are granted to three groups:"
+msgstr "I permessi vengono concessi a tre gruppi:"
+
+#: data/ui/HelpDialog.ui:68
+msgid "The owner of the file"
+msgstr "Il proprietario del file"
+
+#: data/ui/HelpDialog.ui:79
+msgid "A group of users who share access to the file"
+msgstr "Un gruppo di utenti che condividono l'accesso al file"
+
+#: data/ui/HelpDialog.ui:90
+msgid "All other users on the system"
+msgstr "Tutti gli altri utenti del sistema"
+
+#: data/ui/HelpDialog.ui:102
+msgid "The types of permissions are:"
+msgstr "I tipi di permessi sono:"
+
+#: data/ui/HelpDialog.ui:116
+msgid "Read (Symbolic: r, Numeric: 4)"
+msgstr "Lettura (Simbolico: r, Numerico: 4)"
+
+#: data/ui/HelpDialog.ui:117
+msgid "Allows viewing the file's contents or listing a directory's contents"
+msgstr ""
+"Consente di visualizzare il contenuto del file o di elencare il contenuto di "
+"una directory"
+
+#: data/ui/HelpDialog.ui:127
+msgid "Write (Symbolically: 2, Numerically: 2)"
+msgstr "Scrittura (Simbolico: 2, Numericamente: 2)"
+
+#: data/ui/HelpDialog.ui:128
+msgid ""
+"Allows modifying the file's contents or creating/deleting files within a "
+"directory"
+msgstr ""
+"Consente di modificare il contenuto del file o di creare/eliminare file "
+"all'interno di una directory"
+
+#: data/ui/HelpDialog.ui:138
+msgid "Execute (Symbolically: x, Numerically: 1)"
+msgstr "Eseguire (Simbolicamente: x, Numericamente: 1)"
+
+#: data/ui/HelpDialog.ui:139
+msgid "Allows running the file as a program"
+msgstr "Consente di eseguire il file come programma"
+
+#: data/ui/HelpDialog.ui:152
+msgid ""
+"Permissions can either be represented symbolically or numerically. Symbolic "
+"permissions are represented as a string of ten characters, and numeric is "
+"represented by three numbers (octal notation) for Example:"
+msgstr ""
+"I permessi possono essere rappresentati simbolicamente o numericamente. I "
+"permessi simbolici sono rappresentati come una stringa di dieci caratteri, "
+"mentre quelli numerici sono rappresentati da tre numeri (notazione ottale) "
+"per esempio:"
+
+#: data/ui/HelpDialog.ui:158
+msgid "Symbolic: -rwxr-xr--"
+msgstr "Simbolico: -rwxr-xr--"
+
+#: data/ui/HelpDialog.ui:168
+msgid "Numeric: 754"
+msgstr "Numerico: 754"
+
+#: data/ui/HelpDialog.ui:183
+msgid "First character, the file type"
+msgstr "Primo carattere, il tipo di file"
+
+#: data/ui/HelpDialog.ui:184
+msgid "can either be '-' for file or 'd' for directory"
+msgstr "può essere '-' per file o 'd' per directory"
+
+#: data/ui/HelpDialog.ui:189
+msgid "First three positions (after file type)"
+msgstr "Prime tre posizioni (dopo il tipo di file)"
+
+#: data/ui/HelpDialog.ui:190
+msgid ""
+"The read, write and execute permissions for the user, here we have 'rwx', "
+"which translated to 4+2+1 and adds to 7 "
+msgstr ""
+"I permessi di lettura, scrittura ed esecuzione per l'utente, qui abbiamo "
+"'rwx', che tradotto è 4+2+1 e aggiunge 7"
+
+#: data/ui/HelpDialog.ui:195
+msgid "Second three positions"
+msgstr "Seconde tre posizioni"
+
+#: data/ui/HelpDialog.ui:196
+msgid ""
+"The read, write and execute permissions for the group, here we have 'r-x', "
+"which translated to 4+0+1 and adds to 5 "
+msgstr ""
+"I permessi di lettura, scrittura ed esecuzione per il gruppo, qui abbiamo 'r-"
+"x', che tradotto è 4+0+1 e aggiunge 5"
+
+#: data/ui/HelpDialog.ui:201
+msgid "Last three positions"
+msgstr "Ultime tre posizioni"
+
+#: data/ui/HelpDialog.ui:202
+msgid ""
+"The read, write and execute permissions for other users, here we have 'r--', "
+"which translated to 4+0+0 and adds to 4 "
+msgstr ""
+"I permessi di lettura, scrittura ed esecuzione per gli altri utenti, qui "
+"abbiamo 'r--', che tradotto è 4+0+0 e aggiunge 4"
+
+#: data/ui/HelpDialog.ui:210
+msgid "Example command"
+msgstr "Comando di esempio"
+
+#: data/ui/HelpDialog.ui:218
+msgid "chmod 754 (file name)"
+msgstr "chmod 754 (nome file)"
+
+#: data/ui/Window.ui:4 data/ui/Window.ui:44
+#: data/io.github.ronniedroid.concessio.desktop:3
+#: data/io.github.ronniedroid.concessio.metainfo.xml:5 src/application.js:70
+msgid "Concessio"
+msgstr "Concessio"
+
+#: data/ui/Window.ui:52 data/io.github.ronniedroid.concessio.desktop:4
+#: data/io.github.ronniedroid.concessio.metainfo.xml:6
+msgid "Understand file permissions"
+msgstr "Comprendere i permessi dei file"
+
+#: data/ui/Window.ui:57
+msgid "Get started"
+msgstr "Iniziare"
+
+#: data/ui/Window.ui:87
+msgid "open"
+msgstr "apri"
+
+#: data/ui/Window.ui:96
+msgid "Main Menu"
+msgstr "Menu principale"
+
+#: data/ui/Window.ui:144 data/ui/ShortcutsWindow.ui:42
+msgid "Keyboard Shortcuts"
+msgstr "Scorciatoie da tastiera"
+
+#: data/ui/Window.ui:148
+msgid "About"
+msgstr "Informazioni"
+
+#: data/ui/ShortcutsWindow.ui:8
+msgid "File"
+msgstr "FIle"
+
+#: data/ui/ShortcutsWindow.ui:11
+msgid "Open File"
+msgstr "Apri file"
+
+#: data/ui/ShortcutsWindow.ui:12
+msgid "Open file chooser dialog"
+msgstr "Apri la finestra di dialogo di selezione file"
+
+#: data/ui/ShortcutsWindow.ui:20
+msgid "General"
+msgstr "Generale"
+
+#: data/ui/ShortcutsWindow.ui:23
+msgid "Quit App"
+msgstr "Esci dall'app"
+
+#: data/ui/ShortcutsWindow.ui:29
+msgid "Close Window"
+msgstr "Chiudi finestra"
+
+#: data/ui/ShortcutsWindow.ui:35
+msgid "Help dialog"
+msgstr "Dialogo di aiuto"
+
+#: data/ui/ShortcutsWindow.ui:36
+msgid "Display the help dialog"
+msgstr "Visualizza la finestra di aiuto"
+
+#: data/ui/ShortcutsWindow.ui:43
+msgid "Display this keyboard shortcuts window"
+msgstr "Visualizza questa finestra delle scorciatoie da tastiera"
+
+#: data/io.github.ronniedroid.concessio.desktop:9
+msgid "Permissions;Convertor;Calculator;"
+msgstr "Permessi;Convertitore;Calcolatrice;"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:11 src/application.js:74
+msgid ""
+"Concessio helps you understand and convert between unix permissions "
+"representations"
+msgstr ""
+"Concessio ti aiuta a comprendere e convertire tra le rappresentazioni dei "
+"permessi Unix"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:24
+msgid ""
+"Application main page converting between numeric and symbolic permission"
+msgstr ""
+"Pagina principale dell'applicazione che converte tra autorizzazione numerica "
+"e simbolica"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:28
+msgid "Application help page, explaining unix permissions"
+msgstr "Pagina di aiuto dell'applicazione, che spiega i permessi Unix"
+
+#: src/application.js:85
+msgid "Special thanks to"
+msgstr "Ringraziamenti speciali a"
+
+#: src/window.js:116
+msgid "Copied to clipboard!"
+msgstr "Copiato negli appunti!"
+
+#: src/window.js:137
+msgid "Failed to open file."
+msgstr "Impossibile aprire il file."
