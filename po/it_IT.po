@@ -1,9 +1,8 @@
-# SOME DESCRIPTIVE TITLE.
+# ITALIAN TRANSLATION.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the io.github.ronniedroid.concessio package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Albano BATTISTELLA <albanobattistella@gmail.com>, 2O24.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
@@ -274,18 +273,19 @@ msgstr ""
 msgid ""
 "Convert between symbolic and numeric representations of UNIX file permissions"
 msgstr ""
+"Converti tra rappresentazioni simboliche e numeriche dei permessi dei file UNIX"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:14
 msgid "Use toggle buttons to update the symbolic and numeric fields"
-msgstr ""
+msgstr "Utilizzare i pulsanti di attivazione per aggiornare i campi simbolici e numerici"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:15
 msgid "Open a file to read it's permissions and convert them"
-msgstr ""
+msgstr "Aprire un file per leggerne i permessi e convertirli"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:16
 msgid "Open the help dialog to read and understand the UNIX permissions system"
-msgstr ""
+msgstr "Aprire la finestra di dialogo della guida per leggere e comprendere il sistema di autorizzazioni UNIX"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:30
 msgid ""
@@ -300,7 +300,7 @@ msgstr "Pagina di aiuto dell'applicazione, che spiega i permessi Unix"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:61
 msgid "Initial release"
-msgstr ""
+msgstr "Versione iniziale"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.js:84
