@@ -50,6 +50,9 @@
                 <property name="placeholder-text">rwxr--r--</property>
                 <signal name="changed" handler="_removeErrorClass" />
                 <signal name="icon-press" handler="_copyToClipboard" />
+                <style>
+                  <class name="monospace" />
+                </style>
               </object>
             </child>
           </object>

@@ -79,7 +79,9 @@ export const CncApplication = GObject.registerClass({
             license_type: Gtk.License.GPL_3_0,
             developers: ["Ronnie Nissan <ronnie.nissan@proton.me>"],
             designers: ["Brage Fuglseth https://bragefuglseth.dev"],
-            artists: ["Domenik https://github.com/drpetrikov"],
+            artists: ["Dominik Baran https://github.com/drpetrikov"],
+            // Translators: Replace "translator-credits" with your names, one name per line
+            translator_credits: _("translator-credits")
         });
 
         dialog.add_acknowledgement_section(_("Special thanks to"), ["Alice Mikhaylenko", "Jakub Steiner https://jimmac.eu/"]);

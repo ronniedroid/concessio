@@ -10,10 +10,10 @@
   <description>
     <p>Concessio helps you understand and convert between unix permissions representations</p>
     <ul>
-      <li>Convert between symbolic and numeric representations of UNIX file permessions</li>
+      <li>Convert between symbolic and numeric representations of UNIX file permissions</li>
       <li>Use toggle buttons to update the symbolic and numeric fields</li>
-      <li>Open a file to read it's permessions and convert them</li>
-      <li>Open the help dialog to read and understand the UNIX permessions system</li>
+      <li>Open a file to read it's permissions and convert them</li>
+      <li>Open the help dialog to read and understand the UNIX permissions system</li>
     </ul>
   </description>
 
@@ -57,7 +57,7 @@
 
   <releases>
     <release version="v0.1.2" date="2024-08-26">
-      <description>
+      <description translate="no">
         <p>Initial release</p>
       </description>
     </release>

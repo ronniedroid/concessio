@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 23:17+0300\n"
-"PO-Revision-Date: 2024-08-27 22:33+0200\n"
+"POT-Creation-Date: 2024-08-29 13:00+0300\n"
+"PO-Revision-Date: 2024-08-29 13:01+0300\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
-"Language-Team: Albano Battistella \n"
+"Language-Team: Albano Battistella\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.3\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: data/ui/BoxedList.ui:12 data/ui/HelpDialog.ui:67
 msgid "User"
@@ -154,7 +154,7 @@ msgstr "Prime tre posizioni (dopo il tipo di file)"
 #: data/ui/HelpDialog.ui:190
 msgid ""
 "The read, write and execute permissions for the user, here we have 'rwx', "
-"which translated to 4+2+1 and adds to 7 "
+"which translated to 4+2+1 and adds to 7"
 msgstr ""
 "I permessi di lettura, scrittura ed esecuzione per l'utente, qui abbiamo "
 "'rwx', che tradotto è 4+2+1 e aggiunge 7"
@@ -166,7 +166,7 @@ msgstr "Seconde tre posizioni"
 #: data/ui/HelpDialog.ui:196
 msgid ""
 "The read, write and execute permissions for the group, here we have 'r-x', "
-"which translated to 4+0+1 and adds to 5 "
+"which translated to 4+0+1 and adds to 5"
 msgstr ""
 "I permessi di lettura, scrittura ed esecuzione per il gruppo, qui abbiamo 'r-"
 "x', che tradotto è 4+0+1 e aggiunge 5"
@@ -178,7 +178,7 @@ msgstr "Ultime tre posizioni"
 #: data/ui/HelpDialog.ui:202
 msgid ""
 "The read, write and execute permissions for other users, here we have 'r--', "
-"which translated to 4+0+0 and adds to 4 "
+"which translated to 4+0+0 and adds to 4"
 msgstr ""
 "I permessi di lettura, scrittura ed esecuzione per gli altri utenti, qui "
 "abbiamo 'r--', che tradotto è 4+0+0 e aggiunge 4"
@@ -207,8 +207,8 @@ msgid "Get started"
 msgstr "Iniziare"
 
 #: data/ui/Window.ui:87
-msgid "open"
-msgstr "apri"
+msgid "Open"
+msgstr "Apri file"
 
 #: data/ui/Window.ui:96
 msgid "Main Menu"
@@ -270,25 +270,54 @@ msgstr ""
 "Concessio ti aiuta a comprendere e convertire tra le rappresentazioni dei "
 "permessi Unix"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:24
+#: data/io.github.ronniedroid.concessio.metainfo.xml:13
+msgid ""
+"Convert between symbolic and numeric representations of UNIX file permissions"
+msgstr ""
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:14
+msgid "Use toggle buttons to update the symbolic and numeric fields"
+msgstr ""
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:15
+msgid "Open a file to read it's permissions and convert them"
+msgstr ""
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:16
+msgid "Open the help dialog to read and understand the UNIX permissions system"
+msgstr ""
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:30
 msgid ""
 "Application main page converting between numeric and symbolic permission"
 msgstr ""
 "Pagina principale dell'applicazione che converte tra autorizzazione numerica "
 "e simbolica"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:28
+#: data/io.github.ronniedroid.concessio.metainfo.xml:34
 msgid "Application help page, explaining unix permissions"
 msgstr "Pagina di aiuto dell'applicazione, che spiega i permessi Unix"
 
-#: src/application.js:85
+#: data/io.github.ronniedroid.concessio.metainfo.xml:61
+msgid "Initial release"
+msgstr ""
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/application.js:84
+msgid "translator-credits"
+msgstr "Albano Battistella <albanobattistella@gmail.com>"
+
+#: src/application.js:87
 msgid "Special thanks to"
 msgstr "Ringraziamenti speciali a"
 
-#: src/window.js:116
+#: src/window.js:119
 msgid "Copied to clipboard!"
 msgstr "Copiato negli appunti!"
 
-#: src/window.js:137
+#: src/window.js:140
 msgid "Failed to open file."
 msgstr "Impossibile aprire il file."
+
+#~ msgid "open"
+#~ msgstr "apri"

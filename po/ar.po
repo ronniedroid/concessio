@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 23:17+0300\n"
-"PO-Revision-Date: 2024-08-23 11:53+0300\n"
+"POT-Creation-Date: 2024-08-29 13:00+0300\n"
+"PO-Revision-Date: 2024-08-29 13:01+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ar\n"
@@ -148,10 +148,10 @@ msgstr "المواضغ الثلاثة الأولى (بعد نوع الملف)"
 #: data/ui/HelpDialog.ui:190
 msgid ""
 "The read, write and execute permissions for the user, here we have 'rwx', "
-"which translated to 4+2+1 and adds to 7 "
+"which translated to 4+2+1 and adds to 7"
 msgstr ""
 "صلاحيات القراءة والكتابة والتنفيذ للمستخدم، هنا لدينا 'rwx'، والتي تترجم إلى "
-"4+2+1 وتساوي 7 "
+"4+2+1 وتساوي 7"
 
 #: data/ui/HelpDialog.ui:195
 msgid "Second three positions"
@@ -160,10 +160,10 @@ msgstr "الواضع الثلالثة الثانية"
 #: data/ui/HelpDialog.ui:196
 msgid ""
 "The read, write and execute permissions for the group, here we have 'r-x', "
-"which translated to 4+0+1 and adds to 5 "
+"which translated to 4+0+1 and adds to 5"
 msgstr ""
 "صلاحيات القراءة والكتابة والتنفيذ للمجموعة، هنا لدينا 'r-x'، والتي تترجم إلى "
-"4+0+1 وتساوي 5 "
+"4+0+1 وتساوي 5"
 
 #: data/ui/HelpDialog.ui:201
 msgid "Last three positions"
@@ -172,10 +172,10 @@ msgstr "المواضع الثلاثة الأخيرة"
 #: data/ui/HelpDialog.ui:202
 msgid ""
 "The read, write and execute permissions for other users, here we have 'r--', "
-"which translated to 4+0+0 and adds to 4 "
+"which translated to 4+0+0 and adds to 4"
 msgstr ""
 "صلاحيات القراءة والكتابة والتنفيذ للمستخدمين الآخرين، هنا لدينا 'r--'، والتي "
-"تترجم إلى 4+0+0 وتساوي 4 "
+"تترجم إلى 4+0+0 وتساوي 4"
 
 #: data/ui/HelpDialog.ui:210
 msgid "Example command"
@@ -201,8 +201,8 @@ msgid "Get started"
 msgstr "ابدأ الاَن"
 
 #: data/ui/Window.ui:87
-msgid "open"
-msgstr "فتح"
+msgid "Open"
+msgstr "فتح الملف"
 
 #: data/ui/Window.ui:96
 msgid "Main Menu"
@@ -262,26 +262,55 @@ msgid ""
 "representations"
 msgstr "يساعدك كونسيسيو على فهم و التحويل بين تمثيلات صلاحيات اليونكس"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:24
+#: data/io.github.ronniedroid.concessio.metainfo.xml:13
+msgid ""
+"Convert between symbolic and numeric representations of UNIX file permissions"
+msgstr "التحويل بين التمثيلات الرمزية والعددية لصلاحيات ملفات اليونكس"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:14
+msgid "Use toggle buttons to update the symbolic and numeric fields"
+msgstr "استخدم أزرار التبديل لتحديث الحقول الرمزية والعددية"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:15
+msgid "Open a file to read it's permissions and convert them"
+msgstr "افتح ملفًا لقراءة صلاحياته وتحويلها"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:16
+msgid "Open the help dialog to read and understand the UNIX permissions system"
+msgstr "افتح مربع حوار المساعدة لقراءة وفهم نظام صلاحيات اليونكس"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:30
 msgid ""
 "Application main page converting between numeric and symbolic permission"
 msgstr "صفحة التطبيق الرئيسية للتحويل بين الصلاحيات الرمزية و الرقمية"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:28
+#: data/io.github.ronniedroid.concessio.metainfo.xml:34
 msgid "Application help page, explaining unix permissions"
 msgstr "صفحة المساعدة للتطبيق, شرح صلاحيات يونكس"
 
-#: src/application.js:85
+#: data/io.github.ronniedroid.concessio.metainfo.xml:61
+msgid "Initial release"
+msgstr ""
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/application.js:84
+msgid "translator-credits"
+msgstr "روني نيسان https://github.com/ronniedroid/"
+
+#: src/application.js:87
 msgid "Special thanks to"
 msgstr "شكر خاص ل"
 
-#: src/window.js:116
+#: src/window.js:119
 msgid "Copied to clipboard!"
 msgstr "تم النسخ إلى الحافظة!"
 
-#: src/window.js:137
+#: src/window.js:140
 msgid "Failed to open file."
 msgstr "فشل في فتح الملف."
+
+#~ msgid "open"
+#~ msgstr "فتح"
 
 #~ msgid "GNOME Desgin Team"
 #~ msgstr "فريق التصميم جنوم"
