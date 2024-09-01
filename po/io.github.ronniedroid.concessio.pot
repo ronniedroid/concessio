@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-01 12:17+0300\n"
+"POT-Creation-Date: 2024-09-01 14:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -275,6 +275,18 @@ msgstr ""
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:34
 msgid "Application help page, explaining unix permissions"
+msgstr ""
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:62
+msgid "Added Italian translation by Albano Battistella"
+msgstr ""
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:63
+msgid "Minor fixed and changes"
+msgstr ""
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:69
+msgid "Initial release"
 msgstr ""
 
 #. Translators: Replace "translator-credits" with your names, one name per line
