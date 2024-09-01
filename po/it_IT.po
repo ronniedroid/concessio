@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-29 13:00+0300\n"
+"POT-Creation-Date: 2024-09-01 12:17+0300\n"
 "PO-Revision-Date: 2024-08-29 13:01+0300\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Albano Battistella\n"
@@ -273,11 +273,14 @@ msgstr ""
 msgid ""
 "Convert between symbolic and numeric representations of UNIX file permissions"
 msgstr ""
-"Converti tra rappresentazioni simboliche e numeriche dei permessi dei file UNIX"
+"Converti tra rappresentazioni simboliche e numeriche dei permessi dei file "
+"UNIX"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:14
 msgid "Use toggle buttons to update the symbolic and numeric fields"
-msgstr "Utilizzare i pulsanti di attivazione per aggiornare i campi simbolici e numerici"
+msgstr ""
+"Utilizzare i pulsanti di attivazione per aggiornare i campi simbolici e "
+"numerici"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:15
 msgid "Open a file to read it's permissions and convert them"
@@ -285,7 +288,9 @@ msgstr "Aprire un file per leggerne i permessi e convertirli"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:16
 msgid "Open the help dialog to read and understand the UNIX permissions system"
-msgstr "Aprire la finestra di dialogo della guida per leggere e comprendere il sistema di autorizzazioni UNIX"
+msgstr ""
+"Aprire la finestra di dialogo della guida per leggere e comprendere il "
+"sistema di autorizzazioni UNIX"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:30
 msgid ""
@@ -297,10 +302,6 @@ msgstr ""
 #: data/io.github.ronniedroid.concessio.metainfo.xml:34
 msgid "Application help page, explaining unix permissions"
 msgstr "Pagina di aiuto dell'applicazione, che spiega i permessi Unix"
-
-#: data/io.github.ronniedroid.concessio.metainfo.xml:61
-msgid "Initial release"
-msgstr "Versione iniziale"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.js:84
