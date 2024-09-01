@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-01 14:33+0300\n"
-"PO-Revision-Date: 2024-08-29 13:01+0300\n"
+"PO-Revision-Date: 2024-09-01 19:49+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ar\n"
@@ -287,18 +287,6 @@ msgstr "صفحة التطبيق الرئيسية للتحويل بين الصل�
 #: data/io.github.ronniedroid.concessio.metainfo.xml:34
 msgid "Application help page, explaining unix permissions"
 msgstr "صفحة المساعدة للتطبيق, شرح صلاحيات يونكس"
-
-#: data/io.github.ronniedroid.concessio.metainfo.xml:62
-msgid "Added Italian translation by Albano Battistella"
-msgstr ""
-
-#: data/io.github.ronniedroid.concessio.metainfo.xml:63
-msgid "Minor fixed and changes"
-msgstr ""
-
-#: data/io.github.ronniedroid.concessio.metainfo.xml:69
-msgid "Initial release"
-msgstr ""
 
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.js:84
