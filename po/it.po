@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-01 14:33+0300\n"
-"PO-Revision-Date: 2024-09-01 14:28+0300\n"
+"PO-Revision-Date: 2024-09-01 14:28+0100\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Albano Battistella\n"
 "Language: it_IT\n"
@@ -223,7 +223,7 @@ msgstr "Informazioni"
 
 #: data/ui/ShortcutsWindow.ui:8
 msgid "File"
-msgstr "FIle"
+msgstr "File"
 
 #: data/ui/ShortcutsWindow.ui:11
 msgid "Open File"
@@ -309,11 +309,11 @@ msgstr ""
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:63
 msgid "Minor fixed and changes"
-msgstr ""
+msgstr "Piccole correzioni e modifiche"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:69
 msgid "Initial release"
-msgstr ""
+msgstr "Versione iniziale"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.js:84
