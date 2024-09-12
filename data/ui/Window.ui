@@ -24,7 +24,7 @@
                     </child>
                     <property name="content">
                       <object class="AdwClamp">
-                        <property name="maximum-size">320</property>
+                        <property name="maximum-size">450</property>
                         <child>
                           <object class="GtkBox">
                             <property name="orientation">vertical</property>
@@ -103,7 +103,7 @@
                     </child>
                     <property name="content">
                       <object class="AdwClamp">
-                        <property name="maximum-size">320</property>
+                        <property name="maximum-size">450</property>
                         <child>
                           <object class="GtkBox">
                             <property name="halign">3</property>

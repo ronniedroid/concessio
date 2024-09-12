@@ -33,7 +33,7 @@ export const CncWindow = GObject.registerClass({
     }
 
     #setupActions() {
-        ['u1', 'u2', 'u4', 'g1', 'g2', 'g4', 'o1', 'o2', 'o4'].forEach(id => {
+        ['u1', 'u2', 'u4', 'g1', 'g2', 'g4', 'o1', 'o2', 'o4', 'suid', 'sgid', 'sticky'].forEach(id => {
             const action = new Gio.SimpleAction({name: id, state: GLib.Variant.new_boolean(false)});
             action.connect('notify::state', (act) => {
                 this._onButtonToggleAction(act);
@@ -78,7 +78,7 @@ export const CncWindow = GObject.registerClass({
             if (this._form._validateSymbolic(symbolicValue)) {
                 const numericValue = symbolicToNumeric(symbolicValue);
                 this._form._numeric.set_text(numericValue);
-//                this._boxedList.updateFromSymbolic(symbolicValue);
+                this._boxedList.updateFromSymbolic(symbolicValue);
             } else {
                 this._form._symbolic.add_css_class("error");
             }
@@ -89,7 +89,7 @@ export const CncWindow = GObject.registerClass({
             if (this._form._validateNumeric(numericValue)) {
                 const symbolicValue = numericToSymbolic(numericValue);
                 this._form._symbolic.set_text(symbolicValue);
-//                this._boxedList.updateFromSymbolic(symbolicValue);
+                this._boxedList.updateFromSymbolic(symbolicValue);
             } else {
                 this._form._numeric.add_css_class("error");
             }
@@ -99,8 +99,8 @@ export const CncWindow = GObject.registerClass({
     _onButtonToggleAction(act) {
         const button = this._boxedList[`_${act.name}`];
 
-        if (button.active !== act.state.unpack()) {
-            button.active = act.state.unpack();
+        if (button.get_active() !== act.state.unpack()) {
+            button.set_active(act.state.unpack());
         }
 
         button.connect('toggled', () => {
@@ -157,7 +157,7 @@ export const CncWindow = GObject.registerClass({
 });
 
 function symbolicToNumeric(symbolic) {
-    const permMap = { 'r': 4, 's': 1, 'S': 0, 'w': 2, 'x': 1, '-': 0, 't': 1 };
+    const permMap = { 'r': 4, 'w': 2, 'x': 1, '-': 0, 's': 1, 'S': 0, 't': 1, 'T': 0 };
     let suid = 0, sgid = 0, sticky = 0;
 
     if (symbolic[2] === 's') suid = 4;
@@ -165,6 +165,7 @@ function symbolicToNumeric(symbolic) {
     if (symbolic[5] === 's') sgid = 2;
     if (symbolic[5] === 'S') sgid = 2;
     if (symbolic[8] === 't') sticky = 1;
+    if (symbolic[8] === 'T') sticky = 1;
 
     const specialBits = suid + sgid + sticky;
 
@@ -191,19 +192,20 @@ function numericToSymbolic(numeric) {
     const symbolic = perms
         .split('')
         .map(digit => permMap[parseInt(digit)])
-        .join('');
+          .join('');
 
     let symbolicWithSpecial = symbolic.split('');
-    // Check for SUID (4) and whether user has execute permission (1, 5, or 7)
     if (specialBits & 4) {
-        symbolicWithSpecial[2] = (perms[0] === '1' || perms[0] === '5' || perms[0] === '7') ? 's' : 'S'; // user execute
+        symbolicWithSpecial[2] = (perms[0] === '1' || perms[0] === '3' || perms[0] === '5' || perms[0] === '7') ? 's' : 'S';
     }
 
-    // Check for SGID (2) and whether group has execute permission (1, 5, or 7)
-    if (specialBits & 2) {
-        symbolicWithSpecial[5] = (perms[1] === '1' || perms[1] === '5' || perms[1] === '7') ? 's' : 'S'; // group execute
+    if (specialBits & 2 ) {
+        symbolicWithSpecial[5] = (perms[1] === '1' || perms[1] === '3' || perms[1] === '5' || perms[1] === '7') ? 's' : 'S';
     }
-    if (specialBits & 1) symbolicWithSpecial[8] = 't';
+
+    if (specialBits & 1) {
+        symbolicWithSpecial[8] = (perms[2] === '1' || perms[2] === '3' || perms[2] === '5' || perms[2] === '7') ? 't' : 'T';
+    }
 
     return symbolicWithSpecial.join('');
 }

@@ -59,6 +59,17 @@
                     </child>
                   </object>
                 </child>
+                <child>
+                  <object class="GtkToggleButton" id="suid">
+                    <property name="action-name">win.suid</property>
+                    <property name="valign">3</property>
+                    <property name="label">SUID</property>
+                    <property name="tooltip-text" translatable="true">SUID</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
+                  </object>
+                </child>
               </object>
             </child>
           </object>
@@ -113,6 +124,17 @@
                         <property name="icon-name">concessio-execute-symbolic</property>
                       </object>
                     </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkToggleButton" id="sgid">
+                    <property name="action-name">win.sgid</property>
+                    <property name="valign">3</property>
+                    <property name="label">SGID</property>
+                    <property name="tooltip-text" translatable="true">SGID</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
                   </object>
                 </child>
               </object>
@@ -171,48 +193,12 @@
                     </child>
                   </object>
                 </child>
-              </object>
-            </child>
-          </object>
-        </child>
-        <child>
-          <object class="AdwActionRow">
-            <property name="title" translatable="true">Special</property>
-            <child type="suffix">
-              <object class="GtkBox">
-                <property name="orientation">horizontal</property>
-                <property name="spacing">12</property>
                 <child>
-                  <object class="GtkToggleButton" id="s4">
-                    <property name="action-name">win.s4</property>
+                  <object class="GtkToggleButton" id="sticky">
+                    <property name="action-name">win.sticky</property>
                     <property name="valign">3</property>
-                    <property name="halign">3</property>
-                    <property name="label">U</property>
-                    <property name="tooltip-text">SUID</property>
-                    <style>
-                      <class name="flat" />
-                    </style>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkToggleButton" id="s2">
-                    <property name="action-name">win.s2</property>
-                    <property name="valign">3</property>
-                    <property name="halign">3</property>
-                    <property name="label">G</property>
-                    <property name="tooltip-text">SGID</property>
-                    <style>
-                      <class name="flat" />
-                    </style>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkToggleButton" id="21">
-                    <property name="action-name">win.s1</property>
-                    <property name="valign">3</property>
-                    <property name="halign">3</property>
-                    <property name="label">T</property>
-                    <property name="tooltip-text">Sticky bit</property>
+                    <property name="label">Sticky</property>
+                    <property name="tooltip-text" translatable="true">Sticky Bit</property>
                     <style>
                       <class name="flat" />
                     </style>

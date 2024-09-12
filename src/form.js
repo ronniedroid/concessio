@@ -11,7 +11,7 @@ export const CncForm = GObject.registerClass({
     ]
 }, class extends Gtk.Widget {
     _validateSymbolic(symbolic) {
-        return symbolic.length === 9 && /^[r-][w-][xsS-][r-][w-][xsS-][r-][w-][xt-]$/.test(symbolic);
+        return symbolic.length === 9 && /^[r-][w-][xsS-][r-][w-][xsS-][r-][w-][xtT-]$/.test(symbolic);
     }
 
     _validateNumeric(numeric) {
