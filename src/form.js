@@ -1,7 +1,5 @@
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
-import Gdk from 'gi://Gdk';
-import Adw from 'gi://Adw';
 import GLib from 'gi://GLib';
 
 export const CncForm = GObject.registerClass({
@@ -13,11 +11,11 @@ export const CncForm = GObject.registerClass({
     ]
 }, class extends Gtk.Widget {
     _validateSymbolic(symbolic) {
-        return symbolic.length === 9 && /^[r-][w-][x-][r-][w-][x-][r-][w-][x-]$/.test(symbolic);
+        return symbolic.length === 9 && /^[r-][w-][xsS-][r-][w-][xsS-][r-][w-][xt-]$/.test(symbolic);
     }
 
     _validateNumeric(numeric) {
-        return numeric.length === 3 && /^[0-7]+$/.test(numeric);
+        return (numeric.length === 3 || numeric.length === 4) && /^[0-7]+$/.test(numeric);
     }
 
     _removeErrorClass(_entry) {

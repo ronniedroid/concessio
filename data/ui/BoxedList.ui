@@ -175,6 +175,53 @@
             </child>
           </object>
         </child>
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="true">Special</property>
+            <child type="suffix">
+              <object class="GtkBox">
+                <property name="orientation">horizontal</property>
+                <property name="spacing">12</property>
+                <child>
+                  <object class="GtkToggleButton" id="s4">
+                    <property name="action-name">win.s4</property>
+                    <property name="valign">3</property>
+                    <property name="halign">3</property>
+                    <property name="label">U</property>
+                    <property name="tooltip-text">SUID</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkToggleButton" id="s2">
+                    <property name="action-name">win.s2</property>
+                    <property name="valign">3</property>
+                    <property name="halign">3</property>
+                    <property name="label">G</property>
+                    <property name="tooltip-text">SGID</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkToggleButton" id="21">
+                    <property name="action-name">win.s1</property>
+                    <property name="valign">3</property>
+                    <property name="halign">3</property>
+                    <property name="label">T</property>
+                    <property name="tooltip-text">Sticky bit</property>
+                    <style>
+                      <class name="flat" />
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
       </object>
     </child>
   </template>

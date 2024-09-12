@@ -78,7 +78,7 @@ export const CncWindow = GObject.registerClass({
             if (this._form._validateSymbolic(symbolicValue)) {
                 const numericValue = symbolicToNumeric(symbolicValue);
                 this._form._numeric.set_text(numericValue);
-                this._boxedList.updateFromSymbolic(symbolicValue);
+//                this._boxedList.updateFromSymbolic(symbolicValue);
             } else {
                 this._form._symbolic.add_css_class("error");
             }
@@ -89,7 +89,7 @@ export const CncWindow = GObject.registerClass({
             if (this._form._validateNumeric(numericValue)) {
                 const symbolicValue = numericToSymbolic(numericValue);
                 this._form._symbolic.set_text(symbolicValue);
-                this._boxedList.updateFromSymbolic(symbolicValue);
+//                this._boxedList.updateFromSymbolic(symbolicValue);
             } else {
                 this._form._numeric.add_css_class("error");
             }
@@ -157,28 +157,57 @@ export const CncWindow = GObject.registerClass({
 });
 
 function symbolicToNumeric(symbolic) {
-        const permMap = { 'r': 4, 'w': 2, 'x': 1, '-': 0 };
+    const permMap = { 'r': 4, 's': 1, 'S': 0, 'w': 2, 'x': 1, '-': 0, 't': 1 };
+    let suid = 0, sgid = 0, sticky = 0;
 
-        return symbolic
-            .split('')
-            .map(char => permMap[char])
-            .reduce((acc, curr, idx) => {
-                if (idx % 3 === 0) acc.push(0);
-                acc[acc.length - 1] += curr;
-                return acc;
-            }, [])
-            .join('');
-    };
+    if (symbolic[2] === 's') suid = 4;
+    if (symbolic[2] === 'S') suid = 4;
+    if (symbolic[5] === 's') sgid = 2;
+    if (symbolic[5] === 'S') sgid = 2;
+    if (symbolic[8] === 't') sticky = 1;
+
+    const specialBits = suid + sgid + sticky;
+
+    const numeric = symbolic
+        .slice(0, 9)
+        .split('')
+        .map(char => permMap[char])
+        .reduce((acc, curr, idx) => {
+            if (idx % 3 === 0) acc.push(0);
+            acc[acc.length - 1] += curr;
+            return acc;
+        }, [])
+        .join('');
+
+    return specialBits.toString() + numeric;
+}
 
 function numericToSymbolic(numeric) {
-        const permMap = ['---', '--x', '-w-', '-wx', 'r--', 'r-x', 'rw-', 'rwx'];
+    const permMap = ['---', '--x', '-w-', '-wx', 'r--', 'r-x', 'rw-', 'rwx'];
 
-        return numeric
-            .toString()
-            .split('')
-            .map(digit => permMap[parseInt(digit)])
-            .join('');
-};
+    const specialBits = numeric.length === 4 ? numeric[0] : '0';
+    const perms = numeric.slice(-3);
+
+    const symbolic = perms
+        .split('')
+        .map(digit => permMap[parseInt(digit)])
+        .join('');
+
+    let symbolicWithSpecial = symbolic.split('');
+    // Check for SUID (4) and whether user has execute permission (1, 5, or 7)
+    if (specialBits & 4) {
+        symbolicWithSpecial[2] = (perms[0] === '1' || perms[0] === '5' || perms[0] === '7') ? 's' : 'S'; // user execute
+    }
+
+    // Check for SGID (2) and whether group has execute permission (1, 5, or 7)
+    if (specialBits & 2) {
+        symbolicWithSpecial[5] = (perms[1] === '1' || perms[1] === '5' || perms[1] === '7') ? 's' : 'S'; // group execute
+    }
+    if (specialBits & 1) symbolicWithSpecial[8] = 't';
+
+    return symbolicWithSpecial.join('');
+}
+
 
 function getFilePermission(file) {
   const info = file.query_info("unix::mode", Gio.FileQueryInfoFlags.NONE, null);
