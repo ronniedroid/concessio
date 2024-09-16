@@ -33,10 +33,18 @@ export const CncWindow = GObject.registerClass({
     }
 
     #setupActions() {
-        ['u1', 'u2', 'u4', 'g1', 'g2', 'g4', 'o1', 'o2', 'o4', 'suid', 'sgid', 'sticky'].forEach(id => {
+        ['u1', 'u2', 'u4', 'g1', 'g2', 'g4', 'o1', 'o2', 'o4'].forEach(id => {
             const action = new Gio.SimpleAction({name: id, state: GLib.Variant.new_boolean(false)});
             action.connect('notify::state', (act) => {
                 this._onButtonToggleAction(act);
+            });
+            this.add_action(action);
+        });
+
+        ['suid', 'sgid', 'sticky'].forEach(id => {
+            const action = new Gio.SimpleAction({name: id, state: GLib.Variant.new_boolean(false)});
+            action.connect('notify::state', (act) => {
+                this._onSwitchToggleAction(act);
             });
             this.add_action(action);
         });
@@ -110,6 +118,20 @@ export const CncWindow = GObject.registerClass({
         this._updateFormValues(this._boxedList.getSymbolicValue());
     }
 
+    _onSwitchToggleAction(act) {
+        const switchButton = this._boxedList[`_${act.name}`];
+
+        if (switchButton.get_active() !== act.state.unpack()) {
+            switchButton.set_active(act.state.unpack());
+        }
+
+        switchButton.connect('notify::active', () => {
+            act.set_state(GLib.Variant.new_boolean(switchButton.active));
+        });
+
+        this._updateFormValues(this._boxedList.getSymbolicValue());
+    }
+
     _copyToClipboard(text) {
         const display = Gdk.Display.get_default();
         const clipboard = display.get_clipboard();
@@ -180,7 +202,7 @@ function symbolicToNumeric(symbolic) {
         }, [])
         .join('');
 
-    return specialBits.toString() + numeric;
+    return specialBits === 0 ? numeric : specialBits.toString() + numeric;
 }
 
 function numericToSymbolic(numeric) {

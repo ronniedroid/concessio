@@ -17,7 +17,7 @@
     </ul>
   </description>
 
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
 
   <branding>
     <color type="primary" scheme_preference="light">#8ff0a4</color>
@@ -56,6 +56,11 @@
   <url type="bugtracker">https://github.com/ronniedroid/concessio/issues</url>
 
   <releases>
+      <release version="v0.1.5" date="2024-09-18">
+      <description translate="no">
+          <p>Added support for linux special permissions, SUID, SGID and Sticky bit</p>
+      </description>
+    </release>
     <release version="v0.1.4" date="2024-09-01">
       <description translate="no">
         <ul>
@@ -71,3 +76,4 @@
     </release>
   </releases>
 </component>
+

@@ -20,7 +20,7 @@
                     <property name="valign">3</property>
                     <property name="tooltip-text" translatable="true">Read</property>
                     <style>
-                      <class name="flat" />
+                      <class name="flat"/>
                     </style>
                     <child>
                       <object class="GtkImage">
@@ -35,7 +35,7 @@
                     <property name="valign">3</property>
                     <property name="tooltip-text" translatable="true">Write</property>
                     <style>
-                      <class name="flat" />
+                      <class name="flat"/>
                     </style>
                     <child>
                       <object class="GtkImage">
@@ -50,7 +50,7 @@
                     <property name="valign">3</property>
                     <property name="tooltip-text" translatable="true">Execute</property>
                     <style>
-                      <class name="flat" />
+                      <class name="flat"/>
                     </style>
                     <child>
                       <object class="GtkImage">
@@ -60,13 +60,14 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkToggleButton" id="suid">
-                    <property name="action-name">win.suid</property>
+                  <object class="GtkMenuButton" id="suidMenu">
+                    <property name="popover">suidPopover</property>
                     <property name="valign">3</property>
-                    <property name="label">SUID</property>
-                    <property name="tooltip-text" translatable="true">SUID</property>
+                    <property name="halign">3</property>
+                    <property name="label">u+s</property>
+                    <property name="tooltip-text">SUID</property>
                     <style>
-                      <class name="flat" />
+                      <class name="flat"/>
                     </style>
                   </object>
                 </child>
@@ -87,7 +88,7 @@
                     <property name="valign">3</property>
                     <property name="tooltip-text" translatable="true">Read</property>
                     <style>
-                      <class name="flat" />
+                      <class name="flat"/>
                     </style>
                     <child>
                       <object class="GtkImage">
@@ -102,7 +103,7 @@
                     <property name="valign">3</property>
                     <property name="tooltip-text" translatable="true">Write</property>
                     <style>
-                      <class name="flat" />
+                      <class name="flat"/>
                     </style>
                     <child>
                       <object class="GtkImage">
@@ -117,7 +118,7 @@
                     <property name="valign">3</property>
                     <property name="tooltip-text" translatable="true">Execute</property>
                     <style>
-                      <class name="flat" />
+                      <class name="flat"/>
                     </style>
                     <child>
                       <object class="GtkImage">
@@ -127,13 +128,14 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkToggleButton" id="sgid">
-                    <property name="action-name">win.sgid</property>
+                  <object class="GtkMenuButton" id="sgidMenu">
+                    <property name="popover">sgidPopover</property>
                     <property name="valign">3</property>
-                    <property name="label">SGID</property>
-                    <property name="tooltip-text" translatable="true">SGID</property>
+                    <property name="halign">3</property>
+                    <property name="label">g+s</property>
+                    <property name="tooltip-text">SGID</property>
                     <style>
-                      <class name="flat" />
+                      <class name="flat"/>
                     </style>
                   </object>
                 </child>
@@ -154,7 +156,7 @@
                     <property name="valign">3</property>
                     <property name="tooltip-text" translatable="true">Read</property>
                     <style>
-                      <class name="flat" />
+                      <class name="flat"/>
                     </style>
                     <child>
                       <object class="GtkImage">
@@ -169,7 +171,7 @@
                     <property name="valign">3</property>
                     <property name="tooltip-text" translatable="true">Write</property>
                     <style>
-                      <class name="flat" />
+                      <class name="flat"/>
                     </style>
                     <child>
                       <object class="GtkImage">
@@ -184,7 +186,7 @@
                     <property name="valign">3</property>
                     <property name="tooltip-text" translatable="true">Execute</property>
                     <style>
-                      <class name="flat" />
+                      <class name="flat"/>
                     </style>
                     <child>
                       <object class="GtkImage">
@@ -194,13 +196,14 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkToggleButton" id="sticky">
-                    <property name="action-name">win.sticky</property>
+                  <object class="GtkMenuButton" id="stickyMenu">
+                    <property name="popover">stickyPopover</property>
                     <property name="valign">3</property>
-                    <property name="label">Sticky</property>
-                    <property name="tooltip-text" translatable="true">Sticky Bit</property>
+                    <property name="halign">3</property>
+                    <property name="label">o+t</property>
+                    <property name="tooltip-text">Sticky bit</property>
                     <style>
-                      <class name="flat" />
+                      <class name="flat"/>
                     </style>
                   </object>
                 </child>
@@ -210,5 +213,136 @@
         </child>
       </object>
     </child>
+    <object class="GtkPopover" id="suidPopover">
+      <property name="has-arrow">true</property>
+      <property name="name">suidPopover</property>
+      <property name="child">
+        <object class="AdwClamp">
+          <property name="maximum-size">200</property>
+          <child>
+            <object class="GtkBox">
+              <property name="orientation">vertical</property>
+              <property name="spacing">12</property>
+              <property name="halign">3</property>
+              <property name="margin-top">24</property>
+              <property name="margin-start">12</property>
+              <property name="margin-end">12</property>
+              <property name="margin-bottom">24</property>
+              <child>
+                <object class="GtkLabel">
+                  <property name="label">SUID</property>
+                  <style>
+                    <class name="title-1"/>
+                  </style>
+                </object>
+              </child>
+              <child>
+                <object class="GtkSwitch" id="suid">
+                  <property name="halign">3</property>
+                    <property name="action-name">win.suid</property>
+                </object>
+              </child>
+              <child>
+                <object class="GtkLabel">
+                  <property name="label" translatable="true">Executes the file with the permissions of the file owner, not the user running it.</property>
+                  <property name="wrap">true</property>
+                  <property name="justify">center</property>
+                </object>
+              </child>
+            </object>
+          </child>
+        </object>
+      </property>
+    </object>
+    <object class="GtkPopover" id="sgidPopover">
+      <property name="has-arrow">true</property>
+      <property name="name">sgidPopover</property>
+      <property name="child">
+        <object class="AdwClamp">
+          <property name="maximum-size">200</property>
+          <child>
+            <object class="GtkBox">
+              <property name="orientation">vertical</property>
+              <property name="spacing">12</property>
+              <property name="halign">3</property>
+              <property name="margin-top">24</property>
+              <property name="margin-start">12</property>
+              <property name="margin-end">12</property>
+              <property name="margin-bottom">24</property>
+              <child>
+                <object class="GtkLabel">
+                  <property name="label">SGID</property>
+                  <style>
+                    <class name="title-1"/>
+                  </style>
+                </object>
+              </child>
+              <child>
+                <object class="GtkSwitch" id="sgid">
+                  <property name="halign">3</property>
+                  <property name="action-name">win.sgid</property>
+                </object>
+              </child>
+              <child>
+                <object class="GtkLabel">
+                  <property name="label" translatable="true">Executes the file with the permissions of the file's group, or ensures new files in a directory inherit the group.</property>
+                  <property name="wrap">true</property>
+                  <property name="justify">center</property>
+                </object>
+              </child>
+            </object>
+          </child>
+        </object>
+      </property>
+    </object>
+    <object class="GtkPopover" id="stickyPopover">
+      <property name="has-arrow">true</property>
+      <property name="name">stickyPopover</property>
+      <property name="child">
+        <object class="AdwClamp">
+          <property name="maximum-size">200</property>
+          <child>
+            <object class="GtkBox">
+              <property name="orientation">vertical</property>
+              <property name="spacing">12</property>
+              <property name="halign">3</property>
+              <property name="margin-top">24</property>
+              <property name="margin-start">12</property>
+              <property name="margin-end">12</property>
+              <property name="margin-bottom">24</property>
+              <child>
+                <object class="GtkLabel">
+                  <property name="label">Sticky bit</property>
+                  <style>
+                    <class name="title-1"/>
+                  </style>
+                </object>
+              </child>
+              <child>
+                <object class="GtkSwitch" id="sticky">
+                  <property name="halign">3</property>
+                  <property name="action-name">win.sticky</property>
+                </object>
+              </child>
+              <child>
+                <object class="GtkLabel">
+                  <property name="label" translatable="true">Allows only the file owner or directory owner to delete files in the directory, even if others have write permissions.</property>
+                  <property name="wrap">true</property>
+                  <property name="justify">center</property>
+                </object>
+              </child>
+              <child>
+                <object class="GtkLabel">
+                  <property name="label" translatable="true">Only applies to directories and has no effect on files.</property>
+                  <property name="wrap">true</property>
+                  <property name="justify">center</property>
+                </object>
+              </child>
+            </object>
+          </child>
+        </object>
+      </property>
+    </object>
   </template>
 </interface>
+

@@ -1,0 +1,12 @@
+[default]
+name=Default
+runtime=flatpak:org.gnome.Platform/x86_64/46
+toolchain=default
+config-opts=
+run-opts=
+prefix=/app
+app-id=io.github.ronniedroid.concessio
+postbuild=
+prebuild=
+run-command=io.github.ronniedroid.concessio
+default=true
