@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-17 15:39+0300\n"
-"PO-Revision-Date: 2024-09-01 19:48+0300\n"
+"PO-Revision-Date: 2024-09-17 21:48+0100\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Albano Battistella\n"
 "Language: it_IT\n"
@@ -46,12 +46,16 @@ msgid ""
 "Executes the file with the permissions of the file owner, not the user "
 "running it."
 msgstr ""
+"Esegue il file con i permessi del proprietario del file, non dell'utente "
+"che lo sta eseguendo."
 
 #: data/ui/BoxedList.ui:288 data/ui/HelpDialog.ui:267
 msgid ""
 "Executes the file with the permissions of the file's group, or ensures new "
 "files in a directory inherit the group."
 msgstr ""
+"Esegue il file con i permessi del gruppo del file o assicura che i nuovi "
+"file in una directory ereditino il gruppo."
 
 #: data/ui/BoxedList.ui:329 data/ui/HelpDialog.ui:273
 msgid ""
@@ -59,6 +63,9 @@ msgid ""
 "directory, even if others have write permissions. Only applies to "
 "directories and has no effect on files."
 msgstr ""
+"Consente solo al proprietario del file o della directory di eliminare i file nella "
+"directory, anche se altri hanno permessi di scrittura. Si applica solo alle directory "
+"e non ha effetto sui file."
 
 #: data/ui/Form.ui:16
 msgid "Numeric"
@@ -210,9 +217,8 @@ msgid "chmod 754 (file name)"
 msgstr "chmod 754 (nome file)"
 
 #: data/ui/HelpDialog.ui:230
-#, fuzzy
 msgid "Special Permissions"
-msgstr "Permessi Unix"
+msgstr "Permessi speciali"
 
 #: data/ui/HelpDialog.ui:239
 msgid ""
@@ -220,83 +226,89 @@ msgid ""
 "group, and other, they allow for additional privileges over the standard "
 "permission sets"
 msgstr ""
+"I permessi speciali costituiscono un quarto livello di accesso oltre a utente, "
+"gruppo e altro, e consentono privilegi aggiuntivi rispetto ai set di permessi "
+"standard"
 
 #: data/ui/HelpDialog.ui:245
-#, fuzzy
 msgid "The three special permissions are:"
-msgstr "I tipi di permessi sono:"
+msgstr "I tre permessi speciali sono::"
 
 #: data/ui/HelpDialog.ui:281
 msgid "Special permissions can be represented symbolically or numerically."
-msgstr ""
+msgstr "I permessi speciali possono essere rappresentati simbolicamente o numericamente."
 
 #: data/ui/HelpDialog.ui:288
 msgid "Numeric representation:"
-msgstr ""
+msgstr "Rappresentazione numerica:"
 
 #: data/ui/HelpDialog.ui:298
 msgid ""
 "They are denoted as an extra digit before the user, group and others "
 "permissions. Can Either be 0, 4, 2, 1 or any combination of them."
 msgstr ""
+"Sono indicati come una cifra aggiuntiva prima dell'utente, del gruppo e degli altri "
+"permessi. Possono essere 0, 4, 2, 1 o una qualsiasi combinazione di essi."
 
 #: data/ui/HelpDialog.ui:308
 msgid "Symbolical representation:"
-msgstr ""
+msgstr "Rappresentazione simbolica:"
 
 #: data/ui/HelpDialog.ui:324
 msgid "Goes where 'x'' normally is for the user"
-msgstr ""
+msgstr "Va dove normalmente si trova 'x' per l'utente"
 
 #: data/ui/HelpDialog.ui:330
 msgid "Goes where 'x' normally is for the group"
-msgstr ""
+msgstr "Va dove normalmente c'è 'x' per il gruppo"
 
 #: data/ui/HelpDialog.ui:336
 msgid "Goes where 'x' normally is for others"
-msgstr ""
+msgstr "Va dove normalmente c'è "x" per gli altri"
 
 #: data/ui/HelpDialog.ui:344
-#, fuzzy
 msgid "Symbolic: -rwsr-Sr-t"
-msgstr "Simbolico: -rwxr-xr--"
+msgstr "Simbolico: --rwsr-Sr-t"
 
 #: data/ui/HelpDialog.ui:354
-#, fuzzy
 msgid "Numeric: 7745"
-msgstr "Numerico: 754"
+msgstr "Numerico: 7745"
 
 #: data/ui/HelpDialog.ui:370
 msgid ""
 "Represented as '4' numerically. Symbolically, it is either 's' if the owner "
 "has execute permissions or 'S' if not."
 msgstr ""
+"Rappresentato numericamente come '4'. Simbolicamente, è 's' se il proprietario "
+"ha i permessi di esecuzione o 'S' in caso contrario."
 
 #: data/ui/HelpDialog.ui:376
 msgid ""
 "Represented as '2' numerically. Symbolically, it is either 's' if the group "
 "has execute permissions or 'S' if not."
 msgstr ""
+"Rappresentato come '2' numericamente. Simbolicamente, è 's' se il gruppo "
+"ha permessi di esecuzione o 'S' in caso contrario."
 
 #: data/ui/HelpDialog.ui:382
 msgid ""
 "Represented as '1' numerically. Symbolically, it is either 't' if the others "
 "have execute permissions or 'T' if not."
 msgstr ""
+"Rappresentato come '1' numericamente. Simbolicamente, è 't' se gli altri "
+"hanno permessi di esecuzione o 'T' se non li hanno."
 
 #: data/ui/HelpDialog.ui:390
-#, fuzzy
 msgid "Example commands"
-msgstr "Comando di esempio"
+msgstr "Comandi di esempio"
 
 #: data/ui/HelpDialog.ui:399
-#, fuzzy
 msgid "chmod 7745 (file name)"
-msgstr "chmod 754 (nome file)"
+msgstr "chmod 7745 (nome file)"
 
 #: data/ui/HelpDialog.ui:409
 msgid "Further reading"
-msgstr ""
+msgstr "Ulteriore lettura"
 
 #: data/ui/Window.ui:4 data/ui/Window.ui:44
 #: data/io.github.ronniedroid.concessio.desktop:3
