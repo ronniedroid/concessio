@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-01 14:33+0300\n"
-"PO-Revision-Date: 2024-09-01 19:49+0300\n"
+"POT-Creation-Date: 2024-09-17 15:39+0300\n"
+"PO-Revision-Date: 2024-09-17 15:54+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ar\n"
@@ -21,25 +21,49 @@ msgstr ""
 msgid "User"
 msgstr "المستخدم"
 
-#: data/ui/BoxedList.ui:21 data/ui/BoxedList.ui:77 data/ui/BoxedList.ui:133
+#: data/ui/BoxedList.ui:21 data/ui/BoxedList.ui:89 data/ui/BoxedList.ui:157
 msgid "Read"
 msgstr "قراءة"
 
-#: data/ui/BoxedList.ui:36 data/ui/BoxedList.ui:92 data/ui/BoxedList.ui:148
+#: data/ui/BoxedList.ui:36 data/ui/BoxedList.ui:104 data/ui/BoxedList.ui:172
 msgid "Write"
 msgstr "كتابة"
 
-#: data/ui/BoxedList.ui:51 data/ui/BoxedList.ui:107 data/ui/BoxedList.ui:163
+#: data/ui/BoxedList.ui:51 data/ui/BoxedList.ui:119 data/ui/BoxedList.ui:187
 msgid "Execute"
 msgstr "تنفيذ"
 
-#: data/ui/BoxedList.ui:68 data/ui/HelpDialog.ui:78
+#: data/ui/BoxedList.ui:80 data/ui/HelpDialog.ui:78
 msgid "Group"
 msgstr "المجموعة"
 
-#: data/ui/BoxedList.ui:124 data/ui/HelpDialog.ui:89
+#: data/ui/BoxedList.ui:148 data/ui/HelpDialog.ui:89
 msgid "Others"
 msgstr "الاَخرون"
+
+#: data/ui/BoxedList.ui:247 data/ui/HelpDialog.ui:261
+msgid ""
+"Executes the file with the permissions of the file owner, not the user "
+"running it."
+msgstr "يقوم بتنفيذ الملف بصلاحيات مالك الملف، وليس المستخدم الذي يقوم بتشغيله."
+
+#: data/ui/BoxedList.ui:288 data/ui/HelpDialog.ui:267
+msgid ""
+"Executes the file with the permissions of the file's group, or ensures new "
+"files in a directory inherit the group."
+msgstr ""
+"يقوم بتنفيذ الملف بصلاحيات المجموعة، أو يضمن أن الملفات الجديدة في الدليل ترث "
+"نفس المجموعة."
+
+#: data/ui/BoxedList.ui:329 data/ui/HelpDialog.ui:273
+msgid ""
+"Allows only the file owner or directory owner to delete files in the "
+"directory, even if others have write permissions. Only applies to directories "
+"and has no effect on files."
+msgstr ""
+"يسمح فقط لمالك الملف أو مالك الدليل بحذف الملفات الموجودة في الدليل، حتى لو "
+"كان لدى الآخرين أذونات الكتابة. ينطبق فقط على الدلائل وليس له تأثير على "
+"الملفات."
 
 #: data/ui/Form.ui:16
 msgid "Numeric"
@@ -89,33 +113,33 @@ msgstr "جميع المستخدمين الاَخرين على النظام"
 msgid "The types of permissions are:"
 msgstr "أنواع الصلاحيات هي:"
 
-#: data/ui/HelpDialog.ui:116
+#: data/ui/HelpDialog.ui:117
 msgid "Read (Symbolic: r, Numeric: 4)"
 msgstr "قراءة (رقمي: 4، رمزي r)"
 
-#: data/ui/HelpDialog.ui:117
+#: data/ui/HelpDialog.ui:118
 msgid "Allows viewing the file's contents or listing a directory's contents"
 msgstr "يسمح بعرض محتويات الملف أو سرد محتويات المجلد"
 
-#: data/ui/HelpDialog.ui:127
+#: data/ui/HelpDialog.ui:128
 msgid "Write (Symbolically: 2, Numerically: 2)"
 msgstr "كتابة (رقمي: 2، رمزي: w)"
 
-#: data/ui/HelpDialog.ui:128
+#: data/ui/HelpDialog.ui:129
 msgid ""
 "Allows modifying the file's contents or creating/deleting files within a "
 "directory"
 msgstr "يسمح بتعديل محتويات الملف أو إنشاء/حذف الملفات داخل المجلد"
 
-#: data/ui/HelpDialog.ui:138
+#: data/ui/HelpDialog.ui:139
 msgid "Execute (Symbolically: x, Numerically: 1)"
 msgstr "تنفيذ (رقمي: 1، رمزي: x)"
 
-#: data/ui/HelpDialog.ui:139
+#: data/ui/HelpDialog.ui:140
 msgid "Allows running the file as a program"
 msgstr "يسمح بتشغيل الملف كبرنامج"
 
-#: data/ui/HelpDialog.ui:152
+#: data/ui/HelpDialog.ui:153
 msgid ""
 "Permissions can either be represented symbolically or numerically. Symbolic "
 "permissions are represented as a string of ten characters, and numeric is "
@@ -125,27 +149,27 @@ msgstr ""
 "كسلسلة من عشرة أحرف، بينما يتم تمثيل الصلاحيات الرقمية بثلاثة أرقام (ترميز "
 "ثماني) على سبيل المثال:"
 
-#: data/ui/HelpDialog.ui:158
+#: data/ui/HelpDialog.ui:159
 msgid "Symbolic: -rwxr-xr--"
 msgstr "رمزي: --rwxr-xr-"
 
-#: data/ui/HelpDialog.ui:168
+#: data/ui/HelpDialog.ui:169
 msgid "Numeric: 754"
 msgstr "رقمي: 754"
 
-#: data/ui/HelpDialog.ui:183
+#: data/ui/HelpDialog.ui:184
 msgid "First character, the file type"
 msgstr "الحرف الاولو نوع الملف"
 
-#: data/ui/HelpDialog.ui:184
+#: data/ui/HelpDialog.ui:185
 msgid "can either be '-' for file or 'd' for directory"
 msgstr "يمكن ان يكون '-' للملف او 'd' للمجلد"
 
-#: data/ui/HelpDialog.ui:189
+#: data/ui/HelpDialog.ui:190
 msgid "First three positions (after file type)"
 msgstr "المواضغ الثلاثة الأولى (بعد نوع الملف)"
 
-#: data/ui/HelpDialog.ui:190
+#: data/ui/HelpDialog.ui:191
 msgid ""
 "The read, write and execute permissions for the user, here we have 'rwx', "
 "which translated to 4+2+1 and adds to 7"
@@ -153,11 +177,11 @@ msgstr ""
 "صلاحيات القراءة والكتابة والتنفيذ للمستخدم، هنا لدينا 'rwx'، والتي تترجم إلى "
 "4+2+1 وتساوي 7"
 
-#: data/ui/HelpDialog.ui:195
+#: data/ui/HelpDialog.ui:196
 msgid "Second three positions"
 msgstr "الواضع الثلالثة الثانية"
 
-#: data/ui/HelpDialog.ui:196
+#: data/ui/HelpDialog.ui:197
 msgid ""
 "The read, write and execute permissions for the group, here we have 'r-x', "
 "which translated to 4+0+1 and adds to 5"
@@ -165,11 +189,11 @@ msgstr ""
 "صلاحيات القراءة والكتابة والتنفيذ للمجموعة، هنا لدينا 'r-x'، والتي تترجم إلى "
 "4+0+1 وتساوي 5"
 
-#: data/ui/HelpDialog.ui:201
+#: data/ui/HelpDialog.ui:202
 msgid "Last three positions"
 msgstr "المواضع الثلاثة الأخيرة"
 
-#: data/ui/HelpDialog.ui:202
+#: data/ui/HelpDialog.ui:203
 msgid ""
 "The read, write and execute permissions for other users, here we have 'r--', "
 "which translated to 4+0+0 and adds to 4"
@@ -177,13 +201,106 @@ msgstr ""
 "صلاحيات القراءة والكتابة والتنفيذ للمستخدمين الآخرين، هنا لدينا 'r--'، والتي "
 "تترجم إلى 4+0+0 وتساوي 4"
 
-#: data/ui/HelpDialog.ui:210
+#: data/ui/HelpDialog.ui:211
 msgid "Example command"
 msgstr "أمر نموذجي"
 
-#: data/ui/HelpDialog.ui:218
+#: data/ui/HelpDialog.ui:220
 msgid "chmod 754 (file name)"
 msgstr "(اسم الملف) chmod 754"
+
+#: data/ui/HelpDialog.ui:230
+msgid "Special Permissions"
+msgstr "صلاحيات يونكس"
+
+#: data/ui/HelpDialog.ui:239
+msgid ""
+"Special permissions make up a fourth access level in addition to user, group, "
+"and other, they allow for additional privileges over the standard permission "
+"sets"
+msgstr ""
+"تشكل الصلاحيات الخاصة مستوى وصول رابعًا بالإضافة إلى المستخدم والمجموعة "
+"والآخرين، فهي تسمح بامتيازات إضافية على مجموعات الصلاحيات القياسية"
+
+#: data/ui/HelpDialog.ui:245
+msgid "The three special permissions are:"
+msgstr "الصلاحيات الخاصة الثلاثة هي:"
+
+#: data/ui/HelpDialog.ui:281
+msgid "Special permissions can be represented symbolically or numerically."
+msgstr "يمكن تمثيل الصلاحيات الخاصة رمزيًا أو رقميًا."
+
+#: data/ui/HelpDialog.ui:288
+msgid "Numeric representation:"
+msgstr "التمثيل الرقمي:"
+
+#: data/ui/HelpDialog.ui:298
+msgid ""
+"They are denoted as an extra digit before the user, group and others "
+"permissions. Can Either be 0, 4, 2, 1 or any combination of them."
+msgstr ""
+"يتم الإشارة إليها كرقم إضافي قبل صلاحيات المستخدم والمجموعة والآخرين. يمكن أن "
+"تكون إما 0 أو 4 أو 2 أو 1 أو أي تركيبة منها."
+
+#: data/ui/HelpDialog.ui:308
+msgid "Symbolical representation:"
+msgstr "التمثيل الرمزي:"
+
+#: data/ui/HelpDialog.ui:324
+msgid "Goes where 'x'' normally is for the user"
+msgstr "يقع في المكان الذي يوجد فيه \"x\" عادةً للمستخدم"
+
+#: data/ui/HelpDialog.ui:330
+msgid "Goes where 'x' normally is for the group"
+msgstr "يقع في المكان الذي يوجد فيه \"x\" عادةً للمجموعة"
+
+#: data/ui/HelpDialog.ui:336
+msgid "Goes where 'x' normally is for others"
+msgstr "يقع في المكان الذي يوجد فيه \"x\" عادةً للاَحرين"
+
+#: data/ui/HelpDialog.ui:344
+msgid "Symbolic: -rwsr-Sr-t"
+msgstr "رمزي: rwsr-Sr-t-"
+
+#: data/ui/HelpDialog.ui:354
+msgid "Numeric: 7745"
+msgstr "رقمي: 7755"
+
+#: data/ui/HelpDialog.ui:370
+msgid ""
+"Represented as '4' numerically. Symbolically, it is either 's' if the owner "
+"has execute permissions or 'S' if not."
+msgstr ""
+"يتم تمثيله ب \"4\" رقميا. ورمزيا، يكون \"s\" إذا كان المالك لديه صلاحيات "
+"التنفيذ أو \"S\" إذا لم يكن لديه صلاحيات التنفيذ."
+
+#: data/ui/HelpDialog.ui:376
+msgid ""
+"Represented as '2' numerically. Symbolically, it is either 's' if the group "
+"has execute permissions or 'S' if not."
+msgstr ""
+"يتم تمثيله ب \"2\" رقميا. ورمزيا \"s\" إذا كانت المجموعة لديها صلاحيات "
+"التنفيذ أو \"S\" إذا لم يكن لديها صلاحيات التنفيذ."
+
+#: data/ui/HelpDialog.ui:382
+msgid ""
+"Represented as '1' numerically. Symbolically, it is either 't' if the others "
+"have execute permissions or 'T' if not."
+msgstr ""
+"يتم تمثيله ب \"1\" رقميا. ورمزيا \"t\" إذا كان الآخرون لديهم صلاحيات التنفيذ "
+"أو \"T\" إذا لم يكن لديهم صلاحيات التنفيذ."
+
+#: data/ui/HelpDialog.ui:390
+msgid "Example commands"
+msgstr "أمر نموذجي"
+
+#: data/ui/HelpDialog.ui:399
+msgid "chmod 7745 (file name)"
+msgstr "(اسم الملف) chmod 7745"
+
+#: data/ui/HelpDialog.ui:409
+msgid "Further reading"
+msgstr "قراءة إضافية"
 
 #: data/ui/Window.ui:4 data/ui/Window.ui:44
 #: data/io.github.ronniedroid.concessio.desktop:3
@@ -280,8 +397,7 @@ msgid "Open the help dialog to read and understand the UNIX permissions system"
 msgstr "افتح مربع حوار المساعدة لقراءة وفهم نظام صلاحيات اليونكس"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:30
-msgid ""
-"Application main page converting between numeric and symbolic permission"
+msgid "Application main page converting between numeric and symbolic permission"
 msgstr "صفحة التطبيق الرئيسية للتحويل بين الصلاحيات الرمزية و الرقمية"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:34
@@ -297,11 +413,11 @@ msgstr "روني نيسان https://github.com/ronniedroid/"
 msgid "Special thanks to"
 msgstr "شكر خاص ل"
 
-#: src/window.js:119
+#: src/window.js:141
 msgid "Copied to clipboard!"
 msgstr "تم النسخ إلى الحافظة!"
 
-#: src/window.js:140
+#: src/window.js:162
 msgid "Failed to open file."
 msgstr "فشل في فتح الملف."
 

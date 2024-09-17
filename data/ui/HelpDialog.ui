@@ -242,7 +242,7 @@
                 <child>
                   <object class="GtkLabel">
                     <property name="wrap">true</property>
-                    <property name="label" translatable="true">The three special permissions are</property>
+                    <property name="label" translatable="true">The three special permissions are:</property>
                     <property name="halign">1</property>
                     <style>
                       <class name="heading"/>
@@ -367,19 +367,19 @@
                     <child>
                       <object class="AdwActionRow">
                         <property name="title">SUID</property>
-                        <property name="subtitle" translatable="true">Represented as '4' numerically, and either 's' if the owner has execute permissions or 'S' if not.</property>
+                        <property name="subtitle" translatable="true">Represented as '4' numerically. Symbolically, it is either 's' if the owner has execute permissions or 'S' if not.</property>
                       </object>
                     </child>
                     <child>
                       <object class="AdwActionRow">
                         <property name="title">SGID</property>
-                        <property name="subtitle" translatable="true">Represented as '2' numerically, and either 's' if the group has execute permissions or 'S' if not.</property>
+                        <property name="subtitle" translatable="true">Represented as '2' numerically. Symbolically, it is either 's' if the group has execute permissions or 'S' if not.</property>
                       </object>
                     </child>
                     <child>
                       <object class="AdwActionRow">
                         <property name="title">Sticky bit</property>
-                        <property name="subtitle" translatable="true">Represented as '1' numerically, and either 't' if the others have execute permissions or 'T' if not.</property>
+                        <property name="subtitle" translatable="true">Represented as '1' numerically. Symbolically, it is either 't' if the others have execute permissions or 'T' if not.</property>
                       </object>
                     </child>
                   </object>
