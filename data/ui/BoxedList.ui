@@ -326,14 +326,7 @@
               </child>
               <child>
                 <object class="GtkLabel">
-                  <property name="label" translatable="true">Allows only the file owner or directory owner to delete files in the directory, even if others have write permissions.</property>
-                  <property name="wrap">true</property>
-                  <property name="justify">center</property>
-                </object>
-              </child>
-              <child>
-                <object class="GtkLabel">
-                  <property name="label" translatable="true">Only applies to directories and has no effect on files.</property>
+                  <property name="label" translatable="true">Allows only the file owner or directory owner to delete files in the directory, even if others have write permissions. Only applies to directories and has no effect on files.</property>
                   <property name="wrap">true</property>
                   <property name="justify">center</property>
                 </object>

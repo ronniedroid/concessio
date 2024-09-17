@@ -36,7 +36,7 @@
                   <object class="GtkLabel">
                     <property name="label" translatable="true">Unix Permissions</property>
                     <style>
-                      <class name="title-2" />
+                      <class name="title-2"/>
                     </style>
                   </object>
                 </child>
@@ -100,6 +100,7 @@
                 <child>
                   <object class="GtkLabel">
                     <property name="label" translatable="true">The types of permissions are:</property>
+                    <property name="halign">1</property>
                     <style>
                       <class name="heading"/>
                     </style>
@@ -157,8 +158,8 @@
                     <property name="wrap">true</property>
                     <property name="label" translatable="true">Symbolic: -rwxr-xr--</property>
                     <style>
-                      <class name="heading" />
-                      <class name="monospace" />
+                      <class name="heading"/>
+                      <class name="monospace"/>
                     </style>
                   </object>
                 </child>
@@ -167,8 +168,8 @@
                     <property name="wrap">true</property>
                     <property name="label" translatable="true">Numeric: 754</property>
                     <style>
-                      <class name="heading" />
-                      <class name="monospace" />
+                      <class name="heading"/>
+                      <class name="monospace"/>
                     </style>
                   </object>
                 </child>
@@ -208,8 +209,9 @@
                   <object class="GtkLabel">
                     <property name="wrap">true</property>
                     <property name="label" translatable="true">Example command</property>
+                    <property name="halign">1</property>
                     <style>
-                      <class name="heading" />
+                      <class name="heading"/>
                     </style>
                   </object>
                 </child>
@@ -217,10 +219,195 @@
                   <object class="GtkLabel">
                     <property name="label" translatable="true">chmod 754 (file name)</property>
                     <style>
-                      <class name="card" />
-                      <class name="monospace" />
-                      <class name="command-card" />
+                      <class name="card"/>
+                      <class name="monospace"/>
+                      <class name="command-card"/>
                     </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label" translatable="true">Special Permissions</property>
+                    <style>
+                      <class name="title-2"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="wrap">true</property>
+                    <property name="label" translatable="true">Special permissions make up a fourth access level in addition to user, group, and other, they allow for additional privileges over the standard permission sets</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="wrap">true</property>
+                    <property name="label" translatable="true">The three special permissions are</property>
+                    <property name="halign">1</property>
+                    <style>
+                      <class name="heading"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkListBox">
+                    <property name="selection-mode">0</property>
+                    <style>
+                      <class name="boxed-list"/>
+                    </style>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">SUID (user+s)</property>
+                        <property name="subtitle" translatable="true">Executes the file with the permissions of the file owner, not the user running it.</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">SGID (group+s)</property>
+                        <property name="subtitle" translatable="true">Executes the file with the permissions of the file's group, or ensures new files in a directory inherit the group.</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">Sticky bit (other+t)</property>
+                        <property name="subtitle" translatable="true">Allows only the file owner or directory owner to delete files in the directory, even if others have write permissions. Only applies to directories and has no effect on files.</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="wrap">true</property>
+                    <property name="label" translatable="true">Special permissions can be represented symbolically or numerically.</property>
+                    <property name="halign">1</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="wrap">true</property>
+                    <property name="label" translatable="true">Numeric representation:</property>
+                    <property name="halign">1</property>
+                    <style>
+                      <class name="heading"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="wrap">true</property>
+                    <property name="label" translatable="true">They are denoted as an extra digit before the user, group and others permissions. Can Either be 0, 4, 2, 1 or any combination of them.</property>
+                    <style>
+                      <class name="card"/>
+                      <class name="command-card"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="wrap">true</property>
+                    <property name="label" translatable="true">Symbolical representation:</property>
+                    <property name="halign">1</property>
+                    <style>
+                      <class name="heading"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkListBox">
+                    <property name="selection-mode">0</property>
+                    <style>
+                      <class name="boxed-list"/>
+                    </style>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">SUID</property>
+                        <property name="subtitle" translatable="true">Goes where 'x'' normally is for the user</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">SGID</property>
+                        <property name="subtitle" translatable="true">Goes where 'x' normally is for the group</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">Sticky bit</property>
+                        <property name="subtitle" translatable="true">Goes where 'x' normally is for others</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="wrap">true</property>
+                    <property name="label" translatable="true">Symbolic: -rwsr-Sr-t</property>
+                    <style>
+                      <class name="heading"/>
+                      <class name="monospace"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="wrap">true</property>
+                    <property name="label" translatable="true">Numeric: 7745</property>
+                    <style>
+                      <class name="heading"/>
+                      <class name="monospace"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkListBox">
+                    <property name="selection-mode">0</property>
+                    <style>
+                      <class name="boxed-list"/>
+                    </style>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">SUID</property>
+                        <property name="subtitle" translatable="true">Represented as '4' numerically, and either 's' if the owner has execute permissions or 'S' if not.</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">SGID</property>
+                        <property name="subtitle" translatable="true">Represented as '2' numerically, and either 's' if the group has execute permissions or 'S' if not.</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwActionRow">
+                        <property name="title">Sticky bit</property>
+                        <property name="subtitle" translatable="true">Represented as '1' numerically, and either 't' if the others have execute permissions or 'T' if not.</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="wrap">true</property>
+                    <property name="label" translatable="true">Example commands</property>
+                    <property name="halign">1</property>
+                    <style>
+                      <class name="heading"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label" translatable="true">chmod 7745 (file name)</property>
+                    <style>
+                      <class name="card"/>
+                      <class name="monospace"/>
+                      <class name="command-card"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLinkButton">
+                    <property name="label" translatable="true">Further reading</property>
+                    <property name="uri">https://www.redhat.com/sysadmin/suid-sgid-sticky-bit</property>
                   </object>
                 </child>
               </object>
@@ -231,3 +418,4 @@
     </child>
   </template>
 </interface>
+
