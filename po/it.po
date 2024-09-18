@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-17 15:39+0300\n"
-"PO-Revision-Date: 2024-09-17 21:48+0100\n"
+"PO-Revision-Date: 2024-09-18 10:12+0300\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Albano Battistella\n"
 "Language: it_IT\n"
@@ -43,25 +43,24 @@ msgstr "Altri"
 
 #: data/ui/BoxedList.ui:247 data/ui/HelpDialog.ui:261
 msgid ""
-"Executes the file with the permissions of the file owner, not the user "
-"running it."
+"Executes the file with the permissions of the file owner, not the user running it."
 msgstr ""
-"Esegue il file con i permessi del proprietario del file, non dell'utente "
-"che lo sta eseguendo."
+"Esegue il file con i permessi del proprietario del file, non dell'utente che lo sta "
+"eseguendo."
 
 #: data/ui/BoxedList.ui:288 data/ui/HelpDialog.ui:267
 msgid ""
-"Executes the file with the permissions of the file's group, or ensures new "
-"files in a directory inherit the group."
+"Executes the file with the permissions of the file's group, or ensures new files in a "
+"directory inherit the group."
 msgstr ""
-"Esegue il file con i permessi del gruppo del file o assicura che i nuovi "
-"file in una directory ereditino il gruppo."
+"Esegue il file con i permessi del gruppo del file o assicura che i nuovi file in una "
+"directory ereditino il gruppo."
 
 #: data/ui/BoxedList.ui:329 data/ui/HelpDialog.ui:273
 msgid ""
-"Allows only the file owner or directory owner to delete files in the "
-"directory, even if others have write permissions. Only applies to "
-"directories and has no effect on files."
+"Allows only the file owner or directory owner to delete files in the directory, even "
+"if others have write permissions. Only applies to directories and has no effect on "
+"files."
 msgstr ""
 "Consente solo al proprietario del file o della directory di eliminare i file nella "
 "directory, anche se altri hanno permessi di scrittura. Si applica solo alle directory "
@@ -89,11 +88,11 @@ msgstr "Permessi Unix"
 
 #: data/ui/HelpDialog.ui:46
 msgid ""
-"The Unix permissions system is used to grant granulated access to file and "
-"directories on a Unix-like operating system"
+"The Unix permissions system is used to grant granulated access to file and directories "
+"on a Unix-like operating system"
 msgstr ""
-"Il sistema di permessi Unix viene utilizzato per concedere un accesso "
-"granulare a file e directory su un sistema operativo di tipo Unix"
+"Il sistema di permessi Unix viene utilizzato per concedere un accesso granulare a file "
+"e directory su un sistema operativo di tipo Unix"
 
 #: data/ui/HelpDialog.ui:52
 msgid "Permissions are granted to three groups:"
@@ -122,8 +121,8 @@ msgstr "Lettura (Simbolico: r, Numerico: 4)"
 #: data/ui/HelpDialog.ui:118
 msgid "Allows viewing the file's contents or listing a directory's contents"
 msgstr ""
-"Consente di visualizzare il contenuto del file o di elencare il contenuto di "
-"una directory"
+"Consente di visualizzare il contenuto del file o di elencare il contenuto di una "
+"directory"
 
 #: data/ui/HelpDialog.ui:128
 msgid "Write (Symbolically: 2, Numerically: 2)"
@@ -131,11 +130,10 @@ msgstr "Scrittura (Simbolico: 2, Numericamente: 2)"
 
 #: data/ui/HelpDialog.ui:129
 msgid ""
-"Allows modifying the file's contents or creating/deleting files within a "
-"directory"
+"Allows modifying the file's contents or creating/deleting files within a directory"
 msgstr ""
-"Consente di modificare il contenuto del file o di creare/eliminare file "
-"all'interno di una directory"
+"Consente di modificare il contenuto del file o di creare/eliminare file all'interno di "
+"una directory"
 
 #: data/ui/HelpDialog.ui:139
 msgid "Execute (Symbolically: x, Numerically: 1)"
@@ -148,13 +146,12 @@ msgstr "Consente di eseguire il file come programma"
 #: data/ui/HelpDialog.ui:153
 msgid ""
 "Permissions can either be represented symbolically or numerically. Symbolic "
-"permissions are represented as a string of ten characters, and numeric is "
-"represented by three numbers (octal notation) for Example:"
+"permissions are represented as a string of ten characters, and numeric is represented "
+"by three numbers (octal notation) for Example:"
 msgstr ""
-"I permessi possono essere rappresentati simbolicamente o numericamente. I "
-"permessi simbolici sono rappresentati come una stringa di dieci caratteri, "
-"mentre quelli numerici sono rappresentati da tre numeri (notazione ottale) "
-"per esempio:"
+"I permessi possono essere rappresentati simbolicamente o numericamente. I permessi "
+"simbolici sono rappresentati come una stringa di dieci caratteri, mentre quelli "
+"numerici sono rappresentati da tre numeri (notazione ottale) per esempio:"
 
 #: data/ui/HelpDialog.ui:159
 msgid "Symbolic: -rwxr-xr--"
@@ -178,11 +175,11 @@ msgstr "Prime tre posizioni (dopo il tipo di file)"
 
 #: data/ui/HelpDialog.ui:191
 msgid ""
-"The read, write and execute permissions for the user, here we have 'rwx', "
-"which translated to 4+2+1 and adds to 7"
+"The read, write and execute permissions for the user, here we have 'rwx', which "
+"translated to 4+2+1 and adds to 7"
 msgstr ""
-"I permessi di lettura, scrittura ed esecuzione per l'utente, qui abbiamo "
-"'rwx', che tradotto è 4+2+1 e aggiunge 7"
+"I permessi di lettura, scrittura ed esecuzione per l'utente, qui abbiamo 'rwx', che "
+"tradotto è 4+2+1 e aggiunge 7"
 
 #: data/ui/HelpDialog.ui:196
 msgid "Second three positions"
@@ -190,11 +187,11 @@ msgstr "Seconde tre posizioni"
 
 #: data/ui/HelpDialog.ui:197
 msgid ""
-"The read, write and execute permissions for the group, here we have 'r-x', "
-"which translated to 4+0+1 and adds to 5"
+"The read, write and execute permissions for the group, here we have 'r-x', which "
+"translated to 4+0+1 and adds to 5"
 msgstr ""
-"I permessi di lettura, scrittura ed esecuzione per il gruppo, qui abbiamo 'r-"
-"x', che tradotto è 4+0+1 e aggiunge 5"
+"I permessi di lettura, scrittura ed esecuzione per il gruppo, qui abbiamo 'r-x', che "
+"tradotto è 4+0+1 e aggiunge 5"
 
 #: data/ui/HelpDialog.ui:202
 msgid "Last three positions"
@@ -202,11 +199,11 @@ msgstr "Ultime tre posizioni"
 
 #: data/ui/HelpDialog.ui:203
 msgid ""
-"The read, write and execute permissions for other users, here we have 'r--', "
-"which translated to 4+0+0 and adds to 4"
+"The read, write and execute permissions for other users, here we have 'r--', which "
+"translated to 4+0+0 and adds to 4"
 msgstr ""
-"I permessi di lettura, scrittura ed esecuzione per gli altri utenti, qui "
-"abbiamo 'r--', che tradotto è 4+0+0 e aggiunge 4"
+"I permessi di lettura, scrittura ed esecuzione per gli altri utenti, qui abbiamo "
+"'r--', che tradotto è 4+0+0 e aggiunge 4"
 
 #: data/ui/HelpDialog.ui:211
 msgid "Example command"
@@ -222,13 +219,11 @@ msgstr "Permessi speciali"
 
 #: data/ui/HelpDialog.ui:239
 msgid ""
-"Special permissions make up a fourth access level in addition to user, "
-"group, and other, they allow for additional privileges over the standard "
-"permission sets"
+"Special permissions make up a fourth access level in addition to user, group, and "
+"other, they allow for additional privileges over the standard permission sets"
 msgstr ""
-"I permessi speciali costituiscono un quarto livello di accesso oltre a utente, "
-"gruppo e altro, e consentono privilegi aggiuntivi rispetto ai set di permessi "
-"standard"
+"I permessi speciali costituiscono un quarto livello di accesso oltre a utente, gruppo "
+"e altro, e consentono privilegi aggiuntivi rispetto ai set di permessi standard"
 
 #: data/ui/HelpDialog.ui:245
 msgid "The three special permissions are:"
@@ -244,8 +239,8 @@ msgstr "Rappresentazione numerica:"
 
 #: data/ui/HelpDialog.ui:298
 msgid ""
-"They are denoted as an extra digit before the user, group and others "
-"permissions. Can Either be 0, 4, 2, 1 or any combination of them."
+"They are denoted as an extra digit before the user, group and others permissions. Can "
+"Either be 0, 4, 2, 1 or any combination of them."
 msgstr ""
 "Sono indicati come una cifra aggiuntiva prima dell'utente, del gruppo e degli altri "
 "permessi. Possono essere 0, 4, 2, 1 o una qualsiasi combinazione di essi."
@@ -264,7 +259,7 @@ msgstr "Va dove normalmente c'è 'x' per il gruppo"
 
 #: data/ui/HelpDialog.ui:336
 msgid "Goes where 'x' normally is for others"
-msgstr "Va dove normalmente c'è "x" per gli altri"
+msgstr "Va dove normalmente c'è 'x' per gli altri"
 
 #: data/ui/HelpDialog.ui:344
 msgid "Symbolic: -rwsr-Sr-t"
@@ -276,27 +271,27 @@ msgstr "Numerico: 7745"
 
 #: data/ui/HelpDialog.ui:370
 msgid ""
-"Represented as '4' numerically. Symbolically, it is either 's' if the owner "
-"has execute permissions or 'S' if not."
+"Represented as '4' numerically. Symbolically, it is either 's' if the owner has "
+"execute permissions or 'S' if not."
 msgstr ""
-"Rappresentato numericamente come '4'. Simbolicamente, è 's' se il proprietario "
-"ha i permessi di esecuzione o 'S' in caso contrario."
+"Rappresentato numericamente come '4'. Simbolicamente, è 's' se il proprietario ha i "
+"permessi di esecuzione o 'S' in caso contrario."
 
 #: data/ui/HelpDialog.ui:376
 msgid ""
-"Represented as '2' numerically. Symbolically, it is either 's' if the group "
-"has execute permissions or 'S' if not."
+"Represented as '2' numerically. Symbolically, it is either 's' if the group has "
+"execute permissions or 'S' if not."
 msgstr ""
-"Rappresentato come '2' numericamente. Simbolicamente, è 's' se il gruppo "
-"ha permessi di esecuzione o 'S' in caso contrario."
+"Rappresentato come '2' numericamente. Simbolicamente, è 's' se il gruppo ha permessi "
+"di esecuzione o 'S' in caso contrario."
 
 #: data/ui/HelpDialog.ui:382
 msgid ""
-"Represented as '1' numerically. Symbolically, it is either 't' if the others "
-"have execute permissions or 'T' if not."
+"Represented as '1' numerically. Symbolically, it is either 't' if the others have "
+"execute permissions or 'T' if not."
 msgstr ""
-"Rappresentato come '1' numericamente. Simbolicamente, è 't' se gli altri "
-"hanno permessi di esecuzione o 'T' se non li hanno."
+"Rappresentato come '1' numericamente. Simbolicamente, è 't' se gli altri hanno "
+"permessi di esecuzione o 'T' se non li hanno."
 
 #: data/ui/HelpDialog.ui:390
 msgid "Example commands"
@@ -383,24 +378,17 @@ msgstr "Permessi;Convertitore;Calcolatrice;"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:11 src/application.js:74
 msgid ""
-"Concessio helps you understand and convert between unix permissions "
-"representations"
+"Concessio helps you understand and convert between unix permissions representations"
 msgstr ""
-"Concessio ti aiuta a comprendere e convertire tra le rappresentazioni dei "
-"permessi Unix"
+"Concessio ti aiuta a comprendere e convertire tra le rappresentazioni dei permessi Unix"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:13
-msgid ""
-"Convert between symbolic and numeric representations of UNIX file permissions"
-msgstr ""
-"Converti tra rappresentazioni simboliche e numeriche dei permessi dei file "
-"UNIX"
+msgid "Convert between symbolic and numeric representations of UNIX file permissions"
+msgstr "Converti tra rappresentazioni simboliche e numeriche dei permessi dei file UNIX"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:14
 msgid "Use toggle buttons to update the symbolic and numeric fields"
-msgstr ""
-"Utilizzare i pulsanti di attivazione per aggiornare i campi simbolici e "
-"numerici"
+msgstr "Utilizzare i pulsanti di attivazione per aggiornare i campi simbolici e numerici"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:15
 msgid "Open a file to read it's permissions and convert them"
@@ -409,15 +397,14 @@ msgstr "Aprire un file per leggerne i permessi e convertirli"
 #: data/io.github.ronniedroid.concessio.metainfo.xml:16
 msgid "Open the help dialog to read and understand the UNIX permissions system"
 msgstr ""
-"Aprire la finestra di dialogo della guida per leggere e comprendere il "
-"sistema di autorizzazioni UNIX"
+"Aprire la finestra di dialogo della guida per leggere e comprendere il sistema di "
+"autorizzazioni UNIX"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:30
-msgid ""
-"Application main page converting between numeric and symbolic permission"
+msgid "Application main page converting between numeric and symbolic permission"
 msgstr ""
-"Pagina principale dell'applicazione che converte tra autorizzazione numerica "
-"e simbolica"
+"Pagina principale dell'applicazione che converte tra autorizzazione numerica e "
+"simbolica"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:34
 msgid "Application help page, explaining unix permissions"

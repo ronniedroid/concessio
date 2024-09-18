@@ -56,7 +56,12 @@
   <url type="bugtracker">https://github.com/ronniedroid/concessio/issues</url>
 
   <releases>
-      <release version="v0.1.5" date="2024-09-17">
+    <release version="v0.1.6" date="2024-09-18">
+      <description translate="no">
+          <p>Updated translation</p>
+      </description>
+    </release>
+    <release version="v0.1.5" date="2024-09-17">
       <description translate="no">
           <p>Added support for linux special permissions, SUID, SGID and Sticky bit</p>
       </description>
