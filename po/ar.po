@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-17 15:39+0300\n"
-"PO-Revision-Date: 2024-09-17 15:54+0300\n"
+"PO-Revision-Date: 2024-09-20 17:52+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ar\n"
@@ -247,16 +247,16 @@ msgid "Symbolical representation:"
 msgstr "التمثيل الرمزي:"
 
 #: data/ui/HelpDialog.ui:324
-msgid "Goes where 'x'' normally is for the user"
-msgstr "يقع في المكان الذي يوجد فيه \"x\" عادةً للمستخدم"
+msgid "Goes where 'x' normally is for the user"
+msgstr "يقع في المكان الذي يوجد فيه 'x' عادةً للمستخدم"
 
 #: data/ui/HelpDialog.ui:330
 msgid "Goes where 'x' normally is for the group"
-msgstr "يقع في المكان الذي يوجد فيه \"x\" عادةً للمجموعة"
+msgstr "يقع في المكان الذي يوجد فيه 'x' عادةً للمجموعة"
 
 #: data/ui/HelpDialog.ui:336
 msgid "Goes where 'x' normally is for others"
-msgstr "يقع في المكان الذي يوجد فيه \"x\" عادةً للاَحرين"
+msgstr "يقع في المكان الذي يوجد فيه 'x' عادةً للاَحرين"
 
 #: data/ui/HelpDialog.ui:344
 msgid "Symbolic: -rwsr-Sr-t"

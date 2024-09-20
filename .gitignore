@@ -6,3 +6,4 @@ build-dir
 node-modules/
 .eslintcache
 /node_modules/
+*.mo

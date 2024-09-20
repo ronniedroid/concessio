@@ -321,7 +321,7 @@
                     <child>
                       <object class="AdwActionRow">
                         <property name="title">SUID</property>
-                        <property name="subtitle" translatable="true">Goes where 'x'' normally is for the user</property>
+                        <property name="subtitle" translatable="true">Goes where 'x' normally is for the user</property>
                       </object>
                     </child>
                     <child>

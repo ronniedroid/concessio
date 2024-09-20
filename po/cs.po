@@ -9,21 +9,22 @@ msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-18 8:39+UTC+2\n"
-"PO-Revision-Date: 2024-09-18 8:39+UTC+2\n"
+"PO-Revision-Date: 2024-09-20 17:53+0300\n"
 "Last-Translator: vikdevelop <vikdevelop@proton.me>\n"
 "Language-Team: \n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: data/ui/BoxedList.ui:12 data/ui/HelpDialog.ui:67
 msgid "User"
-msgstr "Uživatel"
+msgstr "UÅ¾ivatel"
 
 #: data/ui/BoxedList.ui:21 data/ui/BoxedList.ui:89 data/ui/BoxedList.ui:157
 msgid "Read"
-msgstr "Přečíst"
+msgstr "PÅeÄÃ­st"
 
 #: data/ui/BoxedList.ui:36 data/ui/BoxedList.ui:104 data/ui/BoxedList.ui:172
 msgid "Write"
@@ -31,7 +32,7 @@ msgstr "Zapsat"
 
 #: data/ui/BoxedList.ui:51 data/ui/BoxedList.ui:119 data/ui/BoxedList.ui:187
 msgid "Execute"
-msgstr "Provést"
+msgstr "ProvÃ©st"
 
 #: data/ui/BoxedList.ui:80 data/ui/HelpDialog.ui:78
 msgid "Group"
@@ -39,45 +40,36 @@ msgstr "Skupina"
 
 #: data/ui/BoxedList.ui:148 data/ui/HelpDialog.ui:89
 msgid "Others"
-msgstr "Ostatní"
+msgstr "OstatnÃ­"
 
 #: data/ui/BoxedList.ui:247 data/ui/HelpDialog.ui:261
-msgid ""
-"Executes the file with the permissions of the file owner, not the user "
-"running it."
-msgstr ""
-"Spustí soubor s právy vlastníka souboru, nikoli uživatele "
-"který jej spouští."
+msgid "Executes the file with the permissions of the file owner, not the user running it."
+msgstr "SpustÃ­ soubor s prÃ¡vy vlastnÃ­ka souboru, nikoli uÅ¾ivatele kterÃ½ jej spouÅ¡tÃ­."
 
 #: data/ui/BoxedList.ui:288 data/ui/HelpDialog.ui:267
 msgid ""
-"Executes the file with the permissions of the file's group, or ensures new "
-"files in a directory inherit the group."
-msgstr ""
-"Spustí soubor s právy skupiny souboru nebo zajistí nový "
-"soubory v adresáři zdědí tuto skupinu."
+"Executes the file with the permissions of the file's group, or ensures new files in a directory inherit the group."
+msgstr "SpustÃ­ soubor s prÃ¡vy skupiny souboru nebo zajistÃ­ novÃ½ soubory v adresÃ¡Åi zdÄdÃ­ tuto skupinu."
 
 #: data/ui/BoxedList.ui:329 data/ui/HelpDialog.ui:273
 msgid ""
-"Allows only the file owner or directory owner to delete files in the "
-"directory, even if others have write permissions. Only applies to "
-"directories and has no effect on files."
+"Allows only the file owner or directory owner to delete files in the directory, even if others have write "
+"permissions. Only applies to directories and has no effect on files."
 msgstr ""
-"Umožňuje mazat soubory v "
-"adresáři, i když ostatní mají oprávnění k zápisu. Platí pouze pro "
-"adresáře a nemá vliv na soubory."
+"UmoÅ¾Åuje mazat soubory v adresÃ¡Åi, i kdyÅ¾ ostatnÃ­ majÃ­ oprÃ¡vnÄnÃ­ k zÃ¡pisu. PlatÃ­ pouze pro adresÃ¡Åe a "
+"nemÃ¡ vliv na soubory."
 
 #: data/ui/Form.ui:16
 msgid "Numeric"
-msgstr "Číselné"
+msgstr "ÄÃ­selnÃ©"
 
 #: data/ui/Form.ui:25 data/ui/Form.ui:49
 msgid "Copy value"
-msgstr "Zkopírovat hodnotu"
+msgstr "ZkopÃ­rovat hodnotu"
 
 #: data/ui/Form.ui:40
 msgid "Symbolic"
-msgstr "Symbolické"
+msgstr "SymbolickÃ©"
 
 #: data/ui/HelpDialog.ui:13 data/ui/Window.ui:140
 msgid "Help"
@@ -85,230 +77,214 @@ msgstr "Pomoc"
 
 #: data/ui/HelpDialog.ui:37
 msgid "Unix Permissions"
-msgstr "Unixová oprávnění"
+msgstr "UnixovÃ¡ oprÃ¡vnÄnÃ­"
 
 #: data/ui/HelpDialog.ui:46
 msgid ""
-"The Unix permissions system is used to grant granulated access to file and "
-"directories on a Unix-like operating system"
+"The Unix permissions system is used to grant granulated access to file and directories on a Unix-like operating "
+"system"
 msgstr ""
-"Systém oprávnění systému Unix se používá k udělování granulovaného přístupu k souborům a "
-"adresářům v operačním systému podobném Unixu"
+"SystÃ©m oprÃ¡vnÄnÃ­ systÃ©mu Unix se pouÅ¾Ã­vÃ¡ k udÄlovÃ¡nÃ­ granulovanÃ©ho pÅÃ­stupu k souborÅ¯m a adresÃ¡ÅÅ¯m v "
+"operaÄnÃ­m systÃ©mu podobnÃ©m Unixu"
 
 #: data/ui/HelpDialog.ui:52
 msgid "Permissions are granted to three groups:"
-msgstr "Oprávnění jsou garantovaná pro tři skupiny:"
+msgstr "OprÃ¡vnÄnÃ­ jsou garantovanÃ¡ pro tÅi skupiny:"
 
 #: data/ui/HelpDialog.ui:68
 msgid "The owner of the file"
-msgstr "Vlastník souboru"
+msgstr "VlastnÃ­k souboru"
 
 #: data/ui/HelpDialog.ui:79
 msgid "A group of users who share access to the file"
-msgstr "Skupina uživatelů, která sdílí přístup k souboru"
+msgstr "Skupina uÅ¾ivatelÅ¯, kterÃ¡ sdÃ­lÃ­ pÅÃ­stup k souboru"
 
 #: data/ui/HelpDialog.ui:90
 msgid "All other users on the system"
-msgstr "Všichni ostatní uživatelé systému"
+msgstr "VÅ¡ichni ostatnÃ­ uÅ¾ivatelÃ© systÃ©mu"
 
 #: data/ui/HelpDialog.ui:102
 msgid "The types of permissions are:"
-msgstr "Druhy oprávnění jsou:"
+msgstr "Druhy oprÃ¡vnÄnÃ­ jsou:"
 
 #: data/ui/HelpDialog.ui:117
 msgid "Read (Symbolic: r, Numeric: 4)"
-msgstr "Číst (Symbolický: r, Číselný: 4"
+msgstr "ÄÃ­st (SymbolickÃ½: r, ÄÃ­selnÃ½: 4"
 
 #: data/ui/HelpDialog.ui:118
 msgid "Allows viewing the file's contents or listing a directory's contents"
-msgstr "Umožňuje zobrazení obsahu souboru nebo zobrazení obsahu adresáře"
+msgstr "UmoÅ¾Åuje zobrazenÃ­ obsahu souboru nebo zobrazenÃ­ obsahu adresÃ¡Åe"
 
 #: data/ui/HelpDialog.ui:128
 msgid "Write (Symbolically: 2, Numerically: 2)"
-msgstr "Zapisovat (Symbolicky: 2, Číselně: 2"
+msgstr "Zapisovat (Symbolicky: 2, ÄÃ­selnÄ: 2"
 
 #: data/ui/HelpDialog.ui:129
-msgid ""
-"Allows modifying the file's contents or creating/deleting files within a "
-"directory"
-msgstr ""
-"Umožňuje úpravu obsahu souboru nebo vytváření/mazání souborů v rámci "
-"adresáře"
+msgid "Allows modifying the file's contents or creating/deleting files within a directory"
+msgstr "UmoÅ¾Åuje Ãºpravu obsahu souboru nebo vytvÃ¡ÅenÃ­/mazÃ¡nÃ­ souborÅ¯ v rÃ¡mci adresÃ¡Åe"
 
 #: data/ui/HelpDialog.ui:139
 msgid "Execute (Symbolically: x, Numerically: 1)"
-msgstr "Provést: (Symbolicky: x, Číselně: 1)"
+msgstr "ProvÃ©st: (Symbolicky: x, ÄÃ­selnÄ: 1)"
 
 #: data/ui/HelpDialog.ui:140
 msgid "Allows running the file as a program"
-msgstr "Umožňuje spouštění souboru jako programu"
+msgstr "UmoÅ¾Åuje spouÅ¡tÄnÃ­ souboru jako programu"
 
 #: data/ui/HelpDialog.ui:153
 msgid ""
-"Permissions can either be represented symbolically or numerically. Symbolic "
-"permissions are represented as a string of ten characters, and numeric is "
-"represented by three numbers (octal notation) for Example:"
+"Permissions can either be represented symbolically or numerically. Symbolic permissions are represented as a string "
+"of ten characters, and numeric is represented by three numbers (octal notation) for Example:"
 msgstr ""
-"Oprávnění mohou být reprezentována buď symbolicky, nebo číselně. Symbolické "
-"oprávnění jsou reprezentována jako řetězec deseti znaků a číselná jsou "
-"reprezentována třemi čísly (osmičková notace), například: " "
+"OprÃ¡vnÄnÃ­ mohou bÃ½t reprezentovÃ¡na buÄ symbolicky, nebo ÄÃ­selnÄ. SymbolickÃ© oprÃ¡vnÄnÃ­ jsou reprezentovÃ¡na "
+"jako ÅetÄzec deseti znakÅ¯ a ÄÃ­selnÃ¡ jsou reprezentovÃ¡na tÅemi ÄÃ­sly (osmiÄkovÃ¡ notace), napÅÃ­klad:"
 
 #: data/ui/HelpDialog.ui:159
 msgid "Symbolic: -rwxr-xr--"
-msgstr "Symbolické: -rwxr-xr--"
+msgstr "SymbolickÃ©: -rwxr-xr--"
 
 #: data/ui/HelpDialog.ui:169
 msgid "Numeric: 754"
-msgstr "Číselné: 754"
+msgstr "ÄÃ­selnÃ©: 754"
 
 #: data/ui/HelpDialog.ui:184
 msgid "First character, the file type"
-msgstr "První znak, druh souboru"
+msgstr "PrvnÃ­ znak, druh souboru"
 
 #: data/ui/HelpDialog.ui:185
 msgid "can either be '-' for file or 'd' for directory"
-msgstr "může být buď '-' pro soubor, nebo 'd' pro adresář."
+msgstr "mÅ¯Å¾e bÃ½t buÄ '-' pro soubor, nebo 'd' pro adresÃ¡Å"
 
 #: data/ui/HelpDialog.ui:190
 msgid "First three positions (after file type)"
-msgstr "První tři pozice (za typem souboru)"
+msgstr "PrvnÃ­ tÅi pozice (za typem souboru)"
 
 #: data/ui/HelpDialog.ui:191
 msgid ""
-"The read, write and execute permissions for the user, here we have 'rwx', "
-"which translated to 4+2+1 and adds to 7"
+"The read, write and execute permissions for the user, here we have 'rwx', which translated to 4+2+1 and adds to 7"
 msgstr ""
-"Oprávnění ke čtení, zápisu a spuštění pro uživatele, zde máme 'rwx', "
-"což je v překladu 4+2+1 a dává to 7"
+"OprÃ¡vnÄnÃ­ ke ÄtenÃ­, zÃ¡pisu a spuÅ¡tÄnÃ­ pro uÅ¾ivatele, zde mÃ¡me 'rwx', coÅ¾ je v pÅekladu 4+2+1 a dÃ¡vÃ¡ to 7"
 
 #: data/ui/HelpDialog.ui:196
 msgid "Second three positions"
-msgstr "Druhé tři pozice"
+msgstr "DruhÃ© tÅi pozice"
 
 #: data/ui/HelpDialog.ui:197
 msgid ""
-"The read, write and execute permissions for the group, here we have 'r-x', "
-"which translated to 4+0+1 and adds to 5"
+"The read, write and execute permissions for the group, here we have 'r-x', which translated to 4+0+1 and adds to 5"
 msgstr ""
-"Oprávnění ke čtení, zápisu a spuštění pro skupinu, zde máme 'r-x', "
-"což se přeloží jako 4+0+1 a přičte se k číslu 5."
+"OprÃ¡vnÄnÃ­ ke ÄtenÃ­, zÃ¡pisu a spuÅ¡tÄnÃ­ pro skupinu, zde mÃ¡me 'r-x', coÅ¾ se pÅeloÅ¾Ã­ jako 4+0+1 a pÅiÄte se k ÄÃ­"
+"slu 5"
 
 #: data/ui/HelpDialog.ui:202
 msgid "Last three positions"
-msgstr "Poslední tři pozice"
+msgstr "PoslednÃ­ tÅi pozice"
 
 #: data/ui/HelpDialog.ui:203
 msgid ""
-"The read, write and execute permissions for other users, here we have 'r--', "
-"which translated to 4+0+0 and adds to 4"
+"The read, write and execute permissions for other users, here we have 'r--', which translated to 4+0+0 and adds to 4"
 msgstr ""
-"Oprávnění ke čtení, zápisu a spuštění pro ostatní uživatele, zde máme 'r--', "
-"což se přeloží jako 4+0+0 a přičte se k číslu 4."
+"OprÃ¡vnÄnÃ­ ke ÄtenÃ­, zÃ¡pisu a spuÅ¡tÄnÃ­ pro ostatnÃ­ uÅ¾ivatele, zde mÃ¡me 'r--', coÅ¾ se pÅeloÅ¾Ã­ jako 4+0+0 a "
+"pÅiÄte se k ÄÃ­slu 4"
 
 #: data/ui/HelpDialog.ui:211
 msgid "Example command"
-msgstr "Příklad příkazu"
+msgstr "PÅÃ­klad pÅÃ­kazu"
 
 #: data/ui/HelpDialog.ui:220
 msgid "chmod 754 (file name)"
-msgstr "chmod 754 (název souboru)"
+msgstr "chmod 754 (nÃ¡zev souboru)"
 
 #: data/ui/HelpDialog.ui:230
 msgid "Special Permissions"
-msgstr "Zvláštní oprávnění"
+msgstr "ZvlÃ¡Å¡tnÃ­ oprÃ¡vnÄnÃ­"
 
 #: data/ui/HelpDialog.ui:239
 msgid ""
-"Special permissions make up a fourth access level in addition to user, "
-"group, and other, they allow for additional privileges over the standard "
-"permission sets"
+"Special permissions make up a fourth access level in addition to user, group, and other, they allow for additional "
+"privileges over the standard permission sets"
 msgstr ""
-"Speciální oprávnění tvoří čtvrtou úroveň přístupu vedle uživatelské, "
-"skupiny a dalších, umožňují další oprávnění nad rámec standardních "
-"sady oprávnění"
+"SpeciÃ¡lnÃ­ oprÃ¡vnÄnÃ­ tvoÅÃ­ Ätvrtou ÃºroveÅ pÅÃ­stupu vedle uÅ¾ivatelskÃ©, skupiny a dalÅ¡Ã­ch, umoÅ¾ÅujÃ­ dalÅ¡Ã­ "
+"oprÃ¡vnÄnÃ­ nad rÃ¡mec standardnÃ­ch sady oprÃ¡vnÄnÃ­"
 
 #: data/ui/HelpDialog.ui:245
 msgid "The three special permissions are:"
-msgstr "Třemi zvláštními oprávněními jsou:"
+msgstr "TÅemi zvlÃ¡Å¡tnÃ­mi oprÃ¡vnÄnÃ­mi jsou:"
 
 #: data/ui/HelpDialog.ui:281
 msgid "Special permissions can be represented symbolically or numerically."
-msgstr "Zvláštní oprávnění lze znázornit symbolicky nebo číselně."
+msgstr "ZvlÃ¡Å¡tnÃ­ oprÃ¡vnÄnÃ­ lze znÃ¡zornit symbolicky nebo ÄÃ­selnÄ."
 
 #: data/ui/HelpDialog.ui:288
 msgid "Numeric representation:"
-msgstr "Číselné znázornění"
+msgstr "ÄÃ­selnÃ© znÃ¡zornÄnÃ­:"
 
 #: data/ui/HelpDialog.ui:298
 msgid ""
-"They are denoted as an extra digit before the user, group and others "
-"permissions. Can Either be 0, 4, 2, 1 or any combination of them."
+"They are denoted as an extra digit before the user, group and others permissions. Can Either be 0, 4, 2, 1 or any "
+"combination of them."
 msgstr ""
-"Označují se jako další číslice před uživatelem, skupinou a dalšími "
-"oprávnění. Mohou být buď 0, 4, 2, 1 nebo jejich libovolná kombinace."
+"OznaÄujÃ­ se jako dalÅ¡Ã­ ÄÃ­slice pÅed uÅ¾ivatelem, skupinou a dalÅ¡Ã­mi oprÃ¡vnÄnÃ­. Mohou bÃ½t buÄ 0, 4, 2, 1 nebo "
+"jejich libovolnÃ¡ kombinace."
 
 #: data/ui/HelpDialog.ui:308
 msgid "Symbolical representation:"
-msgstr "Symbolické znázornění"
+msgstr "SymbolickÃ© znÃ¡zornÄnÃ­:"
 
 #: data/ui/HelpDialog.ui:324
-msgid "Goes where 'x'' normally is for the user"
-msgstr "Přejde na místo, kde se pro uživatele obvykle nachází 'x''."
+msgid "Goes where 'x' normally is for the user"
+msgstr "PÅejde na mÃ­sto, kde se pro uÅ¾ivatele obvykle nachÃ¡zÃ­ 'x'"
 
 #: data/ui/HelpDialog.ui:330
 msgid "Goes where 'x' normally is for the group"
-msgstr "Přejde na místo, kde se pro skupinu obvykle nachází 'x''."
+msgstr "PÅejde na mÃ­sto, kde se pro skupinu obvykle nachÃ¡zÃ­ 'x'"
 
 #: data/ui/HelpDialog.ui:336
 msgid "Goes where 'x' normally is for others"
-msgstr "Přejde na místo, kde se pro ostatní uživatele obvykle nachází 'x''."
+msgstr "PÅejde na mÃ­sto, kde se pro ostatnÃ­ uÅ¾ivatele obvykle nachÃ¡zÃ­ 'x'"
 
 #: data/ui/HelpDialog.ui:344
 msgid "Symbolic: -rwsr-Sr-t"
-msgstr "Symbolické: -rwsr-Sr-t"
+msgstr "SymbolickÃ©: -rwsr-Sr-t"
 
 #: data/ui/HelpDialog.ui:354
 msgid "Numeric: 7745"
-msgstr "Číselné: 7745"
+msgstr "ÄÃ­selnÃ©: 7745"
 
 #: data/ui/HelpDialog.ui:370
 msgid ""
-"Represented as '4' numerically. Symbolically, it is either 's' if the owner "
-"has execute permissions or 'S' if not."
+"Represented as '4' numerically. Symbolically, it is either 's' if the owner has execute permissions or 'S' if not."
 msgstr ""
-"Číselně vyjádřeno jako '4'. Symbolicky je to buď „s“, pokud je vlastník "
-"má oprávnění ke spuštění, nebo 'S', pokud nemá."
+"ÄÃ­selnÄ vyjÃ¡dÅeno jako '4'. Symbolicky je to buÄ âsâ, pokud je vlastnÃ­k mÃ¡ oprÃ¡vnÄnÃ­ ke spuÅ¡tÄnÃ­, nebo 'S', "
+"pokud nemÃ¡."
 
 #: data/ui/HelpDialog.ui:376
 msgid ""
-"Represented as '2' numerically. Symbolically, it is either 's' if the group "
-"has execute permissions or 'S' if not."
+"Represented as '2' numerically. Symbolically, it is either 's' if the group has execute permissions or 'S' if not."
 msgstr ""
-"Číselně vyjádřeno jako '2'. Symbolicky je to buď „s“, pokud je skupina "
-"má oprávnění ke spuštění, nebo 'S', pokud nemá."
+"ÄÃ­selnÄ vyjÃ¡dÅeno jako '2'. Symbolicky je to buÄ âsâ, pokud je skupina mÃ¡ oprÃ¡vnÄnÃ­ ke spuÅ¡tÄnÃ­, nebo 'S', "
+"pokud nemÃ¡."
 
 #: data/ui/HelpDialog.ui:382
 msgid ""
-"Represented as '1' numerically. Symbolically, it is either 't' if the others "
-"have execute permissions or 'T' if not."
+"Represented as '1' numerically. Symbolically, it is either 't' if the others have execute permissions or 'T' if not."
 msgstr ""
-"Číselně vyjádřeno jako '1'. Symbolicky je to buď 't', pokud ostatní "
-"mají oprávnění k provádění, nebo 'T', pokud nemají."
+"ÄÃ­selnÄ vyjÃ¡dÅeno jako '1'. Symbolicky je to buÄ 't', pokud ostatnÃ­ majÃ­ oprÃ¡vnÄnÃ­ k provÃ¡dÄnÃ­, nebo 'T', pokud "
+"nemajÃ­."
 
 #: data/ui/HelpDialog.ui:390
 msgid "Example commands"
-msgstr "Příklady příkazů"
+msgstr "PÅÃ­klady pÅÃ­kazÅ¯"
 
 #: data/ui/HelpDialog.ui:399
 msgid "chmod 7745 (file name)"
-msgstr "chmod 7745 (název souboru)"
+msgstr "chmod 7745 (nÃ¡zev souboru)"
 
 #: data/ui/HelpDialog.ui:409
 msgid "Further reading"
-msgstr "Další čtení"
+msgstr "DalÅ¡Ã­ ÄtenÃ­"
 
-#: data/ui/Window.ui:4 data/ui/Window.ui:44
-#: data/io.github.ronniedroid.concessio.desktop:3
+#: data/ui/Window.ui:4 data/ui/Window.ui:44 data/io.github.ronniedroid.concessio.desktop:3
 #: data/io.github.ronniedroid.concessio.metainfo.xml:5 src/application.js:70
 msgid "Concessio"
 msgstr "Concessio"
@@ -316,23 +292,23 @@ msgstr "Concessio"
 #: data/ui/Window.ui:52 data/io.github.ronniedroid.concessio.desktop:4
 #: data/io.github.ronniedroid.concessio.metainfo.xml:6
 msgid "Understand file permissions"
-msgstr "Porozumějte oprávněním souborů"
+msgstr "PorozumÄjte oprÃ¡vnÄnÃ­m souborÅ¯"
 
 #: data/ui/Window.ui:57
 msgid "Get started"
-msgstr "Začínáme"
+msgstr "ZaÄÃ­nÃ¡me"
 
 #: data/ui/Window.ui:87
 msgid "Open"
-msgstr "Otevřít"
+msgstr "OtevÅÃ­t"
 
 #: data/ui/Window.ui:96
 msgid "Main Menu"
-msgstr "Hlavní nabídka"
+msgstr "HlavnÃ­ nabÃ­dka"
 
 #: data/ui/Window.ui:144 data/ui/ShortcutsWindow.ui:42
 msgid "Keyboard Shortcuts"
-msgstr "Klávesové zkratky"
+msgstr "KlÃ¡vesovÃ© zkratky"
 
 #: data/ui/Window.ui:148
 msgid "About"
@@ -344,72 +320,67 @@ msgstr "Soubor"
 
 #: data/ui/ShortcutsWindow.ui:11
 msgid "Open File"
-msgstr "Otevřít soubor"
+msgstr "OtevÅÃ­t soubor"
 
 #: data/ui/ShortcutsWindow.ui:12
 msgid "Open file chooser dialog"
-msgstr "Otevřít dialog pro výběr souboru"
+msgstr "OtevÅÃ­t dialog pro vÃ½bÄr souboru"
 
 #: data/ui/ShortcutsWindow.ui:20
 msgid "General"
-msgstr "Obecné"
+msgstr "ObecnÃ©"
 
 #: data/ui/ShortcutsWindow.ui:23
 msgid "Quit App"
-msgstr "Ukončit aplikaci"
+msgstr "UkonÄit aplikaci"
 
 #: data/ui/ShortcutsWindow.ui:29
 msgid "Close Window"
-msgstr "Zavřít okno"
+msgstr "ZavÅÃ­t okno"
 
 #: data/ui/ShortcutsWindow.ui:35
 msgid "Help dialog"
-msgstr "Dialog nápovědy"
+msgstr "Dialog nÃ¡povÄdy"
 
 #: data/ui/ShortcutsWindow.ui:36
 msgid "Display the help dialog"
-msgstr "Zobrazit dialog nápovědy"
+msgstr "Zobrazit dialog nÃ¡povÄdy"
 
 #: data/ui/ShortcutsWindow.ui:43
 msgid "Display this keyboard shortcuts window"
-msgstr "Zobrazit toto okno s klávesovými zkratkami"
+msgstr "Zobrazit toto okno s klÃ¡vesovÃ½mi zkratkami"
 
 #: data/io.github.ronniedroid.concessio.desktop:9
 msgid "Permissions;Convertor;Calculator;"
 msgstr "Permissions;Convertor;Calculator;"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:11 src/application.js:74
-msgid ""
-"Concessio helps you understand and convert between unix permissions "
-"representations"
-msgstr "Concessio vám pomáhá pochopit a převést mezi oprávněními a znázorněními "
-"Unixu"
+msgid "Concessio helps you understand and convert between unix permissions representations"
+msgstr "Concessio vÃ¡m pomÃ¡hÃ¡ pochopit a pÅevÃ©st mezi oprÃ¡vnÄnÃ­mi a znÃ¡zornÄnÃ­mi Unixu"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:13
-msgid ""
-"Convert between symbolic and numeric representations of UNIX file permissions"
-msgstr "Převod mezi symbolickou a číselnou reprezentací oprávnění souborů systému UNIX"
+msgid "Convert between symbolic and numeric representations of UNIX file permissions"
+msgstr "PÅevod mezi symbolickou a ÄÃ­selnou reprezentacÃ­ oprÃ¡vnÄnÃ­ souborÅ¯ systÃ©mu UNIX"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:14
 msgid "Use toggle buttons to update the symbolic and numeric fields"
-msgstr "K aktualizaci symbolických a číselných polí použijte přepínací tlačítka."
+msgstr "K aktualizaci symbolickÃ½ch a ÄÃ­selnÃ½ch polÃ­ pouÅ¾ijte pÅepÃ­nacÃ­ tlaÄÃ­tka"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:15
 msgid "Open a file to read it's permissions and convert them"
-msgstr "Otevření souboru a přečtení jeho oprávnění a jejich konverze"
+msgstr "OtevÅenÃ­ souboru a pÅeÄtenÃ­ jeho oprÃ¡vnÄnÃ­ a jejich konverze"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:16
 msgid "Open the help dialog to read and understand the UNIX permissions system"
-msgstr "Otevřete dialogové okno nápovědy a přečtěte si systém oprávnění systému UNIX."
+msgstr "OtevÅete dialogovÃ© okno nÃ¡povÄdy a pÅeÄtÄte si systÃ©m oprÃ¡vnÄnÃ­ systÃ©mu UNIX"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:30
-msgid ""
-"Application main page converting between numeric and symbolic permission"
-msgstr "Hlavní stránka aplikace pro převod mezi číselným a symbolickým oprávněním"
+msgid "Application main page converting between numeric and symbolic permission"
+msgstr "HlavnÃ­ strÃ¡nka aplikace pro pÅevod mezi ÄÃ­selnÃ½m a symbolickÃ½m oprÃ¡vnÄnÃ­m"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:34
 msgid "Application help page, explaining unix permissions"
-msgstr "Stránka nápovědy k aplikaci, vysvětlující Unixová oprávnění"
+msgstr "StrÃ¡nka nÃ¡povÄdy k aplikaci, vysvÄtlujÃ­cÃ­ UnixovÃ¡ oprÃ¡vnÄnÃ­"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.js:84
@@ -418,12 +389,12 @@ msgstr "vikdevelop <vikdevelop@proton.me>"
 
 #: src/application.js:87
 msgid "Special thanks to"
-msgstr "Zvláštní poděkování patří"
+msgstr "ZvlÃ¡Å¡tnÃ­ podÄkovÃ¡nÃ­ patÅÃ­"
 
 #: src/window.js:141
 msgid "Copied to clipboard!"
-msgstr "Zkopírováno do schránky!"
+msgstr "ZkopÃ­rovÃ¡no do schrÃ¡nky!"
 
 #: src/window.js:162
 msgid "Failed to open file."
-msgstr "Nepodařilo se otevřít souboru."
+msgstr "NepodaÅilo se otevÅÃ­t souboru."

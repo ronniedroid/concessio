@@ -227,7 +227,7 @@ msgid "Symbolical representation:"
 msgstr ""
 
 #: data/ui/HelpDialog.ui:324
-msgid "Goes where 'x'' normally is for the user"
+msgid "Goes where 'x' normally is for the user"
 msgstr ""
 
 #: data/ui/HelpDialog.ui:330
