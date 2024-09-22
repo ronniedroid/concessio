@@ -58,10 +58,10 @@
   <releases>
     <release version="v0.1.8" date="2024-09-22">
       <description translate="no">
-          <ui>
+          <ul>
               <li>Fixed Czech translations</li>
               <li>Updated to Gnome 47 runtime</li>
-          </ui>
+          </ul>
       </description>
     </release>
     <release version="v0.1.7" date="2024-09-20">
