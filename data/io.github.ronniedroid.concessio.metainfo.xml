@@ -56,6 +56,14 @@
   <url type="bugtracker">https://github.com/ronniedroid/concessio/issues</url>
 
   <releases>
+    <release version="v0.1.8" date="2024-09-22">
+      <description translate="no">
+          <ui>
+              <li>Fixed Czech translations</li>
+              <li>Updated to Gnome 47 runtime</li>
+          </ui>
+      </description>
+    </release>
     <release version="v0.1.7" date="2024-09-20">
       <description translate="no">
           <p>Added Czech translations by vikdevelop</p>

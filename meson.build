@@ -1,9 +1,9 @@
 # Define our project
 project(
        'concessio',
-	version: '0.1.7',
+	version: '0.1.8',
 	license: ['GPL-3.0-or-later'],
-	meson_version: '>= 0.59.0'
+	meson_version: '>= 0.62.0'
 )
 
 APP_ID = 'io.github.ronniedroid.concessio'
