@@ -56,6 +56,14 @@
   <url type="bugtracker">https://github.com/ronniedroid/concessio/issues</url>
 
   <releases>
+    <release version="v0.1.9" date="2024-11-20">
+      <description translate="no">
+        <ul>
+          <li>Added Russian translations (Thanks to vorons)</li>
+          <li>Added Dutch translations (Thanks to Vistaus )</li>
+        </ul>
+      </description>
+    </release>
     <release version="v0.1.8" date="2024-09-22">
       <description translate="no">
           <ul>
