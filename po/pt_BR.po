@@ -116,7 +116,7 @@ msgid "The types of permissions are:"
 msgstr "Os tipos de permissões são:"
 
 #: data/ui/HelpDialog.ui:117
-msgid "Read (Symbolic: r, Numeric: 4)"
+msgid "Read (Symbolically: r, Numerically: 4)"
 msgstr "Leitura (Simbolicamente: r, Numericamente: 4)"
 
 #: data/ui/HelpDialog.ui:118
@@ -125,7 +125,7 @@ msgstr ""
 "Permite visualizar o conteúdo do arquivo ou listar o conteúdo de um diretório"
 
 #: data/ui/HelpDialog.ui:128
-msgid "Write (Symbolically: 2, Numerically: 2)"
+msgid "Write (Symbolically: w, Numerically: 2)"
 msgstr "Escrita (Simbolicamente: w, Numericamente: 2)"
 
 #: data/ui/HelpDialog.ui:129
