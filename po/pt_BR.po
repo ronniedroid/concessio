@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# BRAZILIAN PORTUGUESE TRANSLATION.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the io.github.ronniedroid.concessio package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-17 15:39+0300\n"
 "PO-Revision-Date: 2024-11-21 23:25-0300\n"
-"Last-Translator: \n"
+"Last-Translator: Ioseph Silva\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -64,7 +64,7 @@ msgid ""
 "directories and has no effect on files."
 msgstr ""
 "Permite que somente o proprietário do arquivo ou do diretório exclua "
-"arquivos no diretório, mesmo que outras pessoas tenham permissões de "
+"arquivos no diretório, mesmo que outros usuários tenham permissões de "
 "escrita. Aplica-se somente a diretórios e não tem efeito sobre arquivos."
 
 #: data/ui/Form.ui:16
@@ -180,7 +180,7 @@ msgid ""
 "The read, write and execute permissions for the user, here we have 'rwx', "
 "which translated to 4+2+1 and adds to 7"
 msgstr ""
-"As permissões de leitura, escrita e execução para o usuário, aqui temos "
+"São as permissões de leitura, escrita e execução para o usuário, aqui temos "
 "'rwx', que se traduz em 4+2+1, totalizando 7"
 
 #: data/ui/HelpDialog.ui:196
@@ -192,7 +192,7 @@ msgid ""
 "The read, write and execute permissions for the group, here we have 'r-x', "
 "which translated to 4+0+1 and adds to 5"
 msgstr ""
-"As permissões de leitura, escrita e execução para o grupo, aqui temos 'r-x', "
+"São as permissões de leitura, escrita e execução para o grupo, aqui temos 'r-x', "
 "que se traduz em 4+0+1, totalizando 5"
 
 #: data/ui/HelpDialog.ui:202
@@ -204,7 +204,7 @@ msgid ""
 "The read, write and execute permissions for other users, here we have 'r--', "
 "which translated to 4+0+0 and adds to 4"
 msgstr ""
-"As permissões de leitura, escrita e execução para outros usuários, aqui "
+"São as permissões de leitura, escrita e execução para outros usuários, aqui "
 "temos 'r--', que se traduz em 4+0+0, totalizando 4"
 
 #: data/ui/HelpDialog.ui:211
@@ -377,7 +377,7 @@ msgstr "Mostra a janela de ajuda"
 
 #: data/ui/ShortcutsWindow.ui:43
 msgid "Display this keyboard shortcuts window"
-msgstr "Mostra essa janela de atalhos do teclado"
+msgstr "Mostra essa janela"
 
 #: data/io.github.ronniedroid.concessio.desktop:9
 msgid "Permissions;Convertor;Calculator;"
