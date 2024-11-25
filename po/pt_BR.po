@@ -125,7 +125,7 @@ msgstr ""
 "Permite visualizar o conteúdo do arquivo ou listar o conteúdo de um diretório"
 
 #: data/ui/HelpDialog.ui:128
-msgid "Write (Symbolically: 2, Numerically: 2)"
+msgid "Write (Symbolically: w, Numerically: 2)"
 msgstr "Escrita (Simbolicamente: w, Numericamente: 2)"
 
 #: data/ui/HelpDialog.ui:129
