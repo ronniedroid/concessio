@@ -125,7 +125,7 @@
                     </child>
                     <child>
                       <object class="AdwActionRow">
-                        <property name="title" translatable="true">Write (Symbolically: 2, Numerically: 2)</property>
+                        <property name="title" translatable="true">Write (Symbolically: w, Numerically: 2)</property>
                         <property name="subtitle" translatable="true">Allows modifying the file's contents or creating/deleting files within a directory</property>
                         <child type="prefix">
                           <object class="GtkImage">

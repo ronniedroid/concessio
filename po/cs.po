@@ -116,8 +116,8 @@ msgid "Allows viewing the file's contents or listing a directory's contents"
 msgstr "Umožňuje zobrazení obsahu souboru nebo zobrazení obsahu adresáře"
 
 #: data/ui/HelpDialog.ui:128
-msgid "Write (Symbolically: 2, Numerically: 2)"
-msgstr "Zapisovat (Symbolicky: 2, Číselně: 2)"
+msgid "Write (Symbolically: w, Numerically: 2)"
+msgstr "Zapisovat (Symbolicky: w, Číselně: 2)"
 
 #: data/ui/HelpDialog.ui:129
 msgid "Allows modifying the file's contents or creating/deleting files within a directory"
