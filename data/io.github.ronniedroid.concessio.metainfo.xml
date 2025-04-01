@@ -56,6 +56,14 @@
   <url type="bugtracker">https://github.com/ronniedroid/concessio/issues</url>
 
   <releases>
+    <release version="v0.1.10" date="2025-04-01">
+      <description translate="no">
+        <ul>
+          <li>Updated to gnome 48 runtime</li>
+          <li>Added Brazilian Portuguese translations (Thanks to ioseph-silva )</li>
+        </ul>
+      </description>
+    </release>
     <release version="v0.1.9" date="2024-11-20">
       <description translate="no">
         <ul>
