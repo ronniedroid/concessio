@@ -28,7 +28,7 @@ msgstr "Чтение"
 
 #: data/ui/BoxedList.ui:36 data/ui/BoxedList.ui:104 data/ui/BoxedList.ui:172
 msgid "Write"
-msgstr "Звпись"
+msgstr "Запись"
 
 #: data/ui/BoxedList.ui:51 data/ui/BoxedList.ui:119 data/ui/BoxedList.ui:187
 msgid "Execute"
