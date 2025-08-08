@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# Polish translation for Concessio
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the io.github.ronniedroid.concessio package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-17 15:39+0300\n"
-"PO-Revision-Date: 2025-08-06 13:24+0300\n"
+"PO-Revision-Date: 2025-08-08 13:38+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -417,7 +417,7 @@ msgstr "Strona pomocy aplikacji, tłumacząca uprawnienia UNIX"
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.js:84
 msgid "translator-credits"
-msgstr ""
+msgstr "dawkagaming"
 
 #: src/application.js:87
 msgid "Special thanks to"
