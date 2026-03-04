@@ -33,6 +33,10 @@
       <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/help-page.png</image>
       <caption>Application help page, explaining unix permissions</caption>
     </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/umask-page.png</image>
+      <caption>Application umask page, calculating the umask value for a base permission</caption>
+    </screenshot>
   </screenshots>
 
   <metadata_license>CC0-1.0</metadata_license>
@@ -56,6 +60,13 @@
   <url type="bugtracker">https://github.com/ronniedroid/concessio/issues</url>
 
   <releases>
+    <release version="v0.3.0" date="2026-03-04">
+      <description translate="no">
+        <p>Added umask page</p>
+        <p>Added umask explanation to the help page</p>
+        <p>Make copy buttons accessible by tabbing</p>
+      </description>
+    </release>
     <release version="v0.2.1" date="2026-01-12">
       <description translate="no">
         <p>Make the app accessible by orca</p>

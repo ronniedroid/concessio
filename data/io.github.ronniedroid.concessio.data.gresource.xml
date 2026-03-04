@@ -19,6 +19,8 @@
       <file alias="concessio-user-symbolic.svg">icons/person-symbolic.svg</file>
       <file alias="concessio-group-symbolic.svg">icons/people-symbolic.svg</file>
       <file alias="concessio-others-symbolic.svg">icons/train-load-extreme-symbolic.svg</file>
+      <file alias="concessio-base-permissions-symbolic.svg">icons/padlock2-symbolic.svg</file>
+      <file alias="concessio-umask-symbolic.svg">icons/shield-half-symbolic.svg</file>
       <file preprocess="xml-stripblanks" alias="io.github.sitraorg.sitra.svg">icons/io.github.sitraorg.sitra.svg</file>
       <file preprocess="xml-stripblanks" alias="io.github.getnf.embellish.svg">icons/io.github.getnf.embellish.svg</file>
     </gresource>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-12 12:03+0300\n"
+"POT-Creation-Date: 2026-03-04 19:14+0300\n"
 "PO-Revision-Date: 2024-09-20 17:53+0300\n"
 "Last-Translator: vikdevelop <vikdevelop@proton.me>\n"
 "Language-Team: \n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: data/ui/BoxedList.blp:13 data/ui/HelpDialog.blp:66
+#: data/ui/BoxedList.blp:13 data/ui/HelpDialog.blp:116
 msgid "User"
 msgstr "Uživatel"
 
@@ -53,7 +53,7 @@ msgstr "Porozumějte oprávněním souborů"
 msgid "Set user ID SUID options"
 msgstr ""
 
-#: data/ui/BoxedList.blp:93 data/ui/HelpDialog.blp:76
+#: data/ui/BoxedList.blp:93 data/ui/HelpDialog.blp:126
 msgid "Group"
 msgstr "Skupina"
 
@@ -76,7 +76,7 @@ msgstr "Zvláštní oprávnění"
 msgid "Set group ID SGID options"
 msgstr ""
 
-#: data/ui/BoxedList.blp:173 data/ui/HelpDialog.blp:86
+#: data/ui/BoxedList.blp:173 data/ui/HelpDialog.blp:136
 msgid "Others"
 msgstr "Ostatní"
 
@@ -102,7 +102,7 @@ msgstr ""
 msgid "Set user ID SUID switch"
 msgstr ""
 
-#: data/ui/BoxedList.blp:288 data/ui/HelpDialog.blp:248
+#: data/ui/BoxedList.blp:288 data/ui/HelpDialog.blp:298
 msgid ""
 "Executes the file with the permissions of the file owner, not the user "
 "running it."
@@ -113,7 +113,7 @@ msgstr ""
 msgid "Set group ID SGID switch"
 msgstr ""
 
-#: data/ui/BoxedList.blp:330 data/ui/HelpDialog.blp:253
+#: data/ui/BoxedList.blp:330 data/ui/HelpDialog.blp:303
 msgid ""
 "Executes the file with the permissions of the file's group, or ensures new "
 "files in a directory inherit the group."
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Sticky bit switch"
 msgstr ""
 
-#: data/ui/BoxedList.blp:372 data/ui/HelpDialog.blp:258
+#: data/ui/BoxedList.blp:372 data/ui/HelpDialog.blp:308
 msgid ""
 "Allows only the file owner or directory owner to delete files in the "
 "directory, even if others have write permissions. Only applies to "
@@ -138,43 +138,65 @@ msgstr ""
 msgid "Numeric"
 msgstr "Číselné"
 
-#: data/ui/Form.blp:23 data/ui/Form.blp:50
-msgid "Copy value"
-msgstr "Zkopírovat hodnotu"
-
-#: data/ui/Form.blp:29
+#: data/ui/Form.blp:32
 #, fuzzy
 msgid "Numeric permissions"
 msgstr "Unixová oprávnění"
 
-#: data/ui/Form.blp:30
-msgid "Enter three or four octal digits, for example 644 or 4755"
+#: data/ui/Form.blp:33
+msgid "Enter three or four octal digits, for example 0755"
 msgstr ""
 
-#: data/ui/Form.blp:41
+#: data/ui/Form.blp:39 data/ui/Form.blp:83
+msgid "Copy value"
+msgstr "Zkopírovat hodnotu"
+
+#: data/ui/Form.blp:43
+#, fuzzy
+msgid "Copy numeric value"
+msgstr "Zkopírovat hodnotu"
+
+#: data/ui/Form.blp:54
 msgid "Symbolic"
 msgstr "Symbolické"
 
-#: data/ui/Form.blp:56
+#: data/ui/Form.blp:72
 #, fuzzy
 msgid "Symbolic permissions"
 msgstr "Unixová oprávnění"
 
-#: data/ui/Form.blp:57
+#: data/ui/Form.blp:73
 msgid ""
 "Enter nine characters representing read, write, and execute permissions for "
 "user, group, and others, for example rwxr-xr-x"
 msgstr ""
 
-#: data/ui/HelpDialog.blp:14 data/ui/Window.blp:125
+#: data/ui/Form.blp:87
+#, fuzzy
+msgid "Copy symbolic value"
+msgstr "Zkopírovat hodnotu"
+
+#: data/ui/HelpDialog.blp:14 data/ui/Window.blp:159
 msgid "Help"
 msgstr "Pomoc"
 
 #: data/ui/HelpDialog.blp:36
+msgid "Table of Contents"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:52 data/ui/HelpDialog.blp:86
 msgid "Unix Permissions"
 msgstr "Unixová oprávnění"
 
-#: data/ui/HelpDialog.blp:45
+#: data/ui/HelpDialog.blp:63 data/ui/HelpDialog.blp:267
+msgid "Special Permissions"
+msgstr "Zvláštní oprávnění"
+
+#: data/ui/HelpDialog.blp:74 data/ui/HelpDialog.blp:440 data/ui/Window.blp:132
+msgid "Umask"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:95
 msgid ""
 "The Unix permissions system is used to grant granulated access to file and "
 "directories on a Unix-like operating system"
@@ -182,54 +204,54 @@ msgstr ""
 "Systém oprávnění systému Unix se používá k udělování granulovaného přístupu "
 "k souborům a adresářům v operačním systému podobném Unixu"
 
-#: data/ui/HelpDialog.blp:50
+#: data/ui/HelpDialog.blp:100
 msgid "Permissions are granted to three groups:"
 msgstr "Oprávnění jsou garantovaná pro tři skupiny:"
 
-#: data/ui/HelpDialog.blp:67
+#: data/ui/HelpDialog.blp:117
 msgid "The owner of the file"
 msgstr "Vlastník souboru"
 
-#: data/ui/HelpDialog.blp:77
+#: data/ui/HelpDialog.blp:127
 msgid "A group of users who share access to the file"
 msgstr "Skupina uživatelů, která sdílí přístup k souboru"
 
-#: data/ui/HelpDialog.blp:87
+#: data/ui/HelpDialog.blp:137
 msgid "All other users on the system"
 msgstr "Všichni ostatní uživatelé systému"
 
-#: data/ui/HelpDialog.blp:97
+#: data/ui/HelpDialog.blp:147
 msgid "The types of permissions are:"
 msgstr "Druhy oprávnění jsou:"
 
-#: data/ui/HelpDialog.blp:113
+#: data/ui/HelpDialog.blp:163
 msgid "Read (Symbolic: r, Numeric: 4)"
 msgstr "Číst (Symbolický: r, číselný: 4"
 
-#: data/ui/HelpDialog.blp:114
+#: data/ui/HelpDialog.blp:164
 msgid "Allows viewing the file's contents or listing a directory's contents"
 msgstr "Umožňuje zobrazení obsahu souboru nebo zobrazení obsahu adresáře"
 
-#: data/ui/HelpDialog.blp:123
+#: data/ui/HelpDialog.blp:173
 msgid "Write (Symbolically: w, Numerically: 2)"
 msgstr "Zapisovat (Symbolicky: w, Číselně: 2)"
 
-#: data/ui/HelpDialog.blp:124
+#: data/ui/HelpDialog.blp:174
 msgid ""
 "Allows modifying the file's contents or creating/deleting files within a "
 "directory"
 msgstr ""
 "Umožňuje úpravu obsahu souboru nebo vytváření/mazání souborů v rámci adresáře"
 
-#: data/ui/HelpDialog.blp:133
+#: data/ui/HelpDialog.blp:183
 msgid "Execute (Symbolically: x, Numerically: 1)"
 msgstr "Provést: (Symbolicky: x, Číselně: 1)"
 
-#: data/ui/HelpDialog.blp:134
+#: data/ui/HelpDialog.blp:184
 msgid "Allows running the file as a program"
 msgstr "Umožňuje spouštění souboru jako programu"
 
-#: data/ui/HelpDialog.blp:145
+#: data/ui/HelpDialog.blp:195
 msgid ""
 "Permissions can either be represented symbolically or numerically. Symbolic "
 "permissions are represented as a string of ten characters, and numeric is "
@@ -239,27 +261,27 @@ msgstr ""
 "oprávnění jsou reprezentována jako řetězec deseti znaků a číselná jsou "
 "reprezentována třemi čísly (osmičková notace), například:"
 
-#: data/ui/HelpDialog.blp:150
+#: data/ui/HelpDialog.blp:200
 msgid "Symbolic: -rwxr-xr--"
 msgstr "Symbolické: -rwxr-xr--"
 
-#: data/ui/HelpDialog.blp:160
+#: data/ui/HelpDialog.blp:210
 msgid "Numeric: 754"
 msgstr "Číselné: 754"
 
-#: data/ui/HelpDialog.blp:176
+#: data/ui/HelpDialog.blp:226
 msgid "First character, the file type"
 msgstr "První znak, druh souboru"
 
-#: data/ui/HelpDialog.blp:177
+#: data/ui/HelpDialog.blp:227
 msgid "can either be '-' for file or 'd' for directory"
 msgstr "může být buď '-' pro soubor, nebo 'd' pro adresář"
 
-#: data/ui/HelpDialog.blp:181
+#: data/ui/HelpDialog.blp:231
 msgid "First three positions (after file type)"
 msgstr "První tři pozice (za typem souboru)"
 
-#: data/ui/HelpDialog.blp:182
+#: data/ui/HelpDialog.blp:232
 msgid ""
 "The read, write and execute permissions for the user, here we have 'rwx', "
 "which translated to 4+2+1 and adds to 7"
@@ -267,11 +289,11 @@ msgstr ""
 "Oprávnění ke čtení, zápisu a spuštění pro uživatele, zde máme 'rwx', což je "
 "v překladu 4+2+1 a dává to 7"
 
-#: data/ui/HelpDialog.blp:186
+#: data/ui/HelpDialog.blp:236
 msgid "Second three positions"
 msgstr "Druhé tři pozice"
 
-#: data/ui/HelpDialog.blp:187
+#: data/ui/HelpDialog.blp:237
 msgid ""
 "The read, write and execute permissions for the group, here we have 'r-x', "
 "which translated to 4+0+1 and adds to 5"
@@ -279,11 +301,11 @@ msgstr ""
 "Oprávnění ke čtení, zápisu a spuštění pro skupinu, zde máme 'r-x', což se "
 "přeloží jako 4+0+1 a přičte se k číslu 5"
 
-#: data/ui/HelpDialog.blp:191
+#: data/ui/HelpDialog.blp:241
 msgid "Last three positions"
 msgstr "Poslední tři pozice"
 
-#: data/ui/HelpDialog.blp:192
+#: data/ui/HelpDialog.blp:242
 msgid ""
 "The read, write and execute permissions for other users, here we have 'r--', "
 "which translated to 4+0+0 and adds to 4"
@@ -291,19 +313,15 @@ msgstr ""
 "Oprávnění ke čtení, zápisu a spuštění pro ostatní uživatele, zde máme 'r--', "
 "což se přeloží jako 4+0+0 a přičte se k číslu 4"
 
-#: data/ui/HelpDialog.blp:198
+#: data/ui/HelpDialog.blp:248 data/ui/HelpDialog.blp:520
 msgid "Example command"
 msgstr "Příklad příkazu"
 
-#: data/ui/HelpDialog.blp:207
+#: data/ui/HelpDialog.blp:257
 msgid "chmod 754 (file name)"
 msgstr "chmod 754 (název souboru)"
 
-#: data/ui/HelpDialog.blp:217
-msgid "Special Permissions"
-msgstr "Zvláštní oprávnění"
-
-#: data/ui/HelpDialog.blp:226
+#: data/ui/HelpDialog.blp:276
 msgid ""
 "Special permissions make up a fourth access level in addition to user, "
 "group, and other, they allow for additional privileges over the standard "
@@ -312,19 +330,19 @@ msgstr ""
 "Speciální oprávnění tvoří čtvrtou úroveň přístupu vedle uživatelské, skupiny "
 "a dalších, umožňují další oprávnění nad rámec standardních sady oprávnění"
 
-#: data/ui/HelpDialog.blp:231
+#: data/ui/HelpDialog.blp:281
 msgid "The three special permissions are:"
 msgstr "Třemi zvláštními oprávněními jsou:"
 
-#: data/ui/HelpDialog.blp:264
+#: data/ui/HelpDialog.blp:314
 msgid "Special permissions can be represented symbolically or numerically."
 msgstr "Zvláštní oprávnění lze znázornit symbolicky nebo číselně."
 
-#: data/ui/HelpDialog.blp:270
+#: data/ui/HelpDialog.blp:320
 msgid "Numeric representation:"
 msgstr "Číselné znázornění:"
 
-#: data/ui/HelpDialog.blp:280
+#: data/ui/HelpDialog.blp:330
 msgid ""
 "They are denoted as an extra digit before the user, group and others "
 "permissions. Can Either be 0, 4, 2, 1 or any combination of them."
@@ -332,31 +350,31 @@ msgstr ""
 "Označují se jako další číslice před uživatelem, skupinou a dalšími "
 "oprávnění. Mohou být buď 0, 4, 2, 1 nebo jejich libovolná kombinace."
 
-#: data/ui/HelpDialog.blp:290
+#: data/ui/HelpDialog.blp:340
 msgid "Symbolical representation:"
 msgstr "Symbolické znázornění:"
 
-#: data/ui/HelpDialog.blp:307
+#: data/ui/HelpDialog.blp:357
 msgid "Goes where 'x' normally is for the user"
 msgstr "Přejde na místo, kde se pro uživatele obvykle nachází 'x'"
 
-#: data/ui/HelpDialog.blp:312
+#: data/ui/HelpDialog.blp:362
 msgid "Goes where 'x' normally is for the group"
 msgstr "Přejde na místo, kde se pro skupinu obvykle nachází 'x'"
 
-#: data/ui/HelpDialog.blp:317
+#: data/ui/HelpDialog.blp:367
 msgid "Goes where 'x' normally is for others"
 msgstr "Přejde na místo, kde se pro ostatní uživatele obvykle nachází 'x'"
 
-#: data/ui/HelpDialog.blp:323
+#: data/ui/HelpDialog.blp:373
 msgid "Symbolic: -rwsr-Sr-t"
 msgstr "Symbolické: -rwsr-Sr-t"
 
-#: data/ui/HelpDialog.blp:333
+#: data/ui/HelpDialog.blp:383
 msgid "Numeric: 7745"
 msgstr "Číselné: 7745"
 
-#: data/ui/HelpDialog.blp:350
+#: data/ui/HelpDialog.blp:400
 msgid ""
 "Represented as '4' numerically. Symbolically, it is either 's' if the owner "
 "has execute permissions or 'S' if not."
@@ -364,7 +382,7 @@ msgstr ""
 "Číselně vyjádřeno jako '4'. Symbolicky je to buď 's', pokud je vlastník má "
 "oprávnění ke spuštění, nebo 'S', pokud nemá."
 
-#: data/ui/HelpDialog.blp:355
+#: data/ui/HelpDialog.blp:405
 msgid ""
 "Represented as '2' numerically. Symbolically, it is either 's' if the group "
 "has execute permissions or 'S' if not."
@@ -372,7 +390,7 @@ msgstr ""
 "číselně vyjádřeno jako '2'. Symbolicky je to buď 's', pokud je skupina má "
 "oprávnění ke spuštění, nebo 'S', pokud nemá."
 
-#: data/ui/HelpDialog.blp:360
+#: data/ui/HelpDialog.blp:410
 msgid ""
 "Represented as '1' numerically. Symbolically, it is either 't' if the others "
 "have execute permissions or 'T' if not."
@@ -380,21 +398,89 @@ msgstr ""
 "číselně vyjádřeno jako '1'. Symbolicky je to buď 't', pokud ostatní mají "
 "oprávnění k provádění, nebo 'T', pokud nemají."
 
-#: data/ui/HelpDialog.blp:366
+#: data/ui/HelpDialog.blp:416
 msgid "Example commands"
 msgstr "Příklady příkazů"
 
-#: data/ui/HelpDialog.blp:375
+#: data/ui/HelpDialog.blp:425
 msgid "chmod 7745 (file name)"
 msgstr "chmod 7745 (název souboru)"
 
-#: data/ui/HelpDialog.blp:385
+#: data/ui/HelpDialog.blp:435 data/ui/HelpDialog.blp:549
 msgid "Further reading"
 msgstr "Další čtení"
 
+#: data/ui/HelpDialog.blp:449
+msgid ""
+"The umask (user file-creation mask) determines the default permissions for "
+"new files and directories. It acts as a filter that 'masks out' specific "
+"bits from the base permissions."
+msgstr ""
+
+#: data/ui/HelpDialog.blp:454
+#, fuzzy
+msgid "Typical base permissions:"
+msgstr "Zvláštní oprávnění"
+
+#: data/ui/HelpDialog.blp:470
+msgid "Directories (Base: 777)"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:471
+msgid "Full read, write, and execute permissions by default"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:475
+msgid "Files (Base: 666)"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:476
+msgid "Read and write permissions by default; execute is excluded for security"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:482
+msgid "Calculation logic:"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:492
+msgid ""
+"The final permission is calculated by taking the base and removing the bits "
+"set in the umask."
+msgstr ""
+
+#: data/ui/HelpDialog.blp:508
+msgid "Umask 022"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:509
+msgid ""
+"Removes write access for group and others. (Result: 755 for dirs, 644 for "
+"files)"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:513
+msgid "Umask 077"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:514
+msgid ""
+"Removes all access for group and others. (Result: 700 for dirs, 600 for "
+"files)"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:529
+msgid "umask 022"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:540
+msgid ""
+"Note: The umask command only lasts for the current session. You need to set "
+"the command in your bashrc or equivalent to make it permanent."
+msgstr ""
+
 #: data/ui/Window.blp:5 data/ui/Window.blp:44
 #: data/io.github.ronniedroid.concessio.desktop:2
-#: data/io.github.ronniedroid.concessio.metainfo.xml:5 src/application.js:70
+#: data/io.github.ronniedroid.concessio.metainfo.xml:5 src/application.js:71
 msgid "Concessio"
 msgstr "Concessio"
 
@@ -411,15 +497,20 @@ msgstr "Začínáme"
 msgid "Open"
 msgstr "Otevřít"
 
-#: data/ui/Window.blp:91
+#: data/ui/Window.blp:96
 msgid "Main Menu"
 msgstr "Hlavní nabídka"
 
-#: data/ui/Window.blp:130 data/shortcuts-dialog.blp:29
+#: data/ui/Window.blp:111
+#, fuzzy
+msgid "Permissions"
+msgstr "Unixová oprávnění"
+
+#: data/ui/Window.blp:164 data/shortcuts-dialog.blp:29
 msgid "Keyboard Shortcuts"
 msgstr "Klávesové zkratky"
 
-#: data/ui/Window.blp:135
+#: data/ui/Window.blp:169
 msgid "About"
 msgstr "O aplikaci"
 
@@ -455,7 +546,11 @@ msgstr "Zobrazit toto okno s klávesovými zkratkami"
 msgid "Permissions;Convertor;Calculator;"
 msgstr "Permissions;Convertor;Calculator;"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:11 src/application.js:74
+#: data/io.github.ronniedroid.concessio.metainfo.xml:8
+msgid "Ronnie Nissan"
+msgstr ""
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:11 src/application.js:75
 msgid ""
 "Concessio helps you understand and convert between unix permissions "
 "representations"
@@ -494,19 +589,35 @@ msgid "Application help page, explaining unix permissions"
 msgstr "Stránka nápovědy k aplikaci, vysvětlující Unixová oprávnění"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.js:84
+#: src/application.js:85
 msgid "translator-credits"
 msgstr "vikdevelop <vikdevelop@proton.me>"
 
-#: src/application.js:87
+#: src/application.js:88
+msgid "Embellish"
+msgstr ""
+
+#: src/application.js:88
+msgid "Install nerd fonts"
+msgstr ""
+
+#: src/application.js:89
+msgid "Sitra"
+msgstr ""
+
+#: src/application.js:89
+msgid "Get fonts from online sources"
+msgstr ""
+
+#: src/application.js:91
 msgid "Special thanks to"
 msgstr "Zvláštní poděkování patří"
 
-#: src/window.js:141
+#: src/window.js:148
 msgid "Copied to clipboard!"
 msgstr "Zkopírováno do schránky!"
 
-#: src/window.js:162
+#: src/window.js:169
 msgid "Failed to open file."
 msgstr "Nepodařilo se otevřít souboru."
 

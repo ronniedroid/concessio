@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-12 12:03+0300\n"
+"POT-Creation-Date: 2026-03-04 19:14+0300\n"
 "PO-Revision-Date: 2024-09-29 22:11+0300\n"
 "Last-Translator: Ворон <voron@duck.com>\n"
 "Language-Team: \n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.5\n"
 
-#: data/ui/BoxedList.blp:13 data/ui/HelpDialog.blp:66
+#: data/ui/BoxedList.blp:13 data/ui/HelpDialog.blp:116
 msgid "User"
 msgstr "Пользователь"
 
@@ -53,7 +53,7 @@ msgstr "Понимание прав доступа к файлам"
 msgid "Set user ID SUID options"
 msgstr ""
 
-#: data/ui/BoxedList.blp:93 data/ui/HelpDialog.blp:76
+#: data/ui/BoxedList.blp:93 data/ui/HelpDialog.blp:126
 msgid "Group"
 msgstr "Группа"
 
@@ -76,7 +76,7 @@ msgstr "Специальные разрешения"
 msgid "Set group ID SGID options"
 msgstr ""
 
-#: data/ui/BoxedList.blp:173 data/ui/HelpDialog.blp:86
+#: data/ui/BoxedList.blp:173 data/ui/HelpDialog.blp:136
 msgid "Others"
 msgstr "Остальные"
 
@@ -102,7 +102,7 @@ msgstr ""
 msgid "Set user ID SUID switch"
 msgstr ""
 
-#: data/ui/BoxedList.blp:288 data/ui/HelpDialog.blp:248
+#: data/ui/BoxedList.blp:288 data/ui/HelpDialog.blp:298
 msgid ""
 "Executes the file with the permissions of the file owner, not the user "
 "running it."
@@ -114,7 +114,7 @@ msgstr ""
 msgid "Set group ID SGID switch"
 msgstr ""
 
-#: data/ui/BoxedList.blp:330 data/ui/HelpDialog.blp:253
+#: data/ui/BoxedList.blp:330 data/ui/HelpDialog.blp:303
 msgid ""
 "Executes the file with the permissions of the file's group, or ensures new "
 "files in a directory inherit the group."
@@ -126,7 +126,7 @@ msgstr ""
 msgid "Sticky bit switch"
 msgstr ""
 
-#: data/ui/BoxedList.blp:372 data/ui/HelpDialog.blp:258
+#: data/ui/BoxedList.blp:372 data/ui/HelpDialog.blp:308
 msgid ""
 "Allows only the file owner or directory owner to delete files in the "
 "directory, even if others have write permissions. Only applies to "
@@ -140,43 +140,65 @@ msgstr ""
 msgid "Numeric"
 msgstr "Числовой"
 
-#: data/ui/Form.blp:23 data/ui/Form.blp:50
-msgid "Copy value"
-msgstr "Скопировать значение"
-
-#: data/ui/Form.blp:29
+#: data/ui/Form.blp:32
 #, fuzzy
 msgid "Numeric permissions"
 msgstr "Права доступа Unix"
 
-#: data/ui/Form.blp:30
-msgid "Enter three or four octal digits, for example 644 or 4755"
+#: data/ui/Form.blp:33
+msgid "Enter three or four octal digits, for example 0755"
 msgstr ""
 
-#: data/ui/Form.blp:41
+#: data/ui/Form.blp:39 data/ui/Form.blp:83
+msgid "Copy value"
+msgstr "Скопировать значение"
+
+#: data/ui/Form.blp:43
+#, fuzzy
+msgid "Copy numeric value"
+msgstr "Скопировать значение"
+
+#: data/ui/Form.blp:54
 msgid "Symbolic"
 msgstr "Символический"
 
-#: data/ui/Form.blp:56
+#: data/ui/Form.blp:72
 #, fuzzy
 msgid "Symbolic permissions"
 msgstr "Права доступа Unix"
 
-#: data/ui/Form.blp:57
+#: data/ui/Form.blp:73
 msgid ""
 "Enter nine characters representing read, write, and execute permissions for "
 "user, group, and others, for example rwxr-xr-x"
 msgstr ""
 
-#: data/ui/HelpDialog.blp:14 data/ui/Window.blp:125
+#: data/ui/Form.blp:87
+#, fuzzy
+msgid "Copy symbolic value"
+msgstr "Скопировать значение"
+
+#: data/ui/HelpDialog.blp:14 data/ui/Window.blp:159
 msgid "Help"
 msgstr "Помощь"
 
 #: data/ui/HelpDialog.blp:36
+msgid "Table of Contents"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:52 data/ui/HelpDialog.blp:86
 msgid "Unix Permissions"
 msgstr "Права доступа Unix"
 
-#: data/ui/HelpDialog.blp:45
+#: data/ui/HelpDialog.blp:63 data/ui/HelpDialog.blp:267
+msgid "Special Permissions"
+msgstr "Специальные разрешения"
+
+#: data/ui/HelpDialog.blp:74 data/ui/HelpDialog.blp:440 data/ui/Window.blp:132
+msgid "Umask"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:95
 msgid ""
 "The Unix permissions system is used to grant granulated access to file and "
 "directories on a Unix-like operating system"
@@ -184,40 +206,40 @@ msgstr ""
 "Система разрешений Unix используется для предоставления детализированного "
 "доступа к файлам и каталогам в операционной системе, подобной Unix"
 
-#: data/ui/HelpDialog.blp:50
+#: data/ui/HelpDialog.blp:100
 msgid "Permissions are granted to three groups:"
 msgstr "Разрешения предоставляются трем группам:"
 
-#: data/ui/HelpDialog.blp:67
+#: data/ui/HelpDialog.blp:117
 msgid "The owner of the file"
 msgstr "Владелец файла"
 
-#: data/ui/HelpDialog.blp:77
+#: data/ui/HelpDialog.blp:127
 msgid "A group of users who share access to the file"
 msgstr "Группа пользователей, которые имеют общий доступ к файлу"
 
-#: data/ui/HelpDialog.blp:87
+#: data/ui/HelpDialog.blp:137
 msgid "All other users on the system"
 msgstr "Все остальные пользователи в системе"
 
-#: data/ui/HelpDialog.blp:97
+#: data/ui/HelpDialog.blp:147
 msgid "The types of permissions are:"
 msgstr "Типы разрешений:"
 
-#: data/ui/HelpDialog.blp:113
+#: data/ui/HelpDialog.blp:163
 msgid "Read (Symbolic: r, Numeric: 4)"
 msgstr "Чтение (Символическое: r, Числовое: 4)"
 
-#: data/ui/HelpDialog.blp:114
+#: data/ui/HelpDialog.blp:164
 msgid "Allows viewing the file's contents or listing a directory's contents"
 msgstr ""
 "Позволяет просматривать содержимое файла или список содержимого каталога"
 
-#: data/ui/HelpDialog.blp:123
+#: data/ui/HelpDialog.blp:173
 msgid "Write (Symbolically: w, Numerically: 2)"
 msgstr "Запись (Символическое: w, Числовое: 2)"
 
-#: data/ui/HelpDialog.blp:124
+#: data/ui/HelpDialog.blp:174
 msgid ""
 "Allows modifying the file's contents or creating/deleting files within a "
 "directory"
@@ -225,15 +247,15 @@ msgstr ""
 "Позволяет изменять содержимое файла или создавать/удалять файлы внутри "
 "каталога"
 
-#: data/ui/HelpDialog.blp:133
+#: data/ui/HelpDialog.blp:183
 msgid "Execute (Symbolically: x, Numerically: 1)"
 msgstr "Выполнение (Символическое: x, Числовое: 1)"
 
-#: data/ui/HelpDialog.blp:134
+#: data/ui/HelpDialog.blp:184
 msgid "Allows running the file as a program"
 msgstr "Позволяет запустить файл как программу"
 
-#: data/ui/HelpDialog.blp:145
+#: data/ui/HelpDialog.blp:195
 msgid ""
 "Permissions can either be represented symbolically or numerically. Symbolic "
 "permissions are represented as a string of ten characters, and numeric is "
@@ -243,27 +265,27 @@ msgstr ""
 "разрешения представлены строкой из десяти символов, а численные - тремя "
 "числами (восьмеричная нотация), например:"
 
-#: data/ui/HelpDialog.blp:150
+#: data/ui/HelpDialog.blp:200
 msgid "Symbolic: -rwxr-xr--"
 msgstr "Символический: -rwxr-xr--"
 
-#: data/ui/HelpDialog.blp:160
+#: data/ui/HelpDialog.blp:210
 msgid "Numeric: 754"
 msgstr "Числовой: 754"
 
-#: data/ui/HelpDialog.blp:176
+#: data/ui/HelpDialog.blp:226
 msgid "First character, the file type"
 msgstr "Первый символ, тип файла"
 
-#: data/ui/HelpDialog.blp:177
+#: data/ui/HelpDialog.blp:227
 msgid "can either be '-' for file or 'd' for directory"
 msgstr "может быть '-' для файла или 'd' для каталога"
 
-#: data/ui/HelpDialog.blp:181
+#: data/ui/HelpDialog.blp:231
 msgid "First three positions (after file type)"
 msgstr "Первые три позиции (после типа файла)"
 
-#: data/ui/HelpDialog.blp:182
+#: data/ui/HelpDialog.blp:232
 msgid ""
 "The read, write and execute permissions for the user, here we have 'rwx', "
 "which translated to 4+2+1 and adds to 7"
@@ -271,11 +293,11 @@ msgstr ""
 "Права на чтение, запись и выполнение для пользователя, здесь у нас есть "
 "'rwx', что переводится как 4+2+1 и дает в сумме 7"
 
-#: data/ui/HelpDialog.blp:186
+#: data/ui/HelpDialog.blp:236
 msgid "Second three positions"
 msgstr "Вторые три позиции"
 
-#: data/ui/HelpDialog.blp:187
+#: data/ui/HelpDialog.blp:237
 msgid ""
 "The read, write and execute permissions for the group, here we have 'r-x', "
 "which translated to 4+0+1 and adds to 5"
@@ -283,11 +305,11 @@ msgstr ""
 "Права на чтение, запись и выполнение для группы, здесь у нас 'r-x', что "
 "переводится как 4+0+1 и дает 5"
 
-#: data/ui/HelpDialog.blp:191
+#: data/ui/HelpDialog.blp:241
 msgid "Last three positions"
 msgstr "Последние три позиции"
 
-#: data/ui/HelpDialog.blp:192
+#: data/ui/HelpDialog.blp:242
 msgid ""
 "The read, write and execute permissions for other users, here we have 'r--', "
 "which translated to 4+0+0 and adds to 4"
@@ -295,19 +317,15 @@ msgstr ""
 "Права на чтение, запись и выполнение для остальных пользователей, здесь у "
 "нас 'r--', что переводится как 4+0+0 и дает в сумме 4"
 
-#: data/ui/HelpDialog.blp:198
+#: data/ui/HelpDialog.blp:248 data/ui/HelpDialog.blp:520
 msgid "Example command"
 msgstr "Пример команды"
 
-#: data/ui/HelpDialog.blp:207
+#: data/ui/HelpDialog.blp:257
 msgid "chmod 754 (file name)"
 msgstr "chmod 754 (имя файла)"
 
-#: data/ui/HelpDialog.blp:217
-msgid "Special Permissions"
-msgstr "Специальные разрешения"
-
-#: data/ui/HelpDialog.blp:226
+#: data/ui/HelpDialog.blp:276
 msgid ""
 "Special permissions make up a fourth access level in addition to user, "
 "group, and other, they allow for additional privileges over the standard "
@@ -317,20 +335,20 @@ msgstr ""
 "пользователя, группы и остальных. Они позволяют получить дополнительные "
 "привилегии по сравнению с обычными наборами разрешений"
 
-#: data/ui/HelpDialog.blp:231
+#: data/ui/HelpDialog.blp:281
 msgid "The three special permissions are:"
 msgstr "Три специальных разрешения:"
 
-#: data/ui/HelpDialog.blp:264
+#: data/ui/HelpDialog.blp:314
 msgid "Special permissions can be represented symbolically or numerically."
 msgstr ""
 "Специальные разрешения могут быть представлены символически или численно."
 
-#: data/ui/HelpDialog.blp:270
+#: data/ui/HelpDialog.blp:320
 msgid "Numeric representation:"
 msgstr "Числовое представление:"
 
-#: data/ui/HelpDialog.blp:280
+#: data/ui/HelpDialog.blp:330
 msgid ""
 "They are denoted as an extra digit before the user, group and others "
 "permissions. Can Either be 0, 4, 2, 1 or any combination of them."
@@ -338,31 +356,31 @@ msgstr ""
 "Они обозначаются дополнительной цифрой перед разрешениями пользователя, "
 "группы и остальных. Может быть 0, 4, 2, 1 или любая комбинация из них."
 
-#: data/ui/HelpDialog.blp:290
+#: data/ui/HelpDialog.blp:340
 msgid "Symbolical representation:"
 msgstr "Символическое представление:"
 
-#: data/ui/HelpDialog.blp:307
+#: data/ui/HelpDialog.blp:357
 msgid "Goes where 'x' normally is for the user"
 msgstr "Располагается там, где обычно находится 'x' для пользователя"
 
-#: data/ui/HelpDialog.blp:312
+#: data/ui/HelpDialog.blp:362
 msgid "Goes where 'x' normally is for the group"
 msgstr "Располагается там, где обычно находится 'x' для группы"
 
-#: data/ui/HelpDialog.blp:317
+#: data/ui/HelpDialog.blp:367
 msgid "Goes where 'x' normally is for others"
 msgstr "Располагается там, где обычно находится 'x' для остальных"
 
-#: data/ui/HelpDialog.blp:323
+#: data/ui/HelpDialog.blp:373
 msgid "Symbolic: -rwsr-Sr-t"
 msgstr "Символический: -rwsr-Sr-t"
 
-#: data/ui/HelpDialog.blp:333
+#: data/ui/HelpDialog.blp:383
 msgid "Numeric: 7745"
 msgstr "Числовой: 7745"
 
-#: data/ui/HelpDialog.blp:350
+#: data/ui/HelpDialog.blp:400
 msgid ""
 "Represented as '4' numerically. Symbolically, it is either 's' if the owner "
 "has execute permissions or 'S' if not."
@@ -370,7 +388,7 @@ msgstr ""
 "Представлено числом '4'. Символически, это либо 's', если владелец имеет "
 "права на выполнение, либо 'S', если нет."
 
-#: data/ui/HelpDialog.blp:355
+#: data/ui/HelpDialog.blp:405
 msgid ""
 "Represented as '2' numerically. Symbolically, it is either 's' if the group "
 "has execute permissions or 'S' if not."
@@ -378,7 +396,7 @@ msgstr ""
 "Представлено числом '2'. Символически, это либо 's', если у группы есть "
 "права на выполнение, либо 'S', если нет."
 
-#: data/ui/HelpDialog.blp:360
+#: data/ui/HelpDialog.blp:410
 msgid ""
 "Represented as '1' numerically. Symbolically, it is either 't' if the others "
 "have execute permissions or 'T' if not."
@@ -386,21 +404,89 @@ msgstr ""
 "Представлено числом '1'. Символически, это либо 't', если у остальных есть "
 "права на выполнение, либо 'T', если нет."
 
-#: data/ui/HelpDialog.blp:366
+#: data/ui/HelpDialog.blp:416
 msgid "Example commands"
 msgstr "Примеры команд"
 
-#: data/ui/HelpDialog.blp:375
+#: data/ui/HelpDialog.blp:425
 msgid "chmod 7745 (file name)"
 msgstr "chmod 7745 (имя файла)"
 
-#: data/ui/HelpDialog.blp:385
+#: data/ui/HelpDialog.blp:435 data/ui/HelpDialog.blp:549
 msgid "Further reading"
 msgstr "Дополнительное чтение"
 
+#: data/ui/HelpDialog.blp:449
+msgid ""
+"The umask (user file-creation mask) determines the default permissions for "
+"new files and directories. It acts as a filter that 'masks out' specific "
+"bits from the base permissions."
+msgstr ""
+
+#: data/ui/HelpDialog.blp:454
+#, fuzzy
+msgid "Typical base permissions:"
+msgstr "Специальные разрешения"
+
+#: data/ui/HelpDialog.blp:470
+msgid "Directories (Base: 777)"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:471
+msgid "Full read, write, and execute permissions by default"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:475
+msgid "Files (Base: 666)"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:476
+msgid "Read and write permissions by default; execute is excluded for security"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:482
+msgid "Calculation logic:"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:492
+msgid ""
+"The final permission is calculated by taking the base and removing the bits "
+"set in the umask."
+msgstr ""
+
+#: data/ui/HelpDialog.blp:508
+msgid "Umask 022"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:509
+msgid ""
+"Removes write access for group and others. (Result: 755 for dirs, 644 for "
+"files)"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:513
+msgid "Umask 077"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:514
+msgid ""
+"Removes all access for group and others. (Result: 700 for dirs, 600 for "
+"files)"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:529
+msgid "umask 022"
+msgstr ""
+
+#: data/ui/HelpDialog.blp:540
+msgid ""
+"Note: The umask command only lasts for the current session. You need to set "
+"the command in your bashrc or equivalent to make it permanent."
+msgstr ""
+
 #: data/ui/Window.blp:5 data/ui/Window.blp:44
 #: data/io.github.ronniedroid.concessio.desktop:2
-#: data/io.github.ronniedroid.concessio.metainfo.xml:5 src/application.js:70
+#: data/io.github.ronniedroid.concessio.metainfo.xml:5 src/application.js:71
 msgid "Concessio"
 msgstr "Concessio"
 
@@ -417,15 +503,20 @@ msgstr "Начало"
 msgid "Open"
 msgstr "Открыть"
 
-#: data/ui/Window.blp:91
+#: data/ui/Window.blp:96
 msgid "Main Menu"
 msgstr "Главное меню"
 
-#: data/ui/Window.blp:130 data/shortcuts-dialog.blp:29
+#: data/ui/Window.blp:111
+#, fuzzy
+msgid "Permissions"
+msgstr "Права доступа Unix"
+
+#: data/ui/Window.blp:164 data/shortcuts-dialog.blp:29
 msgid "Keyboard Shortcuts"
 msgstr "Комбинации клавиш"
 
-#: data/ui/Window.blp:135
+#: data/ui/Window.blp:169
 msgid "About"
 msgstr "О приложении"
 
@@ -461,7 +552,11 @@ msgstr "Показать окно комбинаций клавиш"
 msgid "Permissions;Convertor;Calculator;"
 msgstr "Permissions;Convertor;Calculator;Разрешения;Конвертер;Калькулятор;"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:11 src/application.js:74
+#: data/io.github.ronniedroid.concessio.metainfo.xml:8
+msgid "Ronnie Nissan"
+msgstr ""
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml:11 src/application.js:75
 msgid ""
 "Concessio helps you understand and convert between unix permissions "
 "representations"
@@ -501,19 +596,35 @@ msgid "Application help page, explaining unix permissions"
 msgstr "Страница справки приложения, объясняющая права доступа в Unix"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.js:84
+#: src/application.js:85
 msgid "translator-credits"
 msgstr "Ворон <voron@duck.com>"
 
-#: src/application.js:87
+#: src/application.js:88
+msgid "Embellish"
+msgstr ""
+
+#: src/application.js:88
+msgid "Install nerd fonts"
+msgstr ""
+
+#: src/application.js:89
+msgid "Sitra"
+msgstr ""
+
+#: src/application.js:89
+msgid "Get fonts from online sources"
+msgstr ""
+
+#: src/application.js:91
 msgid "Special thanks to"
 msgstr "Особая благодарность"
 
-#: src/window.js:141
+#: src/window.js:148
 msgid "Copied to clipboard!"
 msgstr "Скопировано в буфер обмена!"
 
-#: src/window.js:162
+#: src/window.js:169
 msgid "Failed to open file."
 msgstr "Не удалось открыть файл."
 
