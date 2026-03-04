@@ -18,16 +18,30 @@ template $CncForm {
       ]
     }
 
-    Entry numeric {
-      secondary-icon-name: "concessio-copy-symbolic";
-      secondary-icon-tooltip-text: _("Copy value");
-      placeholder-text: "644";
-      changed => $_removeErrorClass();
-      icon-press => $_copyToClipboard();
+    Box {
+      styles [
+        "linked",
+      ]
 
-      accessibility {
-        label: _("Numeric permissions");
-        description: _("Enter three or four octal digits, for example 644 or 4755");
+      Entry numeric {
+        hexpand: true;
+        placeholder-text: "0755";
+        changed => $_removeErrorClass();
+
+        accessibility {
+          label: _("Numeric permissions");
+          description: _("Enter three or four octal digits, for example 0755");
+        }
+      }
+
+      Button {
+        icon-name: "concessio-copy-symbolic";
+        tooltip-text: _("Copy value");
+        clicked => $_copyNumeric();
+
+        accessibility {
+          label: _("Copy numeric value");
+        }
       }
     }
   }
@@ -35,7 +49,6 @@ template $CncForm {
   Box {
     spacing: 12;
     orientation: vertical;
-    halign: center;
 
     Label {
       label: _("Symbolic");
@@ -45,21 +58,35 @@ template $CncForm {
       ]
     }
 
-    Entry symbolic {
-      secondary-icon-name: "concessio-copy-symbolic";
-      secondary-icon-tooltip-text: _("Copy value");
-      placeholder-text: "rwxr--r--";
-      changed => $_removeErrorClass();
-      icon-press => $_copyToClipboard();
+    Box {
+      styles [
+        "linked",
+      ]
 
-      accessibility {
-        label: _("Symbolic permissions");
-        description: _("Enter nine characters representing read, write, and execute permissions for user, group, and others, for example rwxr-xr-x");
+      Entry symbolic {
+        hexpand: true;
+        placeholder-text: "rwxr--r--";
+        changed => $_removeErrorClass();
+
+        accessibility {
+          label: _("Symbolic permissions");
+          description: _("Enter nine characters representing read, write, and execute permissions for user, group, and others, for example rwxr-xr-x");
+        }
+
+        styles [
+          "monospace",
+        ]
       }
 
-      styles [
-        "monospace",
-      ]
+      Button {
+        icon-name: "concessio-copy-symbolic";
+        tooltip-text: _("Copy value");
+        clicked => $_copySymbolic();
+
+        accessibility {
+          label: _("Copy symbolic value");
+        }
+      }
     }
   }
 }

@@ -22,6 +22,14 @@ export const CncForm = GObject.registerClass({
         _entry.remove_css_class("error");
     }
 
+    _copyNumeric() {
+        this._copyToClipboard(this._numeric);
+    }
+
+    _copySymbolic() {
+        this._copyToClipboard(this._symbolic);
+    }
+
     _copyToClipboard(_entry) {
         if (_entry.get_text().length > 0 && !_entry.has_css_class("error")) {
             const text = GLib.Variant.new_string(_entry.get_text());

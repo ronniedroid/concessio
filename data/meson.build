@@ -4,6 +4,7 @@ blueprints = custom_target('blueprints',
     'ui/BoxedList.blp',
     'ui/Form.blp',
     'ui/HelpDialog.blp',
+    'ui/UmaskForm.blp',
     'ui/Window.blp'
   ),
   output: '.',

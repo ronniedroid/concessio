@@ -4,7 +4,7 @@ using Adw 1;
 template $CncWindow {
   title: _("Concessio");
   default-width: "500";
-  default-height: "400";
+  default-height: "550";
   width-request: "360";
   height-request: "296";
 
@@ -77,7 +77,7 @@ template $CncWindow {
           [top]
           Adw.HeaderBar {
             [start]
-            Button {
+            Button openButton {
               Adw.ButtonContent {
                 label: _("Open");
                 icon-name: "document-open-symbolic";
@@ -85,6 +85,11 @@ template $CncWindow {
 
               action-name: "win.open";
             }
+
+            title-widget: Adw.ViewSwitcher {
+              stack: viewStack;
+              policy: wide;
+            };
 
             [end]
             MenuButton {
@@ -98,19 +103,48 @@ template $CncWindow {
           content: Adw.Clamp {
             maximum-size: 450;
 
-            Box {
-              halign: center;
-              valign: center;
-              orientation: vertical;
-              spacing: 18;
-              margin-start: 12;
-              margin-end: 12;
+            Adw.ViewStack viewStack {
+              vexpand: true;
 
-              $CncForm form {
-                valign: "1";
+              Adw.ViewStackPage {
+                name: "permissions";
+                title: _("Permissions");
+                icon-name: "system-lock-screen-symbolic";
+
+                child: Box {
+                  halign: center;
+                  valign: center;
+                  orientation: vertical;
+                  spacing: 18;
+                  margin-top: 18;
+                  margin-bottom: 18;
+
+                  $CncForm form {
+                    valign: "1";
+                  }
+
+                  $CncBoxedList boxedList {}
+                };
               }
 
-              $CncBoxedList boxedList {}
+              Adw.ViewStackPage {
+                name: "umask";
+                title: _("Umask");
+                icon-name: "security-high-symbolic";
+
+                child: Box {
+                  halign: center;
+                  valign: center;
+                  orientation: vertical;
+                  spacing: 18;
+                  margin-top: 18;
+                  margin-bottom: 18;
+
+                  $CncUmaskForm umaskForm {
+                    valign: "1";
+                  }
+                };
+              }
             }
           };
         };
@@ -137,4 +171,3 @@ menu main_menu {
     }
   }
 }
-

@@ -1,0 +1,161 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $CncUmaskForm: Widget {
+    layout-manager: BoxLayout {
+        orientation: vertical;
+        spacing: 18;
+    };
+
+    Box {
+        spacing: 12;
+        orientation: vertical;
+
+        Label {
+            label: _("Target Permission");
+
+            styles [
+                "heading",
+            ]
+        }
+
+        Box {
+            styles [
+                "linked",
+            ]
+
+            Entry target {
+                hexpand: true;
+                placeholder-text: "755";
+                changed => $_onTargetChanged();
+
+                accessibility {
+                    label: _("Target permission");
+                    description: _("Enter three octal digits for the desired permission");
+                }
+            }
+
+            Button {
+                icon-name: "concessio-copy-symbolic";
+                tooltip-text: _("Copy value");
+                clicked => $_copyTarget();
+
+                accessibility {
+                    label: _("Copy target permission value");
+                }
+            }
+        }
+    }
+
+    Box {
+        spacing: 12;
+        orientation: vertical;
+
+        Label {
+            label: _("UMask");
+
+            styles [
+                "heading",
+            ]
+        }
+
+        Box {
+            styles [
+                "linked",
+            ]
+
+            Entry umask {
+                hexpand: true;
+                placeholder-text: "022";
+                changed => $_onUmaskChanged();
+
+                accessibility {
+                    label: _("Umask permission");
+                    description: _("Enter three octal digits for the umask value");
+                }
+            }
+
+            Button {
+                icon-name: "concessio-copy-symbolic";
+                tooltip-text: _("Copy value");
+                clicked => $_copyUmask();
+
+                accessibility {
+                    label: _("Copy umask value");
+                }
+            }
+        }
+    }
+
+    Box {
+        spacing: 12;
+        orientation: vertical;
+
+        Label {
+            label: _("Base");
+
+            styles [
+                "heading",
+            ]
+        }
+
+        Adw.ToggleGroup base {
+            active: 0;
+
+            Adw.Toggle {
+                label: "666";
+                tooltip: "Files base permission";
+            }
+
+            Adw.Toggle {
+                label: "777";
+                tooltip: "Directories base permission";
+            }
+
+            notify::active => $_onBaseChanged();
+        }
+    }
+
+    Box {
+        spacing: 12;
+        orientation: vertical;
+
+        Label {
+            label: _("Umask Command");
+
+            styles [
+                "heading",
+            ]
+        }
+
+        Box {
+            styles [
+                "linked",
+            ]
+
+            Entry command {
+                hexpand: true;
+                editable: false;
+                can-focus: false;
+
+                accessibility {
+                    label: _("Resulting umask command");
+                }
+
+                styles [
+                    "monospace",
+                ]
+            }
+
+            Button {
+                icon-name: "concessio-copy-symbolic";
+                tooltip-text: _("Copy command");
+                clicked => $_copyCommand();
+
+                accessibility {
+                    label: _("Copy umask command");
+                }
+            }
+        }
+    }
+}

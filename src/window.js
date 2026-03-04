@@ -13,12 +13,19 @@ export const CncWindow = GObject.registerClass({
         'form',
         "boxedList",
         "stack",
+        "viewStack",
+        "umaskForm",
+        "openButton"
     ]
 }, class extends Adw.ApplicationWindow {
     constructor(params = {}) {
         super(params);
         this.#setupActions();
         this.#setupWelcomeScreen();
+
+        this._viewStack.connect('notify::visible-child-name', () => {
+            this._openButton.visible = this._viewStack.visible_child_name === 'permissions';
+        });
 
         Gio._promisify(Gtk.FileDialog.prototype, "open", "open_finish");
     }
@@ -34,7 +41,7 @@ export const CncWindow = GObject.registerClass({
 
     #setupActions() {
         ['u1', 'u2', 'u4', 'g1', 'g2', 'g4', 'o1', 'o2', 'o4'].forEach(id => {
-            const action = new Gio.SimpleAction({name: id, state: GLib.Variant.new_boolean(false)});
+            const action = new Gio.SimpleAction({ name: id, state: GLib.Variant.new_boolean(false) });
             action.connect('notify::state', (act) => {
                 this._onButtonToggleAction(act);
             });
@@ -42,7 +49,7 @@ export const CncWindow = GObject.registerClass({
         });
 
         ['suid', 'sgid', 'sticky'].forEach(id => {
-            const action = new Gio.SimpleAction({name: id, state: GLib.Variant.new_boolean(false)});
+            const action = new Gio.SimpleAction({ name: id, state: GLib.Variant.new_boolean(false) });
             action.connect('notify::state', (act) => {
                 this._onSwitchToggleAction(act);
             });
@@ -114,7 +121,7 @@ export const CncWindow = GObject.registerClass({
         button.connect('toggled', () => {
             act.set_state(GLib.Variant.new_boolean(button.active));
         });
-        
+
         this._updateFormValues(this._boxedList.getSymbolicValue());
     }
 
@@ -214,14 +221,14 @@ function numericToSymbolic(numeric) {
     const symbolic = perms
         .split('')
         .map(digit => permMap[parseInt(digit)])
-          .join('');
+        .join('');
 
     let symbolicWithSpecial = symbolic.split('');
     if (specialBits & 4) {
         symbolicWithSpecial[2] = (perms[0] === '1' || perms[0] === '3' || perms[0] === '5' || perms[0] === '7') ? 's' : 'S';
     }
 
-    if (specialBits & 2 ) {
+    if (specialBits & 2) {
         symbolicWithSpecial[5] = (perms[1] === '1' || perms[1] === '3' || perms[1] === '5' || perms[1] === '7') ? 's' : 'S';
     }
 
@@ -234,7 +241,7 @@ function numericToSymbolic(numeric) {
 
 
 function getFilePermission(file) {
-  const info = file.query_info("unix::mode", Gio.FileQueryInfoFlags.NONE, null);
-  const mode = info.get_attribute_uint32("unix::mode") & 0o777;
-  return mode.toString(8);
+    const info = file.query_info("unix::mode", Gio.FileQueryInfoFlags.NONE, null);
+    const mode = info.get_attribute_uint32("unix::mode") & 0o777;
+    return mode.toString(8).padStart(3, '0');
 }
