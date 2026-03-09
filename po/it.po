@@ -1,14 +1,14 @@
 # ITALIAN TRANSLATION.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the io.github.ronniedroid.concessio package.
-# Albano BATTISTELLA <albanobattistella@gmail.com>, 2O24.
+# Albano BATTISTELLA <albanobattistella@gmail.com>, 2O24,2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-04 19:14+0300\n"
-"PO-Revision-Date: 2024-09-20 17:53+0300\n"
+"PO-Revision-Date: 2026-03-09 20:53+0200\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Albano Battistella\n"
 "Language: it_IT\n"
@@ -26,80 +26,72 @@ msgid "Read"
 msgstr "Lettura"
 
 #: data/ui/BoxedList.blp:26
-#, fuzzy
 msgid "User read permission"
-msgstr "Comprendere i permessi dei file"
+msgstr "Permesso di lettura dell'utente"
 
 #: data/ui/BoxedList.blp:41 data/ui/BoxedList.blp:121 data/ui/BoxedList.blp:201
 msgid "Write"
 msgstr "Scrittura"
 
 #: data/ui/BoxedList.blp:44
-#, fuzzy
 msgid "User write permission"
-msgstr "Comprendere i permessi dei file"
+msgstr "Permesso di scrittura dell'utente"
 
 #: data/ui/BoxedList.blp:59 data/ui/BoxedList.blp:139 data/ui/BoxedList.blp:219
 msgid "Execute"
 msgstr "Eseguire"
 
 #: data/ui/BoxedList.blp:62
-#, fuzzy
 msgid "User execute permission"
-msgstr "Comprendere i permessi dei file"
+msgstr "Permesso di esecuzione dell'utente"
 
 #: data/ui/BoxedList.blp:82
 msgid "Set user ID SUID options"
-msgstr ""
+msgstr "Imposta le opzioni SUID dell'ID utente"
 
 #: data/ui/BoxedList.blp:93 data/ui/HelpDialog.blp:126
 msgid "Group"
 msgstr "Gruppo"
 
 #: data/ui/BoxedList.blp:106
-#, fuzzy
 msgid "Group read permission"
-msgstr "Permessi speciali"
+msgstr "Permesso di lettura del gruppo"
 
 #: data/ui/BoxedList.blp:124
-#, fuzzy
 msgid "Group write permission"
-msgstr "Comprendere i permessi dei file"
+msgstr "Autorizzazione di scrittura del gruppo"
 
 #: data/ui/BoxedList.blp:142
-#, fuzzy
 msgid "Group execute permission"
-msgstr "Permessi speciali"
+msgstr "Permesso di esecuzione del gruppo"
 
 #: data/ui/BoxedList.blp:162
 msgid "Set group ID SGID options"
-msgstr ""
+msgstr "Imposta le opzioni SGID dell'ID gruppo"
 
 #: data/ui/BoxedList.blp:173 data/ui/HelpDialog.blp:136
 msgid "Others"
 msgstr "Altri"
 
 #: data/ui/BoxedList.blp:186
-#, fuzzy
 msgid "Other users read permission"
-msgstr "I tipi di permessi sono:"
+msgstr "Permessi di lettura di altri utenti"
 
 #: data/ui/BoxedList.blp:204
-#, fuzzy
 msgid "Other users write permission"
-msgstr "Comprendere i permessi dei file"
+msgstr "Permessi di scrittura di altri utenti"
 
 #: data/ui/BoxedList.blp:222
 msgid "Other users execute permission"
-msgstr ""
+msgstr "Permessi di esecuzione di altri utenti"
 
 #: data/ui/BoxedList.blp:242
 msgid "Sticky bit options"
-msgstr ""
+msgstr "Opzioni Sticky bit"
 
 #: data/ui/BoxedList.blp:283
 msgid "Set user ID SUID switch"
-msgstr ""
+msgstr "Imposta cambio SUID dell'ID utente"
 
 #: data/ui/BoxedList.blp:288 data/ui/HelpDialog.blp:298
 msgid ""
@@ -111,7 +103,7 @@ msgstr ""
 
 #: data/ui/BoxedList.blp:325
 msgid "Set group ID SGID switch"
-msgstr ""
+msgstr "Imposta cambio SGID dell'ID gruppo"
 
 #: data/ui/BoxedList.blp:330 data/ui/HelpDialog.blp:303
 msgid ""
@@ -123,7 +115,7 @@ msgstr ""
 
 #: data/ui/BoxedList.blp:367
 msgid "Sticky bit switch"
-msgstr ""
+msgstr "Cambia Sticky bit"
 
 #: data/ui/BoxedList.blp:372 data/ui/HelpDialog.blp:308
 msgid ""
@@ -140,42 +132,40 @@ msgid "Numeric"
 msgstr "Numerico"
 
 #: data/ui/Form.blp:32
-#, fuzzy
 msgid "Numeric permissions"
-msgstr "Permessi Unix"
+msgstr "Permessi numerici"
 
 #: data/ui/Form.blp:33
 msgid "Enter three or four octal digits, for example 0755"
-msgstr ""
+msgstr "Inserisci tre o quattro cifre ottali, ad esempio 0755"
 
 #: data/ui/Form.blp:39 data/ui/Form.blp:83
 msgid "Copy value"
 msgstr "Copia valore"
 
 #: data/ui/Form.blp:43
-#, fuzzy
 msgid "Copy numeric value"
-msgstr "Copia valore"
+msgstr "Copia valore numerico"
 
 #: data/ui/Form.blp:54
 msgid "Symbolic"
 msgstr "Simbolico"
 
 #: data/ui/Form.blp:72
-#, fuzzy
 msgid "Symbolic permissions"
-msgstr "Permessi Unix"
+msgstr "Permessi simbolici"
 
 #: data/ui/Form.blp:73
 msgid ""
 "Enter nine characters representing read, write, and execute permissions for "
 "user, group, and others, for example rwxr-xr-x"
 msgstr ""
+"Inserisci nove caratteri che rappresentano i permessi di lettura, scrittura ed esecuzione per "
+"utente, gruppo e altri, ad esempio rwxr-xr-x"
 
 #: data/ui/Form.blp:87
-#, fuzzy
 msgid "Copy symbolic value"
-msgstr "Copia valore"
+msgstr "Copia valore simbolico"
 
 #: data/ui/HelpDialog.blp:14 data/ui/Window.blp:159
 msgid "Help"
@@ -183,7 +173,7 @@ msgstr "Aiuto"
 
 #: data/ui/HelpDialog.blp:36
 msgid "Table of Contents"
-msgstr ""
+msgstr "Tabella dei contenuti"
 
 #: data/ui/HelpDialog.blp:52 data/ui/HelpDialog.blp:86
 msgid "Unix Permissions"
@@ -232,7 +222,7 @@ msgstr "Lettura (Simbolico: r, Numerico: 4)"
 #: data/ui/HelpDialog.blp:164
 msgid "Allows viewing the file's contents or listing a directory's contents"
 msgstr ""
-"Consente di visualizzare il contenuto del file o di elencare il contenuto di "
+"Consente di visualizzare il contenuto del file o di elencare il contenuto di"
 "una directory"
 
 #: data/ui/HelpDialog.blp:173
@@ -425,67 +415,77 @@ msgid ""
 "new files and directories. It acts as a filter that 'masks out' specific "
 "bits from the base permissions."
 msgstr ""
+"La umask (maschera di creazione file utente) determina i permessi predefiniti per "
+"nuovi file e directory. Agisce come un filtro che "maschera" specifici "
+"bit dai permessi di base."
 
 #: data/ui/HelpDialog.blp:454
-#, fuzzy
 msgid "Typical base permissions:"
-msgstr "Permessi speciali"
+msgstr "Autorizzazioni di base tipiche:"
 
 #: data/ui/HelpDialog.blp:470
 msgid "Directories (Base: 777)"
-msgstr ""
+msgstr "Directories (Base: 777)"
 
 #: data/ui/HelpDialog.blp:471
 msgid "Full read, write, and execute permissions by default"
-msgstr ""
+msgstr "Permessi di lettura, scrittura ed esecuzione completi per impostazione predefinita"
 
 #: data/ui/HelpDialog.blp:475
 msgid "Files (Base: 666)"
-msgstr ""
+msgstr "Files (Base: 666)"
 
 #: data/ui/HelpDialog.blp:476
 msgid "Read and write permissions by default; execute is excluded for security"
-msgstr ""
+msgstr "Permessi di lettura e scrittura predefiniti; l'esecuzione è esclusa per motivi di sicurezza"
 
 #: data/ui/HelpDialog.blp:482
 msgid "Calculation logic:"
-msgstr ""
+msgstr "Logica di calcolo:"
 
 #: data/ui/HelpDialog.blp:492
 msgid ""
 "The final permission is calculated by taking the base and removing the bits "
 "set in the umask."
 msgstr ""
+"Il permesso finale viene calcolato prendendo la base e rimuovendo i bit "
+"impostati nell'umask."
 
 #: data/ui/HelpDialog.blp:508
 msgid "Umask 022"
-msgstr ""
+msgstr "Umask 022"
 
 #: data/ui/HelpDialog.blp:509
 msgid ""
 "Removes write access for group and others. (Result: 755 for dirs, 644 for "
 "files)"
 msgstr ""
+"Rimuove l'accesso in scrittura per il gruppo e altri. (Risultato: 755 per le directory, 644 "
+"per i file)"
 
 #: data/ui/HelpDialog.blp:513
 msgid "Umask 077"
-msgstr ""
+msgstr "Umask 077"
 
 #: data/ui/HelpDialog.blp:514
 msgid ""
 "Removes all access for group and others. (Result: 700 for dirs, 600 for "
 "files)"
 msgstr ""
+"Rimuove tutti gli accessi per il gruppo e altri. (Risultato: 700 per le directory, 600 per "
+"i file)"
 
 #: data/ui/HelpDialog.blp:529
 msgid "umask 022"
-msgstr ""
+msgstr "umask 022"
 
 #: data/ui/HelpDialog.blp:540
 msgid ""
 "Note: The umask command only lasts for the current session. You need to set "
 "the command in your bashrc or equivalent to make it permanent."
 msgstr ""
+"Nota: il comando umask è valido solo per la sessione corrente. È necessario impostare "
+"il comando nel proprio bashrc o in un file equivalente per renderlo permanente."
 
 #: data/ui/Window.blp:5 data/ui/Window.blp:44
 #: data/io.github.ronniedroid.concessio.desktop:2
@@ -511,9 +511,8 @@ msgid "Main Menu"
 msgstr "Menu principale"
 
 #: data/ui/Window.blp:111
-#, fuzzy
 msgid "Permissions"
-msgstr "Permessi Unix"
+msgstr "Permessi"
 
 #: data/ui/Window.blp:164 data/shortcuts-dialog.blp:29
 msgid "Keyboard Shortcuts"
@@ -557,7 +556,7 @@ msgstr "Permessi;Convertitore;Calcolatrice;"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:8
 msgid "Ronnie Nissan"
-msgstr ""
+msgstr "Ronnie Nissan"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml:11 src/application.js:75
 msgid ""
@@ -608,19 +607,19 @@ msgstr "Albano Battistella <albanobattistella@gmail.com>"
 
 #: src/application.js:88
 msgid "Embellish"
-msgstr ""
+msgstr "Abbellire"
 
 #: src/application.js:88
 msgid "Install nerd fonts"
-msgstr ""
+msgstr "Installa i font nerd"
 
 #: src/application.js:89
 msgid "Sitra"
-msgstr ""
+msgstr "Sitra"
 
 #: src/application.js:89
 msgid "Get fonts from online sources"
-msgstr ""
+msgstr "Ottieni font da fonti online"
 
 #: src/application.js:91
 msgid "Special thanks to"
