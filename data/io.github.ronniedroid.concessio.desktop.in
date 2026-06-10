@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Concessio
+Comment= Understand file permissions
+Icon=io.github.ronniedroid.concessio
+Exec=io.github.ronniedroid.concessio
+Type=Application
+DBusActivatable=true
+Categories=System;Utility;
+Keywords=Permissions;Converter;Calculator;
