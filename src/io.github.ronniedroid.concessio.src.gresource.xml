@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-    <gresource prefix="/io/github/ronniedroid/concessio/js">
-        <file>main.js</file>
-        <file>application.js</file>
-        <file>window.js</file>
-        <file>form.js</file>
-        <file>boxedList.js</file>
-        <file>helpDialog.js</file>
-        <file>umaskForm.js</file>
+    <gresource prefix="/io/github/ronniedroid/concessio/">
+        <file preprocess="xml-stripblanks">shortcuts-dialog.ui</file>
+        <file preprocess="xml-stripblanks">permissions.ui</file>
+        <!-- <file preprocess="xml-stripblanks">umask.ui</file> -->
+        <file preprocess="xml-stripblanks">window.ui</file>
+        <file preprocess="xml-stripblanks">help-dialog.ui</file>
+        <file alias="style.css">assets/style.css</file>
+        <file preprocess="xml-stripblanks" alias="welcome.svg">assets/welcome.svg</file>
+        <file preprocess="xml-stripblanks" alias="help.svg">assets/help.svg</file>
+    </gresource>
+    <gresource prefix="/io/github/ronniedroid/concessio/icons/scalable/actions">
+      <file preprocess="xml-stripblanks" alias="concessio-read-symbolic.svg">assets/icons/open-book-symbolic.svg</file>
+      <file preprocess="xml-stripblanks" alias="concessio-write-symbolic.svg">assets/icons/edit-symbolic.svg</file>
+      <file preprocess="xml-stripblanks" alias="concessio-execute-symbolic.svg">assets/icons/execute-from-symbolic.svg</file>
+      <file preprocess="xml-stripblanks" alias="concessio-copy-symbolic.svg">assets/icons/copy-symbolic.svg</file>
+      <file preprocess="xml-stripblanks" alias="concessio-user-symbolic.svg">assets/icons/person-symbolic.svg</file>
+      <file preprocess="xml-stripblanks" alias="concessio-group-symbolic.svg">assets/icons/people-symbolic.svg</file>
+      <file preprocess="xml-stripblanks" alias="concessio-others-symbolic.svg">assets/icons/train-load-extreme-symbolic.svg</file>
+      <file preprocess="xml-stripblanks" alias="concessio-base-permissions-symbolic.svg">assets/icons/padlock2-symbolic.svg</file>
+      <file preprocess="xml-stripblanks" alias="concessio-umask-symbolic.svg">assets/icons/shield-half-symbolic.svg</file>
+      <file preprocess="xml-stripblanks" alias="io.github.sitraorg.sitra.svg">assets/icons/io.github.sitraorg.sitra.svg</file>
+      <file preprocess="xml-stripblanks" alias="io.github.getnf.embellish.svg">assets/icons/io.github.getnf.embellish.svg</file>
     </gresource>
 </gresources>
