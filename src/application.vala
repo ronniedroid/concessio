@@ -41,7 +41,6 @@ public class Concessio.Application : Adw.Application {
 
 	public override void activate () {
 		base.activate ();
-        // var _ = typeof (Concessio.Permissions);
 		var win = this.active_window ?? new Concessio.Window (this);
 		win.present ();
 	}

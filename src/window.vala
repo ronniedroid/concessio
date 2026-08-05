@@ -22,9 +22,16 @@ using Gee;
 
 [GtkTemplate (ui = "/io/github/ronniedroid/concessio/window.ui")]
 public class Concessio.Window : Adw.ApplicationWindow {
-    [GtkChild] private unowned Adw.ToastOverlay toast_overlay;
-    [GtkChild] private unowned Gtk.Stack stack;
-    [GtkChild] private unowned Adw.ViewStack main_stack;
+    [GtkChild]
+    private unowned Adw.ToastOverlay toast_overlay;
+    [GtkChild]
+    private unowned Gtk.Stack stack;
+    [GtkChild]
+    private unowned Gtk.Button open_button;
+    [GtkChild]
+    private unowned Adw.ViewStack main_stack;
+    [GtkChild]
+    private unowned Concessio.Permissions permissions;
 
     private GLib.Settings settings = new GLib.Settings ("io.github.ronniedroid.concessio");
 
@@ -37,6 +44,20 @@ public class Concessio.Window : Adw.ApplicationWindow {
 
         setup_welcome_screen ();
         setup_actions ();
+
+        main_stack.notify["visible-child-name"].connect (() => {
+            if (main_stack.get_visible_child_name () != "permissions") {
+                open_button.set_visible (false);
+            } else {
+                open_button.set_visible (true);
+            }
+        });
+
+        permissions.copied.connect ((text) => {
+            var toast = new Adw.Toast (_("Copied “%s”").printf (text));
+            toast.timeout = 2;
+            toast_overlay.add_toast (toast);
+        });
     }
 
     private void setup_welcome_screen () {
@@ -61,6 +82,23 @@ public class Concessio.Window : Adw.ApplicationWindow {
                 view;
             settings.set_boolean ("welcome-screen-shown", true);
         });
-        	this.add_action (change_view_action);
+        this.add_action (change_view_action);
+    }
+
+    [GtkCallback]
+    private async void open_file () {
+        var dialog = new Gtk.FileDialog ();
+
+        try {
+            File file = yield dialog.open (this, null);
+
+            permissions.load_file (file);
+        } catch (Error e) {
+            if (!(e is Gtk.DialogError.DISMISSED)) {
+                toast_overlay.add_toast (
+                                         new Adw.Toast (_("Failed to open file."))
+                );
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-/* help_dialog.vala
+/* permissions.vala
  *
  * Copyright 2026 Ronnie Nissan Yousif
  *
@@ -20,31 +20,52 @@
 
 [GtkTemplate (ui = "/io/github/ronniedroid/concessio/permissions.ui")]
 public class Concessio.Permissions : Gtk.Box {
+    [GtkChild]
+    private unowned Gtk.Entry numeric_entry;
+    [GtkChild]
+    private unowned Gtk.Entry symbolic_entry;
+    [GtkChild]
+    private unowned Gtk.ToggleButton u4;
+    [GtkChild]
+    private unowned Gtk.ToggleButton u2;
+    [GtkChild]
+    private unowned Gtk.ToggleButton u1;
+    [GtkChild]
+    private unowned Gtk.ToggleButton g4;
+    [GtkChild]
+    private unowned Gtk.ToggleButton g2;
+    [GtkChild]
+    private unowned Gtk.ToggleButton g1;
+    [GtkChild]
+    private unowned Gtk.ToggleButton o4;
+    [GtkChild]
+    private unowned Gtk.ToggleButton o2;
+    [GtkChild]
+    private unowned Gtk.ToggleButton o1;
+    [GtkChild]
+    private unowned Gtk.Switch suid;
+    [GtkChild]
+    private unowned Gtk.Switch sgid;
+    [GtkChild]
+    private unowned Gtk.Switch sticky;
 
-    [GtkChild] private unowned Gtk.Entry numeric_entry;
-    [GtkChild] private unowned Gtk.Entry symbolic_entry;
-    [GtkChild] private unowned Gtk.Entry chmod_command_entry;
-
-    [GtkChild] private unowned Gtk.ToggleButton u4;
-    [GtkChild] private unowned Gtk.ToggleButton u2;
-    [GtkChild] private unowned Gtk.ToggleButton u1;
-
-    [GtkChild] private unowned Gtk.ToggleButton g4;
-    [GtkChild] private unowned Gtk.ToggleButton g2;
-    [GtkChild] private unowned Gtk.ToggleButton g1;
-
-    [GtkChild] private unowned Gtk.ToggleButton o4;
-    [GtkChild] private unowned Gtk.ToggleButton o2;
-    [GtkChild] private unowned Gtk.ToggleButton o1;
-
-    [GtkChild] private unowned Gtk.Switch suid;
-    [GtkChild] private unowned Gtk.Switch sgid;
-    [GtkChild] private unowned Gtk.Switch sticky;
-
-    public uint mode { get; set; default = 0644; }
+    public uint mode { get; set; default = 00644; }
+    public signal void copied (string text);
 
     private bool updating = false;
 
+    private const uint MODE_USER_READ = 00400;
+    private const uint MODE_USER_WRITE = 00200;
+    private const uint MODE_USER_EXECUTE = 00100;
+    private const uint MODE_GROUP_READ = 00040;
+    private const uint MODE_GROUP_WRITE = 00020;
+    private const uint MODE_GROUP_EXECUTE = 00010;
+    private const uint MODE_OTHER_READ = 00004;
+    private const uint MODE_OTHER_WRITE = 00002;
+    private const uint MODE_OTHER_EXECUTE = 00001;
+    private const uint MODE_SUID = 04000;
+    private const uint MODE_SGID = 02000;
+    private const uint MODE_STICKY = 01000;
     private const string[] PERM_MAP = {
         "---",
         "--x",
@@ -56,27 +77,45 @@ public class Concessio.Permissions : Gtk.Box {
         "rwx"
     };
 
-    public Permissions () {
-
+    construct {
         notify["mode"].connect (() => {
             update_ui_from_mode ();
         });
-
-        numeric_entry.changed.connect (() => {
-            update_mode_from_numeric ();
-        });
-
-        symbolic_entry.changed.connect (() => {
-            update_mode_from_symbolic ();
-        });
-
         connect_toggle_signals ();
-
+        numeric_entry.activate.connect (update_mode_from_numeric);
+        symbolic_entry.activate.connect (update_mode_from_symbolic);
         update_ui_from_mode ();
     }
 
-    private void connect_toggle_signals () {
+    private void update_ui_from_mode () {
+        updating = true;
+        numeric_entry.text = mode_to_numeric ();
+        numeric_entry.remove_css_class ("error");
+        symbolic_entry.text = mode_to_symbolic ();
+        symbolic_entry.remove_css_class ("error");
 
+        u4.active = (mode & MODE_USER_READ) != 0;
+        u2.active = (mode & MODE_USER_WRITE) != 0;
+        u1.active = (mode & MODE_USER_EXECUTE) != 0;
+
+        g4.active = (mode & MODE_GROUP_READ) != 0;
+        g2.active = (mode & MODE_GROUP_WRITE) != 0;
+        g1.active = (mode & MODE_GROUP_EXECUTE) != 0;
+
+        o4.active = (mode & MODE_OTHER_READ) != 0;
+        o2.active = (mode & MODE_OTHER_WRITE) != 0;
+        o1.active = (mode & MODE_OTHER_EXECUTE) != 0;
+
+        suid.active = (mode & MODE_SUID) != 0;
+        sgid.active = (mode & MODE_SGID) != 0;
+        sticky.active = (mode & MODE_STICKY) != 0;
+
+        updating = false;
+    }
+
+    // Toggle buttons
+
+    private void connect_toggle_signals () {
         u4.toggled.connect (update_mode_from_buttons);
         u2.toggled.connect (update_mode_from_buttons);
         u1.toggled.connect (update_mode_from_buttons);
@@ -95,98 +134,69 @@ public class Concessio.Permissions : Gtk.Box {
     }
 
     private void update_mode_from_buttons () {
-
         if (updating)
             return;
 
-        uint mode = 0;
+        uint new_mode = 0;
 
-        if (u4.active)mode |= 0400;
-        if (u2.active)mode |= 0200;
-        if (u1.active)mode |= 0100;
+        if (u4.active) { new_mode |= MODE_USER_READ; }
+        if (u2.active) { new_mode |= MODE_USER_WRITE; }
+        if (u1.active) { new_mode |= MODE_USER_EXECUTE; }
 
-        if (g4.active)mode |= 0040;
-        if (g2.active)mode |= 0020;
-        if (g1.active)mode |= 0010;
+        if (g4.active) { new_mode |= MODE_GROUP_READ; }
+        if (g2.active) { new_mode |= MODE_GROUP_WRITE; }
+        if (g1.active) { new_mode |= MODE_GROUP_EXECUTE; }
 
-        if (o4.active)mode |= 0004;
-        if (o2.active)mode |= 0002;
-        if (o1.active)mode |= 0001;
+        if (o4.active) { new_mode |= MODE_OTHER_READ; }
+        if (o2.active) { new_mode |= MODE_OTHER_WRITE; }
+        if (o1.active) { new_mode |= MODE_OTHER_EXECUTE; }
 
-        if (suid.active)mode |= 04000;
-        if (sgid.active)mode |= 02000;
-        if (sticky.active)mode |= 01000;
+        if (suid.active) { new_mode |= MODE_SUID; }
+        if (sgid.active) { new_mode |= MODE_SGID; }
+        if (sticky.active) { new_mode |= MODE_STICKY; }
 
-        this.mode = mode;
+        mode = new_mode;
+    }
+
+    // Numeric entry
+
+    private string mode_to_numeric () {
+        return "%03o".printf (mode);
     }
 
     private void update_mode_from_numeric () {
-
-        if (updating)
+        if (updating) {
             return;
+        }
 
-        try {
-            mode = uint.parse (
-                               numeric_entry.text.strip (),
-                               8
-            );
-        } catch (Error e) {
+        uint parsed;
+        if (try_parse_octal (numeric_entry.text, out parsed)) {
+            mode = parsed;
+            numeric_entry.remove_css_class ("error");
+        } else {
+            numeric_entry.add_css_class ("error");
         }
     }
 
-    private uint triplet_to_octal (string triplet) {
+    private bool try_parse_octal (string input, out uint value) {
+        value = 0;
 
-        uint value = 0;
+        string text = input.strip ();
 
-        if (triplet[0] != '-')
-            value += 4;
+        uint64 parsed;
+        try {
+            uint64.from_string (text, out parsed, 8, 0, 07777);
+        } catch (NumberParserError e) {
+            return false;
+        }
 
-        if (triplet[1] != '-')
-            value += 2;
-
-        if (triplet[2] == 'x' ||
-            triplet[2] == 's' ||
-            triplet[2] == 't')
-            value += 1;
-
-        return value;
+        value = (uint) parsed;
+        return true;
     }
 
-    private void update_mode_from_symbolic () {
-
-        if (updating)
-            return;
-
-        string text = symbolic_entry.text.strip ();
-
-        if (text.length != 9)
-            return;
-
-        uint special = 0;
-
-        if (text[2] == 's' || text[2] == 'S')
-            special |= 4;
-
-        if (text[5] == 's' || text[5] == 'S')
-            special |= 2;
-
-        if (text[8] == 't' || text[8] == 'T')
-            special |= 1;
-
-        uint user = triplet_to_octal (text.substring (0, 3));
-        uint group = triplet_to_octal (text.substring (3, 3));
-        uint other = triplet_to_octal (text.substring (6, 3));
-
-        mode =
-            (special << 9)
-            | (user << 6)
-            | (group << 3)
-            | other;
-    }
+    // Symbolic entry
 
     private string mode_to_symbolic () {
-
-        uint special = (mode >> 9) & 7;
         uint user = (mode >> 6) & 7;
         uint group = (mode >> 3) & 7;
         uint other = mode & 7;
@@ -199,54 +209,129 @@ public class Concessio.Permissions : Gtk.Box {
         char gx = g[2];
         char ox = o[2];
 
-        if ((special & 4) != 0)
+        if ((mode & MODE_SUID) != 0) {
             ux = (ux == 'x') ? 's' : 'S';
-
-        if ((special & 2) != 0)
+        }
+        if ((mode & MODE_SGID) != 0) {
             gx = (gx == 'x') ? 's' : 'S';
-
-        if ((special & 1) != 0)
+        }
+        if ((mode & MODE_STICKY) != 0) {
             ox = (ox == 'x') ? 't' : 'T';
+        }
 
-        return @"$(u[0])$(u[1])$ux$(g[0])$(g[1])$gx$(o[0])$(o[1])$ox";
+        string user_str = u.substring (0, 2) + ux.to_string ();
+        string group_str = g.substring (0, 2) + gx.to_string ();
+        string other_str = o.substring (0, 2) + ox.to_string ();
+
+        return user_str + group_str + other_str;
     }
 
-    private string mode_to_numeric () {
+    private void update_mode_from_symbolic () {
+        if (updating) {
+            return;
+        }
 
-        uint special = (mode >> 9) & 7;
+        string text = symbolic_entry.text.strip ();
 
-        if (special == 0)
-            return "%03o".printf (mode & 0777);
+        if (text.length != 9) {
+            symbolic_entry.add_css_class ("error");
+            return;
+        }
 
-        return "%04o".printf (mode);
+        uint user, group, other;
+        bool user_ok = triplet_to_octal (text.substring (0, 3), out user);
+        bool group_ok = triplet_to_octal (text.substring (3, 3), out group);
+        bool other_ok = triplet_to_octal (text.substring (6, 3), out other);
+
+        if (!user_ok || !group_ok || !other_ok) {
+            symbolic_entry.add_css_class ("error");
+            return;
+        }
+
+        uint special = 0;
+        if (text[2] == 's' || text[2] == 'S') {
+            special |= 4;
+        }
+        if (text[5] == 's' || text[5] == 'S') {
+            special |= 2;
+        }
+        if (text[8] == 't' || text[8] == 'T') {
+            special |= 1;
+        }
+
+        mode = (special << 9) | (user << 6) | (group << 3) | other;
+        symbolic_entry.remove_css_class ("error");
     }
 
-    private void update_ui_from_mode () {
+    private bool triplet_to_octal (string triplet, out uint value) {
+        value = 0;
 
-        updating = true;
+        if (triplet.length != 3) {
+            return false;
+        }
 
-        numeric_entry.text = mode_to_numeric ();
-        symbolic_entry.text = mode_to_symbolic ();
+        char r = triplet[0];
+        char w = triplet[1];
+        char x = triplet[2];
 
-        u4.active = (mode & 0400) != 0;
-        u2.active = (mode & 0200) != 0;
-        u1.active = (mode & 0100) != 0;
+        uint result = 0;
 
-        g4.active = (mode & 0040) != 0;
-        g2.active = (mode & 0020) != 0;
-        g1.active = (mode & 0010) != 0;
+        if (r == 'r') {
+            result += 4;
+        } else if (r != '-') {
+            return false;
+        }
 
-        o4.active = (mode & 0004) != 0;
-        o2.active = (mode & 0002) != 0;
-        o1.active = (mode & 0001) != 0;
+        if (w == 'w') {
+            result += 2;
+        } else if (w != '-') {
+            return false;
+        }
 
-        suid.active = (mode & 04000) != 0;
-        sgid.active = (mode & 02000) != 0;
-        sticky.active = (mode & 01000) != 0;
+        if (x == 'x' || x == 's' || x == 't') {
+            result += 1;
+        } else if (x != '-' && x != 'S' && x != 'T') {
+            return false;
+        }
 
-        chmod_command_entry.text =
-            "chmod %s filename".printf (mode_to_numeric ());
+        value = result;
+        return true;
+    }
 
-        updating = false;
+    // Callbacks
+
+    [GtkCallback]
+    private void commit_numeric () {
+        numeric_entry.activate ();
+    }
+
+    [GtkCallback]
+    private void commit_symbolic () {
+        symbolic_entry.activate ();
+    }
+
+    [GtkCallback]
+    private void copy_numeric () {
+        copy_to_clipboard (numeric_entry.text);
+    }
+
+    [GtkCallback]
+    private void copy_symbolic () {
+        copy_to_clipboard (symbolic_entry.text);
+    }
+
+    private void copy_to_clipboard (string text) {
+        this.get_clipboard ().set_text (text);
+        copied (text);
+    }
+
+    public void load_file (File file) throws Error {
+        FileInfo info = file.query_info (
+                                         FileAttribute.UNIX_MODE,
+                                         FileQueryInfoFlags.NONE,
+                                         null
+        );
+
+        mode = info.get_attribute_uint32 (FileAttribute.UNIX_MODE) & 07777;
     }
 }

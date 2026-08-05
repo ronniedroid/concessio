@@ -1,497 +1,479 @@
 using Gtk 4.0;
 using Adw 1;
 
-template $ConcessioPermissions : Box {
-  orientation: vertical;
-  spacing: 24;
-
-  Box {
-    orientation: horizontal;
-    spacing: 18;
-
-    Box {
-      spacing: 12;
-      orientation: vertical;
-      hexpand: true;
-
-      Label {
-        label: _("Numeric");
-        xalign: 0;
-
-        styles [
-          "heading",
-        ]
-      }
-
-      Box {
-        styles [
-          "linked",
-        ]
-
-        Entry numeric_entry {
-          hexpand: true;
-          placeholder-text: "0755";
-
-          accessibility {
-            label: _("Numeric permissions");
-            description: _("Enter three or four octal digits, for example 0755");
-          }
-        }
-
-        Button {
-          icon-name: "concessio-copy-symbolic";
-          tooltip-text: _("Copy value");
-          // clicked => $_copyNumeric();
-
-          accessibility {
-            label: _("Copy numeric value");
-          }
-        }
-      }
-    }
-
-    Box {
-      spacing: 12;
-      orientation: vertical;
-      hexpand: true;
-
-      Label {
-        label: _("Symbolic");
-        xalign: 0;
-
-        styles [
-          "heading",
-        ]
-      }
-
-      Box {
-        styles [
-          "linked",
-        ]
-
-        Entry symbolic_entry {
-          hexpand: true;
-          placeholder-text: "rwxr--r--";
-
-          accessibility {
-            label: _("Symbolic permissions");
-            description: _("Enter nine characters representing read, write, and execute permissions for user, group, and others, for example rwxr-xr-x");
-          }
-
-          styles [
-            "monospace",
-          ]
-        }
-
-        Button {
-          icon-name: "concessio-copy-symbolic";
-          tooltip-text: _("Copy value");
-          // clicked => $_copySymbolic();
-
-          accessibility {
-            label: _("Copy symbolic value");
-          }
-        }
-      }
-    }
-  }
-
-  ListBox {
-    selection-mode: none;
-
-    styles [
-      "boxed-list",
-    ]
-
-    Adw.ActionRow {
-      title: _("User");
-
-      [suffix]
-      Box {
-        orientation: horizontal;
-        spacing: 12;
-
-        ToggleButton u4 {
-          valign: center;
-          tooltip-text: _("Read");
-
-          accessibility {
-            label: _("User read permission");
-          }
-
-          styles [
-            "flat",
-          ]
-
-          Image {
-            icon-name: "concessio-read-symbolic";
-          }
-        }
-
-        ToggleButton u2 {
-          valign: center;
-          tooltip-text: _("Write");
-
-          accessibility {
-            label: _("User write permission");
-          }
-
-          styles [
-            "flat",
-          ]
-
-          Image {
-            icon-name: "concessio-write-symbolic";
-          }
-        }
-
-        ToggleButton u1 {
-          valign: center;
-          tooltip-text: _("Execute");
-
-          accessibility {
-            label: _("User execute permission");
-          }
-
-          styles [
-            "flat",
-          ]
-
-          Image {
-            icon-name: "concessio-execute-symbolic";
-          }
-        }
-
-        MenuButton suid_menu {
-          valign: center;
-          halign: center;
-          label: "u+s";
-          tooltip-text: "SUID";
-
-          accessibility {
-            label: _("Set user ID SUID options");
-          }
-
-          styles [
-            "flat",
-          ]
-
-          popover: Popover suid_popover {
-            has-arrow: true;
-
-            child: Adw.Clamp {
-              maximum-size: 200;
-
-              Box {
-                orientation: vertical;
-                spacing: 12;
-                halign: center;
-                margin-top: 24;
-                margin-start: 12;
-                margin-end: 12;
-                margin-bottom: 24;
-
-                Label {
-                  label: "SUID";
-
-                  styles [
-                    "title-1",
-                  ]
-                }
-
-                Switch suid {
-                  halign: center;
-
-                  accessibility {
-                    label: _("Set user ID SUID switch");
-                  }
-                }
-
-                Label {
-                  label: _("Executes the file with the permissions of the file owner, not the user running it.");
-                  wrap: true;
-                  justify: center;
-                }
-              }
-            };
-          };
-        }
-      }
-    }
-
-    Adw.ActionRow {
-      title: _("Group");
-
-      [suffix]
-      Box {
-        orientation: horizontal;
-        spacing: 12;
-
-        ToggleButton g4 {
-          valign: center;
-          tooltip-text: _("Read");
-
-          accessibility {
-            label: _("Group read permission");
-          }
-
-          styles [
-            "flat",
-          ]
-
-          Image {
-            icon-name: "concessio-read-symbolic";
-          }
-        }
-
-        ToggleButton g2 {
-          valign: center;
-          tooltip-text: _("Write");
-
-          accessibility {
-            label: _("Group write permission");
-          }
-
-          styles [
-            "flat",
-          ]
-
-          Image {
-            icon-name: "concessio-write-symbolic";
-          }
-        }
-
-        ToggleButton g1 {
-          valign: center;
-          tooltip-text: _("Execute");
-
-          accessibility {
-            label: _("Group execute permission");
-          }
-
-          styles [
-            "flat",
-          ]
-
-          Image {
-            icon-name: "concessio-execute-symbolic";
-          }
-        }
-
-        MenuButton sgid_menu {
-          valign: center;
-          halign: center;
-          label: "g+s";
-          tooltip-text: "SGID";
-
-          accessibility {
-            label: _("Set group ID SGID options");
-          }
-
-          styles [
-            "flat",
-          ]
-
-          popover: Popover sgid_popover {
-            has-arrow: true;
-
-            child: Adw.Clamp {
-              maximum-size: 200;
-
-              Box {
-                orientation: vertical;
-                spacing: 12;
-                halign: center;
-                margin-top: 24;
-                margin-start: 12;
-                margin-end: 12;
-                margin-bottom: 24;
-
-                Label {
-                  label: "SGID";
-
-                  styles [
-                    "title-1",
-                  ]
-                }
-
-                Switch sgid {
-                  halign: center;
-
-                  accessibility {
-                    label: _("Set group ID SGID switch");
-                  }
-                }
-
-                Label {
-                  label: _("Executes the file with the permissions of the file's group, or ensures new files in a directory inherit the group.");
-                  wrap: true;
-                  justify: center;
-                }
-              }
-            };
-          };
-        }
-      }
-    }
-
-    Adw.ActionRow {
-      title: _("Others");
-
-      [suffix]
-      Box {
-        orientation: horizontal;
-        spacing: 12;
-
-        ToggleButton o4 {
-          valign: center;
-          tooltip-text: _("Read");
-
-          accessibility {
-            label: _("Other users read permission");
-          }
-
-          styles [
-            "flat",
-          ]
-
-          Image {
-            icon-name: "concessio-read-symbolic";
-          }
-        }
-
-        ToggleButton o2 {
-          valign: center;
-          tooltip-text: _("Write");
-
-          accessibility {
-            label: _("Other users write permission");
-          }
-
-          styles [
-            "flat",
-          ]
-
-          Image {
-            icon-name: "concessio-write-symbolic";
-          }
-        }
-
-        ToggleButton o1 {
-          valign: center;
-          tooltip-text: _("Execute");
-
-          accessibility {
-            label: _("Other users execute permission");
-          }
-
-          styles [
-            "flat",
-          ]
-
-          Image {
-            icon-name: "concessio-execute-symbolic";
-          }
-        }
-
-        MenuButton sticky_menu {
-          valign: center;
-          halign: center;
-          label: "o+t";
-          tooltip-text: "Sticky bit";
-
-          accessibility {
-            label: _("Sticky bit options");
-          }
-
-          styles [
-            "flat",
-          ]
-
-          popover: Popover sticky_popover {
-            has-arrow: true;
-
-            child: Adw.Clamp {
-              maximum-size: 200;
-
-              Box {
-                orientation: vertical;
-                spacing: 12;
-                halign: center;
-                margin-top: 24;
-                margin-start: 12;
-                margin-end: 12;
-                margin-bottom: 24;
-
-                Label {
-                  label: "Sticky bit";
-
-                  styles [
-                    "title-1",
-                  ]
-                }
-
-                Switch sticky {
-                  halign: center;
-
-                  accessibility {
-                    label: _("Sticky bit switch");
-                  }
-                }
-
-                Label {
-                  label: _("Allows only the file owner or directory owner to delete files in the directory, even if others have write permissions. Only applies to directories and has no effect on files.");
-                  wrap: true;
-                  justify: center;
-                }
-              }
-            };
-          };
-        }
-      }
-    }
-  }
-
-  Box {
-    spacing: 12;
+template $ConcessioPermissions: Box {
     orientation: vertical;
-
-    Label {
-      label: _("Chmod Command");
-
-      styles [
-        "heading",
-      ]
-    }
+    spacing: 24;
 
     Box {
-      styles [
-        "linked",
-      ]
+        orientation: horizontal;
+        spacing: 18;
 
-      Entry chmod_command_entry {
-        hexpand: true;
-        editable: false;
-        can-focus: false;
+        Box {
+            spacing: 12;
+            orientation: vertical;
+            hexpand: true;
 
-        accessibility {
-          label: _("Resulting chmod command");
+            Label {
+                label: _("Numeric");
+                xalign: 0;
+
+                styles [
+                    "heading",
+                ]
+            }
+
+            Box {
+                styles [
+                    "linked",
+                ]
+
+                Button {
+                    icon-name: "concessio-copy-symbolic";
+                    tooltip-text: _("Copy value");
+                    clicked => $copy_numeric();
+                    accessibility {
+                        label: _("Copy numeric value");
+                    }
+                }
+
+                Entry numeric_entry {
+                    hexpand: true;
+                    placeholder-text: "0755";
+
+                    accessibility {
+                        label: _("Numeric permissions");
+                        description: _("Enter three or four octal digits, for example 0755");
+                    }
+                }
+
+                Button {
+                    icon-name: "object-select-symbolic";
+                    tooltip-text: _("Apply value");
+                    clicked => $commit_numeric();
+                    accessibility {
+                        label: _("Apply numeric value");
+                    }
+                }
+            }
         }
+
+        Box {
+            spacing: 12;
+            orientation: vertical;
+            hexpand: true;
+
+            Label {
+                label: _("Symbolic");
+                xalign: 0;
+
+                styles [
+                    "heading",
+                ]
+            }
+
+            Box {
+                styles [
+                    "linked",
+                ]
+
+                Button {
+                    icon-name: "concessio-copy-symbolic";
+                    tooltip-text: _("Copy value");
+                    clicked => $copy_symbolic();
+                    accessibility {
+                        label: _("Copy symbolic value");
+                    }
+                }
+
+                Entry symbolic_entry {
+                    hexpand: true;
+                    placeholder-text: "rwxr--r--";
+
+                    accessibility {
+                        label: _("Symbolic permissions");
+                        description: _(
+                            "Enter nine characters representing read, write, and execute permissions for user, group, and others, for example rwxr-xr-x"
+                        );
+                    }
+
+                    styles [
+                        "monospace",
+                    ]
+                }
+
+                Button {
+                    icon-name: "object-select-symbolic";
+                    tooltip-text: _("Apply value");
+                    clicked => $commit_symbolic();
+                    accessibility {
+                        label: _("Apply symbolic value");
+                    }
+                }
+            }
+        }
+    }
+
+    ListBox {
+        selection-mode: none;
 
         styles [
-          "monospace",
+            "boxed-list",
         ]
-      }
 
-      Button {
-        icon-name: "concessio-copy-symbolic";
-        tooltip-text: _("Copy command");
-        // clicked => $copy_chmod_command();
+        Adw.ActionRow {
+            title: _("User");
 
-        accessibility {
-          label: _("Copy chmod command");
+            [suffix]
+            Box {
+                orientation: horizontal;
+                spacing: 12;
+
+                ToggleButton u4 {
+                    valign: center;
+                    tooltip-text: _("Read");
+
+                    accessibility {
+                        label: _("User read permission");
+                    }
+
+                    styles [
+                        "flat",
+                    ]
+
+                    Image {
+                        icon-name: "concessio-read-symbolic";
+                    }
+                }
+
+                ToggleButton u2 {
+                    valign: center;
+                    tooltip-text: _("Write");
+
+                    accessibility {
+                        label: _("User write permission");
+                    }
+
+                    styles [
+                        "flat",
+                    ]
+
+                    Image {
+                        icon-name: "concessio-write-symbolic";
+                    }
+                }
+
+                ToggleButton u1 {
+                    valign: center;
+                    tooltip-text: _("Execute");
+
+                    accessibility {
+                        label: _("User execute permission");
+                    }
+
+                    styles [
+                        "flat",
+                    ]
+
+                    Image {
+                        icon-name: "concessio-execute-symbolic";
+                    }
+                }
+
+                MenuButton suid_menu {
+                    valign: center;
+                    halign: center;
+                    label: "u+s";
+                    tooltip-text: "SUID";
+
+                    accessibility {
+                        label: _("Set user ID SUID options");
+                    }
+
+                    styles [
+                        "flat",
+                    ]
+
+                    popover: Popover suid_popover {
+                        has-arrow: true;
+
+                        child: Adw.Clamp {
+                            maximum-size: 200;
+
+                            Box {
+                                orientation: vertical;
+                                spacing: 12;
+                                halign: center;
+                                margin-top: 24;
+                                margin-start: 12;
+                                margin-end: 12;
+                                margin-bottom: 24;
+
+                                Label {
+                                    label: "SUID";
+
+                                    styles [
+                                        "title-1",
+                                    ]
+                                }
+
+                                Switch suid {
+                                    halign: center;
+
+                                    accessibility {
+                                        label: _("Set user ID SUID switch");
+                                    }
+                                }
+
+                                Label {
+                                    label: _(
+                                        "Executes the file with the permissions of the file owner, not the user running it."
+                                    );
+                                    wrap: true;
+                                    justify: center;
+                                }
+                            }
+                        };
+                    };
+                }
+            }
         }
-      }
+
+        Adw.ActionRow {
+            title: _("Group");
+
+            [suffix]
+            Box {
+                orientation: horizontal;
+                spacing: 12;
+
+                ToggleButton g4 {
+                    valign: center;
+                    tooltip-text: _("Read");
+
+                    accessibility {
+                        label: _("Group read permission");
+                    }
+
+                    styles [
+                        "flat",
+                    ]
+
+                    Image {
+                        icon-name: "concessio-read-symbolic";
+                    }
+                }
+
+                ToggleButton g2 {
+                    valign: center;
+                    tooltip-text: _("Write");
+
+                    accessibility {
+                        label: _("Group write permission");
+                    }
+
+                    styles [
+                        "flat",
+                    ]
+
+                    Image {
+                        icon-name: "concessio-write-symbolic";
+                    }
+                }
+
+                ToggleButton g1 {
+                    valign: center;
+                    tooltip-text: _("Execute");
+
+                    accessibility {
+                        label: _("Group execute permission");
+                    }
+
+                    styles [
+                        "flat",
+                    ]
+
+                    Image {
+                        icon-name: "concessio-execute-symbolic";
+                    }
+                }
+
+                MenuButton sgid_menu {
+                    valign: center;
+                    halign: center;
+                    label: "g+s";
+                    tooltip-text: "SGID";
+
+                    accessibility {
+                        label: _("Set group ID SGID options");
+                    }
+
+                    styles [
+                        "flat",
+                    ]
+
+                    popover: Popover sgid_popover {
+                        has-arrow: true;
+
+                        child: Adw.Clamp {
+                            maximum-size: 200;
+
+                            Box {
+                                orientation: vertical;
+                                spacing: 12;
+                                halign: center;
+                                margin-top: 24;
+                                margin-start: 12;
+                                margin-end: 12;
+                                margin-bottom: 24;
+
+                                Label {
+                                    label: "SGID";
+
+                                    styles [
+                                        "title-1",
+                                    ]
+                                }
+
+                                Switch sgid {
+                                    halign: center;
+
+                                    accessibility {
+                                        label: _("Set group ID SGID switch");
+                                    }
+                                }
+
+                                Label {
+                                    label: _(
+                                        "Executes the file with the permissions of the file's group, or ensures new files in a directory inherit the group."
+                                    );
+                                    wrap: true;
+                                    justify: center;
+                                }
+                            }
+                        };
+                    };
+                }
+            }
+        }
+
+        Adw.ActionRow {
+            title: _("Others");
+
+            [suffix]
+            Box {
+                orientation: horizontal;
+                spacing: 12;
+
+                ToggleButton o4 {
+                    valign: center;
+                    tooltip-text: _("Read");
+
+                    accessibility {
+                        label: _("Other users read permission");
+                    }
+
+                    styles [
+                        "flat",
+                    ]
+
+                    Image {
+                        icon-name: "concessio-read-symbolic";
+                    }
+                }
+
+                ToggleButton o2 {
+                    valign: center;
+                    tooltip-text: _("Write");
+
+                    accessibility {
+                        label: _("Other users write permission");
+                    }
+
+                    styles [
+                        "flat",
+                    ]
+
+                    Image {
+                        icon-name: "concessio-write-symbolic";
+                    }
+                }
+
+                ToggleButton o1 {
+                    valign: center;
+                    tooltip-text: _("Execute");
+
+                    accessibility {
+                        label: _("Other users execute permission");
+                    }
+
+                    styles [
+                        "flat",
+                    ]
+
+                    Image {
+                        icon-name: "concessio-execute-symbolic";
+                    }
+                }
+
+                MenuButton sticky_menu {
+                    valign: center;
+                    halign: center;
+                    label: "o+t";
+                    tooltip-text: "Sticky bit";
+
+                    accessibility {
+                        label: _("Sticky bit options");
+                    }
+
+                    styles [
+                        "flat",
+                    ]
+
+                    popover: Popover sticky_popover {
+                        has-arrow: true;
+
+                        child: Adw.Clamp {
+                            maximum-size: 200;
+
+                            Box {
+                                orientation: vertical;
+                                spacing: 12;
+                                halign: center;
+                                margin-top: 24;
+                                margin-start: 12;
+                                margin-end: 12;
+                                margin-bottom: 24;
+
+                                Label {
+                                    label: "Sticky bit";
+
+                                    styles [
+                                        "title-1",
+                                    ]
+                                }
+
+                                Switch sticky {
+                                    halign: center;
+
+                                    accessibility {
+                                        label: _("Sticky bit switch");
+                                    }
+                                }
+
+                                Label {
+                                    label: _(
+                                        "Allows only the file owner or directory owner to delete files in the directory, even if others have write permissions. Only applies to directories and has no effect on files."
+                                    );
+                                    wrap: true;
+                                    justify: center;
+                                }
+                            }
+                        };
+                    };
+                }
+            }
+        }
     }
-  }
 }
+

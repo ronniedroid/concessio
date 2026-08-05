@@ -90,13 +90,15 @@ template $ConcessioWindow: Adw.ApplicationWindow {
                     [top]
                     Adw.HeaderBar header_bar {
                         [start]
-                        Button openButton {
+                        Button open_button {
                             Adw.ButtonContent {
                                 label: _("Open");
                                 icon-name: "document-open-symbolic";
                             }
-
-                            action-name: "win.open";
+                            clicked => $open_file();
+                            accessibility {
+                                label: _("Open a file");
+                            }
                         }
 
                         title-widget: Adw.ViewSwitcher {
@@ -124,32 +126,25 @@ template $ConcessioWindow: Adw.ApplicationWindow {
 
                             Adw.ViewStack main_stack {
                                 vexpand: true;
+                                enable-transitions: true;
 
                                 Adw.ViewStackPage {
                                     name: "permissions";
                                     title: _("Permissions");
                                     icon-name: "concessio-base-permissions-symbolic";
 
-                                    child: Box {
-                                        halign: center;
-                                        valign: center;
-                                        orientation: vertical;
-                                        spacing: 18;
-                                        margin-start: 12;
-                                        margin-end: 12;
-                                        margin-top: 18;
-                                        margin-bottom: 18;
+                                    child: Adw.Clamp {
+                                        maximum-size: 600;
 
-                                        Adw.Clamp {
-                                            maximum-size: 600;
-
-                                            Box {
-                                                orientation: vertical;
-                                                spacing: 48;
-
-                                                $ConcessioPermissions permissions {
-                                                }
-                                            }
+                                        $ConcessioPermissions permissions {
+                                            halign: center;
+                                            valign: center;
+                                            orientation: vertical;
+                                            spacing: 18;
+                                            margin-start: 12;
+                                            margin-end: 12;
+                                            margin-top: 18;
+                                            margin-bottom: 18;
                                         }
                                     };
                                 }
@@ -168,10 +163,9 @@ template $ConcessioWindow: Adw.ApplicationWindow {
                                         margin-end: 12;
                                         margin-top: 18;
                                         margin-bottom: 18;
-
-                                            // $ConcessioUmask umask {
-                                            //     valign: start;
-                                            // }
+                                        // $ConcessioUmask umask {
+                                        //     valign: start;
+                                        // }
                                     };
                                 }
                             }
