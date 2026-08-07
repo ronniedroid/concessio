@@ -52,25 +52,9 @@ public class Concessio.UMask : Gtk.Box {
         dirs_target_label.label = "%03o".printf (DIRS_BASE & ~umask & ALL_BITS);
     }
 
-    private bool try_parse_octal (string input, out uint value) {
-        value = 0;
-
-        string text = input.strip ();
-        uint64 parsed;
-
-        try {
-            uint64.from_string (text, out parsed, 8, 0, ALL_BITS);
-        } catch (NumberParserError e) {
-            return false;
-        }
-
-        value = (uint) parsed;
-        return true;
-    }
-
     private void update_umask_from_entry () {
         uint parsed;
-        if (try_parse_octal (umask_entry.text, out parsed)) {
+        if (Concessio.Util.try_parse_octal (umask_entry.text, out parsed, 0777)) {
             umask = parsed & ALL_BITS;
             umask_entry.remove_css_class ("error");
         } else {
@@ -87,11 +71,6 @@ public class Concessio.UMask : Gtk.Box {
 
     [GtkCallback]
     private void copy_umask_value () {
-        copy_to_clipboard (umask_entry.text);
-    }
-
-    private void copy_to_clipboard (string text) {
-        this.get_clipboard ().set_text (text);
-        copied (text);
+        Concessio.Util.copy_to_clipboard (this, umask_entry.text);
     }
 }

@@ -170,28 +170,12 @@ public class Concessio.Permissions : Gtk.Box {
         }
 
         uint parsed;
-        if (try_parse_octal (numeric_entry.text, out parsed)) {
+        if (Concessio.Util.try_parse_octal (numeric_entry.text, out parsed)) {
             mode = parsed;
             numeric_entry.remove_css_class ("error");
         } else {
             numeric_entry.add_css_class ("error");
         }
-    }
-
-    private bool try_parse_octal (string input, out uint value) {
-        value = 0;
-
-        string text = input.strip ();
-
-        uint64 parsed;
-        try {
-            uint64.from_string (text, out parsed, 8, 0, 07777);
-        } catch (NumberParserError e) {
-            return false;
-        }
-
-        value = (uint) parsed;
-        return true;
     }
 
     // Symbolic entry
@@ -312,17 +296,12 @@ public class Concessio.Permissions : Gtk.Box {
 
     [GtkCallback]
     private void copy_numeric () {
-        copy_to_clipboard (numeric_entry.text);
+        Concessio.Util.copy_to_clipboard (this, numeric_entry.text);
     }
 
     [GtkCallback]
     private void copy_symbolic () {
-        copy_to_clipboard (symbolic_entry.text);
-    }
-
-    private void copy_to_clipboard (string text) {
-        this.get_clipboard ().set_text (text);
-        copied (text);
+        Concessio.Util.copy_to_clipboard (this, symbolic_entry.text);
     }
 
     public void load_file (File file) throws Error {

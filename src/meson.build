@@ -4,7 +4,8 @@ concessio_sources += files(
   'window.vala',
   'help_dialog.vala',
   'permissions.vala',
-  'umask.vala'
+  'umask.vala',
+  'util.vala'
 )
 
 concessio_deps = [
