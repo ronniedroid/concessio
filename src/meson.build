@@ -3,7 +3,8 @@ concessio_sources += files(
   'application.vala',
   'window.vala',
   'help_dialog.vala',
-  'permissions.vala'
+  'permissions.vala',
+  'umask.vala'
 )
 
 concessio_deps = [
@@ -22,7 +23,7 @@ blueprints = custom_target('blueprints',
     'help-dialog.blp',
     'window.blp',
     'permissions.blp',
-    # 'umask.blp',
+    'umask.blp',
   ),
   output: '.',
   command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],

@@ -95,7 +95,9 @@ template $ConcessioWindow: Adw.ApplicationWindow {
                                 label: _("Open");
                                 icon-name: "document-open-symbolic";
                             }
+
                             clicked => $open_file();
+
                             accessibility {
                                 label: _("Open a file");
                             }
@@ -154,18 +156,19 @@ template $ConcessioWindow: Adw.ApplicationWindow {
                                     title: _("Umask");
                                     icon-name: "concessio-umask-symbolic";
 
-                                    child: Box {
-                                        halign: center;
-                                        valign: center;
-                                        orientation: vertical;
-                                        spacing: 18;
-                                        margin-start: 12;
-                                        margin-end: 12;
-                                        margin-top: 18;
-                                        margin-bottom: 18;
-                                        // $ConcessioUmask umask {
-                                        //     valign: start;
-                                        // }
+                                    child: Adw.Clamp {
+                                        maximum-size: 600;
+
+                                        $ConcessioUMask umask {
+                                            halign: center;
+                                            valign: center;
+                                            orientation: vertical;
+                                            spacing: 18;
+                                            margin-start: 12;
+                                            margin-end: 12;
+                                            margin-top: 18;
+                                            margin-bottom: 18;
+                                        }
                                     };
                                 }
                             }

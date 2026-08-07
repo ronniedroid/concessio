@@ -1,0 +1,101 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $ConcessioUMask: Box {
+    orientation: vertical;
+    spacing: 24;
+
+    Box {
+        spacing: 6;
+        halign: center;
+        orientation: vertical;
+
+        Label {
+            label: _("Umask");
+
+            styles [
+                "heading",
+            ]
+        }
+
+        Label {
+            label: _("The umask determines the default permissions removed from new files and directories.");
+            wrap: true;
+        }
+
+        Box {
+        margin-top: 12;
+            styles [
+                "linked",
+            ]
+
+            Button {
+                icon-name: "concessio-copy-symbolic";
+                tooltip-text: _("Copy value");
+                clicked => $copy_umask_value ();
+
+                accessibility {
+                    label: _("Copy umask value");
+                }
+            }
+
+            Entry umask_entry {
+                hexpand: true;
+                placeholder-text: "022";
+
+                accessibility {
+                    label: _("Umask value");
+                    description: _("Enter three octal digits for the umask value");
+                }
+            }
+
+            Button {
+                icon-name: "object-select-symbolic";
+                tooltip-text: _("Apply value");
+                clicked => $commit_umask_value ();
+
+                accessibility {
+                    label: _("Apply umask value");
+                }
+            }
+        }
+    }
+
+    ListBox {
+        selection-mode: none;
+
+        styles [
+            "boxed-list",
+        ]
+
+        Adw.ActionRow files_row {
+            title: _("Files");
+            subtitle: _("New files will be created with this permission");
+
+            [suffix]
+            Label files_target_label {
+                valign: center;
+
+                styles [
+                    "monospace",
+                    "title-3",
+                ]
+            }
+        }
+
+        Adw.ActionRow dirs_row {
+            title: _("Directories");
+            subtitle: _("New directories will be created with this permission");
+
+            [suffix]
+            Label dirs_target_label {
+                valign: center;
+
+                styles [
+                    "monospace",
+                    "title-3",
+                ]
+            }
+        }
+    }
+}

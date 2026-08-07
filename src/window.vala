@@ -32,11 +32,14 @@ public class Concessio.Window : Adw.ApplicationWindow {
     private unowned Adw.ViewStack main_stack;
     [GtkChild]
     private unowned Concessio.Permissions permissions;
+    [GtkChild]
+    private unowned Concessio.UMask umask;
 
     private GLib.Settings settings = new GLib.Settings ("io.github.ronniedroid.concessio");
 
     static construct {
         typeof (Concessio.Permissions).ensure ();
+        typeof (Concessio.UMask).ensure ();
     }
 
     public Window (Adw.Application app) {
@@ -54,6 +57,12 @@ public class Concessio.Window : Adw.ApplicationWindow {
         });
 
         permissions.copied.connect ((text) => {
+            var toast = new Adw.Toast (_("Copied “%s”").printf (text));
+            toast.timeout = 2;
+            toast_overlay.add_toast (toast);
+        });
+
+        umask.copied.connect ((text) => {
             var toast = new Adw.Toast (_("Copied “%s”").printf (text));
             toast.timeout = 2;
             toast_overlay.add_toast (toast);
