@@ -72,6 +72,7 @@ public class Concessio.UMask : Gtk.Box {
         uint parsed;
         if (try_parse_octal (umask_entry.text, out parsed)) {
             umask = parsed & ALL_BITS;
+            umask_entry.remove_css_class ("error");
         } else {
             umask_entry.add_css_class ("error");
         }
