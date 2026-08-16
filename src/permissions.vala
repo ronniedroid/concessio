@@ -17,6 +17,7 @@
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+using Posix;
 
 [GtkTemplate (ui = "/io/github/ronniedroid/concessio/permissions.ui")]
 public class Concessio.Permissions : Gtk.Box {
@@ -130,8 +131,19 @@ public class Concessio.Permissions : Gtk.Box {
             file_path_label.label = "";
             file_stack.visible_child_name = "empty";
         } else {
-            file_name_label.label = current_file.get_basename ();
-            file_path_label.label = current_file.get_path ();
+            string file_name = current_file.get_basename ();
+            string file_path;
+            try {
+                file_path = handle_path (current_file);
+            } catch (Error err) {
+                file_path = current_file.get_path ();
+            }
+            file_name_label.label = file_name;
+            file_name_label.ellipsize = Pango.EllipsizeMode.END;
+            file_name_label.tooltip_text = file_name;
+            file_path_label.label = file_path;
+            file_path_label.ellipsize = Pango.EllipsizeMode.END;
+            file_path_label.tooltip_text = file_path;
             file_stack.visible_child_name = "loaded";
         }
     }
@@ -341,5 +353,61 @@ public class Concessio.Permissions : Gtk.Box {
 
         mode = info.get_attribute_uint32 (FileAttribute.UNIX_MODE) & 07777;
         current_file = file;
+    }
+
+    public string handle_path (File file) throws Error {
+        int uid = (int) Posix.getuid ();
+        string doc_portal = @"/run/user/$uid/doc/";
+        string? file_path = file.get_path ();
+
+        if (file_path == null) {
+            return "";
+        }
+
+        if (file_path.has_prefix (doc_portal)) {
+            var info = file.query_info ("xattr::document-portal.host-path", FileQueryInfoFlags.NONE);
+            string? host_path = info.get_attribute_string ("xattr::document-portal.host-path");
+
+            if (host_path != null) {
+                // Early portal versions added a "\x00" suffix, trim it if present
+                int len = host_path.length;
+                if (len > 4 && host_path.has_suffix ("\\x00")) {
+                    host_path = host_path.substring (0, len - 4);
+                }
+                file_path = Path.get_dirname (host_path);
+            } else {
+                // Use "Document Portal" as fallback
+                return _("Document Portal");
+            }
+        }
+
+        if (file_path.has_prefix ("/var/home")) {
+            string? username = get_username (uid);
+            if (username != null) {
+                string mask = @"/var/home/$username";
+                if (file_path.has_prefix (mask)) {
+                    string cleaned_path = file_path.substring (mask.length);
+                    file_path = "~" + cleaned_path;
+                }
+            }
+        }
+
+        string home = Environment.get_home_dir ();
+        if (file_path.has_prefix (home)) {
+            file_path = "~" + file_path.substring (home.length);
+            if (file_path == "~") {
+                file_path = "~/";
+            }
+        }
+
+        return file_path;
+    }
+
+    public string ? get_username (int uid) {
+        unowned Passwd? pw = getpwuid ((uid_t) uid);
+        if (pw != null) {
+            return pw.pw_name;
+        }
+        return null;
     }
 }

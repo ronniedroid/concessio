@@ -16,6 +16,7 @@ concessio_deps = [
   dependency('gtk4'),
   dependency('libadwaita-1', version: '>= 1.4'),
   dependency('gee-0.8'),
+  valac.find_library('posix')
 ]
 
 blueprints = custom_target('blueprints',
