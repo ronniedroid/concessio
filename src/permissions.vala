@@ -48,8 +48,15 @@ public class Concessio.Permissions : Gtk.Box {
     private unowned Gtk.Switch sgid;
     [GtkChild]
     private unowned Gtk.Switch sticky;
+    [GtkChild]
+    private unowned Gtk.Stack file_stack;
+    [GtkChild]
+    private unowned Gtk.Label file_name_label;
+    [GtkChild]
+    private unowned Gtk.Label file_path_label;
 
     public uint mode { get; set; default = 00644; }
+    public File? current_file { get; set; default = null; }
     public signal void copied (string text);
 
     private bool updating = false;
@@ -81,10 +88,14 @@ public class Concessio.Permissions : Gtk.Box {
         notify["mode"].connect (() => {
             update_ui_from_mode ();
         });
+        notify["current-file"].connect (() => {
+            update_ui_from_file ();
+        });
         connect_toggle_signals ();
         numeric_entry.activate.connect (update_mode_from_numeric);
         symbolic_entry.activate.connect (update_mode_from_symbolic);
         update_ui_from_mode ();
+        update_ui_from_file ();
     }
 
     private void update_ui_from_mode () {
@@ -111,6 +122,18 @@ public class Concessio.Permissions : Gtk.Box {
         sticky.active = (mode & MODE_STICKY) != 0;
 
         updating = false;
+    }
+
+    private void update_ui_from_file () {
+        if (current_file == null) {
+            file_name_label.label = "";
+            file_path_label.label = "";
+            file_stack.visible_child_name = "empty";
+        } else {
+            file_name_label.label = current_file.get_basename ();
+            file_path_label.label = current_file.get_path ();
+            file_stack.visible_child_name = "loaded";
+        }
     }
 
     // Toggle buttons
@@ -304,6 +327,11 @@ public class Concessio.Permissions : Gtk.Box {
         Concessio.Util.copy_to_clipboard (this, symbolic_entry.text);
     }
 
+    [GtkCallback]
+    private void close_file () {
+        current_file = null;
+    }
+
     public void load_file (File file) throws Error {
         FileInfo info = file.query_info (
                                          FileAttribute.UNIX_MODE,
@@ -312,5 +340,6 @@ public class Concessio.Permissions : Gtk.Box {
         );
 
         mode = info.get_attribute_uint32 (FileAttribute.UNIX_MODE) & 07777;
+        current_file = file;
     }
 }

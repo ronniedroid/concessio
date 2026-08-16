@@ -1,4 +1,9 @@
+box.card {
+  padding: 12px;
+}
+
 .command-card {
   margin: 4px;
   padding: 18px;
 }
+

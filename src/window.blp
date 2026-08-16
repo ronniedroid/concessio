@@ -89,20 +89,6 @@ template $ConcessioWindow: Adw.ApplicationWindow {
 
                     [top]
                     Adw.HeaderBar header_bar {
-                        [start]
-                        Button open_button {
-                            Adw.ButtonContent {
-                                label: _("Open");
-                                icon-name: "document-open-symbolic";
-                            }
-
-                            clicked => $open_file();
-
-                            accessibility {
-                                label: _("Open a file");
-                            }
-                        }
-
                         title-widget: Adw.ViewSwitcher {
                             stack: main_stack;
                             policy: wide;

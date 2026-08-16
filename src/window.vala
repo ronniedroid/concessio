@@ -27,10 +27,6 @@ public class Concessio.Window : Adw.ApplicationWindow {
     [GtkChild]
     private unowned Gtk.Stack stack;
     [GtkChild]
-    private unowned Gtk.Button open_button;
-    [GtkChild]
-    private unowned Adw.ViewStack main_stack;
-    [GtkChild]
     private unowned Concessio.Permissions permissions;
     [GtkChild]
     private unowned Concessio.UMask umask;
@@ -47,14 +43,6 @@ public class Concessio.Window : Adw.ApplicationWindow {
 
         setup_welcome_screen ();
         setup_actions ();
-
-        main_stack.notify["visible-child-name"].connect (() => {
-            if (main_stack.get_visible_child_name () != "permissions") {
-                open_button.set_visible (false);
-            } else {
-                open_button.set_visible (true);
-            }
-        });
 
         permissions.copied.connect ((text) => {
             var toast = new Adw.Toast (_("Copied “%s”").printf (text));
@@ -92,9 +80,14 @@ public class Concessio.Window : Adw.ApplicationWindow {
             settings.set_boolean ("welcome-screen-shown", true);
         });
         this.add_action (change_view_action);
+
+        var open_action = new SimpleAction ("open", null);
+        open_action.activate.connect (() => {
+            open_file.begin ();
+        });
+        this.add_action (open_action);
     }
 
-    [GtkCallback]
     private async void open_file () {
         var dialog = new Gtk.FileDialog ();
 
