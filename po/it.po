@@ -1,14 +1,14 @@
 # ITALIAN TRANSLATION.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the io.github.ronniedroid.concessio package.
-# Albano BATTISTELLA <albanobattistella@gmail.com>, 2O24.
+# Albano BATTISTELLA <albanobattistella@gmail.com>,2O24,2025,2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-17 00:03+0300\n"
-"PO-Revision-Date: 2024-09-20 17:53+0300\n"
+"PO-Revision-Date: 2026-08-17 19:02+0200\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Albano Battistella\n"
 "Language: it_IT\n"
@@ -29,13 +29,12 @@ msgid "Understand file permissions"
 msgstr "Comprendere i permessi dei file"
 
 #: data/io.github.ronniedroid.concessio.desktop.in:9
-#, fuzzy
 msgid "Permissions;Converter;Calculator;"
 msgstr "Permessi;Convertitore;Calcolatrice;"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:8
 msgid "Ronnie Nissan"
-msgstr ""
+msgstr "Ronnie Nissan"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:11
 #: src/application.vala:61
@@ -50,8 +49,7 @@ msgstr ""
 msgid ""
 "Convert between symbolic and numeric representations of UNIX file permissions"
 msgstr ""
-"Converti tra rappresentazioni simboliche e numeriche dei permessi dei file "
-"UNIX"
+"Converti tra rappresentazioni simboliche e numeriche dei permessi dei file UNIX"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:14
 msgid "Use toggle buttons to update the symbolic and numeric fields"
@@ -73,7 +71,7 @@ msgstr ""
 msgid ""
 "Application main page converting between numeric and symbolic permission"
 msgstr ""
-"Pagina principale dell'applicazione che converte tra autorizzazione numerica "
+"Pagina principale dell'applicazione che converte tra autorizzazione numerica"
 "e simbolica"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:34
@@ -81,12 +79,10 @@ msgid "Application help page, explaining unix permissions"
 msgstr "Pagina di aiuto dell'applicazione, che spiega i permessi Unix"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:38
-#, fuzzy
 msgid ""
 "Application umask page, calculating the umask value for a base permission"
 msgstr ""
-"Pagina principale dell'applicazione che converte tra autorizzazione numerica "
-"e simbolica"
+"Pagina umask dell'applicazione, che calcola il valore di umask per un permesso di base"
 
 #: src/shortcuts-dialog.blp:7
 msgid "Quit App"
@@ -114,23 +110,23 @@ msgstr "Visualizza questa finestra delle scorciatoie da tastiera"
 
 #: src/application.vala:68
 msgid "translator-credits"
-msgstr "Albano Battistella <albanobattistella@gmail.com>"
+msgstr "Albano Battistella<albanobattistella@gmail.com>"
 
 #: src/application.vala:76
 msgid "Embellish"
-msgstr ""
+msgstr "Abbellisci"
 
 #: src/application.vala:76
 msgid "Install nerd fonts"
-msgstr ""
+msgstr "Installa i nerd font"
 
 #: src/application.vala:77
 msgid "Sitra"
-msgstr ""
+msgstr "Sitra"
 
 #: src/application.vala:77
 msgid "Get fonts from online sources"
-msgstr ""
+msgstr "Ottieni i font da sorgenti online"
 
 #: src/application.vala:78
 msgid "Special thanks to"
@@ -139,7 +135,7 @@ msgstr "Ringraziamenti speciali a"
 #: src/window.vala:48 src/window.vala:54
 #, c-format
 msgid "Copied “%s”"
-msgstr ""
+msgstr "Copiato “%s”"
 
 #: src/window.vala:101
 msgid "Failed to open file."
@@ -154,14 +150,13 @@ msgid "Main Menu"
 msgstr "Menu principale"
 
 #: src/window.blp:121
-#, fuzzy
 msgid "Permissions"
-msgstr "Permessi Unix"
+msgstr "Permessi"
 
 #: src/window.blp:142 src/help-dialog.blp:74 src/help-dialog.blp:440
 #: src/umask.blp:14 src/umask.blp:20
 msgid "Umask"
-msgstr ""
+msgstr "Umask"
 
 #: src/window.blp:172 src/help-dialog.blp:14
 msgid "Help"
@@ -174,30 +169,27 @@ msgstr "Informazioni"
 #. Use "Document Portal" as fallback
 #: src/permissions.vala:380
 msgid "Document Portal"
-msgstr ""
+msgstr "Portale dei documenti"
 
 #: src/permissions.blp:21 src/permissions.blp:25
 msgid "Open File"
 msgstr "Apri file"
 
 #: src/permissions.blp:30 src/permissions.blp:34
-#, fuzzy
 msgid "Open a file to view its permissions"
-msgstr "Aprire un file per leggerne i permessi e convertirli"
+msgstr "Apri un file per visualizzarne i permessi"
 
 #: src/permissions.blp:41 src/permissions.blp:46
-#, fuzzy
 msgid "Open a file"
-msgstr "Apri file"
+msgstr "Apri un file"
 
 #: src/permissions.blp:81 src/permissions.blp:86
 msgid "Open a different file"
-msgstr ""
+msgstr "Apri un file differente"
 
 #: src/permissions.blp:92 src/permissions.blp:97
-#, fuzzy
 msgid "Close file"
-msgstr "Chiudi finestra"
+msgstr "Chiudi file"
 
 #: src/permissions.blp:114
 msgid "Numeric"
@@ -208,53 +200,48 @@ msgid "Copy value"
 msgstr "Copia valore"
 
 #: src/permissions.blp:132
-#, fuzzy
 msgid "Copy numeric value"
-msgstr "Copia valore"
+msgstr "Copia valore numerico"
 
 #: src/permissions.blp:141
-#, fuzzy
 msgid "Numeric permissions"
-msgstr "Permessi Unix"
+msgstr "Permessi numerici"
 
 #: src/permissions.blp:142
 msgid "Enter three or four octal digits, for example 0755"
-msgstr ""
+msgstr "Inserisci tre o quattro cifre ottali, ad esempio 0755"
 
 #: src/permissions.blp:148 src/permissions.blp:203 src/umask.blp:60
-#, fuzzy
 msgid "Apply value"
-msgstr "Copia valore"
+msgstr "Applica valore"
 
 #: src/permissions.blp:151
-#, fuzzy
 msgid "Apply numeric value"
-msgstr "Copia valore"
+msgstr "Applica valore numerico"
 
 #: src/permissions.blp:163
 msgid "Symbolic"
 msgstr "Simbolico"
 
 #: src/permissions.blp:181
-#, fuzzy
 msgid "Copy symbolic value"
-msgstr "Copia valore"
+msgstr "Copia valore simbolico"
 
 #: src/permissions.blp:190
-#, fuzzy
 msgid "Symbolic permissions"
-msgstr "Permessi Unix"
+msgstr "Permessi simbolici"
 
 #: src/permissions.blp:192
 msgid ""
 "Enter nine characters representing read, write, and execute permissions for "
 "user, group, and others, for example rwxr-xr-x"
 msgstr ""
+"Inserisci nove caratteri che rappresentano i permessi di lettura, scrittura ed "
+"esecuzione per utente, gruppo e altri, ad esempio rwxr-xr-x"
 
 #: src/permissions.blp:206
-#, fuzzy
 msgid "Apply symbolic value"
-msgstr "Copia valore"
+msgstr "Applica valore simbolico"
 
 #: src/permissions.blp:221 src/help-dialog.blp:116
 msgid "User"
@@ -265,35 +252,32 @@ msgid "Read"
 msgstr "Lettura"
 
 #: src/permissions.blp:233
-#, fuzzy
 msgid "User read permission"
-msgstr "Comprendere i permessi dei file"
+msgstr "Permesso di lettura utente"
 
 #: src/permissions.blp:247 src/permissions.blp:365 src/permissions.blp:483
 msgid "Write"
 msgstr "Scrittura"
 
 #: src/permissions.blp:250
-#, fuzzy
 msgid "User write permission"
-msgstr "Comprendere i permessi dei file"
+msgstr "Permesso di scrittura utente"
 
 #: src/permissions.blp:264 src/permissions.blp:382 src/permissions.blp:500
 msgid "Execute"
 msgstr "Eseguire"
 
 #: src/permissions.blp:267
-#, fuzzy
 msgid "User execute permission"
-msgstr "Comprendere i permessi dei file"
+msgstr "Permesso di esecuzione utente"
 
 #: src/permissions.blp:286
 msgid "Set user ID SUID options"
-msgstr ""
+msgstr "Imposta opzioni SUID dell'ID utente"
 
 #: src/permissions.blp:320
 msgid "Set user ID SUID switch"
-msgstr ""
+msgstr "Interruttore imposta SUID dell'ID utente"
 
 #: src/permissions.blp:326 src/help-dialog.blp:298
 msgid ""
@@ -308,61 +292,56 @@ msgid "Group"
 msgstr "Gruppo"
 
 #: src/permissions.blp:351
-#, fuzzy
 msgid "Group read permission"
-msgstr "Permessi speciali"
+msgstr "Permesso di lettura gruppo"
 
 #: src/permissions.blp:368
-#, fuzzy
 msgid "Group write permission"
-msgstr "Comprendere i permessi dei file"
+msgstr "Permesso di scrittura gruppo"
 
 #: src/permissions.blp:385
-#, fuzzy
 msgid "Group execute permission"
-msgstr "Permessi speciali"
+msgstr "Permesso di esecuzione gruppo"
 
 #: src/permissions.blp:404
 msgid "Set group ID SGID options"
-msgstr ""
+msgstr "Imposta opzioni SGID dell'ID gruppo"
 
 #: src/permissions.blp:438
 msgid "Set group ID SGID switch"
-msgstr ""
+msgstr "Interruttore imposta SGID dell'ID gruppo"
 
 #: src/permissions.blp:444 src/help-dialog.blp:303
 msgid ""
 "Executes the file with the permissions of the file's group, or ensures new "
 "files in a directory inherit the group."
 msgstr ""
-"Esegue il file con i permessi del gruppo del file o assicura che i nuovi "
-"file in una directory ereditino il gruppo."
+"Esegue il file con i permessi del gruppo del file, oppure garantisce che i "
+"nuovi file in una directory ereditino il gruppo."
 
 #: src/permissions.blp:457 src/help-dialog.blp:136
 msgid "Others"
 msgstr "Altri"
 
 #: src/permissions.blp:469
-#, fuzzy
 msgid "Other users read permission"
-msgstr "I tipi di permessi sono:"
+msgstr "Permesso di lettura per gli altri utenti"
 
 #: src/permissions.blp:486
-#, fuzzy
 msgid "Other users write permission"
-msgstr "Comprendere i permessi dei file"
+msgstr "Permesso di scrittura per gli altri utenti"
 
 #: src/permissions.blp:503
 msgid "Other users execute permission"
-msgstr ""
+msgstr "Permesso di esecuzione per gli altri utenti"
 
 #: src/permissions.blp:522
 msgid "Sticky bit options"
-msgstr ""
+msgstr "Opzioni dello sticky bit"
 
 #: src/permissions.blp:556
 msgid "Sticky bit switch"
-msgstr ""
+msgstr "Interruttore dello sticky bit"
 
 #: src/permissions.blp:562 src/help-dialog.blp:308
 msgid ""
@@ -370,13 +349,13 @@ msgid ""
 "directory, even if others have write permissions. Only applies to "
 "directories and has no effect on files."
 msgstr ""
-"Consente solo al proprietario del file o della directory di eliminare i file "
-"nella directory, anche se altri hanno permessi di scrittura. Si applica solo "
-"alle directory e non ha effetto sui file."
+"Consente solo al proprietario del file o al proprietario della directory di "
+"eliminare i file all'interno della directory, anche se altri utenti dispongono "
+"dei permessi di scrittura. Si applica solo alle directory e non ha effetto sui file."
 
 #: src/help-dialog.blp:36
 msgid "Table of Contents"
-msgstr ""
+msgstr "Indice dei contenuti"
 
 #: src/help-dialog.blp:52 src/help-dialog.blp:86
 msgid "Unix Permissions"
@@ -391,8 +370,8 @@ msgid ""
 "The Unix permissions system is used to grant granulated access to file and "
 "directories on a Unix-like operating system"
 msgstr ""
-"Il sistema di permessi Unix viene utilizzato per concedere un accesso "
-"granulare a file e directory su un sistema operativo di tipo Unix"
+"Il sistema di permessi Unix viene utilizzato per concedere un accesso granulare a "
+"file e directory su un sistema operativo di tipo Unix"
 
 #: src/help-dialog.blp:100
 msgid "Permissions are granted to three groups:"
@@ -408,7 +387,7 @@ msgstr "Un gruppo di utenti che condividono l'accesso al file"
 
 #: src/help-dialog.blp:137
 msgid "All other users on the system"
-msgstr "Tutti gli altri utenti del sistema"
+msgstr "Tutti gli altri utenti sul sistema"
 
 #: src/help-dialog.blp:147
 msgid "The types of permissions are:"
@@ -421,28 +400,28 @@ msgstr "Lettura (Simbolico: r, Numerico: 4)"
 #: src/help-dialog.blp:164
 msgid "Allows viewing the file's contents or listing a directory's contents"
 msgstr ""
-"Consente di visualizzare il contenuto del file o di elencare il contenuto di "
-"una directory"
+"Consente di visualizzare il contenuto del file o di elencare il contenuto di una "
+"directory"
 
 #: src/help-dialog.blp:173
 msgid "Write (Symbolically: w, Numerically: 2)"
-msgstr "Scrittura (Simbolico: w, Numericamente: 2)"
+msgstr "Scrittura (Simbolico: w, Numerico: 2)"
 
 #: src/help-dialog.blp:174
 msgid ""
 "Allows modifying the file's contents or creating/deleting files within a "
 "directory"
 msgstr ""
-"Consente di modificare il contenuto del file o di creare/eliminare file "
-"all'interno di una directory"
+"Consente di modificare il contenuto del file o di creare/eliminare file all'interno "
+"di una directory"
 
 #: src/help-dialog.blp:183
 msgid "Execute (Symbolically: x, Numerically: 1)"
-msgstr "Eseguire (Simbolicamente: x, Numericamente: 1)"
+msgstr "Esecuzione (Simbolico: x, Numerico: 1)"
 
 #: src/help-dialog.blp:184
 msgid "Allows running the file as a program"
-msgstr "Consente di eseguire il file come programma"
+msgstr "Consente di eseguire il file come un programma"
 
 #: src/help-dialog.blp:195
 msgid ""
@@ -450,10 +429,9 @@ msgid ""
 "permissions are represented as a string of ten characters, and numeric is "
 "represented by three numbers (octal notation) for Example:"
 msgstr ""
-"I permessi possono essere rappresentati simbolicamente o numericamente. I "
-"permessi simbolici sono rappresentati come una stringa di dieci caratteri, "
-"mentre quelli numerici sono rappresentati da tre numeri (notazione ottale) "
-"per esempio:"
+"I permessi possono essere rappresentati in modo simbolico o numerico. I permessi "
+"simbolici sono rappresentati da una stringa di dieci caratteri, mentre quelli "
+"numerici sono rappresentati da tre numeri (notazione ottale), ad esempio:"
 
 #: src/help-dialog.blp:200
 msgid "Symbolic: -rwxr-xr--"
@@ -469,7 +447,7 @@ msgstr "Primo carattere, il tipo di file"
 
 #: src/help-dialog.blp:227
 msgid "can either be '-' for file or 'd' for directory"
-msgstr "può essere '-' per file o 'd' per directory"
+msgstr "può essere '-' per un file o 'd' per una directory"
 
 #: src/help-dialog.blp:231
 msgid "First three positions (after file type)"
@@ -480,8 +458,8 @@ msgid ""
 "The read, write and execute permissions for the user, here we have 'rwx', "
 "which translated to 4+2+1 and adds to 7"
 msgstr ""
-"I permessi di lettura, scrittura ed esecuzione per l'utente, qui abbiamo "
-"'rwx', che tradotto è 4+2+1 e aggiunge 7"
+"I permessi di lettura, scrittura ed esecuzione per l'utente; in questo caso abbiamo "
+"'rwx', che tradotto corrisponde a 4+2+1 e dà come somma 7"
 
 #: src/help-dialog.blp:236
 msgid "Second three positions"
@@ -492,8 +470,8 @@ msgid ""
 "The read, write and execute permissions for the group, here we have 'r-x', "
 "which translated to 4+0+1 and adds to 5"
 msgstr ""
-"I permessi di lettura, scrittura ed esecuzione per il gruppo, qui abbiamo 'r-"
-"x', che tradotto è 4+0+1 e aggiunge 5"
+"I permessi di lettura, scrittura ed esecuzione per il gruppo; in questo caso abbiamo "
+"'r-x', che tradotto corrisponde a 4+0+1 e dà como somma 5"
 
 #: src/help-dialog.blp:241
 msgid "Last three positions"
@@ -504,8 +482,8 @@ msgid ""
 "The read, write and execute permissions for other users, here we have 'r--', "
 "which translated to 4+0+0 and adds to 4"
 msgstr ""
-"I permessi di lettura, scrittura ed esecuzione per gli altri utenti, qui "
-"abbiamo 'r--', che tradotto è 4+0+0 e aggiunge 4"
+"I permessi di lettura, scrittura ed esecuzione per gli altri utenti; in questo caso "
+"abbiamo 'r--', che tradotto corrisponde a 4+0+0 e dà come somma 4"
 
 #: src/help-dialog.blp:248 src/help-dialog.blp:520
 msgid "Example command"
@@ -513,7 +491,7 @@ msgstr "Comando di esempio"
 
 #: src/help-dialog.blp:257
 msgid "chmod 754 (file name)"
-msgstr "chmod 754 (nome file)"
+msgstr "chmod 754 (nome del file)"
 
 #: src/help-dialog.blp:276
 msgid ""
@@ -521,32 +499,26 @@ msgid ""
 "group, and other, they allow for additional privileges over the standard "
 "permission sets"
 msgstr ""
-"I permessi speciali costituiscono un quarto livello di accesso oltre a "
-"utente, gruppo e altro, e consentono privilegi aggiuntivi rispetto ai set di "
-"permessi standard"
+"I permessi speciali costituiscono un quarto livello di accesso in aggiunta a utente, "
+"gruppo e altri; essi consentono privilegi aggiuntivi rispetto ai set di permessi "
+"standard"
 
 #: src/help-dialog.blp:281
 msgid "The three special permissions are:"
-msgstr "I tre permessi speciali sono::"
+msgstr "I tre permessi speciali sono:"
 
 #: src/help-dialog.blp:314
 msgid "Special permissions can be represented symbolically or numerically."
-msgstr ""
-"I permessi speciali possono essere rappresentati simbolicamente o "
-"numericamente."
+msgstr "I permessi speciali possono essere rappresentati in modo simbolico o numerico."
 
 #: src/help-dialog.blp:320
 msgid "Numeric representation:"
 msgstr "Rappresentazione numerica:"
 
 #: src/help-dialog.blp:330
-msgid ""
-"They are denoted as an extra digit before the user, group and others "
-"permissions. Can Either be 0, 4, 2, 1 or any combination of them."
+msgid "They are denoted as an extra digit before the user, group and others permissions. Can Either be 0, 4, 2, 1 or any combination of them."
 msgstr ""
-"Sono indicati come una cifra aggiuntiva prima dell'utente, del gruppo e "
-"degli altri permessi. Possono essere 0, 4, 2, 1 o una qualsiasi combinazione "
-"di essi."
+"Sono indicati come una cifra aggiuntiva prima dei permessi di utente, gruppo e altri. Può essere 0, 4, 2, 1 o qualsiasi combinazione di essi."
 
 #: src/help-dialog.blp:340
 msgid "Symbolical representation:"
@@ -554,19 +526,19 @@ msgstr "Rappresentazione simbolica:"
 
 #: src/help-dialog.blp:357
 msgid "Goes where 'x' normally is for the user"
-msgstr "Va dove normalmente si trova 'x' per l'utente"
+msgstr "Va dove si trova normalmente la 'x' per l'utente"
 
 #: src/help-dialog.blp:362
 msgid "Goes where 'x' normally is for the group"
-msgstr "Va dove normalmente c'è 'x' per il gruppo"
+msgstr "Va dove si trova normalmente la 'x' per il gruppo"
 
 #: src/help-dialog.blp:367
 msgid "Goes where 'x' normally is for others"
-msgstr "Va dove normalmente c'è 'x' per gli altri"
+msgstr "Va dove si trova normalmente la 'x' per gli altri"
 
 #: src/help-dialog.blp:373
 msgid "Symbolic: -rwsr-Sr-t"
-msgstr "Simbolico: --rwsr-Sr-t"
+msgstr "Simbolico: -rwsr-Sr-t"
 
 #: src/help-dialog.blp:383
 msgid "Numeric: 7745"
@@ -577,24 +549,24 @@ msgid ""
 "Represented as '4' numerically. Symbolically, it is either 's' if the owner "
 "has execute permissions or 'S' if not."
 msgstr ""
-"Rappresentato numericamente come '4'. Simbolicamente, è 's' se il "
-"proprietario ha i permessi di esecuzione o 'S' in caso contrario."
+"Rappresentato numericamente come '4'. In modo simbolico, è 's' se il proprietario "
+"ha i permessi di esecuzione, altrimenti è 'S'."
 
 #: src/help-dialog.blp:405
 msgid ""
 "Represented as '2' numerically. Symbolically, it is either 's' if the group "
 "has execute permissions or 'S' if not."
 msgstr ""
-"Rappresentato come '2' numericamente. Simbolicamente, è 's' se il gruppo ha "
-"permessi di esecuzione o 'S' in caso contrario."
+"Rappresentato numericamente come '2'. In modo simbolico, è 's' se il gruppo "
+"ha i permessi di esecuzione, altrimenti è 'S'."
 
 #: src/help-dialog.blp:410
 msgid ""
 "Represented as '1' numerically. Symbolically, it is either 't' if the others "
 "have execute permissions or 'T' if not."
 msgstr ""
-"Rappresentato come '1' numericamente. Simbolicamente, è 't' se gli altri "
-"hanno permessi di esecuzione o 'T' se non li hanno."
+"Rappresentato numericamente come '1'. In modo simbolico, è 't' se gli altri "
+"hanno i permessi di esecuzione, altrimenti è 'T'."
 
 #: src/help-dialog.blp:416
 msgid "Example commands"
@@ -602,11 +574,11 @@ msgstr "Comandi di esempio"
 
 #: src/help-dialog.blp:425
 msgid "chmod 7745 (file name)"
-msgstr "chmod 7745 (nome file)"
+msgstr "chmod 7745 (nome del file)"
 
 #: src/help-dialog.blp:435 src/help-dialog.blp:549
 msgid "Further reading"
-msgstr "Ulteriore lettura"
+msgstr "Ulteriori letture"
 
 #: src/help-dialog.blp:449
 msgid ""
@@ -614,120 +586,116 @@ msgid ""
 "new files and directories. It acts as a filter that 'masks out' specific "
 "bits from the base permissions."
 msgstr ""
+"L'umask (user file-creation mask) determina i permessi predefiniti per i nuovi "
+"file e directory. Agisce come un filtro che \"maschera\" bit specifici dai "
+"permessi di base."
 
 #: src/help-dialog.blp:454
-#, fuzzy
 msgid "Typical base permissions:"
-msgstr "Permessi speciali"
+msgstr "Permessi di base tipici:"
 
 #: src/help-dialog.blp:470
 msgid "Directories (Base: 777)"
-msgstr ""
+msgstr "Directory (Base: 777)"
 
 #: src/help-dialog.blp:471
 msgid "Full read, write, and execute permissions by default"
-msgstr ""
+msgstr "Permessi completi di lettura, scrittura ed esecuzione come impostazione predefinita"
 
 #: src/help-dialog.blp:475
 msgid "Files (Base: 666)"
-msgstr ""
+msgstr "File (Base: 666)"
 
 #: src/help-dialog.blp:476
 msgid "Read and write permissions by default; execute is excluded for security"
 msgstr ""
+"Permessi di lettura e scrittura come impostazione predefinita; l'esecuzione è "
+"esclusa per motivi di sicurezza"
 
 #: src/help-dialog.blp:482
 msgid "Calculation logic:"
-msgstr ""
+msgstr "Logica di calcolo:"
 
 #: src/help-dialog.blp:492
 msgid ""
 "The final permission is calculated by taking the base and removing the bits "
 "set in the umask."
 msgstr ""
+"Il permesso finale viene calcolato partendo dalla base e rimuovendo i bit "
+"impostati nell'umask."
 
 #: src/help-dialog.blp:508
 msgid "Umask 022"
-msgstr ""
+msgstr "Umask 022"
 
 #: src/help-dialog.blp:509
 msgid ""
 "Removes write access for group and others. (Result: 755 for dirs, 644 for "
 "files)"
 msgstr ""
+"Rimuove l'accesso in scrittura per il gruppo e per gli altri. (Risultato: 755 per "
+"le directory, 644 per i file)"
 
 #: src/help-dialog.blp:513
 msgid "Umask 077"
-msgstr ""
+msgstr "Umask 077"
 
 #: src/help-dialog.blp:514
 msgid ""
 "Removes all access for group and others. (Result: 700 for dirs, 600 for "
 "files)"
 msgstr ""
+"Rimuove qualsiasi tipo di accesso per il gruppo e per gli altri. (Risultato: 700 "
+"per le directory, 600 per i file)"
 
 #: src/help-dialog.blp:529
 msgid "umask 022"
-msgstr ""
+msgstr "umask 022"
 
 #: src/help-dialog.blp:540
 msgid ""
 "Note: The umask command only lasts for the current session. You need to set "
 "the command in your bashrc or equivalent to make it permanent."
 msgstr ""
+"Nota: il comando umask ha effetto solo per la sessione corrente. È necessario "
+"inserire il comando nel proprio file bashrc o equivalente per renderlo permanente."
 
 #: src/umask.blp:25 src/umask.blp:28
 msgid ""
 "The umask determines the default permissions removed from new files and "
 "directories."
 msgstr ""
+"L'umask determina i permessi predefiniti che vengono sottratti ai nuovi file e "
+"alle directory."
 
 #: src/umask.blp:44
-#, fuzzy
 msgid "Copy umask value"
-msgstr "Copia valore"
+msgstr "Copia valore umask"
 
 #: src/umask.blp:53
 msgid "Umask value"
-msgstr ""
+msgstr "Valore umask"
 
 #: src/umask.blp:54
 msgid "Enter three octal digits for the umask value"
-msgstr ""
+msgstr "Inserisci tre cifre ottali per il valore di umask"
 
 #: src/umask.blp:64
-#, fuzzy
 msgid "Apply umask value"
-msgstr "Copia valore"
+msgstr "Applica valore umask"
 
 #: src/umask.blp:78
-#, fuzzy
 msgid "Files"
 msgstr "File"
 
 #: src/umask.blp:79
 msgid "New files will be created with this permission"
-msgstr ""
+msgstr "I nuovi file verranno creati con questo permesso"
 
 #: src/umask.blp:93
 msgid "Directories"
-msgstr ""
+msgstr "Directory"
 
 #: src/umask.blp:94
 msgid "New directories will be created with this permission"
-msgstr ""
-
-#~ msgid "Open"
-#~ msgstr "Apri file"
-
-#~ msgid "Open file chooser dialog"
-#~ msgstr "Apri la finestra di dialogo di selezione file"
-
-#~ msgid "Copied to clipboard!"
-#~ msgstr "Copiato negli appunti!"
-
-#~ msgid "General"
-#~ msgstr "Generale"
-
-#~ msgid "open"
-#~ msgstr "apri"
+msgstr "Le nuove directory verranno create con questo permesso"
