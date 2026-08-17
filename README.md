@@ -8,10 +8,10 @@
 ![screenshot](/data/screenshots/help-page.png)
 
 ## Features:
-- Convert between symbolic and numeric representations of UNIX file permessions
+- Convert between symbolic and numeric representations of UNIX file permissions
 - Use toggle buttons to update the symbolic and numeric fields
-- Open a file to read it's permessions and convert them
-- Open the help dialog to read and understand the UNIX permessions system
+- Open a file to read it's permissions and convert them
+- Open the help dialog to read and understand the UNIX permissions system
 
 
 ## Installation

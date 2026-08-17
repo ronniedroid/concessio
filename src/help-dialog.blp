@@ -2,555 +2,598 @@ using Gtk 4.0;
 using Adw 1;
 
 template $ConcessioHelpDialog {
-  content-height: "1000";
-  content-width: "600";
+    content-height: "1000";
+    content-width: "600";
 
-  Adw.ToolbarView {
-    [top]
-    Adw.HeaderBar help_header_bar {
-      show-title: false;
+    Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar help_header_bar {
+            show-title: false;
 
-      title-widget: Adw.WindowTitle {
-        title: _("Help");
-      };
+            title-widget: Adw.WindowTitle {
+                title: _("Help");
+            };
+        }
+
+        content: ScrolledWindow scrolled_window {
+            hscrollbar-policy: never;
+
+            Box {
+                halign: center;
+                orientation: vertical;
+                spacing: 18;
+                margin-start: 12;
+                margin-end: 12;
+                margin-bottom: 18;
+
+                Picture {
+                    file: "resource:///io/github/ronniedroid/concessio/help.svg";
+                    can-shrink: false;
+                    accessible-role: presentation;
+                }
+
+                Label {
+                    label: _("Table of Contents");
+                    halign: start;
+
+                    styles [
+                        "heading",
+                    ]
+                }
+
+                ListBox toc_list {
+                    selection-mode: none;
+
+                    styles [
+                        "boxed-list",
+                    ]
+
+                    Adw.ActionRow toc_unix_perms {
+                        title: _("Unix Permissions");
+                        activatable: true;
+                        activated => $scroll_to_unix_perms();
+
+                        [suffix]
+                        Image {
+                            icon-name: "go-down-symbolic";
+                            accessible-role: presentation;
+                        }
+                    }
+
+                    Adw.ActionRow toc_special_perms {
+                        title: _("Special Permissions");
+                        activatable: true;
+                        activated => $scroll_to_special_perms();
+
+                        [suffix]
+                        Image {
+                            icon-name: "go-down-symbolic";
+                            accessible-role: presentation;
+                        }
+                    }
+
+                    Adw.ActionRow toc_umask {
+                        title: _("Umask");
+                        activatable: true;
+                        activated => $scroll_to_umask();
+
+                        [suffix]
+                        Image {
+                            icon-name: "go-down-symbolic";
+                            accessible-role: presentation;
+                        }
+                    }
+                }
+
+                Label unix_perms_header {
+                    label: _("Unix Permissions");
+
+                    styles [
+                        "title-2",
+                    ]
+                }
+
+                Label {
+                    wrap: true;
+                    label: _(
+                        "The Unix permissions system is used to grant granulated access to file and directories on a Unix-like operating system"
+                    );
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("Permissions are granted to three groups:");
+                    halign: start;
+
+                    styles [
+                        "heading",
+                    ]
+                }
+
+                ListBox {
+                    selection-mode: none;
+
+                    styles [
+                        "boxed-list",
+                    ]
+
+                    Adw.ActionRow {
+                        title: _("User");
+                        subtitle: _("The owner of the file");
+
+                        [prefix]
+                        Image {
+                            icon-name: "concessio-user-symbolic";
+                            accessible-role: presentation;
+                        }
+                    }
+
+                    Adw.ActionRow {
+                        title: _("Group");
+                        subtitle: _("A group of users who share access to the file");
+
+                        [prefix]
+                        Image {
+                            icon-name: "concessio-group-symbolic";
+                            accessible-role: presentation;
+                        }
+                    }
+
+                    Adw.ActionRow {
+                        title: _("Others");
+                        subtitle: _("All other users on the system");
+
+                        [prefix]
+                        Image {
+                            icon-name: "concessio-others-symbolic";
+                            accessible-role: presentation;
+                        }
+                    }
+                }
+
+                Label {
+                    label: _("The types of permissions are:");
+                    halign: start;
+
+                    styles [
+                        "heading",
+                    ]
+                }
+
+                ListBox {
+                    selection-mode: none;
+
+                    styles [
+                        "boxed-list",
+                    ]
+
+                    Adw.ActionRow {
+                        title: _("Read (Symbolic: r, Numeric: 4)");
+                        subtitle: _("Allows viewing the file's contents or listing a directory's contents");
+
+                        [prefix]
+                        Image {
+                            icon-name: "concessio-read-symbolic";
+                            accessible-role: presentation;
+                        }
+                    }
+
+                    Adw.ActionRow {
+                        title: _("Write (Symbolically: w, Numerically: 2)");
+                        subtitle: _(
+                            "Allows modifying the file's contents or creating/deleting files within a directory"
+                        );
+
+                        [prefix]
+                        Image {
+                            icon-name: "concessio-write-symbolic";
+                            accessible-role: presentation;
+                        }
+                    }
+
+                    Adw.ActionRow {
+                        title: _("Execute (Symbolically: x, Numerically: 1)");
+                        subtitle: _("Allows running the file as a program");
+
+                        [prefix]
+                        Image {
+                            icon-name: "concessio-execute-symbolic";
+                            accessible-role: presentation;
+                        }
+                    }
+                }
+
+                Label {
+                    wrap: true;
+                    label: _(
+                        "Permissions can either be represented symbolically or numerically. Symbolic permissions are represented as a string of ten characters, and numeric is represented by three numbers (octal notation) for Example:"
+                    );
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("Symbolic: -rwxr-xr--");
+
+                    styles [
+                        "heading",
+                        "monospace",
+                    ]
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("Numeric: 754");
+
+                    styles [
+                        "heading",
+                        "monospace",
+                    ]
+                }
+
+                ListBox {
+                    selection-mode: none;
+
+                    styles [
+                        "boxed-list",
+                    ]
+
+                    Adw.ActionRow {
+                        title: _("First character, the file type");
+                        subtitle: _("can either be '-' for file or 'd' for directory");
+                    }
+
+                    Adw.ActionRow {
+                        title: _("First three positions (after file type)");
+                        subtitle: _(
+                            "The read, write and execute permissions for the user, here we have 'rwx', which translated to 4+2+1 and adds to 7"
+                        );
+                    }
+
+                    Adw.ActionRow {
+                        title: _("Second three positions");
+                        subtitle: _(
+                            "The read, write and execute permissions for the group, here we have 'r-x', which translated to 4+0+1 and adds to 5"
+                        );
+                    }
+
+                    Adw.ActionRow {
+                        title: _("Last three positions");
+                        subtitle: _(
+                            "The read, write and execute permissions for other users, here we have 'r--', which translated to 4+0+0 and adds to 4"
+                        );
+                    }
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("Example command");
+                    halign: start;
+
+                    styles [
+                        "heading",
+                    ]
+                }
+
+                Label {
+                    label: _("chmod 754 (file name)");
+
+                    styles [
+                        "card",
+                        "monospace",
+                        "command-card",
+                    ]
+                }
+
+                Label special_perms_header {
+                    label: _("Special Permissions");
+
+                    styles [
+                        "title-2",
+                    ]
+                }
+
+                Label {
+                    wrap: true;
+                    label: _(
+                        "Special permissions make up a fourth access level in addition to user, group, and other, they allow for additional privileges over the standard permission sets"
+                    );
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("The three special permissions are:");
+                    halign: start;
+
+                    styles [
+                        "heading",
+                    ]
+                }
+
+                ListBox {
+                    selection-mode: none;
+
+                    styles [
+                        "boxed-list",
+                    ]
+
+                    Adw.ActionRow {
+                        title: "SUID (user+s)";
+                        subtitle: _(
+                            "Executes the file with the permissions of the file owner, not the user running it."
+                        );
+                    }
+
+                    Adw.ActionRow {
+                        title: "SGID (group+s)";
+                        subtitle: _(
+                            "Executes the file with the permissions of the file's group, or ensures new files in a directory inherit the group."
+                        );
+                    }
+
+                    Adw.ActionRow {
+                        title: "Sticky bit (other+t)";
+                        subtitle: _(
+                            "Allows only the file owner or directory owner to delete files in the directory, even if others have write permissions. Only applies to directories and has no effect on files."
+                        );
+                    }
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("Special permissions can be represented symbolically or numerically.");
+                    halign: start;
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("Numeric representation:");
+                    halign: start;
+
+                    styles [
+                        "heading",
+                    ]
+                }
+
+                Label {
+                    wrap: true;
+                    label: _(
+                        "They are denoted as an extra digit before the user, group and others permissions. Can Either be 0, 4, 2, 1 or any combination of them."
+                    );
+
+                    styles [
+                        "card",
+                        "command-card",
+                    ]
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("Symbolical representation:");
+                    halign: start;
+
+                    styles [
+                        "heading",
+                    ]
+                }
+
+                ListBox {
+                    selection-mode: none;
+
+                    styles [
+                        "boxed-list",
+                    ]
+
+                    Adw.ActionRow {
+                        title: "SUID";
+                        subtitle: _("Goes where 'x' normally is for the user");
+                    }
+
+                    Adw.ActionRow {
+                        title: "SGID";
+                        subtitle: _("Goes where 'x' normally is for the group");
+                    }
+
+                    Adw.ActionRow {
+                        title: "Sticky bit";
+                        subtitle: _("Goes where 'x' normally is for others");
+                    }
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("Symbolic: -rwsr-Sr-t");
+
+                    styles [
+                        "heading",
+                        "monospace",
+                    ]
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("Numeric: 7745");
+
+                    styles [
+                        "heading",
+                        "monospace",
+                    ]
+                }
+
+                ListBox {
+                    selection-mode: none;
+
+                    styles [
+                        "boxed-list",
+                    ]
+
+                    Adw.ActionRow {
+                        title: "SUID";
+                        subtitle: _(
+                            "Represented as '4' numerically. Symbolically, it is either 's' if the owner has execute permissions or 'S' if not."
+                        );
+                    }
+
+                    Adw.ActionRow {
+                        title: "SGID";
+                        subtitle: _(
+                            "Represented as '2' numerically. Symbolically, it is either 's' if the group has execute permissions or 'S' if not."
+                        );
+                    }
+
+                    Adw.ActionRow {
+                        title: "Sticky bit";
+                        subtitle: _(
+                            "Represented as '1' numerically. Symbolically, it is either 't' if the others have execute permissions or 'T' if not."
+                        );
+                    }
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("Example commands");
+                    halign: start;
+
+                    styles [
+                        "heading",
+                    ]
+                }
+
+                Label {
+                    label: _("chmod 7745 (file name)");
+
+                    styles [
+                        "card",
+                        "monospace",
+                        "command-card",
+                    ]
+                }
+
+                LinkButton {
+                    label: _("Further reading");
+                    uri: "https://www.redhat.com/sysadmin/suid-sgid-sticky-bit";
+                }
+
+                Label umask_header {
+                    label: _("Umask");
+
+                    styles [
+                        "title-2",
+                    ]
+                }
+
+                Label {
+                    wrap: true;
+                    label: _(
+                        "The umask (user file-creation mask) determines the default permissions for new files and directories. It acts as a filter that 'masks out' specific bits from the base permissions."
+                    );
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("Typical base permissions:");
+                    halign: start;
+
+                    styles [
+                        "heading",
+                    ]
+                }
+
+                ListBox {
+                    selection-mode: none;
+
+                    styles [
+                        "boxed-list",
+                    ]
+
+                    Adw.ActionRow {
+                        title: _("Directories (Base: 777)");
+                        subtitle: _("Full read, write, and execute permissions by default");
+                    }
+
+                    Adw.ActionRow {
+                        title: _("Files (Base: 666)");
+                        subtitle: _("Read and write permissions by default; execute is excluded for security");
+                    }
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("Calculation logic:");
+                    halign: start;
+
+                    styles [
+                        "heading",
+                    ]
+                }
+
+                Label {
+                    wrap: true;
+                    label: _(
+                        "The final permission is calculated by taking the base and removing the bits set in the umask."
+                    );
+
+                    styles [
+                        "card",
+                        "command-card",
+                    ]
+                }
+
+                ListBox {
+                    selection-mode: none;
+
+                    styles [
+                        "boxed-list",
+                    ]
+
+                    Adw.ActionRow {
+                        title: _("Umask 022");
+                        subtitle: _("Removes write access for group and others. (Result: 755 for dirs, 644 for files)");
+                    }
+
+                    Adw.ActionRow {
+                        title: _("Umask 077");
+                        subtitle: _("Removes all access for group and others. (Result: 700 for dirs, 600 for files)");
+                    }
+                }
+
+                Label {
+                    wrap: true;
+                    label: _("Example command");
+                    halign: start;
+
+                    styles [
+                        "heading",
+                    ]
+                }
+
+                Label {
+                    label: _("umask 022");
+
+                    styles [
+                        "card",
+                        "monospace",
+                        "command-card",
+                    ]
+                }
+
+                Label {
+                    wrap: true;
+                    label: _(
+                        "Note: The umask command only lasts for the current session. You need to set the command in your bashrc or equivalent to make it permanent."
+                    );
+
+                    styles [
+                        "card",
+                        "command-card",
+                    ]
+                }
+
+                LinkButton {
+                    label: _("Further reading");
+                    uri: "https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html";
+                }
+            }
+        };
     }
-
-    content: ScrolledWindow scrolled_window {
-      hscrollbar-policy: never;
-
-      Box {
-        halign: center;
-        orientation: vertical;
-        spacing: 18;
-        margin-start: 12;
-        margin-end: 12;
-        margin-bottom: 18;
-
-        Picture {
-          file: "resource:///io/github/ronniedroid/concessio/help.svg";
-          can-shrink: false;
-          accessible-role: presentation;
-        }
-
-        Label {
-          label: _("Table of Contents");
-          halign: start;
-
-          styles [
-            "heading",
-          ]
-        }
-
-        ListBox toc_list {
-          selection-mode: none;
-
-          styles [
-            "boxed-list",
-          ]
-
-          Adw.ActionRow toc_unix_perms {
-            title: _("Unix Permissions");
-            activatable: true;
-            activated => $scroll_to_unix_perms();
-
-            [suffix]
-            Image {
-              icon-name: "go-down-symbolic";
-            }
-          }
-
-          Adw.ActionRow toc_special_perms {
-            title: _("Special Permissions");
-            activatable: true;
-            activated => $scroll_to_special_perms();
-
-            [suffix]
-            Image {
-              icon-name: "go-down-symbolic";
-            }
-          }
-
-          Adw.ActionRow toc_umask {
-            title: _("Umask");
-            activatable: true;
-            activated => $scroll_to_umask();
-
-            [suffix]
-            Image {
-              icon-name: "go-down-symbolic";
-            }
-          }
-        }
-
-        Label unix_perms_header {
-          label: _("Unix Permissions");
-
-          styles [
-            "title-2",
-          ]
-        }
-
-        Label {
-          wrap: true;
-          label: _("The Unix permissions system is used to grant granulated access to file and directories on a Unix-like operating system");
-        }
-
-        Label {
-          wrap: true;
-          label: _("Permissions are granted to three groups:");
-          halign: start;
-
-          styles [
-            "heading",
-          ]
-        }
-
-        ListBox {
-          selection-mode: none;
-
-          styles [
-            "boxed-list",
-          ]
-
-          Adw.ActionRow {
-            title: _("User");
-            subtitle: _("The owner of the file");
-
-            [prefix]
-            Image {
-              icon-name: "concessio-user-symbolic";
-            }
-          }
-
-          Adw.ActionRow {
-            title: _("Group");
-            subtitle: _("A group of users who share access to the file");
-
-            [prefix]
-            Image {
-              icon-name: "concessio-group-symbolic";
-            }
-          }
-
-          Adw.ActionRow {
-            title: _("Others");
-            subtitle: _("All other users on the system");
-
-            [prefix]
-            Image {
-              icon-name: "concessio-others-symbolic";
-            }
-          }
-        }
-
-        Label {
-          label: _("The types of permissions are:");
-          halign: start;
-
-          styles [
-            "heading",
-          ]
-        }
-
-        ListBox {
-          selection-mode: none;
-
-          styles [
-            "boxed-list",
-          ]
-
-          Adw.ActionRow {
-            title: _("Read (Symbolic: r, Numeric: 4)");
-            subtitle: _("Allows viewing the file's contents or listing a directory's contents");
-
-            [prefix]
-            Image {
-              icon-name: "concessio-read-symbolic";
-            }
-          }
-
-          Adw.ActionRow {
-            title: _("Write (Symbolically: w, Numerically: 2)");
-            subtitle: _("Allows modifying the file's contents or creating/deleting files within a directory");
-
-            [prefix]
-            Image {
-              icon-name: "concessio-write-symbolic";
-            }
-          }
-
-          Adw.ActionRow {
-            title: _("Execute (Symbolically: x, Numerically: 1)");
-            subtitle: _("Allows running the file as a program");
-
-            [prefix]
-            Image {
-              icon-name: "concessio-execute-symbolic";
-            }
-          }
-        }
-
-        Label {
-          wrap: true;
-          label: _("Permissions can either be represented symbolically or numerically. Symbolic permissions are represented as a string of ten characters, and numeric is represented by three numbers (octal notation) for Example:");
-        }
-
-        Label {
-          wrap: true;
-          label: _("Symbolic: -rwxr-xr--");
-
-          styles [
-            "heading",
-            "monospace",
-          ]
-        }
-
-        Label {
-          wrap: true;
-          label: _("Numeric: 754");
-
-          styles [
-            "heading",
-            "monospace",
-          ]
-        }
-
-        ListBox {
-          selection-mode: none;
-
-          styles [
-            "boxed-list",
-          ]
-
-          Adw.ActionRow {
-            title: _("First character, the file type");
-            subtitle: _("can either be '-' for file or 'd' for directory");
-          }
-
-          Adw.ActionRow {
-            title: _("First three positions (after file type)");
-            subtitle: _("The read, write and execute permissions for the user, here we have 'rwx', which translated to 4+2+1 and adds to 7");
-          }
-
-          Adw.ActionRow {
-            title: _("Second three positions");
-            subtitle: _("The read, write and execute permissions for the group, here we have 'r-x', which translated to 4+0+1 and adds to 5");
-          }
-
-          Adw.ActionRow {
-            title: _("Last three positions");
-            subtitle: _("The read, write and execute permissions for other users, here we have 'r--', which translated to 4+0+0 and adds to 4");
-          }
-        }
-
-        Label {
-          wrap: true;
-          label: _("Example command");
-          halign: start;
-
-          styles [
-            "heading",
-          ]
-        }
-
-        Label {
-          label: _("chmod 754 (file name)");
-
-          styles [
-            "card",
-            "monospace",
-            "command-card",
-          ]
-        }
-
-        Label special_perms_header {
-          label: _("Special Permissions");
-
-          styles [
-            "title-2",
-          ]
-        }
-
-        Label {
-          wrap: true;
-          label: _("Special permissions make up a fourth access level in addition to user, group, and other, they allow for additional privileges over the standard permission sets");
-        }
-
-        Label {
-          wrap: true;
-          label: _("The three special permissions are:");
-          halign: start;
-
-          styles [
-            "heading",
-          ]
-        }
-
-        ListBox {
-          selection-mode: none;
-
-          styles [
-            "boxed-list",
-          ]
-
-          Adw.ActionRow {
-            title: "SUID (user+s)";
-            subtitle: _("Executes the file with the permissions of the file owner, not the user running it.");
-          }
-
-          Adw.ActionRow {
-            title: "SGID (group+s)";
-            subtitle: _("Executes the file with the permissions of the file's group, or ensures new files in a directory inherit the group.");
-          }
-
-          Adw.ActionRow {
-            title: "Sticky bit (other+t)";
-            subtitle: _("Allows only the file owner or directory owner to delete files in the directory, even if others have write permissions. Only applies to directories and has no effect on files.");
-          }
-        }
-
-        Label {
-          wrap: true;
-          label: _("Special permissions can be represented symbolically or numerically.");
-          halign: start;
-        }
-
-        Label {
-          wrap: true;
-          label: _("Numeric representation:");
-          halign: start;
-
-          styles [
-            "heading",
-          ]
-        }
-
-        Label {
-          wrap: true;
-          label: _("They are denoted as an extra digit before the user, group and others permissions. Can Either be 0, 4, 2, 1 or any combination of them.");
-
-          styles [
-            "card",
-            "command-card",
-          ]
-        }
-
-        Label {
-          wrap: true;
-          label: _("Symbolical representation:");
-          halign: start;
-
-          styles [
-            "heading",
-          ]
-        }
-
-        ListBox {
-          selection-mode: none;
-
-          styles [
-            "boxed-list",
-          ]
-
-          Adw.ActionRow {
-            title: "SUID";
-            subtitle: _("Goes where 'x' normally is for the user");
-          }
-
-          Adw.ActionRow {
-            title: "SGID";
-            subtitle: _("Goes where 'x' normally is for the group");
-          }
-
-          Adw.ActionRow {
-            title: "Sticky bit";
-            subtitle: _("Goes where 'x' normally is for others");
-          }
-        }
-
-        Label {
-          wrap: true;
-          label: _("Symbolic: -rwsr-Sr-t");
-
-          styles [
-            "heading",
-            "monospace",
-          ]
-        }
-
-        Label {
-          wrap: true;
-          label: _("Numeric: 7745");
-
-          styles [
-            "heading",
-            "monospace",
-          ]
-        }
-
-        ListBox {
-          selection-mode: none;
-
-          styles [
-            "boxed-list",
-          ]
-
-          Adw.ActionRow {
-            title: "SUID";
-            subtitle: _("Represented as '4' numerically. Symbolically, it is either 's' if the owner has execute permissions or 'S' if not.");
-          }
-
-          Adw.ActionRow {
-            title: "SGID";
-            subtitle: _("Represented as '2' numerically. Symbolically, it is either 's' if the group has execute permissions or 'S' if not.");
-          }
-
-          Adw.ActionRow {
-            title: "Sticky bit";
-            subtitle: _("Represented as '1' numerically. Symbolically, it is either 't' if the others have execute permissions or 'T' if not.");
-          }
-        }
-
-        Label {
-          wrap: true;
-          label: _("Example commands");
-          halign: start;
-
-          styles [
-            "heading",
-          ]
-        }
-
-        Label {
-          label: _("chmod 7745 (file name)");
-
-          styles [
-            "card",
-            "monospace",
-            "command-card",
-          ]
-        }
-
-        LinkButton {
-          label: _("Further reading");
-          uri: "https://www.redhat.com/sysadmin/suid-sgid-sticky-bit";
-        }
-
-        Label umask_header {
-          label: _("Umask");
-
-          styles [
-            "title-2",
-          ]
-        }
-
-        Label {
-          wrap: true;
-          label: _("The umask (user file-creation mask) determines the default permissions for new files and directories. It acts as a filter that 'masks out' specific bits from the base permissions.");
-        }
-
-        Label {
-          wrap: true;
-          label: _("Typical base permissions:");
-          halign: start;
-
-          styles [
-            "heading",
-          ]
-        }
-
-        ListBox {
-          selection-mode: none;
-
-          styles [
-            "boxed-list",
-          ]
-
-          Adw.ActionRow {
-            title: _("Directories (Base: 777)");
-            subtitle: _("Full read, write, and execute permissions by default");
-          }
-
-          Adw.ActionRow {
-            title: _("Files (Base: 666)");
-            subtitle: _("Read and write permissions by default; execute is excluded for security");
-          }
-        }
-
-        Label {
-          wrap: true;
-          label: _("Calculation logic:");
-          halign: start;
-
-          styles [
-            "heading",
-          ]
-        }
-
-        Label {
-          wrap: true;
-          label: _("The final permission is calculated by taking the base and removing the bits set in the umask.");
-
-          styles [
-            "card",
-            "command-card",
-          ]
-        }
-
-        ListBox {
-          selection-mode: none;
-
-          styles [
-            "boxed-list",
-          ]
-
-          Adw.ActionRow {
-            title: _("Umask 022");
-            subtitle: _("Removes write access for group and others. (Result: 755 for dirs, 644 for files)");
-          }
-
-          Adw.ActionRow {
-            title: _("Umask 077");
-            subtitle: _("Removes all access for group and others. (Result: 700 for dirs, 600 for files)");
-          }
-        }
-
-        Label {
-          wrap: true;
-          label: _("Example command");
-          halign: start;
-
-          styles [
-            "heading",
-          ]
-        }
-
-        Label {
-          label: _("umask 022");
-
-          styles [
-            "card",
-            "monospace",
-            "command-card",
-          ]
-        }
-
-        Label {
-          wrap: true;
-          label: _("Note: The umask command only lasts for the current session. You need to set the command in your bashrc or equivalent to make it permanent.");
-
-          styles [
-            "card",
-            "command-card",
-          ]
-        }
-
-        LinkButton {
-          label: _("Further reading");
-          uri: "https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html";
-        }
-      }
-    };
-  }
 }
 
