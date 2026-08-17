@@ -16,11 +16,17 @@ template $ConcessioUMask: Box {
             styles [
                 "heading",
             ]
+            accessibility {
+              label: _("Umask");
+            }
         }
 
         Label {
             label: _("The umask determines the default permissions removed from new files and directories.");
             wrap: true;
+            accessibility {
+              label: _("The umask determines the default permissions removed from new files and directories.");
+            }
         }
 
         Box {

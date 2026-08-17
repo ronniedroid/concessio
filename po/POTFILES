@@ -1,13 +1,13 @@
-data/ui/BoxedList.blp
-data/ui/Form.blp
-data/ui/HelpDialog.blp
-data/ui/Window.blp
-data/shortcuts-dialog.blp
-data/io.github.ronniedroid.concessio.desktop
-data/io.github.ronniedroid.concessio.metainfo.xml
+data/io.github.ronniedroid.concessio.desktop.in
+data/io.github.ronniedroid.concessio.metainfo.xml.in
 
-src/application.js
-src/boxedList.js
-src/form.js
-src/helpDialog.js
-src/window.js
+src/shortcuts-dialog.blp
+src/application.vala
+src/window.vala
+src/window.blp
+src/permissions.vala
+src/permissions.blp
+src/help_dialog.vala
+src/help-dialog.blp
+src/umask.vala
+src/umask.blp

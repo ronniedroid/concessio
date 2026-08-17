@@ -21,12 +21,18 @@ Stack file_stack {
                     label: _("Open File");
                     xalign: 0;
                     styles ["heading"]
+                    accessibility {
+                      label: _("Open File");
+                    }
                 }
 
                 Label {
                     label: _("Open a file to view its permissions");
                     xalign: 0;
                     styles ["dim-label", "caption"]
+                    accessibility {
+                      label: _("Open a file to view its permissions");
+                    }
                 }
             }
 
@@ -51,6 +57,7 @@ Stack file_stack {
 
             Image {
                 icon-name: "text-x-generic-symbolic";
+                accessible-role: presentation;
             }
 
             Box {

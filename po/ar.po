@@ -8,106 +8,302 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-04 19:14+0300\n"
-"PO-Revision-Date: 2026-03-04 19:34+0300\n"
+"POT-Creation-Date: 2026-08-17 00:03+0300\n"
+"PO-Revision-Date: 2026-08-17 19:42+0300\n"
 "Last-Translator: Ronnie Nissan <ronnie.nissan@proton.me>\n"
 "Language-Team: Arabic\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Gtranslator 50.0\n"
 "Plural-Forms: nplurals=6; plural= n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: data/ui/BoxedList.blp:13 data/ui/HelpDialog.blp:116
+#: data/io.github.ronniedroid.concessio.desktop.in:2
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:5
+#: src/application.vala:59 src/window.blp:5 src/window.blp:56
+msgid "Concessio"
+msgstr "كونسيسيو"
+
+#: data/io.github.ronniedroid.concessio.desktop.in:3
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:6 src/window.blp:64
+msgid "Understand file permissions"
+msgstr "أفهم صلاحيات الملفات"
+
+#: data/io.github.ronniedroid.concessio.desktop.in:9
+msgid "Permissions;Converter;Calculator;"
+msgstr "صلاحيات;محول;حاسبة;"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:8
+msgid "Ronnie Nissan"
+msgstr "روني نيسان"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:11
+#: src/application.vala:61
+msgid ""
+"Concessio helps you understand and convert between unix permissions "
+"representations"
+msgstr "يساعدك كونسيسيو على فهم و التحويل بين تمثيلات صلاحيات اليونكس"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:13
+msgid ""
+"Convert between symbolic and numeric representations of UNIX file permissions"
+msgstr "التحويل بين التمثيلات الرمزية والعددية لصلاحيات ملفات اليونكس"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:14
+msgid "Use toggle buttons to update the symbolic and numeric fields"
+msgstr "استخدم أزرار التبديل لتحديث الحقول الرمزية والعددية"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:15
+msgid "Open a file to read it's permissions and convert them"
+msgstr "افتح ملفًا لقراءة صلاحياته وتحويلها"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:16
+msgid "Open the help dialog to read and understand the UNIX permissions system"
+msgstr "افتح مربع حوار المساعدة لقراءة وفهم نظام صلاحيات اليونكس"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:30
+msgid ""
+"Application main page converting between numeric and symbolic permission"
+msgstr "صفحة التطبيق الرئيسية للتحويل بين الصلاحيات الرمزية و الرقمية"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:34
+msgid "Application help page, explaining unix permissions"
+msgstr "صفحة المساعدة للتطبيق, شرح صلاحيات يونكس"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:38
+msgid ""
+"Application umask page, calculating the umask value for a base permission"
+msgstr "صفحة التطبيق الخاصة بحساب قيمة قناع المستخدم لصلاحية أساسية"
+
+#: src/shortcuts-dialog.blp:7
+msgid "Quit App"
+msgstr "أغلاق التطبيق"
+
+#: src/shortcuts-dialog.blp:12
+msgid "Close Window"
+msgstr "إغلاق النافذة"
+
+#: src/shortcuts-dialog.blp:17
+msgid "Help dialog"
+msgstr "مربع حوار المساعدة"
+
+#: src/shortcuts-dialog.blp:18
+msgid "Display the help dialog"
+msgstr "عرض مربع الحوار للمساعدة"
+
+#: src/shortcuts-dialog.blp:23 src/window.blp:177
+msgid "Keyboard Shortcuts"
+msgstr "اختصارات لوحة المفاتيح"
+
+#: src/shortcuts-dialog.blp:24
+msgid "Display this keyboard shortcuts window"
+msgstr "عرض نافذة اختصارات لوحة المفاتيح هذه"
+
+#: src/application.vala:68
+msgid "translator-credits"
+msgstr "روني نيسان https://github.com/ronniedroid/"
+
+#: src/application.vala:76
+msgid "Embellish"
+msgstr "أيمبيليش"
+
+#: src/application.vala:76
+msgid "Install nerd fonts"
+msgstr "تثبيت خطوط نيرد (Nerd Fonts)"
+
+#: src/application.vala:77
+msgid "Sitra"
+msgstr "سطرا"
+
+#: src/application.vala:77
+msgid "Get fonts from online sources"
+msgstr "احصل على الخطوط من مصادر عبر الإنترنت"
+
+#: src/application.vala:78
+msgid "Special thanks to"
+msgstr "شكر خاص ل"
+
+#: src/window.vala:48 src/window.vala:54
+#, c-format
+msgid "Copied “%s”"
+msgstr "تم نسخ \"%s\""
+
+#: src/window.vala:101
+msgid "Failed to open file."
+msgstr "فشل في فتح الملف."
+
+#: src/window.blp:68
+msgid "Get started"
+msgstr "ابدأ الاَن"
+
+#: src/window.blp:99
+msgid "Main Menu"
+msgstr "القائمة الرئيسية"
+
+#: src/window.blp:121
+msgid "Permissions"
+msgstr "الصلاحيات"
+
+#: src/window.blp:142 src/help-dialog.blp:74 src/help-dialog.blp:440
+#: src/umask.blp:14 src/umask.blp:20
+msgid "Umask"
+msgstr "قناع المستخدم"
+
+#: src/window.blp:172 src/help-dialog.blp:14
+msgid "Help"
+msgstr "مساعدة"
+
+#: src/window.blp:182
+msgid "About"
+msgstr "حول"
+
+#. Use "Document Portal" as fallback
+#: src/permissions.vala:380
+msgid "Document Portal"
+msgstr "بوابة المستندات"
+
+#: src/permissions.blp:21 src/permissions.blp:25
+msgid "Open File"
+msgstr "فتح الملف"
+
+#: src/permissions.blp:30 src/permissions.blp:34
+msgid "Open a file to view its permissions"
+msgstr "افتح ملفًا لعرض صلاحياته"
+
+#: src/permissions.blp:41 src/permissions.blp:46
+msgid "Open a file"
+msgstr "فتح ملف"
+
+#: src/permissions.blp:81 src/permissions.blp:86
+msgid "Open a different file"
+msgstr "افتح ملفًا مختلفًا"
+
+#: src/permissions.blp:92 src/permissions.blp:97
+msgid "Close file"
+msgstr "إغلاق الملف"
+
+#: src/permissions.blp:114
+msgid "Numeric"
+msgstr "رقمي"
+
+#: src/permissions.blp:129 src/permissions.blp:178 src/umask.blp:40
+msgid "Copy value"
+msgstr "نسخ القيمة"
+
+#: src/permissions.blp:132
+msgid "Copy numeric value"
+msgstr "نسخ القيمة الرقمية"
+
+#: src/permissions.blp:141
+msgid "Numeric permissions"
+msgstr "صلاحيات رقمية"
+
+#: src/permissions.blp:142
+msgid "Enter three or four octal digits, for example 0755"
+msgstr "أدخل ثلاثة أو أربعة أرقام ثمانية، على سبيل المثال 0755"
+
+#: src/permissions.blp:148 src/permissions.blp:203 src/umask.blp:60
+msgid "Apply value"
+msgstr "تطبيق القيمة"
+
+#: src/permissions.blp:151
+msgid "Apply numeric value"
+msgstr "تطبيق القيمة الرقمية"
+
+#: src/permissions.blp:163
+msgid "Symbolic"
+msgstr "رمزي"
+
+#: src/permissions.blp:181
+msgid "Copy symbolic value"
+msgstr "نسخ القيمة الرمزية"
+
+#: src/permissions.blp:190
+msgid "Symbolic permissions"
+msgstr "صلاحيات رمزية"
+
+#: src/permissions.blp:192
+msgid ""
+"Enter nine characters representing read, write, and execute permissions for "
+"user, group, and others, for example rwxr-xr-x"
+msgstr ""
+"أدخل تسعة أحرف تمثل صلاحيات القراءة والكتابة والتنفيذ للمالك والمجموعة "
+"والآخرين، على سبيل المثال rwxr-xr-x"
+
+#: src/permissions.blp:206
+msgid "Apply symbolic value"
+msgstr "تطبيق القيمة الرمزية"
+
+#: src/permissions.blp:221 src/help-dialog.blp:116
 msgid "User"
 msgstr "المستخدم"
 
-#: data/ui/BoxedList.blp:23 data/ui/BoxedList.blp:103 data/ui/BoxedList.blp:183
+#: src/permissions.blp:230 src/permissions.blp:348 src/permissions.blp:466
 msgid "Read"
 msgstr "قراءة"
 
-#: data/ui/BoxedList.blp:26
+#: src/permissions.blp:233
 msgid "User read permission"
 msgstr "صلاحيات القراءة للمستخدم"
 
-#: data/ui/BoxedList.blp:41 data/ui/BoxedList.blp:121 data/ui/BoxedList.blp:201
+#: src/permissions.blp:247 src/permissions.blp:365 src/permissions.blp:483
 msgid "Write"
 msgstr "كتابة"
 
-#: data/ui/BoxedList.blp:44
+#: src/permissions.blp:250
 msgid "User write permission"
 msgstr "صلاحيات الكتابة للمستخدم"
 
-#: data/ui/BoxedList.blp:59 data/ui/BoxedList.blp:139 data/ui/BoxedList.blp:219
+#: src/permissions.blp:264 src/permissions.blp:382 src/permissions.blp:500
 msgid "Execute"
 msgstr "تنفيذ"
 
-#: data/ui/BoxedList.blp:62
+#: src/permissions.blp:267
 msgid "User execute permission"
 msgstr "صلاحيات التنفيذ للمستخدم"
 
-#: data/ui/BoxedList.blp:82
+#: src/permissions.blp:286
 msgid "Set user ID SUID options"
 msgstr "خيارات تعيين معرف المستخدم (SUID)"
 
-#: data/ui/BoxedList.blp:93 data/ui/HelpDialog.blp:126
-msgid "Group"
-msgstr "المجموعة"
-
-#: data/ui/BoxedList.blp:106
-msgid "Group read permission"
-msgstr "صلاحيات القراءة للمجموعة"
-
-#: data/ui/BoxedList.blp:124
-msgid "Group write permission"
-msgstr "صلاحيات الكتابة للمجموعة"
-
-#: data/ui/BoxedList.blp:142
-msgid "Group execute permission"
-msgstr "صلاحيات التنفيذ للمجموعة"
-
-#: data/ui/BoxedList.blp:162
-msgid "Set group ID SGID options"
-msgstr "خيارات تعيين معرف المجموعة (SGID)"
-
-#: data/ui/BoxedList.blp:173 data/ui/HelpDialog.blp:136
-msgid "Others"
-msgstr "الاَخرون"
-
-#: data/ui/BoxedList.blp:186
-msgid "Other users read permission"
-msgstr "صلاحيات القراءة للمستخدمين الآخرين"
-
-#: data/ui/BoxedList.blp:204
-msgid "Other users write permission"
-msgstr "صلاحيات الكتابة للمستخدمين الآخرين"
-
-#: data/ui/BoxedList.blp:222
-msgid "Other users execute permission"
-msgstr "صلاحيات التنفيذ للمستخدمين الآخرين"
-
-#: data/ui/BoxedList.blp:242
-msgid "Sticky bit options"
-msgstr "خيارات البت اللاصق"
-
-#: data/ui/BoxedList.blp:283
+#: src/permissions.blp:320
 msgid "Set user ID SUID switch"
 msgstr "مفتاح تفعيل تعيين معرف المستخدم (SUID)"
 
-#: data/ui/BoxedList.blp:288 data/ui/HelpDialog.blp:298
+#: src/permissions.blp:326 src/help-dialog.blp:298
 msgid ""
 "Executes the file with the permissions of the file owner, not the user "
 "running it."
 msgstr ""
 "يقوم بتنفيذ الملف بصلاحيات مالك الملف، وليس المستخدم الذي يقوم بتشغيله."
 
-#: data/ui/BoxedList.blp:325
+#: src/permissions.blp:339 src/help-dialog.blp:126
+msgid "Group"
+msgstr "المجموعة"
+
+#: src/permissions.blp:351
+msgid "Group read permission"
+msgstr "صلاحيات القراءة للمجموعة"
+
+#: src/permissions.blp:368
+msgid "Group write permission"
+msgstr "صلاحيات الكتابة للمجموعة"
+
+#: src/permissions.blp:385
+msgid "Group execute permission"
+msgstr "صلاحيات التنفيذ للمجموعة"
+
+#: src/permissions.blp:404
+msgid "Set group ID SGID options"
+msgstr "خيارات تعيين معرف المجموعة (SGID)"
+
+#: src/permissions.blp:438
 msgid "Set group ID SGID switch"
 msgstr "مفتاح تفعيل تعيين معرف المجموعة (SGID)"
 
-#: data/ui/BoxedList.blp:330 data/ui/HelpDialog.blp:303
+#: src/permissions.blp:444 src/help-dialog.blp:303
 msgid ""
 "Executes the file with the permissions of the file's group, or ensures new "
 "files in a directory inherit the group."
@@ -115,11 +311,31 @@ msgstr ""
 "يقوم بتنفيذ الملف بصلاحيات المجموعة، أو يضمن أن الملفات الجديدة في الدليل "
 "ترث نفس المجموعة."
 
-#: data/ui/BoxedList.blp:367
+#: src/permissions.blp:457 src/help-dialog.blp:136
+msgid "Others"
+msgstr "الاَخرون"
+
+#: src/permissions.blp:469
+msgid "Other users read permission"
+msgstr "صلاحيات القراءة للمستخدمين الآخرين"
+
+#: src/permissions.blp:486
+msgid "Other users write permission"
+msgstr "صلاحيات الكتابة للمستخدمين الآخرين"
+
+#: src/permissions.blp:503
+msgid "Other users execute permission"
+msgstr "صلاحيات التنفيذ للمستخدمين الآخرين"
+
+#: src/permissions.blp:522
+msgid "Sticky bit options"
+msgstr "خيارات البت اللاصق"
+
+#: src/permissions.blp:556
 msgid "Sticky bit switch"
 msgstr "مفتاح تفعيل البت اللاصق"
 
-#: data/ui/BoxedList.blp:372 data/ui/HelpDialog.blp:308
+#: src/permissions.blp:562 src/help-dialog.blp:308
 msgid ""
 "Allows only the file owner or directory owner to delete files in the "
 "directory, even if others have write permissions. Only applies to "
@@ -129,67 +345,19 @@ msgstr ""
 "كان لدى الآخرين أذونات الكتابة. ينطبق فقط على الدلائل وليس له تأثير على "
 "الملفات."
 
-#: data/ui/Form.blp:14
-msgid "Numeric"
-msgstr "رقمي"
-
-#: data/ui/Form.blp:32
-msgid "Numeric permissions"
-msgstr "صلاحيات رقمية"
-
-#: data/ui/Form.blp:33
-msgid "Enter three or four octal digits, for example 0755"
-msgstr "أدخل ثلاثة أو أربعة أرقام ثمانية، على سبيل المثال 0755"
-
-#: data/ui/Form.blp:39 data/ui/Form.blp:83
-msgid "Copy value"
-msgstr "نسخ القيمة"
-
-#: data/ui/Form.blp:43
-msgid "Copy numeric value"
-msgstr "نسخ القيمة الرقمية"
-
-#: data/ui/Form.blp:54
-msgid "Symbolic"
-msgstr "رمزي"
-
-#: data/ui/Form.blp:72
-msgid "Symbolic permissions"
-msgstr "صلاحيات رمزية"
-
-#: data/ui/Form.blp:73
-msgid ""
-"Enter nine characters representing read, write, and execute permissions for "
-"user, group, and others, for example rwxr-xr-x"
-msgstr ""
-"أدخل تسعة أحرف تمثل صلاحيات القراءة والكتابة والتنفيذ للمالك والمجموعة "
-"والآخرين، على سبيل المثال rwxr-xr-x"
-
-#: data/ui/Form.blp:87
-msgid "Copy symbolic value"
-msgstr "نسخ القيمة الرمزية"
-
-#: data/ui/HelpDialog.blp:14 data/ui/Window.blp:159
-msgid "Help"
-msgstr "مساعدة"
-
-#: data/ui/HelpDialog.blp:36
+#: src/help-dialog.blp:36
 msgid "Table of Contents"
 msgstr "جدول المحتويات"
 
-#: data/ui/HelpDialog.blp:52 data/ui/HelpDialog.blp:86
+#: src/help-dialog.blp:52 src/help-dialog.blp:86
 msgid "Unix Permissions"
 msgstr "صلاحيات يونكس"
 
-#: data/ui/HelpDialog.blp:63 data/ui/HelpDialog.blp:267
+#: src/help-dialog.blp:63 src/help-dialog.blp:267
 msgid "Special Permissions"
 msgstr "صلاحيات يونكس"
 
-#: data/ui/HelpDialog.blp:74 data/ui/HelpDialog.blp:440 data/ui/Window.blp:132
-msgid "Umask"
-msgstr "قناع المستخدم (Umask)"
-
-#: data/ui/HelpDialog.blp:95
+#: src/help-dialog.blp:95
 msgid ""
 "The Unix permissions system is used to grant granulated access to file and "
 "directories on a Unix-like operating system"
@@ -197,53 +365,53 @@ msgstr ""
 "يُستخدم نظام صلاحيات يونكس لمنح الوصول المجزأ إلى الملفات والمجلدات على نظام "
 "تشغيل مشابه ليونكس"
 
-#: data/ui/HelpDialog.blp:100
+#: src/help-dialog.blp:100
 msgid "Permissions are granted to three groups:"
 msgstr "يتم منح الصلاحيات إلى ثلاث مجموعات:"
 
-#: data/ui/HelpDialog.blp:117
+#: src/help-dialog.blp:117
 msgid "The owner of the file"
 msgstr "مالك الملف"
 
-#: data/ui/HelpDialog.blp:127
+#: src/help-dialog.blp:127
 msgid "A group of users who share access to the file"
 msgstr "مجموعة من المستخدمين الذين يشاركون في الوصول إلى الملف"
 
-#: data/ui/HelpDialog.blp:137
+#: src/help-dialog.blp:137
 msgid "All other users on the system"
 msgstr "جميع المستخدمين الاَخرين على النظام"
 
-#: data/ui/HelpDialog.blp:147
+#: src/help-dialog.blp:147
 msgid "The types of permissions are:"
 msgstr "أنواع الصلاحيات هي:"
 
-#: data/ui/HelpDialog.blp:163
+#: src/help-dialog.blp:163
 msgid "Read (Symbolic: r, Numeric: 4)"
 msgstr "قراءة (رقمي: 4، رمزي r)"
 
-#: data/ui/HelpDialog.blp:164
+#: src/help-dialog.blp:164
 msgid "Allows viewing the file's contents or listing a directory's contents"
 msgstr "يسمح بعرض محتويات الملف أو سرد محتويات المجلد"
 
-#: data/ui/HelpDialog.blp:173
+#: src/help-dialog.blp:173
 msgid "Write (Symbolically: w, Numerically: 2)"
 msgstr "كتابة (رقمي: 2، رمزي: w)"
 
-#: data/ui/HelpDialog.blp:174
+#: src/help-dialog.blp:174
 msgid ""
 "Allows modifying the file's contents or creating/deleting files within a "
 "directory"
 msgstr "يسمح بتعديل محتويات الملف أو إنشاء/حذف الملفات داخل المجلد"
 
-#: data/ui/HelpDialog.blp:183
+#: src/help-dialog.blp:183
 msgid "Execute (Symbolically: x, Numerically: 1)"
 msgstr "تنفيذ (رقمي: 1، رمزي: x)"
 
-#: data/ui/HelpDialog.blp:184
+#: src/help-dialog.blp:184
 msgid "Allows running the file as a program"
 msgstr "يسمح بتشغيل الملف كبرنامج"
 
-#: data/ui/HelpDialog.blp:195
+#: src/help-dialog.blp:195
 msgid ""
 "Permissions can either be represented symbolically or numerically. Symbolic "
 "permissions are represented as a string of ten characters, and numeric is "
@@ -253,27 +421,27 @@ msgstr ""
 "كسلسلة من عشرة أحرف، بينما يتم تمثيل الصلاحيات الرقمية بثلاثة أرقام (ترميز "
 "ثماني) على سبيل المثال:"
 
-#: data/ui/HelpDialog.blp:200
+#: src/help-dialog.blp:200
 msgid "Symbolic: -rwxr-xr--"
 msgstr "رمزي: --rwxr-xr-"
 
-#: data/ui/HelpDialog.blp:210
+#: src/help-dialog.blp:210
 msgid "Numeric: 754"
 msgstr "رقمي: 754"
 
-#: data/ui/HelpDialog.blp:226
+#: src/help-dialog.blp:226
 msgid "First character, the file type"
 msgstr "الحرف الاولو نوع الملف"
 
-#: data/ui/HelpDialog.blp:227
+#: src/help-dialog.blp:227
 msgid "can either be '-' for file or 'd' for directory"
 msgstr "يمكن ان يكون '-' للملف او 'd' للمجلد"
 
-#: data/ui/HelpDialog.blp:231
+#: src/help-dialog.blp:231
 msgid "First three positions (after file type)"
 msgstr "المواضغ الثلاثة الأولى (بعد نوع الملف)"
 
-#: data/ui/HelpDialog.blp:232
+#: src/help-dialog.blp:232
 msgid ""
 "The read, write and execute permissions for the user, here we have 'rwx', "
 "which translated to 4+2+1 and adds to 7"
@@ -281,11 +449,11 @@ msgstr ""
 "صلاحيات القراءة والكتابة والتنفيذ للمستخدم، هنا لدينا 'rwx'، والتي تترجم إلى "
 "4+2+1 وتساوي 7"
 
-#: data/ui/HelpDialog.blp:236
+#: src/help-dialog.blp:236
 msgid "Second three positions"
 msgstr "الواضع الثلالثة الثانية"
 
-#: data/ui/HelpDialog.blp:237
+#: src/help-dialog.blp:237
 msgid ""
 "The read, write and execute permissions for the group, here we have 'r-x', "
 "which translated to 4+0+1 and adds to 5"
@@ -293,11 +461,11 @@ msgstr ""
 "صلاحيات القراءة والكتابة والتنفيذ للمجموعة، هنا لدينا 'r-x'، والتي تترجم إلى "
 "4+0+1 وتساوي 5"
 
-#: data/ui/HelpDialog.blp:241
+#: src/help-dialog.blp:241
 msgid "Last three positions"
 msgstr "المواضع الثلاثة الأخيرة"
 
-#: data/ui/HelpDialog.blp:242
+#: src/help-dialog.blp:242
 msgid ""
 "The read, write and execute permissions for other users, here we have 'r--', "
 "which translated to 4+0+0 and adds to 4"
@@ -305,15 +473,15 @@ msgstr ""
 "صلاحيات القراءة والكتابة والتنفيذ للمستخدمين الآخرين، هنا لدينا 'r--'، والتي "
 "تترجم إلى 4+0+0 وتساوي 4"
 
-#: data/ui/HelpDialog.blp:248 data/ui/HelpDialog.blp:520
+#: src/help-dialog.blp:248 src/help-dialog.blp:520
 msgid "Example command"
 msgstr "أمر نموذجي"
 
-#: data/ui/HelpDialog.blp:257
+#: src/help-dialog.blp:257
 msgid "chmod 754 (file name)"
 msgstr "(اسم الملف) chmod 754"
 
-#: data/ui/HelpDialog.blp:276
+#: src/help-dialog.blp:276
 msgid ""
 "Special permissions make up a fourth access level in addition to user, "
 "group, and other, they allow for additional privileges over the standard "
@@ -322,19 +490,19 @@ msgstr ""
 "تشكل الصلاحيات الخاصة مستوى وصول رابعًا بالإضافة إلى المستخدم والمجموعة "
 "والآخرين، فهي تسمح بامتيازات إضافية على مجموعات الصلاحيات القياسية"
 
-#: data/ui/HelpDialog.blp:281
+#: src/help-dialog.blp:281
 msgid "The three special permissions are:"
 msgstr "الصلاحيات الخاصة الثلاثة هي:"
 
-#: data/ui/HelpDialog.blp:314
+#: src/help-dialog.blp:314
 msgid "Special permissions can be represented symbolically or numerically."
 msgstr "يمكن تمثيل الصلاحيات الخاصة رمزيًا أو رقميًا."
 
-#: data/ui/HelpDialog.blp:320
+#: src/help-dialog.blp:320
 msgid "Numeric representation:"
 msgstr "التمثيل الرقمي:"
 
-#: data/ui/HelpDialog.blp:330
+#: src/help-dialog.blp:330
 msgid ""
 "They are denoted as an extra digit before the user, group and others "
 "permissions. Can Either be 0, 4, 2, 1 or any combination of them."
@@ -342,31 +510,31 @@ msgstr ""
 "يتم الإشارة إليها كرقم إضافي قبل صلاحيات المستخدم والمجموعة والآخرين. يمكن "
 "أن تكون إما 0 أو 4 أو 2 أو 1 أو أي تركيبة منها."
 
-#: data/ui/HelpDialog.blp:340
+#: src/help-dialog.blp:340
 msgid "Symbolical representation:"
 msgstr "التمثيل الرمزي:"
 
-#: data/ui/HelpDialog.blp:357
+#: src/help-dialog.blp:357
 msgid "Goes where 'x' normally is for the user"
 msgstr "يقع في المكان الذي يوجد فيه 'x' عادةً للمستخدم"
 
-#: data/ui/HelpDialog.blp:362
+#: src/help-dialog.blp:362
 msgid "Goes where 'x' normally is for the group"
 msgstr "يقع في المكان الذي يوجد فيه 'x' عادةً للمجموعة"
 
-#: data/ui/HelpDialog.blp:367
+#: src/help-dialog.blp:367
 msgid "Goes where 'x' normally is for others"
 msgstr "يقع في المكان الذي يوجد فيه 'x' عادةً للاَحرين"
 
-#: data/ui/HelpDialog.blp:373
+#: src/help-dialog.blp:373
 msgid "Symbolic: -rwsr-Sr-t"
 msgstr "رمزي: rwsr-Sr-t-"
 
-#: data/ui/HelpDialog.blp:383
+#: src/help-dialog.blp:383
 msgid "Numeric: 7745"
 msgstr "رقمي: 7755"
 
-#: data/ui/HelpDialog.blp:400
+#: src/help-dialog.blp:400
 msgid ""
 "Represented as '4' numerically. Symbolically, it is either 's' if the owner "
 "has execute permissions or 'S' if not."
@@ -374,7 +542,7 @@ msgstr ""
 "يتم تمثيله ب \"4\" رقميا. ورمزيا، يكون \"s\" إذا كان المالك لديه صلاحيات "
 "التنفيذ أو \"S\" إذا لم يكن لديه صلاحيات التنفيذ."
 
-#: data/ui/HelpDialog.blp:405
+#: src/help-dialog.blp:405
 msgid ""
 "Represented as '2' numerically. Symbolically, it is either 's' if the group "
 "has execute permissions or 'S' if not."
@@ -382,7 +550,7 @@ msgstr ""
 "يتم تمثيله ب \"2\" رقميا. ورمزيا \"s\" إذا كانت المجموعة لديها صلاحيات "
 "التنفيذ أو \"S\" إذا لم يكن لديها صلاحيات التنفيذ."
 
-#: data/ui/HelpDialog.blp:410
+#: src/help-dialog.blp:410
 msgid ""
 "Represented as '1' numerically. Symbolically, it is either 't' if the others "
 "have execute permissions or 'T' if not."
@@ -390,19 +558,19 @@ msgstr ""
 "يتم تمثيله ب \"1\" رقميا. ورمزيا \"t\" إذا كان الآخرون لديهم صلاحيات التنفيذ "
 "أو \"T\" إذا لم يكن لديهم صلاحيات التنفيذ."
 
-#: data/ui/HelpDialog.blp:416
+#: src/help-dialog.blp:416
 msgid "Example commands"
 msgstr "أمر نموذجي"
 
-#: data/ui/HelpDialog.blp:425
+#: src/help-dialog.blp:425
 msgid "chmod 7745 (file name)"
 msgstr "(اسم الملف) chmod 7745"
 
-#: data/ui/HelpDialog.blp:435 data/ui/HelpDialog.blp:549
+#: src/help-dialog.blp:435 src/help-dialog.blp:549
 msgid "Further reading"
 msgstr "قراءة إضافية"
 
-#: data/ui/HelpDialog.blp:449
+#: src/help-dialog.blp:449
 msgid ""
 "The umask (user file-creation mask) determines the default permissions for "
 "new files and directories. It acts as a filter that 'masks out' specific "
@@ -411,31 +579,31 @@ msgstr ""
 "يحدد قناع مستخدم إنشاء الملفات (umask) الأذونات الافتراضية للملفات والمجلدات "
 "الجديدة. يعمل بمثابة مرشح يقوم بحجب أجزاء معينة من الأذونات الأساسية."
 
-#: data/ui/HelpDialog.blp:454
+#: src/help-dialog.blp:454
 msgid "Typical base permissions:"
 msgstr "الأذونات الأساسية النموذجية:"
 
-#: data/ui/HelpDialog.blp:470
+#: src/help-dialog.blp:470
 msgid "Directories (Base: 777)"
 msgstr "المجلدات (الأساس: 777)"
 
-#: data/ui/HelpDialog.blp:471
+#: src/help-dialog.blp:471
 msgid "Full read, write, and execute permissions by default"
 msgstr "صلاحيات القراءة والكتابة والتنفيذ الكاملة افتراضيًا"
 
-#: data/ui/HelpDialog.blp:475
+#: src/help-dialog.blp:475
 msgid "Files (Base: 666)"
 msgstr "الملفات (الأساس: 666)"
 
-#: data/ui/HelpDialog.blp:476
+#: src/help-dialog.blp:476
 msgid "Read and write permissions by default; execute is excluded for security"
 msgstr "صلاحيات القراءة والكتابة افتراضيًا؛ ويُستثنى التنفيذ لأسباب أمنية"
 
-#: data/ui/HelpDialog.blp:482
+#: src/help-dialog.blp:482
 msgid "Calculation logic:"
 msgstr "منطق الحساب:"
 
-#: data/ui/HelpDialog.blp:492
+#: src/help-dialog.blp:492
 msgid ""
 "The final permission is calculated by taking the base and removing the bits "
 "set in the umask."
@@ -443,22 +611,22 @@ msgstr ""
 "يتم حساب الصلاحية النهائية بأخذ الأساس وإزالة البتات المحددة في قناع "
 "المستخدم."
 
-#: data/ui/HelpDialog.blp:508
+#: src/help-dialog.blp:508
 msgid "Umask 022"
 msgstr "قناع المستخدم 022"
 
-#: data/ui/HelpDialog.blp:509
+#: src/help-dialog.blp:509
 msgid ""
 "Removes write access for group and others. (Result: 755 for dirs, 644 for "
 "files)"
 msgstr ""
 "يزيل صلاحية الكتابة للمجموعة والآخرين. (النتيجة: 755 للمجلدات، 644 للملفات)"
 
-#: data/ui/HelpDialog.blp:513
+#: src/help-dialog.blp:513
 msgid "Umask 077"
 msgstr "قناع المستخدم 077"
 
-#: data/ui/HelpDialog.blp:514
+#: src/help-dialog.blp:514
 msgid ""
 "Removes all access for group and others. (Result: 700 for dirs, 600 for "
 "files)"
@@ -466,11 +634,11 @@ msgstr ""
 "يزيل جميع صلاحيات الوصول للمجموعة والآخرين. (النتيجة: 700 للمجلدات، 600 "
 "للملفات)"
 
-#: data/ui/HelpDialog.blp:529
+#: src/help-dialog.blp:529
 msgid "umask 022"
 msgstr "umask 022"
 
-#: data/ui/HelpDialog.blp:540
+#: src/help-dialog.blp:540
 msgid ""
 "Note: The umask command only lasts for the current session. You need to set "
 "the command in your bashrc or equivalent to make it permanent."
@@ -478,144 +646,54 @@ msgstr ""
 "ملاحظة: أمر umask يستمر فقط للجلسة الحالية. تحتاج إلى تعيين الأمر في ملف "
 "bashrc أو ما يعادله لجعله دائمًا."
 
-#: data/ui/Window.blp:5 data/ui/Window.blp:44
-#: data/io.github.ronniedroid.concessio.desktop:2
-#: data/io.github.ronniedroid.concessio.metainfo.xml:5 src/application.js:71
-msgid "Concessio"
-msgstr "كونسيسيو"
-
-#: data/ui/Window.blp:52 data/io.github.ronniedroid.concessio.desktop:3
-#: data/io.github.ronniedroid.concessio.metainfo.xml:6
-msgid "Understand file permissions"
-msgstr "أفهم صلاحيات الملفات"
-
-#: data/ui/Window.blp:56
-msgid "Get started"
-msgstr "ابدأ الاَن"
-
-#: data/ui/Window.blp:82
-msgid "Open"
-msgstr "فتح الملف"
-
-#: data/ui/Window.blp:96
-msgid "Main Menu"
-msgstr "القائمة الرئيسية"
-
-#: data/ui/Window.blp:111
-msgid "Permissions"
-msgstr "الصلاحيات"
-
-#: data/ui/Window.blp:164 data/shortcuts-dialog.blp:29
-msgid "Keyboard Shortcuts"
-msgstr "اختصارات لوحة المفاتيح"
-
-#: data/ui/Window.blp:169
-msgid "About"
-msgstr "حول"
-
-#: data/shortcuts-dialog.blp:7
-msgid "Open File"
-msgstr "فتح الملف"
-
-#: data/shortcuts-dialog.blp:8
-msgid "Open file chooser dialog"
-msgstr "فتح مربع حوار اختيار الملف"
-
-#: data/shortcuts-dialog.blp:13
-msgid "Quit App"
-msgstr "أغلاق التطبيق"
-
-#: data/shortcuts-dialog.blp:18
-msgid "Close Window"
-msgstr "إغلاق النافذة"
-
-#: data/shortcuts-dialog.blp:23
-msgid "Help dialog"
-msgstr "مربع حوار المساعدة"
-
-#: data/shortcuts-dialog.blp:24
-msgid "Display the help dialog"
-msgstr "عرض مربع الحوار للمساعدة"
-
-#: data/shortcuts-dialog.blp:30
-msgid "Display this keyboard shortcuts window"
-msgstr "عرض نافذة اختصارات لوحة المفاتيح هذه"
-
-#: data/io.github.ronniedroid.concessio.desktop:9
-msgid "Permissions;Convertor;Calculator;"
-msgstr "صلاحيات;محول;حاسبة;"
-
-#: data/io.github.ronniedroid.concessio.metainfo.xml:8
-msgid "Ronnie Nissan"
-msgstr "روني نيسان"
-
-#: data/io.github.ronniedroid.concessio.metainfo.xml:11 src/application.js:75
+#: src/umask.blp:25 src/umask.blp:28
 msgid ""
-"Concessio helps you understand and convert between unix permissions "
-"representations"
-msgstr "يساعدك كونسيسيو على فهم و التحويل بين تمثيلات صلاحيات اليونكس"
+"The umask determines the default permissions removed from new files and "
+"directories."
+msgstr ""
+"يحدد قناع المستخدم صلاحيات الوصول الافتراضية التي تتم إزالتها من الملفات "
+"والمجلدات الجديدة."
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:13
-msgid ""
-"Convert between symbolic and numeric representations of UNIX file permissions"
-msgstr "التحويل بين التمثيلات الرمزية والعددية لصلاحيات ملفات اليونكس"
+#: src/umask.blp:44
+msgid "Copy umask value"
+msgstr "نسخ قيمة قناع المستخدم"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:14
-msgid "Use toggle buttons to update the symbolic and numeric fields"
-msgstr "استخدم أزرار التبديل لتحديث الحقول الرمزية والعددية"
+#: src/umask.blp:53
+msgid "Umask value"
+msgstr "قيمة قناع المستخدم"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:15
-msgid "Open a file to read it's permissions and convert them"
-msgstr "افتح ملفًا لقراءة صلاحياته وتحويلها"
+#: src/umask.blp:54
+msgid "Enter three octal digits for the umask value"
+msgstr "أدخل ثلاثة أرقام ثمانية لقيمة قناع المستخدم"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:16
-msgid "Open the help dialog to read and understand the UNIX permissions system"
-msgstr "افتح مربع حوار المساعدة لقراءة وفهم نظام صلاحيات اليونكس"
+#: src/umask.blp:64
+msgid "Apply umask value"
+msgstr "تطبيق قيمة قناع المستخدم"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:30
-msgid ""
-"Application main page converting between numeric and symbolic permission"
-msgstr "صفحة التطبيق الرئيسية للتحويل بين الصلاحيات الرمزية و الرقمية"
+#: src/umask.blp:78
+msgid "Files"
+msgstr "الملفات"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:34
-msgid "Application help page, explaining unix permissions"
-msgstr "صفحة المساعدة للتطبيق, شرح صلاحيات يونكس"
+#: src/umask.blp:79
+msgid "New files will be created with this permission"
+msgstr "سيتم إنشاء الملفات الجديدة بهذه الصلاحيات"
 
-#. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.js:85
-msgid "translator-credits"
-msgstr "روني نيسان https://github.com/ronniedroid/"
+#: src/umask.blp:93
+msgid "Directories"
+msgstr "المجلدات"
 
-#: src/application.js:88
-msgid "Embellish"
-msgstr "أيمبيليش"
+#: src/umask.blp:94
+msgid "New directories will be created with this permission"
+msgstr "سيتم إنشاء المجلدات الجديدة بهذه الصلاحيات"
 
-#: src/application.js:88
-msgid "Install nerd fonts"
-msgstr "تثبيت خطوط نيرد (Nerd Fonts)"
+#~ msgid "Open"
+#~ msgstr "فتح الملف"
 
-#: src/application.js:89
-msgid "Sitra"
-msgstr "سطرا"
+#~ msgid "Open file chooser dialog"
+#~ msgstr "فتح مربع حوار اختيار الملف"
 
-#: src/application.js:89
-msgid "Get fonts from online sources"
-msgstr "احصل على الخطوط من مصادر عبر الإنترنت"
-
-#: src/application.js:91
-msgid "Special thanks to"
-msgstr "شكر خاص ل"
-
-#: src/window.js:148
-msgid "Copied to clipboard!"
-msgstr "تم النسخ إلى الحافظة!"
-
-#: src/window.js:169
-msgid "Failed to open file."
-msgstr "فشل في فتح الملف."
-
-#~ msgid "File"
-#~ msgstr "الملف"
+#~ msgid "Copied to clipboard!"
+#~ msgstr "تم النسخ إلى الحافظة!"
 
 #~ msgid "General"
 #~ msgstr "عام"
