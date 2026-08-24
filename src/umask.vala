@@ -54,7 +54,7 @@ public class Concessio.UMask : Gtk.Box {
 
     private void update_umask_from_entry () {
         uint parsed;
-        if (Concessio.Util.try_parse_octal (umask_entry.text, out parsed, 0777)) {
+        if (Concessio.Util.try_parse_octal (umask_entry.text, out parsed)) {
             umask = parsed & ALL_BITS;
             umask_entry.remove_css_class ("error");
         } else {

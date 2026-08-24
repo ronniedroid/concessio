@@ -205,7 +205,7 @@ public class Concessio.Permissions : Gtk.Box {
         }
 
         uint parsed;
-        if (Concessio.Util.try_parse_octal (numeric_entry.text, out parsed)) {
+        if (Concessio.Util.try_parse_octal (numeric_entry.text, out parsed, 07777)) {
             mode = parsed;
             numeric_entry.remove_css_class ("error");
         } else {
