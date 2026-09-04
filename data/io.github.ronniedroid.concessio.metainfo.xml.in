@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>@APP_ID@</id>
+  <id>io.github.ronniedroid.concessio</id>
 
   <name>Concessio</name>
   <summary>Understand file permissions</summary>
@@ -33,17 +33,21 @@
       <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/help-page.png</image>
       <caption>Application help page, explaining unix permissions</caption>
     </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/umask-page.png</image>
+      <caption>Application umask page, calculating the umask value for a base permission</caption>
+    </screenshot>
   </screenshots>
 
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
-  <launchable type="desktop-id">@APP_ID@.desktop</launchable>
+  <launchable type="desktop-id">io.github.ronniedroid.concessio.desktop</launchable>
   <provides>
-    <binary>@APP_ID@</binary>
-    <dbus type="user">@APP_ID@</dbus>
+    <binary>io.github.ronniedroid.concessio</binary>
+    <dbus type="user">io.github.ronniedroid.concessio</dbus>
   </provides>
-  <translation type="gettext">@APP_ID@</translation>
+  <translation type="gettext">io.github.ronniedroid.concessio</translation>
 
   <supports>
     <control>pointing</control>
@@ -56,6 +60,13 @@
   <url type="bugtracker">https://github.com/ronniedroid/concessio/issues</url>
 
   <releases>
+    <release version="v0.3.0" date="2026-03-04">
+      <description translate="no">
+        <p>Added umask page</p>
+        <p>Added umask explanation to the help page</p>
+        <p>Make copy buttons accessible by tabbing</p>
+      </description>
+    </release>
     <release version="v0.2.1" date="2026-01-12">
       <description translate="no">
         <p>Make the app accessible by orca</p>

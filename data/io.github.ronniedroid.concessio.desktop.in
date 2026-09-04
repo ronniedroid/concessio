@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=Concessio
 Comment= Understand file permissions
-Icon=@APP_ID@
-Exec=@BINDIR@/@APP_ID@
+Icon=io.github.ronniedroid.concessio
+Exec=concessio
 Type=Application
 DBusActivatable=true
 Categories=System;Utility;
-Keywords=Permissions;Convertor;Calculator;
+Keywords=Permissions;Converter;Calculator;
