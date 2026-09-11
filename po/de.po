@@ -8,509 +8,587 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-12 12:03+0300\n"
-"PO-Revision-Date: 2026-02-28 19:02+0100\n"
-"Last-Translator: Pascal Bernhard <pascal.bernhard@posteo.de>\n"
+"POT-Creation-Date: 2026-08-17 00:03+0300\n"
+"PO-Revision-Date: 2026-09-06 22:16+0200\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.8\n"
-
-#: data/ui/BoxedList.blp:13 data/ui/HelpDialog.blp:66
-msgid "User"
-msgstr "Nutzer"
-
-#: data/ui/BoxedList.blp:23 data/ui/BoxedList.blp:103 data/ui/BoxedList.blp:183
-msgid "Read"
-msgstr "Lesen"
-
-#: data/ui/BoxedList.blp:26
-msgid "User read permission"
-msgstr "Leserechte des Nutzers"
-
-#: data/ui/BoxedList.blp:41 data/ui/BoxedList.blp:121 data/ui/BoxedList.blp:201
-msgid "Write"
-msgstr "Schreiben"
-
-#: data/ui/BoxedList.blp:44
-msgid "User write permission"
-msgstr "Schreibrechte des Nutzers"
-
-#: data/ui/BoxedList.blp:59 data/ui/BoxedList.blp:139 data/ui/BoxedList.blp:219
-msgid "Execute"
-msgstr "Ausführen"
-
-#: data/ui/BoxedList.blp:62
-msgid "User execute permission"
-msgstr "Ausführungsrechte des Nutzers"
-
-#: data/ui/BoxedList.blp:82
-msgid "Set user ID SUID options"
-msgstr "Lege ID SUID Optionen des Nutzer fest"
-
-#: data/ui/BoxedList.blp:93 data/ui/HelpDialog.blp:76
-msgid "Group"
-msgstr "Gruppe"
-
-#: data/ui/BoxedList.blp:106
-msgid "Group read permission"
-msgstr "Leserechte der Gruppe"
-
-#: data/ui/BoxedList.blp:124
-msgid "Group write permission"
-msgstr "Schreibrechte der Gruppe"
-
-#: data/ui/BoxedList.blp:142
-msgid "Group execute permission"
-msgstr "Ausführungsrechte der Gruppe"
-
-#: data/ui/BoxedList.blp:162
-msgid "Set group ID SGID options"
-msgstr "Lege ID SUID Optionen der Gruppe fest"
-
-#: data/ui/BoxedList.blp:173 data/ui/HelpDialog.blp:86
-msgid "Others"
-msgstr "Andere Nutzer"
-
-#: data/ui/BoxedList.blp:186
-msgid "Other users read permission"
-msgstr "Leserechte anderer Nutzer"
-
-#: data/ui/BoxedList.blp:204
-msgid "Other users write permission"
-msgstr "Schreibrechte anderer Nutzer"
-
-#: data/ui/BoxedList.blp:222
-msgid "Other users execute permission"
-msgstr "Ausführungsrechte anderer Nutzer"
-
-#: data/ui/BoxedList.blp:242
-msgid "Sticky bit options"
-msgstr "Sticky Bit Optionen"
-
-#: data/ui/BoxedList.blp:283
-msgid "Set user ID SUID switch"
-msgstr "Lege ID SUID Optionen des Nutzer fest"
-
-#: data/ui/BoxedList.blp:288 data/ui/HelpDialog.blp:248
-msgid ""
-"Executes the file with the permissions of the file owner, not the user "
-"running it."
-msgstr ""
-"Führt die Datei mit den Berechtigungen des Dateieigentümers aus, nicht mit "
-"denen des Benutzers, der sie ausführt."
-
-#: data/ui/BoxedList.blp:325
-msgid "Set group ID SGID switch"
-msgstr "Lege ID SUID Optionen der Gruppe fest"
-
-#: data/ui/BoxedList.blp:330 data/ui/HelpDialog.blp:253
-msgid ""
-"Executes the file with the permissions of the file's group, or ensures new "
-"files in a directory inherit the group."
-msgstr ""
-"Führt die Datei mit den Berechtigungen der Gruppe der Datei aus oder sorgt "
-"dafür, dass neue Dateien in einem Verzeichnis die Gruppenzugehörigkeit erben."
-
-#: data/ui/BoxedList.blp:367
-msgid "Sticky bit switch"
-msgstr "Schalter für Sticky Bit"
-
-#: data/ui/BoxedList.blp:372 data/ui/HelpDialog.blp:258
-msgid ""
-"Allows only the file owner or directory owner to delete files in the "
-"directory, even if others have write permissions. Only applies to "
-"directories and has no effect on files."
-msgstr ""
-"Erlaubt nur dem Dateieigentümer oder dem Verzeichniseigentümer, Dateien im "
-"Verzeichnis zu löschen, selbst wenn andere Schreibrechte besitzen. Gilt nur "
-"für Verzeichnisse und hat keine Wirkung auf Dateien."
-
-#: data/ui/Form.blp:14
-msgid "Numeric"
-msgstr "Numerisch"
-
-#: data/ui/Form.blp:23 data/ui/Form.blp:50
-msgid "Copy value"
-msgstr "Kopiere Wert"
-
-#: data/ui/Form.blp:29
-msgid "Numeric permissions"
-msgstr "Numerische Berechtigungen"
-
-#: data/ui/Form.blp:30
-msgid "Enter three or four octal digits, for example 644 or 4755"
-msgstr "Gib drei oder vier Oktalziffern ein, zum Beispiel 644 oder 4755"
-
-#: data/ui/Form.blp:41
-msgid "Symbolic"
-msgstr "Symbolisch"
-
-#: data/ui/Form.blp:56
-msgid "Symbolic permissions"
-msgstr "Symbolische Berechtigungen"
-
-#: data/ui/Form.blp:57
-msgid ""
-"Enter nine characters representing read, write, and execute permissions for "
-"user, group, and others, for example rwxr-xr-x"
-msgstr ""
-"Gib neun Zeichen ein, die Lese-, Schreib- und Ausführungsrechte für "
-"Benutzer, Gruppe und andere darstellen, zum Beispiel rwxr-xr-x"
-
-#: data/ui/HelpDialog.blp:14 data/ui/Window.blp:125
-msgid "Help"
-msgstr "Hilfe"
-
-#: data/ui/HelpDialog.blp:36
-msgid "Unix Permissions"
-msgstr "Unix Berechtigungen"
-
-#: data/ui/HelpDialog.blp:45
-msgid ""
-"The Unix permissions system is used to grant granulated access to file and "
-"directories on a Unix-like operating system"
-msgstr ""
-"Das UNIX-Berechtigungssystem wird verwendet, um granularen Zugriff auf "
-"Dateien und Verzeichnisse in einem Unix-ähnlichen Betriebssystem zu gewähren"
-
-#: data/ui/HelpDialog.blp:50
-msgid "Permissions are granted to three groups:"
-msgstr "Berechtigungen werden an drei Gruppen vergeben:"
-
-#: data/ui/HelpDialog.blp:67
-msgid "The owner of the file"
-msgstr "Der Besitzer der Datei"
-
-#: data/ui/HelpDialog.blp:77
-msgid "A group of users who share access to the file"
-msgstr "Eine Gruppe von Nutzern, welche sich den Zugriff auf die Datei teilen"
-
-#: data/ui/HelpDialog.blp:87
-msgid "All other users on the system"
-msgstr "Alle anderen Nutzer auf dem System"
-
-#: data/ui/HelpDialog.blp:97
-msgid "The types of permissions are:"
-msgstr "Die Arten von Berechtigungen sind:"
-
-#: data/ui/HelpDialog.blp:113
-msgid "Read (Symbolic: r, Numeric: 4)"
-msgstr "Lesen (Symbolisch: r, Numerisch: 4)"
-
-#: data/ui/HelpDialog.blp:114
-msgid "Allows viewing the file's contents or listing a directory's contents"
-msgstr ""
-"Erlaubt es, den Inhalt der Datei anzusehen oder den Inhalt eines "
-"Verzeichnisses aufzulisten"
-
-#: data/ui/HelpDialog.blp:123
-msgid "Write (Symbolically: w, Numerically: 2)"
-msgstr "Schreiben (Symbolisch: w, Numerisch: 2)"
-
-#: data/ui/HelpDialog.blp:124
-msgid ""
-"Allows modifying the file's contents or creating/deleting files within a "
-"directory"
-msgstr ""
-"Erlaubt es, den Inhalt einer Datei zu bearbeiten oder Dateien in einem "
-"Verzeichnis zu erstellen/löschen"
-
-#: data/ui/HelpDialog.blp:133
-msgid "Execute (Symbolically: x, Numerically: 1)"
-msgstr "Ausführen (Symbolisch x, Numerisch: 1)"
-
-#: data/ui/HelpDialog.blp:134
-msgid "Allows running the file as a program"
-msgstr "Erlaubt das Ausführen der Datei als Programm"
-
-#: data/ui/HelpDialog.blp:145
-msgid ""
-"Permissions can either be represented symbolically or numerically. Symbolic "
-"permissions are represented as a string of ten characters, and numeric is "
-"represented by three numbers (octal notation) for Example:"
-msgstr ""
-"Berechtigungen können entweder symbolisch oder numerisch dargestellt werden. "
-"Symbolische Berechtigungen werden als eine Zeichenkette aus zehn Zeichen "
-"dargestellt, und numerische Berechtigungen werden durch drei Zahlen "
-"(Oktalnotation) dargestellt, zum Beispiel:"
-
-#: data/ui/HelpDialog.blp:150
-msgid "Symbolic: -rwxr-xr--"
-msgstr "Symbolisch: -rwxr-xr--"
-
-#: data/ui/HelpDialog.blp:160
-msgid "Numeric: 754"
-msgstr "Numerisch: 754"
-
-#: data/ui/HelpDialog.blp:176
-msgid "First character, the file type"
-msgstr "Erstes Zeichen, der Dateityp"
-
-#: data/ui/HelpDialog.blp:177
-msgid "can either be '-' for file or 'd' for directory"
-msgstr "kann entweder '-' für Datei oder 'd' für Verzeichnis sein"
-
-#: data/ui/HelpDialog.blp:181
-msgid "First three positions (after file type)"
-msgstr "Erste drei Stellen (nach dem Dateityp)"
-
-#: data/ui/HelpDialog.blp:182
-msgid ""
-"The read, write and execute permissions for the user, here we have 'rwx', "
-"which translated to 4+2+1 and adds to 7"
-msgstr ""
-"Die Lese-, Schreib- und Ausführungsberechtigungen für den Benutzer, hier "
-"haben wir 'rwx', was 4+2+1 ergibt und sich auf 7 addiert"
-
-#: data/ui/HelpDialog.blp:186
-msgid "Second three positions"
-msgstr "Zweite drei Stellen"
-
-#: data/ui/HelpDialog.blp:187
-msgid ""
-"The read, write and execute permissions for the group, here we have 'r-x', "
-"which translated to 4+0+1 and adds to 5"
-msgstr ""
-"Die Lese-, Schreib- und Ausführungsberechtigungen für die Gruppe, hier haben "
-"wir 'r-x', was 4+0+1 ergibt und sich auf 5 addiert"
-
-#: data/ui/HelpDialog.blp:191
-msgid "Last three positions"
-msgstr "Letzte drei Stellen"
-
-#: data/ui/HelpDialog.blp:192
-msgid ""
-"The read, write and execute permissions for other users, here we have 'r--', "
-"which translated to 4+0+0 and adds to 4"
-msgstr ""
-"Die Lese-, Schreib- und Ausführungsberechtigungen für andere Benutzer, hier "
-"haben wir 'r--', was 4+0+0 ergibt und sich auf 4 addiert"
-
-#: data/ui/HelpDialog.blp:198
-msgid "Example command"
-msgstr "Beispielbefehl"
-
-#: data/ui/HelpDialog.blp:207
-msgid "chmod 754 (file name)"
-msgstr "chmod 754 (Dateiname)"
-
-#: data/ui/HelpDialog.blp:217
-msgid "Special Permissions"
-msgstr "Besondere Berechtigungen"
-
-#: data/ui/HelpDialog.blp:226
-msgid ""
-"Special permissions make up a fourth access level in addition to user, "
-"group, and other, they allow for additional privileges over the standard "
-"permission sets"
-msgstr ""
-"Sonderberechtigungen bilden eine vierte Zugriffsebene zusätzlich zu "
-"Benutzer, Gruppe und anderen. Sie ermöglichen zusätzliche Privilegien "
-"gegenüber den standardmäßigen Berechtigungssätzen"
-
-#: data/ui/HelpDialog.blp:231
-msgid "The three special permissions are:"
-msgstr "Die drei Sonderberechtigungen sind:"
-
-#: data/ui/HelpDialog.blp:264
-msgid "Special permissions can be represented symbolically or numerically."
-msgstr ""
-"Sonderberechtigungen können symbolisch oder numerisch dargestellt werden."
-
-#: data/ui/HelpDialog.blp:270
-msgid "Numeric representation:"
-msgstr "Numerische Darstellung:"
-
-#: data/ui/HelpDialog.blp:280
-msgid ""
-"They are denoted as an extra digit before the user, group and others "
-"permissions. Can Either be 0, 4, 2, 1 or any combination of them."
-msgstr ""
-"Sie werden als eine zusätzliche Ziffer vor den Benutzer-, Gruppen- und "
-"anderen Berechtigungen dargestellt. Sie können entweder 0, 4, 2, 1 oder eine "
-"beliebige Kombination davon sein."
-
-#: data/ui/HelpDialog.blp:290
-msgid "Symbolical representation:"
-msgstr "Symbolische Darstellung:"
-
-#: data/ui/HelpDialog.blp:307
-msgid "Goes where 'x' normally is for the user"
-msgstr "Steht dort, wo normalerweise 'x' beim Benutzer steht"
-
-#: data/ui/HelpDialog.blp:312
-msgid "Goes where 'x' normally is for the group"
-msgstr "Steht dort, wo normalerweise 'x' bei der Gruppe steht"
-
-#: data/ui/HelpDialog.blp:317
-msgid "Goes where 'x' normally is for others"
-msgstr "Steht dort, wo normalerweise 'x' beim Anderen steht"
-
-#: data/ui/HelpDialog.blp:323
-msgid "Symbolic: -rwsr-Sr-t"
-msgstr "Symbolisch -rwsr-Sr-t"
-
-#: data/ui/HelpDialog.blp:333
-msgid "Numeric: 7745"
-msgstr "Numerisch: 7745"
-
-#: data/ui/HelpDialog.blp:350
-msgid ""
-"Represented as '4' numerically. Symbolically, it is either 's' if the owner "
-"has execute permissions or 'S' if not."
-msgstr ""
-"Numerisch als '4' dargestellt. Symbolisch ist es entweder 's', wenn der "
-"Eigentümer Ausführungsberechtigungen hat, oder 'S', falls nicht."
-
-#: data/ui/HelpDialog.blp:355
-msgid ""
-"Represented as '2' numerically. Symbolically, it is either 's' if the group "
-"has execute permissions or 'S' if not."
-msgstr ""
-"Numerisch als '2' dargestellt. Symbolisch ist es entweder 's', wenn die "
-"Gruppe Ausführungsberechtigungen hat, oder 'S', falls nicht."
-
-#: data/ui/HelpDialog.blp:360
-msgid ""
-"Represented as '1' numerically. Symbolically, it is either 't' if the others "
-"have execute permissions or 'T' if not."
-msgstr ""
-"Numerisch als '1' dargestellt. Symbolisch ist es entweder 't', wenn andere "
-"Ausführungsberechtigungen haben, oder 'T', falls nicht."
-
-#: data/ui/HelpDialog.blp:366
-msgid "Example commands"
-msgstr "Beispielbefehle"
-
-#: data/ui/HelpDialog.blp:375
-msgid "chmod 7745 (file name)"
-msgstr "chmod 7745 (Dateiname)"
-
-#: data/ui/HelpDialog.blp:385
-msgid "Further reading"
-msgstr "Weiterführende Literatur"
-
-#: data/ui/Window.blp:5 data/ui/Window.blp:44
-#: data/io.github.ronniedroid.concessio.desktop:2
-#: data/io.github.ronniedroid.concessio.metainfo.xml:5 src/application.js:70
+"X-Generator: Poedit 3.9\n"
+
+#: data/io.github.ronniedroid.concessio.desktop.in:2
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:5
+#: src/application.vala:59 src/window.blp:5 src/window.blp:56
 msgid "Concessio"
 msgstr "Concessio"
 
-#: data/ui/Window.blp:52 data/io.github.ronniedroid.concessio.desktop:3
-#: data/io.github.ronniedroid.concessio.metainfo.xml:6
+#: data/io.github.ronniedroid.concessio.desktop.in:3
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:6 src/window.blp:64
 msgid "Understand file permissions"
 msgstr "Verstehe Dateiberechtigungen"
 
-#: data/ui/Window.blp:56
-msgid "Get started"
-msgstr "Erste Schritte"
-
-#: data/ui/Window.blp:82
-msgid "Open"
-msgstr "Öffnen"
-
-#: data/ui/Window.blp:91
-msgid "Main Menu"
-msgstr "Hauptmenü"
-
-#: data/ui/Window.blp:130 data/shortcuts-dialog.blp:29
-msgid "Keyboard Shortcuts"
-msgstr "Tastaturkürzel"
-
-#: data/ui/Window.blp:135
-msgid "About"
-msgstr "Über"
-
-#: data/shortcuts-dialog.blp:7
-msgid "Open File"
-msgstr "Datei öffnen"
-
-#: data/shortcuts-dialog.blp:8
-msgid "Open file chooser dialog"
-msgstr "Dateiauswahldialog öffnen"
-
-#: data/shortcuts-dialog.blp:13
-msgid "Quit App"
-msgstr "Programm beenden"
-
-#: data/shortcuts-dialog.blp:18
-msgid "Close Window"
-msgstr "Fenster schließen"
-
-#: data/shortcuts-dialog.blp:23
-msgid "Help dialog"
-msgstr "Hilfedialog"
-
-#: data/shortcuts-dialog.blp:24
-msgid "Display the help dialog"
-msgstr "Zeige Hilfedialog an"
-
-#: data/shortcuts-dialog.blp:30
-msgid "Display this keyboard shortcuts window"
-msgstr "Zeige Fenster der Tastaturkürzel an"
-
-#: data/io.github.ronniedroid.concessio.desktop:9
-msgid "Permissions;Convertor;Calculator;"
+#: data/io.github.ronniedroid.concessio.desktop.in:9
+msgid "Permissions;Converter;Calculator;"
 msgstr "Berechtigungen;Umwandler;Rechner;"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:11 src/application.js:74
-msgid ""
-"Concessio helps you understand and convert between unix permissions "
-"representations"
-msgstr ""
-"Concessio hilft Dir, UNIX-Berechtigungsdarstellungen zu verstehen und "
-"zwischen ihnen zu umzuwandeln"
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:8
+msgid "Ronnie Nissan"
+msgstr "Ronnie Nissan"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:13
-msgid ""
-"Convert between symbolic and numeric representations of UNIX file permissions"
-msgstr ""
-"Wandle zwischen symbolischen und numerischen Darstellungen von UNIX-"
-"Dateiberechtigungen um"
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:11
+#: src/application.vala:61
+msgid "Concessio helps you understand and convert between unix permissions representations"
+msgstr "Concessio hilft Dir, Unix-Berechtigungsdarstellungen zu verstehen und zwischen ihnen umzuwandeln"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:14
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:13
+msgid "Convert between symbolic and numeric representations of UNIX file permissions"
+msgstr "Wandle zwischen symbolischen und numerischen Darstellungen von UNIX-Dateiberechtigungen um"
+
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:14
 msgid "Use toggle buttons to update the symbolic and numeric fields"
-msgstr ""
-"Verwende Umschalter, um die symbolischen und numerischen Felder zu "
-"aktualisieren"
+msgstr "Verwende Umschalter, um die symbolischen und numerischen Felder zu aktualisieren"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:15
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:15
 msgid "Open a file to read it's permissions and convert them"
 msgstr "Öffne eine Datei, um ihre Berechtigungen zu lesen und umzuwandeln"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:16
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:16
 msgid "Open the help dialog to read and understand the UNIX permissions system"
-msgstr ""
-"Öffne den Hilfedialog, um das UNIX-Berichtigungssystem zu lesen und zu "
-"verstehen"
+msgstr "Öffne den Hilfedialog, um das UNIX-Berichtigungssystem zu lesen und zu verstehen"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:30
-msgid ""
-"Application main page converting between numeric and symbolic permission"
-msgstr ""
-"Hauptseite der Anwendung zur Umwandlung zwischen numerischen und "
-"symbolischen Berechtigungen"
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:30
+msgid "Application main page converting between numeric and symbolic permission"
+msgstr "Hauptseite der Anwendung zur Umwandlung zwischen numerischen und symbolischen Berechtigungen"
 
-#: data/io.github.ronniedroid.concessio.metainfo.xml:34
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:34
 msgid "Application help page, explaining unix permissions"
-msgstr "Hilfeseite des Programms, die UNIX-Berechtigungen erklärt"
+msgstr "Hilfeseite des Programms, die Unix-Berechtigungen erklärt"
 
-#. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.js:84
+#: data/io.github.ronniedroid.concessio.metainfo.xml.in:38
+msgid "Application umask page, calculating the umask value for a base permission"
+msgstr "Umask-Seite der Anwendung, die den Umask-Wert für eine Basisberechtigung berechnet"
+
+#: src/shortcuts-dialog.blp:7
+msgid "Quit App"
+msgstr "Anwendung beenden"
+
+#: src/shortcuts-dialog.blp:12
+msgid "Close Window"
+msgstr "Fenster schließen"
+
+#: src/shortcuts-dialog.blp:17
+msgid "Help dialog"
+msgstr "Hilfedialog"
+
+#: src/shortcuts-dialog.blp:18
+msgid "Display the help dialog"
+msgstr "Hilfedialog anzeigen"
+
+#: src/shortcuts-dialog.blp:23 src/window.blp:177
+msgid "Keyboard Shortcuts"
+msgstr "Tastenkombinationen"
+
+#: src/shortcuts-dialog.blp:24
+msgid "Display this keyboard shortcuts window"
+msgstr "Dieses Fenster für Tastenkombinationen anzeigen"
+
+#: src/application.vala:68
 msgid "translator-credits"
-msgstr "Anerkennung an Übersetzer"
+msgstr "Übersetzer"
 
-#: src/application.js:87
+#: src/application.vala:76
+msgid "Embellish"
+msgstr "Embellish"
+
+#: src/application.vala:76
+msgid "Install nerd fonts"
+msgstr "Nerd-Schriftarten installieren"
+
+#: src/application.vala:77
+msgid "Sitra"
+msgstr "Sitra"
+
+#: src/application.vala:77
+msgid "Get fonts from online sources"
+msgstr "Schriftarten aus Online-Quellen beziehen"
+
+#: src/application.vala:78
 msgid "Special thanks to"
 msgstr "Besonderer Dank geht an"
 
-#: src/window.js:141
-msgid "Copied to clipboard!"
-msgstr "In die Zwischenablage kopiert!"
+#: src/window.vala:48 src/window.vala:54
+#, c-format
+msgid "Copied “%s”"
+msgstr "„%s“ kopiert"
 
-#: src/window.js:162
+#: src/window.vala:101
 msgid "Failed to open file."
-msgstr "Öffnen der Datei fehlgeschlagen."
+msgstr "Fehler beim Öffnen der Datei."
+
+#: src/window.blp:68
+msgid "Get started"
+msgstr "Loslegen"
+
+#: src/window.blp:99
+msgid "Main Menu"
+msgstr "Hauptmenü"
+
+#: src/window.blp:121
+msgid "Permissions"
+msgstr "Berechtigungen"
+
+#: src/window.blp:142 src/help-dialog.blp:74 src/help-dialog.blp:440
+#: src/umask.blp:14 src/umask.blp:20
+msgid "Umask"
+msgstr "Umask"
+
+#: src/window.blp:172 src/help-dialog.blp:14
+msgid "Help"
+msgstr "Hilfe"
+
+#: src/window.blp:182
+msgid "About"
+msgstr "Über"
+
+#. Use "Document Portal" as fallback
+#: src/permissions.vala:380
+msgid "Document Portal"
+msgstr "Dokumentenportal"
+
+#: src/permissions.blp:21 src/permissions.blp:25
+msgid "Open File"
+msgstr "Datei öffnen"
+
+#: src/permissions.blp:30 src/permissions.blp:34
+msgid "Open a file to view its permissions"
+msgstr "Öffne eine Datei, um deren Berechtigungen anzuzeigen"
+
+#: src/permissions.blp:41 src/permissions.blp:46
+msgid "Open a file"
+msgstr "Eine Datei öffnen"
+
+#: src/permissions.blp:81 src/permissions.blp:86
+msgid "Open a different file"
+msgstr "Eine andere Datei öffnen"
+
+#: src/permissions.blp:92 src/permissions.blp:97
+msgid "Close file"
+msgstr "Datei schließen"
+
+#: src/permissions.blp:114
+msgid "Numeric"
+msgstr "Numerisch"
+
+#: src/permissions.blp:129 src/permissions.blp:178 src/umask.blp:40
+msgid "Copy value"
+msgstr "Wert kopieren"
+
+#: src/permissions.blp:132
+msgid "Copy numeric value"
+msgstr "Numerischen Wert kopieren"
+
+#: src/permissions.blp:141
+msgid "Numeric permissions"
+msgstr "Numerische Berechtigungen"
+
+#: src/permissions.blp:142
+msgid "Enter three or four octal digits, for example 0755"
+msgstr "Gib drei oder vier Oktalziffern ein, zum Beispiel 644 oder 4755"
+
+#: src/permissions.blp:148 src/permissions.blp:203 src/umask.blp:60
+msgid "Apply value"
+msgstr "Wert anwenden"
+
+#: src/permissions.blp:151
+msgid "Apply numeric value"
+msgstr "Numerischen Wert anwenden"
+
+#: src/permissions.blp:163
+msgid "Symbolic"
+msgstr "Symbolisch"
+
+#: src/permissions.blp:181
+msgid "Copy symbolic value"
+msgstr "Symbolischen Wert kopieren"
+
+#: src/permissions.blp:190
+msgid "Symbolic permissions"
+msgstr "Symbolische Berechtigungen"
+
+#: src/permissions.blp:192
+msgid "Enter nine characters representing read, write, and execute permissions for user, group, and others, for example rwxr-xr-x"
+msgstr "Gib neun Zeichen ein, die Lese-, Schreib- und Ausführungsrechte für Benutzer, Gruppe und andere darstellen, zum Beispiel rwxr-xr-x"
+
+#: src/permissions.blp:206
+msgid "Apply symbolic value"
+msgstr "Symbolischen Wert anwenden"
+
+#: src/permissions.blp:221 src/help-dialog.blp:116
+msgid "User"
+msgstr "Benutzer"
+
+#: src/permissions.blp:230 src/permissions.blp:348 src/permissions.blp:466
+msgid "Read"
+msgstr "Lesen"
+
+#: src/permissions.blp:233
+msgid "User read permission"
+msgstr "Leseberechtigung des Benutzers"
+
+#: src/permissions.blp:247 src/permissions.blp:365 src/permissions.blp:483
+msgid "Write"
+msgstr "Schreiben"
+
+#: src/permissions.blp:250
+msgid "User write permission"
+msgstr "Schreibberechtigung des Benutzers"
+
+#: src/permissions.blp:264 src/permissions.blp:382 src/permissions.blp:500
+msgid "Execute"
+msgstr "Ausführen"
+
+#: src/permissions.blp:267
+msgid "User execute permission"
+msgstr "Ausführungsberechtigung des Benutzers"
+
+#: src/permissions.blp:286
+msgid "Set user ID SUID options"
+msgstr "Benutzer-ID-SUID-Optionen setzen"
+
+#: src/permissions.blp:320
+msgid "Set user ID SUID switch"
+msgstr "Benutzer-ID-SUID-Schalter setzen"
+
+#: src/permissions.blp:326 src/help-dialog.blp:298
+msgid "Executes the file with the permissions of the file owner, not the user running it."
+msgstr "Führt die Datei mit den Berechtigungen des Dateibesitzers aus, nicht des ausführenden Benutzers."
+
+#: src/permissions.blp:339 src/help-dialog.blp:126
+msgid "Group"
+msgstr "Gruppe"
+
+#: src/permissions.blp:351
+msgid "Group read permission"
+msgstr "Leseberechtigung der Gruppe"
+
+#: src/permissions.blp:368
+msgid "Group write permission"
+msgstr "Schreibberechtigung der Gruppe"
+
+#: src/permissions.blp:385
+msgid "Group execute permission"
+msgstr "Ausführungsberechtigung der Gruppe"
+
+#: src/permissions.blp:404
+msgid "Set group ID SGID options"
+msgstr "Gruppen-ID-SGID-Optionen setzen"
+
+#: src/permissions.blp:438
+msgid "Set group ID SGID switch"
+msgstr "Gruppen-ID-SGID-Schalter setzen"
+
+#: src/permissions.blp:444 src/help-dialog.blp:303
+msgid "Executes the file with the permissions of the file's group, or ensures new files in a directory inherit the group."
+msgstr "Führt die Datei mit den Berechtigungen der Dateigruppe aus oder stellt sicher, dass neue Dateien in einem Verzeichnis die Gruppe erben."
+
+#: src/permissions.blp:457 src/help-dialog.blp:136
+msgid "Others"
+msgstr "Andere"
+
+#: src/permissions.blp:469
+msgid "Other users read permission"
+msgstr "Leseberechtigung für andere Benutzer"
+
+#: src/permissions.blp:486
+msgid "Other users write permission"
+msgstr "Schreibberechtigung für andere Benutzer"
+
+#: src/permissions.blp:503
+msgid "Other users execute permission"
+msgstr "Ausführungsberechtigung für andere Benutzer"
+
+#: src/permissions.blp:522
+msgid "Sticky bit options"
+msgstr "Sticky-Bit-Optionen"
+
+#: src/permissions.blp:556
+msgid "Sticky bit switch"
+msgstr "Sticky-Bit-Schalter"
+
+#: src/permissions.blp:562 src/help-dialog.blp:308
+msgid "Allows only the file owner or directory owner to delete files in the directory, even if others have write permissions. Only applies to directories and has no effect on files."
+msgstr "Erlaubt nur dem Dateibesitzer oder Verzeichnisbesitzer, Dateien im Verzeichnis zu löschen, selbst wenn andere Schreibberechtigungen haben. Gilt nur für Verzeichnisse und hat keine Auswirkung auf Dateien."
+
+#: src/help-dialog.blp:36
+msgid "Table of Contents"
+msgstr "Inhaltsverzeichnis"
+
+#: src/help-dialog.blp:52 src/help-dialog.blp:86
+msgid "Unix Permissions"
+msgstr "Unix-Berechtigungen"
+
+#: src/help-dialog.blp:63 src/help-dialog.blp:267
+msgid "Special Permissions"
+msgstr "Spezielle Berechtigungen"
+
+#: src/help-dialog.blp:95
+msgid "The Unix permissions system is used to grant granulated access to file and directories on a Unix-like operating system"
+msgstr "Das Unix-Berechtigungssystem wird verwendet, um granulierten Zugriff auf Dateien und Verzeichnisse in einem Unix-ähnlichen Betriebssystem zu gewähren"
+
+#: src/help-dialog.blp:100
+msgid "Permissions are granted to three groups:"
+msgstr "Berechtigungen werden drei Gruppen gewährt:"
+
+#: src/help-dialog.blp:117
+msgid "The owner of the file"
+msgstr "Dem Besitzer der Datei"
+
+#: src/help-dialog.blp:127
+msgid "A group of users who share access to the file"
+msgstr "Einer Gruppe von Benutzern, die den Zugriff auf die Datei teilen"
+
+#: src/help-dialog.blp:137
+msgid "All other users on the system"
+msgstr "Allen anderen Benutzern im System"
+
+#: src/help-dialog.blp:147
+msgid "The types of permissions are:"
+msgstr "Die Arten von Berechtigungen sind:"
+
+#: src/help-dialog.blp:163
+msgid "Read (Symbolic: r, Numeric: 4)"
+msgstr "Lesen (Symbolisch: r, Numerisch: 4)"
+
+#: src/help-dialog.blp:164
+msgid "Allows viewing the file's contents or listing a directory's contents"
+msgstr "Ermöglicht das Anzeigen des Inhalts der Datei oder das Auflisten des Inhalts eines Verzeichnisses"
+
+#: src/help-dialog.blp:173
+msgid "Write (Symbolically: w, Numerically: 2)"
+msgstr "Schreiben (Symbolisch: w, Numerisch: 2)"
+
+#: src/help-dialog.blp:174
+msgid "Allows modifying the file's contents or creating/deleting files within a directory"
+msgstr "Ermöglicht das Ändern des Inhalts der Datei oder das Erstellen/Löschen von Dateien innerhalb eines Verzeichnisses"
+
+#: src/help-dialog.blp:183
+msgid "Execute (Symbolically: x, Numerically: 1)"
+msgstr "Ausführen (Symbolisch: x, Numerisch: 1)"
+
+#: src/help-dialog.blp:184
+msgid "Allows running the file as a program"
+msgstr "Ermöglicht das Ausführen der Datei als Programm"
+
+#: src/help-dialog.blp:195
+msgid "Permissions can either be represented symbolically or numerically. Symbolic permissions are represented as a string of ten characters, and numeric is represented by three numbers (octal notation) for Example:"
+msgstr "Berechtigungen können entweder symbolisch oder numerisch dargestellt werden. Symbolische Berechtigungen werden als Zeichenfolge von zehn Zeichen dargestellt, und numerische werden durch drei Zahlen (oktale Notation) zum Beispiel:"
+
+#: src/help-dialog.blp:200
+msgid "Symbolic: -rwxr-xr--"
+msgstr "Symbolisch: -rwxr-xr--"
+
+#: src/help-dialog.blp:210
+msgid "Numeric: 754"
+msgstr "Numerisch: 754"
+
+#: src/help-dialog.blp:226
+msgid "First character, the file type"
+msgstr "Erstes Zeichen, der Dateityp"
+
+#: src/help-dialog.blp:227
+msgid "can either be '-' for file or 'd' for directory"
+msgstr "kann entweder '-' für eine Datei oder 'd' für ein Verzeichnis sein"
+
+#: src/help-dialog.blp:231
+msgid "First three positions (after file type)"
+msgstr "Erste drei Positionen (nach dem Dateityp)"
+
+#: src/help-dialog.blp:232
+msgid "The read, write and execute permissions for the user, here we have 'rwx', which translated to 4+2+1 and adds to 7"
+msgstr "Die Lese-, Schreib- und Ausführungsberechtigungen für den Benutzer, hier haben wir 'rwx', was 4+2+1 ergibt und sich auf 7 addiert"
+
+#: src/help-dialog.blp:236
+msgid "Second three positions"
+msgstr "Zweite drei Positionen"
+
+#: src/help-dialog.blp:237
+msgid "The read, write and execute permissions for the group, here we have 'r-x', which translated to 4+0+1 and adds to 5"
+msgstr "Die Lese-, Schreib- und Ausführungsberechtigungen für die Gruppe, hier haben wir 'r-x', was 4+0+1 ergibt und sich auf 5 addiert"
+
+#: src/help-dialog.blp:241
+msgid "Last three positions"
+msgstr "Letzte drei Positionen"
+
+#: src/help-dialog.blp:242
+msgid "The read, write and execute permissions for other users, here we have 'r--', which translated to 4+0+0 and adds to 4"
+msgstr "Die Lese-, Schreib- und Ausführungsberechtigungen für andere Benutzer, hier haben wir 'r--', was 4+0+0 ergibt und sich auf 4 addiert"
+
+#: src/help-dialog.blp:248 src/help-dialog.blp:520
+msgid "Example command"
+msgstr "Beispielbefehl"
+
+#: src/help-dialog.blp:257
+msgid "chmod 754 (file name)"
+msgstr "chmod 754 (Dateiname)"
+
+#: src/help-dialog.blp:276
+msgid "Special permissions make up a fourth access level in addition to user, group, and other, they allow for additional privileges over the standard permission sets"
+msgstr "Sonderberechtigungen bilden eine vierte Zugriffsebene zusätzlich zu Benutzer, Gruppe und anderen. Sie ermöglichen zusätzliche Privilegien gegenüber den standardmäßigen Berechtigungssätzen"
+
+#: src/help-dialog.blp:281
+msgid "The three special permissions are:"
+msgstr "Die drei speziellen Berechtigungen sind:"
+
+#: src/help-dialog.blp:314
+msgid "Special permissions can be represented symbolically or numerically."
+msgstr "Spezielle Berechtigungen können symbolisch oder numerisch dargestellt werden."
+
+#: src/help-dialog.blp:320
+msgid "Numeric representation:"
+msgstr "Numerische Darstellung:"
+
+#: src/help-dialog.blp:330
+msgid "They are denoted as an extra digit before the user, group and others permissions. Can Either be 0, 4, 2, 1 or any combination of them."
+msgstr "Sie werden als zusätzliche Ziffer vor den Berechtigungen für Benutzer, Gruppe und Andere angegeben. Kann entweder 0, 4, 2, 1 oder eine beliebige Kombination davon sein."
+
+#: src/help-dialog.blp:340
+msgid "Symbolical representation:"
+msgstr "Symbolische Darstellung:"
+
+#: src/help-dialog.blp:357
+msgid "Goes where 'x' normally is for the user"
+msgstr "Steht dort, wo normalerweise 'x' für den Benutzer steht"
+
+#: src/help-dialog.blp:362
+msgid "Goes where 'x' normally is for the group"
+msgstr "Steht dort, wo normalerweise 'x' für die Gruppe steht"
+
+#: src/help-dialog.blp:367
+msgid "Goes where 'x' normally is for others"
+msgstr "Steht dort, wo normalerweise 'x' für die Anderen steht"
+
+#: src/help-dialog.blp:373
+msgid "Symbolic: -rwsr-Sr-t"
+msgstr "Symbolisch: -rwsr-Sr-t"
+
+#: src/help-dialog.blp:383
+msgid "Numeric: 7745"
+msgstr "Numerisch: 7745"
+
+#: src/help-dialog.blp:400
+msgid "Represented as '4' numerically. Symbolically, it is either 's' if the owner has execute permissions or 'S' if not."
+msgstr "Numerisch als '4' dargestellt. Symbolisch ist es entweder 's', wenn der Besitzer Ausführungsberechtigungen hat, oder 'S', wenn nicht."
+
+#: src/help-dialog.blp:405
+msgid "Represented as '2' numerically. Symbolically, it is either 's' if the group has execute permissions or 'S' if not."
+msgstr "Numerisch als '2' dargestellt. Symbolisch ist es entweder 's', wenn die Gruppe Ausführungsberechtigungen hat, oder 'S', wenn nicht."
+
+#: src/help-dialog.blp:410
+msgid "Represented as '1' numerically. Symbolically, it is either 't' if the others have execute permissions or 'T' if not."
+msgstr "Numerisch als '1' dargestellt. Symbolisch ist es entweder 't', wenn die Anderen Ausführungsberechtigungen haben, oder 'T', wenn nicht."
+
+#: src/help-dialog.blp:416
+msgid "Example commands"
+msgstr "Beispielbefehle"
+
+#: src/help-dialog.blp:425
+msgid "chmod 7745 (file name)"
+msgstr "chmod 7745 (Dateiname)"
+
+#: src/help-dialog.blp:435 src/help-dialog.blp:549
+msgid "Further reading"
+msgstr "Weiterführende Literatur"
+
+#: src/help-dialog.blp:449
+msgid "The umask (user file-creation mask) determines the default permissions for new files and directories. It acts as a filter that 'masks out' specific bits from the base permissions."
+msgstr "Die Umask (Benutzer-Dateierstellungsmaske) bestimmt die Standardberechtigungen für neue Dateien und Verzeichnisse. Sie fungiert als Filter, der bestimmte Bits aus den Basisberechtigungen 'ausblendet'."
+
+#: src/help-dialog.blp:454
+msgid "Typical base permissions:"
+msgstr "Typische Basisberechtigungen:"
+
+#: src/help-dialog.blp:470
+msgid "Directories (Base: 777)"
+msgstr "Verzeichnisse (Basis: 777)"
+
+#: src/help-dialog.blp:471
+msgid "Full read, write, and execute permissions by default"
+msgstr "Standardmäßig volle Lese-, Schreib- und Ausführungsberechtigungen"
+
+#: src/help-dialog.blp:475
+msgid "Files (Base: 666)"
+msgstr "Dateien (Basis: 666)"
+
+#: src/help-dialog.blp:476
+msgid "Read and write permissions by default; execute is excluded for security"
+msgstr "Standardmäßig Lese- und Schreibberechtigungen; die Ausführung ist aus Sicherheitsgründen ausgeschlossen"
+
+#: src/help-dialog.blp:482
+msgid "Calculation logic:"
+msgstr "Berechnungslogik:"
+
+#: src/help-dialog.blp:492
+msgid "The final permission is calculated by taking the base and removing the bits set in the umask."
+msgstr "Die endgültige Berechtigung wird berechnet, indem von der Basis ausgegangen wird und die in der Umask gesetzten Bits entfernt werden."
+
+#: src/help-dialog.blp:508
+msgid "Umask 022"
+msgstr "Umask 022"
+
+#: src/help-dialog.blp:509
+msgid "Removes write access for group and others. (Result: 755 for dirs, 644 for files)"
+msgstr "Entfernt den Schreibzugriff für Gruppe und Andere. (Ergebnis: 755 für Verzeichnisse, 644 für Dateien)"
+
+#: src/help-dialog.blp:513
+msgid "Umask 077"
+msgstr "Umask 077"
+
+#: src/help-dialog.blp:514
+msgid "Removes all access for group and others. (Result: 700 for dirs, 600 for files)"
+msgstr "Entfernt sämtlichen Zugriff für Gruppe und Andere. (Ergebnis: 700 für Verzeichnisse, 600 für Dateien)"
+
+#: src/help-dialog.blp:529
+msgid "umask 022"
+msgstr "umask 022"
+
+#: src/help-dialog.blp:540
+msgid "Note: The umask command only lasts for the current session. You need to set the command in your bashrc or equivalent to make it permanent."
+msgstr "Hinweis: Der Befehl umask gilt nur für die aktuelle Sitzung. Sie müssen den Befehl in Ihrer bashrc oder einer ähnlichen Datei festlegen, um ihn dauerhaft zu machen."
+
+#: src/umask.blp:25 src/umask.blp:28
+msgid "The umask determines the default permissions removed from new files and directories."
+msgstr "Umask bestimmt die Standardberechtigungen, die von neuen Dateien und Verzeichnissen entfernt werden."
+
+#: src/umask.blp:44
+msgid "Copy umask value"
+msgstr "Umask-Wert kopieren"
+
+#: src/umask.blp:53
+msgid "Umask value"
+msgstr "Umask-Wert"
+
+#: src/umask.blp:54
+msgid "Enter three octal digits for the umask value"
+msgstr "Geben Sie drei oktale Ziffern für den Umask-Wert ein"
+
+#: src/umask.blp:64
+msgid "Apply umask value"
+msgstr "Umask-Wert anwenden"
+
+#: src/umask.blp:78
+msgid "Files"
+msgstr "Dateien"
+
+#: src/umask.blp:79
+msgid "New files will be created with this permission"
+msgstr "Neue Dateien werden mit dieser Berechtigung erstellt"
+
+#: src/umask.blp:93
+msgid "Directories"
+msgstr "Verzeichnisse"
+
+#: src/umask.blp:94
+msgid "New directories will be created with this permission"
+msgstr "Neue Verzeichnisse werden mit dieser Berechtigung erstellt"
