@@ -57,6 +57,10 @@ public class Concessio.Window : Adw.ApplicationWindow {
             toast_overlay.add_toast (toast);
         });
 
+        permissions.permissions_applied.connect (() => {
+            toast_overlay.add_toast (new Adw.Toast (_("Permissions updated")));
+        });
+
         umask.copied.connect ((text) => {
             var toast = new Adw.Toast (_("Copied “%s”").printf (text));
             toast.timeout = 2;
