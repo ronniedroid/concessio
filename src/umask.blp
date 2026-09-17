@@ -5,63 +5,49 @@ template $ConcessioUMask: Box {
     orientation: vertical;
     spacing: 24;
 
-    Box {
-        spacing: 6;
-        halign: center;
-        orientation: vertical;
-
-        Label {
-            label: _("Umask");
-
-            styles [
-                "heading",
-            ]
-            accessibility {
-              label: _("Umask");
-            }
-        }
-
-        Label {
-            label: _("The umask determines the default permissions removed from new files and directories.");
-            wrap: true;
-            accessibility {
-              label: _("The umask determines the default permissions removed from new files and directories.");
-            }
-        }
-
+    Adw.Bin {
         Box {
-        margin-top: 12;
+            margin-top: 12;
+
             styles [
                 "linked",
             ]
 
-            Button {
-                icon-name: "concessio-copy-symbolic";
-                tooltip-text: _("Copy value");
-                clicked => $copy_umask_value ();
+            DropDown input_type {
+                model: StringList {
+                    strings [
+                        _("Umask"),
+                        _("Files"),
+                        _("Directories")
+                        ,
+                    ]
+                };
+
+                tooltip-text: _("Choose the value you know");
 
                 accessibility {
-                    label: _("Copy umask value");
+                    label: _("Known value");
+                    description: _("Choose whether to enter a umask, file permissions, or directory permissions.");
                 }
             }
 
             Entry umask_entry {
                 hexpand: true;
-                placeholder-text: "022";
+                placeholder-text: _("022");
 
                 accessibility {
                     label: _("Umask value");
-                    description: _("Enter three octal digits for the umask value");
+                    description: _("Enter an octal value from 000 to 777 for the selected input type.");
                 }
             }
 
             Button {
                 icon-name: "object-select-symbolic";
                 tooltip-text: _("Apply value");
-                clicked => $commit_umask_value ();
+                clicked => $commit_umask_value();
 
                 accessibility {
-                    label: _("Apply umask value");
+                    label: _("Apply value");
                 }
             }
         }
@@ -74,9 +60,95 @@ template $ConcessioUMask: Box {
             "boxed-list",
         ]
 
+        Adw.ActionRow {
+            title: _("Umask");
+            subtitle: _("Umask needed for these permissions");
+
+            [prefix]
+            MenuButton {
+                icon-name: "dialog-information-symbolic";
+                valign: center;
+                tooltip-text: _("About umask");
+
+                styles [
+                    "flat",
+                ]
+
+                accessibility {
+                    label: _("About umask");
+                }
+
+                popover: Popover {
+                    Label {
+                        label: _(
+                            "A umask specifies which permissions are removed when new files and directories are created."
+                        );
+                        wrap: true;
+                        max-width-chars: 32;
+                        margin-top: 12;
+                        margin-bottom: 12;
+                        margin-start: 12;
+                        margin-end: 12;
+                    }
+                };
+            }
+
+            [suffix]
+            Label umask_target_label {
+                valign: center;
+
+                styles [
+                    "monospace",
+                    "title-3",
+                ]
+            }
+
+            [suffix]
+            Button {
+                icon-name: "concessio-copy-symbolic";
+                valign: center;
+                tooltip-text: _("Copy umask value");
+                clicked => $copy_umask_value();
+                styles ["flat"]
+
+                accessibility {
+                    label: _("Copy umask value");
+                }
+            }
+        }
+
         Adw.ActionRow files_row {
             title: _("Files");
             subtitle: _("New files will be created with this permission");
+
+            [prefix]
+            MenuButton {
+                icon-name: "dialog-information-symbolic";
+                valign: center;
+                tooltip-text: _("About file permissions");
+
+                styles [
+                    "flat",
+                ]
+
+                accessibility {
+                    label: _("About file permissions");
+                }
+
+                popover: Popover {
+                    Label {
+                        label: _(
+                            "New files start with permission 666. A umask can remove permissions, but cannot add execute permission."
+                        );
+                        wrap: true;
+                        max-width-chars: 32;
+                        margin-top: 12;
+                        margin-bottom: 12;
+                        margin-start: 12;
+                        margin-end: 12;
+                    }
+                };
+            }
 
             [suffix]
             Label files_target_label {
@@ -93,6 +165,35 @@ template $ConcessioUMask: Box {
             title: _("Directories");
             subtitle: _("New directories will be created with this permission");
 
+            [prefix]
+            MenuButton {
+                icon-name: "dialog-information-symbolic";
+                valign: center;
+                tooltip-text: _("About directory permissions");
+
+                styles [
+                    "flat",
+                ]
+
+                accessibility {
+                    label: _("About directory permissions");
+                }
+
+                popover: Popover {
+                    Label {
+                        label: _(
+                            "New directories start with permission 777. A umask can remove read, write, and execute permissions."
+                        );
+                        wrap: true;
+                        max-width-chars: 32;
+                        margin-top: 12;
+                        margin-bottom: 12;
+                        margin-start: 12;
+                        margin-end: 12;
+                    }
+                };
+            }
+
             [suffix]
             Label dirs_target_label {
                 valign: center;
@@ -105,3 +206,4 @@ template $ConcessioUMask: Box {
         }
     }
 }
+
