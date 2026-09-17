@@ -45,11 +45,12 @@ public class Concessio.HelpDialog : Adw.Dialog {
     }
 
     private void scroll_to (Gtk.Widget widget) {
+        widget.grab_focus ();
         var vadj = scrolled_window.get_vadjustment ();
 
         Graphene.Rect bounds;
         if (widget.compute_bounds (scrolled_window, out bounds)) {
-            vadj.value = bounds.origin.y - 18;
+            vadj.value += bounds.origin.y - 18;
         }
     }
 
