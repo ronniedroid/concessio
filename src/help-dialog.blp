@@ -2,6 +2,8 @@ using Gtk 4.0;
 using Adw 1;
 
 template $ConcessioHelpDialog {
+    title: _("Help");
+
     content-height: "1000";
     content-width: "600";
 
@@ -33,6 +35,11 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 1;
+                    }
                     label: _("Table of Contents");
                     halign: start;
 
@@ -41,14 +48,15 @@ template $ConcessioHelpDialog {
                     ]
                 }
 
-                ListBox toc_list {
+                ListBox {
                     selection-mode: none;
 
                     styles [
                         "boxed-list",
                     ]
 
-                    Adw.ActionRow toc_unix_perms {
+                    Adw.ActionRow {
+                        focusable: true;
                         title: _("Unix Permissions");
                         activatable: true;
                         activated => $scroll_to_unix_perms();
@@ -60,7 +68,8 @@ template $ConcessioHelpDialog {
                         }
                     }
 
-                    Adw.ActionRow toc_special_perms {
+                    Adw.ActionRow {
+                        focusable: true;
                         title: _("Special Permissions");
                         activatable: true;
                         activated => $scroll_to_special_perms();
@@ -72,7 +81,8 @@ template $ConcessioHelpDialog {
                         }
                     }
 
-                    Adw.ActionRow toc_umask {
+                    Adw.ActionRow {
+                        focusable: true;
                         title: _("Umask");
                         activatable: true;
                         activated => $scroll_to_umask();
@@ -86,6 +96,11 @@ template $ConcessioHelpDialog {
                 }
 
                 Label unix_perms_header {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 1;
+                    }
                     label: _("Unix Permissions");
 
                     styles [
@@ -94,6 +109,7 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     wrap: true;
                     label: _(
                         "The Unix permissions system is used to grant granulated access to file and directories on a Unix-like operating system"
@@ -101,6 +117,11 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 2;
+                    }
                     wrap: true;
                     label: _("Permissions are granted to three groups:");
                     halign: start;
@@ -118,6 +139,7 @@ template $ConcessioHelpDialog {
                     ]
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("User");
                         subtitle: _("The owner of the file");
 
@@ -129,6 +151,7 @@ template $ConcessioHelpDialog {
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("Group");
                         subtitle: _("A group of users who share access to the file");
 
@@ -140,6 +163,7 @@ template $ConcessioHelpDialog {
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("Others");
                         subtitle: _("All other users on the system");
 
@@ -152,6 +176,11 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 2;
+                    }
                     label: _("The types of permissions are:");
                     halign: start;
 
@@ -168,6 +197,7 @@ template $ConcessioHelpDialog {
                     ]
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("Read (Symbolic: r, Numeric: 4)");
                         subtitle: _("Allows viewing the file's contents or listing a directory's contents");
 
@@ -179,6 +209,7 @@ template $ConcessioHelpDialog {
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("Write (Symbolically: w, Numerically: 2)");
                         subtitle: _(
                             "Allows modifying the file's contents or creating/deleting files within a directory"
@@ -192,6 +223,7 @@ template $ConcessioHelpDialog {
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("Execute (Symbolically: x, Numerically: 1)");
                         subtitle: _("Allows running the file as a program");
 
@@ -204,6 +236,7 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     wrap: true;
                     label: _(
                         "Permissions can either be represented symbolically or numerically. Symbolic permissions are represented as a string of ten characters, and numeric is represented by three numbers (octal notation) for Example:"
@@ -211,6 +244,7 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     wrap: true;
                     label: _("Symbolic: -rwxr-xr--");
 
@@ -221,6 +255,7 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     wrap: true;
                     label: _("Numeric: 754");
 
@@ -238,11 +273,13 @@ template $ConcessioHelpDialog {
                     ]
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("First character, the file type");
                         subtitle: _("can either be '-' for file or 'd' for directory");
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("First three positions (after file type)");
                         subtitle: _(
                             "The read, write and execute permissions for the user, here we have 'rwx', which translated to 4+2+1 and adds to 7"
@@ -250,6 +287,7 @@ template $ConcessioHelpDialog {
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("Second three positions");
                         subtitle: _(
                             "The read, write and execute permissions for the group, here we have 'r-x', which translated to 4+0+1 and adds to 5"
@@ -257,6 +295,7 @@ template $ConcessioHelpDialog {
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("Last three positions");
                         subtitle: _(
                             "The read, write and execute permissions for other users, here we have 'r--', which translated to 4+0+0 and adds to 4"
@@ -265,6 +304,11 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 2;
+                    }
                     wrap: true;
                     label: _("Example command");
                     halign: start;
@@ -275,6 +319,7 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     label: _("chmod 754 (file name)");
 
                     styles [
@@ -285,6 +330,11 @@ template $ConcessioHelpDialog {
                 }
 
                 Label special_perms_header {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 1;
+                    }
                     label: _("Special Permissions");
 
                     styles [
@@ -293,6 +343,7 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     wrap: true;
                     label: _(
                         "Special permissions make up a fourth access level in addition to user, group, and other, they allow for additional privileges over the standard permission sets"
@@ -300,6 +351,11 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 2;
+                    }
                     wrap: true;
                     label: _("The three special permissions are:");
                     halign: start;
@@ -317,6 +373,7 @@ template $ConcessioHelpDialog {
                     ]
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: "SUID (user+s)";
                         subtitle: _(
                             "Executes the file with the permissions of the file owner, not the user running it."
@@ -324,6 +381,7 @@ template $ConcessioHelpDialog {
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: "SGID (group+s)";
                         subtitle: _(
                             "Executes the file with the permissions of the file's group, or ensures new files in a directory inherit the group."
@@ -331,6 +389,7 @@ template $ConcessioHelpDialog {
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: "Sticky bit (other+t)";
                         subtitle: _(
                             "Allows only the file owner or directory owner to delete files in the directory, even if others have write permissions. Only applies to directories and has no effect on files."
@@ -339,12 +398,18 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     wrap: true;
                     label: _("Special permissions can be represented symbolically or numerically.");
                     halign: start;
                 }
 
                 Label {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 2;
+                    }
                     wrap: true;
                     label: _("Numeric representation:");
                     halign: start;
@@ -355,6 +420,7 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     wrap: true;
                     label: _(
                         "They are denoted as an extra digit before the user, group and others permissions. Can Either be 0, 4, 2, 1 or any combination of them."
@@ -367,6 +433,11 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 2;
+                    }
                     wrap: true;
                     label: _("Symbolical representation:");
                     halign: start;
@@ -384,22 +455,26 @@ template $ConcessioHelpDialog {
                     ]
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: "SUID";
                         subtitle: _("Goes where 'x' normally is for the user");
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: "SGID";
                         subtitle: _("Goes where 'x' normally is for the group");
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: "Sticky bit";
                         subtitle: _("Goes where 'x' normally is for others");
                     }
                 }
 
                 Label {
+                    selectable: true;
                     wrap: true;
                     label: _("Symbolic: -rwsr-Sr-t");
 
@@ -410,6 +485,7 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     wrap: true;
                     label: _("Numeric: 7745");
 
@@ -427,6 +503,7 @@ template $ConcessioHelpDialog {
                     ]
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: "SUID";
                         subtitle: _(
                             "Represented as '4' numerically. Symbolically, it is either 's' if the owner has execute permissions or 'S' if not."
@@ -434,6 +511,7 @@ template $ConcessioHelpDialog {
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: "SGID";
                         subtitle: _(
                             "Represented as '2' numerically. Symbolically, it is either 's' if the group has execute permissions or 'S' if not."
@@ -441,6 +519,7 @@ template $ConcessioHelpDialog {
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: "Sticky bit";
                         subtitle: _(
                             "Represented as '1' numerically. Symbolically, it is either 't' if the others have execute permissions or 'T' if not."
@@ -449,6 +528,11 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 2;
+                    }
                     wrap: true;
                     label: _("Example commands");
                     halign: start;
@@ -459,6 +543,7 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     label: _("chmod 7745 (file name)");
 
                     styles [
@@ -469,11 +554,17 @@ template $ConcessioHelpDialog {
                 }
 
                 LinkButton {
-                    label: _("Further reading");
+                    label: _("Further reading about special permissions");
                     uri: "https://www.redhat.com/sysadmin/suid-sgid-sticky-bit";
+                    tooltip-text: "https://www.redhat.com/sysadmin/suid-sgid-sticky-bit";
                 }
 
                 Label umask_header {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 1;
+                    }
                     label: _("Umask");
 
                     styles [
@@ -482,6 +573,7 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     wrap: true;
                     label: _(
                         "The umask (user file-creation mask) determines the default permissions for new files and directories. It acts as a filter that 'masks out' specific bits from the base permissions."
@@ -489,6 +581,11 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 2;
+                    }
                     wrap: true;
                     label: _("Typical base permissions:");
                     halign: start;
@@ -506,17 +603,24 @@ template $ConcessioHelpDialog {
                     ]
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("Directories (Base: 777)");
                         subtitle: _("Full read, write, and execute permissions by default");
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("Files (Base: 666)");
                         subtitle: _("Read and write permissions by default; execute is excluded for security");
                     }
                 }
 
                 Label {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 2;
+                    }
                     wrap: true;
                     label: _("Calculation logic:");
                     halign: start;
@@ -527,6 +631,7 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     wrap: true;
                     label: _(
                         "The final permission is calculated by taking the base and removing the bits set in the umask."
@@ -546,17 +651,24 @@ template $ConcessioHelpDialog {
                     ]
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("Umask 022");
                         subtitle: _("Removes write access for group and others. (Result: 755 for dirs, 644 for files)");
                     }
 
                     Adw.ActionRow {
+                        focusable: true;
                         title: _("Umask 077");
                         subtitle: _("Removes all access for group and others. (Result: 700 for dirs, 600 for files)");
                     }
                 }
 
                 Label {
+                    selectable: true;
+                    accessible-role: heading;
+                    accessibility {
+                        level: 2;
+                    }
                     wrap: true;
                     label: _("Example command");
                     halign: start;
@@ -567,6 +679,7 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     label: _("umask 022");
 
                     styles [
@@ -577,6 +690,7 @@ template $ConcessioHelpDialog {
                 }
 
                 Label {
+                    selectable: true;
                     wrap: true;
                     label: _(
                         "Note: The umask command only lasts for the current session. You need to set the command in your bashrc or equivalent to make it permanent."
@@ -589,8 +703,9 @@ template $ConcessioHelpDialog {
                 }
 
                 LinkButton {
-                    label: _("Further reading");
+                    label: _("Further reading about umask");
                     uri: "https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html";
+                    tooltip-text: "https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html";
                 }
             }
         };
