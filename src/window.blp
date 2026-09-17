@@ -109,17 +109,30 @@ template $ConcessioWindow: Adw.ApplicationWindow {
                     }
 
                     content: ScrolledWindow {
-                        Adw.Clamp {
-                            maximum-size: 450;
+                        Adw.ViewStack main_stack {
+                            vexpand: true;
+                            enable-transitions: true;
 
-                            Adw.ViewStack main_stack {
-                                vexpand: true;
-                                enable-transitions: true;
+                            Adw.ViewStackPage {
+                                name: "permissions";
+                                title: _("Permissions");
+                                icon-name: "concessio-base-permissions-symbolic";
 
-                                Adw.ViewStackPage {
-                                    name: "permissions";
-                                    title: _("Permissions");
-                                    icon-name: "concessio-base-permissions-symbolic";
+                                child: Overlay permissions_overlay {
+                                    [overlay]
+                                    Revealer drag_revealer {
+                                        can-target: false;
+                                        transition-type: crossfade;
+
+                                        Adw.StatusPage drag_status_page {
+                                            title: _("Drop to view permissions");
+                                            icon-name: "document-open-symbolic";
+
+                                            styles [
+                                                "file-drop-overlay",
+                                            ]
+                                        }
+                                    }
 
                                     child: Adw.Clamp {
                                         maximum-size: 600;
@@ -135,28 +148,28 @@ template $ConcessioWindow: Adw.ApplicationWindow {
                                             margin-bottom: 18;
                                         }
                                     };
-                                }
+                                };
+                            }
 
-                                Adw.ViewStackPage {
-                                    name: "umask";
-                                    title: _("Umask");
-                                    icon-name: "concessio-umask-symbolic";
+                            Adw.ViewStackPage {
+                                name: "umask";
+                                title: _("Umask");
+                                icon-name: "concessio-umask-symbolic";
 
-                                    child: Adw.Clamp {
-                                        maximum-size: 600;
+                                child: Adw.Clamp {
+                                    maximum-size: 600;
 
-                                        $ConcessioUMask umask {
-                                            halign: center;
-                                            valign: center;
-                                            orientation: vertical;
-                                            spacing: 18;
-                                            margin-start: 12;
-                                            margin-end: 12;
-                                            margin-top: 18;
-                                            margin-bottom: 18;
-                                        }
-                                    };
-                                }
+                                    $ConcessioUMask umask {
+                                        halign: center;
+                                        valign: center;
+                                        orientation: vertical;
+                                        spacing: 18;
+                                        margin-start: 12;
+                                        margin-end: 12;
+                                        margin-top: 18;
+                                        margin-bottom: 18;
+                                    }
+                                };
                             }
                         }
                     };
