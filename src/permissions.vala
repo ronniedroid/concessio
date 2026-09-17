@@ -55,10 +55,14 @@ public class Concessio.Permissions : Gtk.Box {
     private unowned Gtk.Label file_name_label;
     [GtkChild]
     private unowned Gtk.Label file_path_label;
+    [GtkChild]
+    private unowned Gtk.Button apply_button;
 
     public uint mode { get; set; default = 00644; }
+    private uint loaded_mode;
     public File? current_file { get; set; default = null; }
     public signal void copied (string text);
+    public signal void permissions_applied ();
 
     private bool updating = false;
 
@@ -88,15 +92,23 @@ public class Concessio.Permissions : Gtk.Box {
     construct {
         notify["mode"].connect (() => {
             update_ui_from_mode ();
+            update_apply_button ();
         });
         notify["current-file"].connect (() => {
             update_ui_from_file ();
+            update_apply_button ();
         });
         connect_toggle_signals ();
         numeric_entry.activate.connect (update_mode_from_numeric);
         symbolic_entry.activate.connect (update_mode_from_symbolic);
         update_ui_from_mode ();
         update_ui_from_file ();
+        update_apply_button ();
+    }
+
+    private void update_apply_button () {
+        apply_button.sensitive =
+            current_file != null && mode != loaded_mode;
     }
 
     private void update_ui_from_mode () {
@@ -344,6 +356,62 @@ public class Concessio.Permissions : Gtk.Box {
         current_file = null;
     }
 
+    [GtkCallback]
+    private async void apply_file_permissions () {
+        if (current_file == null || mode == loaded_mode) {
+            return;
+        }
+
+        var file = current_file;
+        uint requested_mode = mode;
+        uint original_mode = loaded_mode;
+
+        var dialog = new Adw.AlertDialog (
+                                          _("Apply Permission Changes?"),
+                                          _("Change the permissions of “%s” from %s to %s?").printf (
+                                                                                                     file.get_basename (),
+                                                                                                     "%03o".printf (original_mode),
+                                                                                                     "%03o".printf (requested_mode)
+                                          )
+        );
+
+        dialog.add_response ("cancel", _("Cancel"));
+        dialog.add_response ("apply", _("Apply"));
+        dialog.set_response_appearance (
+                                        "apply",
+                                        Adw.ResponseAppearance.SUGGESTED
+        );
+        dialog.close_response = "cancel";
+
+        string response = yield dialog.choose (this, null);
+
+        if (response != "apply") {
+            return;
+        }
+
+        try {
+            file.set_attribute_uint32 (
+                                       FileAttribute.UNIX_MODE,
+                                       requested_mode & 07777,
+                                       FileQueryInfoFlags.NONE
+            );
+
+            loaded_mode = requested_mode;
+            update_apply_button ();
+            permissions_applied ();
+        } catch (Error e) {
+            var error_dialog = new Adw.AlertDialog (
+                                                    _("Could Not Apply Permissions"),
+                                                    e.message
+            );
+
+            error_dialog.add_response ("close", _("Close"));
+            error_dialog.close_response = "close";
+
+            yield error_dialog.choose (this, null);
+        }
+    }
+
     public void load_file (File file) throws Error {
         FileInfo info = file.query_info (
                                          FileAttribute.UNIX_MODE,
@@ -351,7 +419,8 @@ public class Concessio.Permissions : Gtk.Box {
                                          null
         );
 
-        mode = info.get_attribute_uint32 (FileAttribute.UNIX_MODE) & 07777;
+        loaded_mode = info.get_attribute_uint32 (FileAttribute.UNIX_MODE) & 07777;
+        mode = loaded_mode;
         current_file = file;
     }
 

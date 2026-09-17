@@ -2,104 +2,143 @@ using Gtk 4.0;
 using Adw 1;
 
 template $ConcessioPermissions: Box {
-Stack file_stack {
-    transition-type: none;
-    vhomogeneous: false;
+    Stack file_stack {
+        transition-type: none;
+        vhomogeneous: false;
 
-    StackPage {
-        name: "empty";
-        child: Box {
-            styles ["card"]
-            spacing: 12;
+        StackPage {
+            name: "empty";
 
-            Box {
-                orientation: vertical;
-                valign: center;
-                hexpand: true;
+            child: Box {
+                styles [
+                    "card",
+                ]
 
-                Label {
-                    label: _("Open File");
-                    xalign: 0;
-                    styles ["heading"]
-                    accessibility {
-                      label: _("Open File");
+                spacing: 12;
+
+                Box {
+                    orientation: vertical;
+                    valign: center;
+                    hexpand: true;
+
+                    Label {
+                        label: _("Open File");
+                        xalign: 0;
+
+                        styles [
+                            "heading",
+                        ]
+
+                        accessibility {
+                            label: _("Open File");
+                        }
+                    }
+
+                    Label {
+                        label: _("Open a file to view its permissions");
+                        xalign: 0;
+
+                        styles [
+                            "dim-label",
+                            "caption",
+                        ]
+
+                        accessibility {
+                            label: _("Open a file to view its permissions");
+                        }
                     }
                 }
 
-                Label {
-                    label: _("Open a file to view its permissions");
-                    xalign: 0;
-                    styles ["dim-label", "caption"]
+                Button {
+                    icon-name: "document-open-symbolic";
+                    tooltip-text: _("Open a file");
+                    valign: center;
+                    action-name: "win.open";
+
                     accessibility {
-                      label: _("Open a file to view its permissions");
+                        label: _("Open a file");
                     }
                 }
-            }
+            };
+        }
 
-            Button {
-                icon-name: "document-open-symbolic";
-                tooltip-text: _("Open a file");
-                valign: center;
-                action-name: "win.open";
+        StackPage {
+            name: "loaded";
 
-                accessibility {
-                    label: _("Open a file");
+            child: Box {
+                styles [
+                    "card",
+                ]
+
+                spacing: 12;
+
+                Image {
+                    icon-name: "text-x-generic-symbolic";
+                    accessible-role: presentation;
                 }
-            }
-        };
+
+                Box {
+                    orientation: vertical;
+                    valign: center;
+                    hexpand: true;
+
+                    Label file_name_label {
+                        xalign: 0;
+
+                        styles [
+                            "heading",
+                        ]
+                    }
+
+                    Label file_path_label {
+                        xalign: 0;
+
+                        styles [
+                            "dim-label",
+                            "caption",
+                        ]
+                    }
+                }
+
+                Button {
+                    icon-name: "document-open-symbolic";
+                    tooltip-text: _("Open a different file");
+                    valign: center;
+                    action-name: "win.open";
+
+                    accessibility {
+                        label: _("Open a different file");
+                    }
+                }
+
+                Button {
+                    icon-name: "window-close-symbolic";
+                    tooltip-text: _("Close file");
+                    clicked => $close_file();
+                    valign: center;
+
+                    accessibility {
+                        label: _("Close file");
+                    }
+                }
+
+                Button apply_button {
+                    icon-name: "object-select-symbolic";
+                    tooltip-text: _("Apply permission changes");
+                    clicked => $apply_file_permissions();
+                    valign: center;
+
+                    styles [
+                        "suggested-action",
+                    ]
+
+                    accessibility {
+                        label: _("Apply permission changes to file");
+                    }
+                }
+            };
+        }
     }
-
-    StackPage {
-        name: "loaded";
-        child: Box {
-            styles ["card"]
-            spacing: 12;
-
-            Image {
-                icon-name: "text-x-generic-symbolic";
-                accessible-role: presentation;
-            }
-
-            Box {
-                orientation: vertical;
-                valign: center;
-                hexpand: true;
-
-                Label file_name_label {
-                    xalign: 0;
-                    styles ["heading"]
-                }
-
-                Label file_path_label {
-                    xalign: 0;
-                    styles ["dim-label", "caption"]
-                }
-            }
-
-            Button {
-                icon-name: "document-open-symbolic";
-                tooltip-text: _("Open a different file");
-                valign: center;
-                action-name: "win.open";
-
-                accessibility {
-                    label: _("Open a different file");
-                }
-            }
-
-            Button {
-                icon-name: "window-close-symbolic";
-                tooltip-text: _("Close file");
-                clicked => $close_file ();
-                valign: center;
-
-                accessibility {
-                    label: _("Close file");
-                }
-            }
-        };
-    }
-}
 
     Box {
         orientation: horizontal;
@@ -128,6 +167,7 @@ Stack file_stack {
                     icon-name: "concessio-copy-symbolic";
                     tooltip-text: _("Copy value");
                     clicked => $copy_numeric();
+
                     accessibility {
                         label: _("Copy numeric value");
                     }
@@ -147,6 +187,7 @@ Stack file_stack {
                     icon-name: "object-select-symbolic";
                     tooltip-text: _("Apply value");
                     clicked => $commit_numeric();
+
                     accessibility {
                         label: _("Apply numeric value");
                     }
@@ -177,6 +218,7 @@ Stack file_stack {
                     icon-name: "concessio-copy-symbolic";
                     tooltip-text: _("Copy value");
                     clicked => $copy_symbolic();
+
                     accessibility {
                         label: _("Copy symbolic value");
                     }
@@ -202,6 +244,7 @@ Stack file_stack {
                     icon-name: "object-select-symbolic";
                     tooltip-text: _("Apply value");
                     clicked => $commit_symbolic();
+
                     accessibility {
                         label: _("Apply symbolic value");
                     }
@@ -572,4 +615,3 @@ Stack file_stack {
         }
     }
 }
-
