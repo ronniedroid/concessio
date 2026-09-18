@@ -102,19 +102,6 @@ template $ConcessioUMask: Box {
                     "title-3",
                 ]
             }
-
-            [suffix]
-            Button {
-                icon-name: "concessio-copy-symbolic";
-                valign: center;
-                tooltip-text: _("Copy umask value");
-                clicked => $copy_umask_value();
-                styles ["flat"]
-
-                accessibility {
-                    label: _("Copy umask value");
-                }
-            }
         }
 
         Adw.ActionRow files_row {
@@ -206,4 +193,5 @@ template $ConcessioUMask: Box {
         }
     }
 }
+
 

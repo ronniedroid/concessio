@@ -32,7 +32,6 @@ public class Concessio.UMask : Gtk.Box {
     private unowned Gtk.Label dirs_target_label;
 
     public uint umask { get; set; default = 0022; }
-    public signal void copied (string text);
 
     private const uint FILES_BASE = 0666;
     private const uint DIRS_BASE = 0777;
@@ -132,12 +131,5 @@ public class Concessio.UMask : Gtk.Box {
     [GtkCallback]
     private void commit_umask_value () {
         umask_entry.activate ();
-    }
-
-    [GtkCallback]
-    private void copy_umask_value () {
-        string text = "%03o".printf (umask & ALL_BITS);
-        Concessio.Util.copy_to_clipboard (this, text);
-        copied (text);
     }
 }
