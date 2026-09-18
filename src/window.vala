@@ -102,6 +102,7 @@ public class Concessio.Window : Adw.ApplicationWindow {
     private void setup_file_drop () {
         var target = new Gtk.DropTarget (typeof (Gdk.FileList), Gdk.DragAction.COPY);
         target.preload = true;
+        target.propagation_phase = Gtk.PropagationPhase.CAPTURE;
         target.notify["value"].connect (() => {
             if (target.current_drop != null) {
                 update_file_drop_message (target.get_value ());
