@@ -62,7 +62,7 @@ public class Concessio.Permissions : Gtk.Box {
     private uint loaded_mode;
     public File? current_file { get; set; default = null; }
     public signal void copied (string text);
-    public signal void permissions_applied ();
+    public signal void permissions_applied (File file, uint previous_mode, uint applied_mode);
 
     private bool updating = false;
 
@@ -357,37 +357,14 @@ public class Concessio.Permissions : Gtk.Box {
     }
 
     [GtkCallback]
-    private async void apply_file_permissions () {
+    private void apply_file_permissions () {
         if (current_file == null || mode == loaded_mode) {
             return;
         }
 
         var file = current_file;
         uint requested_mode = mode;
-        uint original_mode = loaded_mode;
-
-        var dialog = new Adw.AlertDialog (
-                                          _("Apply Permission Changes?"),
-                                          _("Change the permissions of “%s” from %s to %s?").printf (
-                                                                                                     file.get_basename (),
-                                                                                                     "%03o".printf (original_mode),
-                                                                                                     "%03o".printf (requested_mode)
-                                          )
-        );
-
-        dialog.add_response ("cancel", _("Cancel"));
-        dialog.add_response ("apply", _("Apply"));
-        dialog.set_response_appearance (
-                                        "apply",
-                                        Adw.ResponseAppearance.SUGGESTED
-        );
-        dialog.close_response = "cancel";
-
-        string response = yield dialog.choose (this, null);
-
-        if (response != "apply") {
-            return;
-        }
+        uint previous_mode = loaded_mode;
 
         try {
             file.set_attribute_uint32 (
@@ -398,17 +375,39 @@ public class Concessio.Permissions : Gtk.Box {
 
             loaded_mode = requested_mode;
             update_apply_button ();
-            permissions_applied ();
+
+            permissions_applied (file, previous_mode, requested_mode);
         } catch (Error e) {
-            var error_dialog = new Adw.AlertDialog (
-                                                    _("Could Not Apply Permissions"),
-                                                    e.message
+            show_apply_error.begin (e.message);
+        }
+    }
+
+    private async void show_apply_error (string message) {
+        var dialog = new Adw.AlertDialog (
+                                          _("Could Not Apply Permissions"),
+                                          message
+        );
+
+        dialog.add_response ("close", _("Close"));
+        dialog.close_response = "close";
+
+        yield dialog.choose (this, null);
+    }
+
+    public void undo_file_permissions (File file, uint previous_mode) {
+        try {
+            file.set_attribute_uint32 (
+                                       FileAttribute.UNIX_MODE,
+                                       previous_mode & 07777,
+                                       FileQueryInfoFlags.NONE
             );
 
-            error_dialog.add_response ("close", _("Close"));
-            error_dialog.close_response = "close";
-
-            yield error_dialog.choose (this, null);
+            if (current_file == file) {
+                loaded_mode = previous_mode;
+                mode = previous_mode;
+            }
+        } catch (Error e) {
+            show_apply_error.begin (e.message);
         }
     }
 

@@ -55,8 +55,20 @@ public class Concessio.Window : Adw.ApplicationWindow {
             toast_overlay.add_toast (toast);
         });
 
-        permissions.permissions_applied.connect (() => {
-            toast_overlay.add_toast (new Adw.Toast (_("Permissions updated")));
+        permissions.permissions_applied.connect ((file, previous_mode, applied_mode) => {
+            var toast = new Adw.Toast (
+                                       _("Permissions for “%s” updated to %s").printf (
+                                                                                       file.get_basename (),
+                                                                                       "%03o".printf (applied_mode)
+                                       )
+            );
+            toast.button_label = _("Undo");
+
+            toast.button_clicked.connect (() => {
+                permissions.undo_file_permissions (file, previous_mode);
+            });
+
+            toast_overlay.add_toast (toast);
         });
     }
 
