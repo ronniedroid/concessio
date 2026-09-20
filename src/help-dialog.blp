@@ -3,7 +3,6 @@ using Adw 1;
 
 template $ConcessioHelpDialog {
     title: _("Help");
-
     content-height: "1000";
     content-width: "600";
 
@@ -37,9 +36,11 @@ template $ConcessioHelpDialog {
                 Label {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 1;
                     }
+
                     label: _("Table of Contents");
                     halign: start;
 
@@ -98,9 +99,11 @@ template $ConcessioHelpDialog {
                 Label unix_perms_header {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 1;
                     }
+
                     label: _("Unix Permissions");
 
                     styles [
@@ -119,9 +122,11 @@ template $ConcessioHelpDialog {
                 Label {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 2;
                     }
+
                     wrap: true;
                     label: _("Permissions are granted to three groups:");
                     halign: start;
@@ -178,9 +183,11 @@ template $ConcessioHelpDialog {
                 Label {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 2;
                     }
+
                     label: _("The types of permissions are:");
                     halign: start;
 
@@ -306,9 +313,11 @@ template $ConcessioHelpDialog {
                 Label {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 2;
                     }
+
                     wrap: true;
                     label: _("Example command");
                     halign: start;
@@ -332,9 +341,11 @@ template $ConcessioHelpDialog {
                 Label special_perms_header {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 1;
                     }
+
                     label: _("Special Permissions");
 
                     styles [
@@ -353,9 +364,11 @@ template $ConcessioHelpDialog {
                 Label {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 2;
                     }
+
                     wrap: true;
                     label: _("The three special permissions are:");
                     halign: start;
@@ -407,9 +420,11 @@ template $ConcessioHelpDialog {
                 Label {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 2;
                     }
+
                     wrap: true;
                     label: _("Numeric representation:");
                     halign: start;
@@ -435,9 +450,11 @@ template $ConcessioHelpDialog {
                 Label {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 2;
                     }
+
                     wrap: true;
                     label: _("Symbolical representation:");
                     halign: start;
@@ -530,9 +547,11 @@ template $ConcessioHelpDialog {
                 Label {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 2;
                     }
+
                     wrap: true;
                     label: _("Example commands");
                     halign: start;
@@ -554,17 +573,26 @@ template $ConcessioHelpDialog {
                 }
 
                 LinkButton {
-                    label: _("Further reading about special permissions");
                     uri: "https://www.redhat.com/sysadmin/suid-sgid-sticky-bit";
                     tooltip-text: "https://www.redhat.com/sysadmin/suid-sgid-sticky-bit";
+
+                    child: Label {
+                        label: _("Further reading about special permissions");
+                        wrap: true;
+                        wrap-mode: word_char;
+                        max-width-chars: 40;
+                        justify: center;
+                    };
                 }
 
                 Label umask_header {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 1;
                     }
+
                     label: _("Umask");
 
                     styles [
@@ -583,9 +611,11 @@ template $ConcessioHelpDialog {
                 Label {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 2;
                     }
+
                     wrap: true;
                     label: _("Typical base permissions:");
                     halign: start;
@@ -618,9 +648,11 @@ template $ConcessioHelpDialog {
                 Label {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 2;
                     }
+
                     wrap: true;
                     label: _("Calculation logic:");
                     halign: start;
@@ -666,9 +698,11 @@ template $ConcessioHelpDialog {
                 Label {
                     selectable: true;
                     accessible-role: heading;
+
                     accessibility {
                         level: 2;
                     }
+
                     wrap: true;
                     label: _("Example command");
                     halign: start;
@@ -703,9 +737,16 @@ template $ConcessioHelpDialog {
                 }
 
                 LinkButton {
-                    label: _("Further reading about umask");
                     uri: "https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html";
                     tooltip-text: "https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html";
+
+                    child: Label {
+                        label: _("Further reading about umask");
+                        wrap: true;
+                        wrap-mode: word_char;
+                        max-width-chars: 40;
+                        justify: center;
+                    };
                 }
             }
         };
