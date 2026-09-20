@@ -84,7 +84,7 @@ template $ConcessioHelpDialog {
 
                     Adw.ActionRow {
                         focusable: true;
-                        title: _("Umask");
+                        title: _("umask");
                         activatable: true;
                         activated => $scroll_to_umask();
 
@@ -329,7 +329,7 @@ template $ConcessioHelpDialog {
 
                 Label {
                     selectable: true;
-                    label: _("chmod 754 (file name)");
+                    label: "chmod 754 (file name)";
 
                     styles [
                         "card",
@@ -563,7 +563,7 @@ template $ConcessioHelpDialog {
 
                 Label {
                     selectable: true;
-                    label: _("chmod 7745 (file name)");
+                    label: "chmod 7745 (file name)";
 
                     styles [
                         "card",
@@ -593,7 +593,7 @@ template $ConcessioHelpDialog {
                         level: 1;
                     }
 
-                    label: _("Umask");
+                    label: _("umask");
 
                     styles [
                         "title-2",
@@ -684,13 +684,13 @@ template $ConcessioHelpDialog {
 
                     Adw.ActionRow {
                         focusable: true;
-                        title: _("Umask 022");
+                        title: _("umask 022");
                         subtitle: _("Removes write access for group and others. (Result: 755 for dirs, 644 for files)");
                     }
 
                     Adw.ActionRow {
                         focusable: true;
-                        title: _("Umask 077");
+                        title: _("umask 077");
                         subtitle: _("Removes all access for group and others. (Result: 700 for dirs, 600 for files)");
                     }
                 }
@@ -714,7 +714,7 @@ template $ConcessioHelpDialog {
 
                 Label {
                     selectable: true;
-                    label: _("umask 022");
+                    label: "umask 022";
 
                     styles [
                         "card",

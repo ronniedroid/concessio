@@ -73,17 +73,17 @@ public class Concessio.UMask : Gtk.Box {
         case InputType.FILES:
             value = files_permission;
             label = _("File permissions");
-            umask_entry.placeholder_text = _("644");
+            umask_entry.placeholder_text = "644";
             break;
         case InputType.DIRECTORIES:
             value = dirs_permission;
             label = _("Directory permissions");
-            umask_entry.placeholder_text = _("755");
+            umask_entry.placeholder_text = "755";
             break;
         default:
             value = umask & ALL_BITS;
             label = _("Umask value");
-            umask_entry.placeholder_text = _("022");
+            umask_entry.placeholder_text = "022";
             break;
         }
         umask_entry.text = "%03o".printf (value);
