@@ -216,10 +216,13 @@ public class Concessio.Permissions : Gtk.Box {
             return;
         }
 
+        int position = numeric_entry.get_position ();
+
         uint parsed;
         if (Concessio.Util.try_parse_octal (numeric_entry.text, out parsed, 07777)) {
             mode = parsed;
             numeric_entry.remove_css_class ("error");
+            numeric_entry.set_position (position);
         } else {
             numeric_entry.add_css_class ("error");
         }
@@ -262,6 +265,8 @@ public class Concessio.Permissions : Gtk.Box {
             return;
         }
 
+        int position = symbolic_entry.get_position ();
+
         string text = symbolic_entry.text.strip ();
 
         if (text.length != 9) {
@@ -292,6 +297,7 @@ public class Concessio.Permissions : Gtk.Box {
 
         mode = (special << 9) | (user << 6) | (group << 3) | other;
         symbolic_entry.remove_css_class ("error");
+        symbolic_entry.set_position (position);
     }
 
     private bool triplet_to_octal (string triplet, out uint value) {
@@ -479,3 +485,4 @@ public class Concessio.Permissions : Gtk.Box {
         return null;
     }
 }
+

@@ -92,6 +92,7 @@ public class Concessio.UMask : Gtk.Box {
     }
 
     private void update_umask_from_entry () {
+        int position = umask_entry.get_position ();
         uint parsed;
         if (!Concessio.Util.try_parse_octal (umask_entry.text, out parsed, ALL_BITS)) {
             show_entry_error (_("Enter an octal value from 000 to 777."));
@@ -114,6 +115,7 @@ public class Concessio.UMask : Gtk.Box {
             break;
         }
         clear_entry_error ();
+        umask_entry.set_position (position);
     }
 
     private void show_entry_error (string message) {
