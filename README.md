@@ -5,6 +5,7 @@
 [![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app)
 
 ![screenshot](/data/screenshots/main-page.png)
+![screenshot](/data/screenshots/editing-file-permissions.png)
 ![screenshot](/data/screenshots/umask-page.png)
 ![screenshot](/data/screenshots/help-page.png)
 
