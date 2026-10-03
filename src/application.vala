@@ -36,7 +36,7 @@ public class Concessio.Application : Adw.Application {
 		this.add_action_entries (action_entries, this);
 		this.set_accels_for_action ("app.quit", { "<primary>q" });
 		this.set_accels_for_action ("window.close", { "<Primary>w" });
-        this.set_accels_for_action ("app.help", {"<Primary>h"});
+        this.set_accels_for_action ("app.help", {"F1"});
 	}
 
 	public override void activate () {
