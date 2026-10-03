@@ -13,6 +13,7 @@
       <li>Convert between symbolic and numeric representations of UNIX file permissions</li>
       <li>Use toggle buttons to update the symbolic and numeric fields</li>
       <li>Open a file to read it's permissions and convert them</li>
+      <li>Calculate umask values and see the resulting permissions for new files and directories</li>
       <li>Open the help dialog to read and understand the UNIX permissions system</li>
     </ul>
   </description>
@@ -27,15 +28,19 @@
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/main-page.png</image>
-      <caption>Application main page converting between numeric and symbolic permission</caption>
+      <caption>Application main page, converting between numeric and symbolic permission</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/help-page.png</image>
-      <caption>Application help page, explaining unix permissions</caption>
+      <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/editing-file-permissions.png</image>
+      <caption>Applications main page, updating a file's permissions</caption>
     </screenshot>
     <screenshot>
       <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/umask-page.png</image>
       <caption>Application umask page, calculating the umask value for a base permission</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/ronniedroid/concessio/main/data/screenshots/help-page.png</image>
+      <caption>Application help page, explaining unix permissions</caption>
     </screenshot>
   </screenshots>
 
@@ -60,6 +65,17 @@
   <url type="bugtracker">https://github.com/ronniedroid/concessio/issues</url>
 
   <releases>
+    <release version="v1.0.0" date="2026-10-03">
+      <description translate="no">
+        <p>Redesigned the file opening workflow</p>
+        <p>Added drag and drop support for opening files</p>
+        <p>Added support for changing file permissions, with the ability to undo changes</p>
+        <p>Improved the umask calculator to calculate from umask, file, or directory permissions</p>
+        <p>Improved accessibility throughout the app</p>
+        <p>Improved input validation and editing behavior</p>
+        <p>Updated translations</p>
+      </description>
+    </release>
     <release version="v0.3.0" date="2026-03-04">
       <description translate="no">
         <p>Added umask page</p>
