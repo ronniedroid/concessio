@@ -9,7 +9,7 @@
   <homepage rdf:resource="https://github.com/ronniedroid/concessio" />
   <bug-database rdf:resource="https://github.com/ronniedroid/concessio/issues" />
 
-  <programming-language>JavaScript</programming-language>
+  <programming-language>Vala</programming-language>
   <platform>GTK 4</platform>
   <platform>Libadwaita</platform>
 
