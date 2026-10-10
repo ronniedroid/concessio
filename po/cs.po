@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: io.github.ronniedroid.concessio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-20 22:18+0300\n"
-"PO-Revision-Date: 2024-09-20 17:53+0300\n"
-"Last-Translator: vikdevelop <vikdevelop@proton.me>\n"
+"PO-Revision-Date: 2026-10-10 17:53+0300\n"
+"Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: \n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -30,13 +30,12 @@ msgid "Understand file permissions"
 msgstr "Porozumějte oprávněním souborů"
 
 #: data/io.github.ronniedroid.concessio.desktop.in:9
-#, fuzzy
 msgid "Permissions;Converter;Calculator;"
-msgstr "Permissions;Convertor;Calculator;"
+msgstr "Oprávnění;Převodník;Kalkulačka;"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:8
 msgid "Ronnie Nissan"
-msgstr ""
+msgstr "Ronnie Nissan"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:11
 #: src/application.vala:61
@@ -44,45 +43,43 @@ msgid ""
 "Concessio helps you understand and convert between unix permissions "
 "representations"
 msgstr ""
-"Concessio vám pomáhá pochopit a převést mezi oprávněními a znázorněními Unixu"
+"Concessio pomáhá pochopit a převádět mezi znázorněními unixových oprávnění"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:13
 msgid ""
 "Convert between symbolic and numeric representations of UNIX file permissions"
 msgstr ""
-"Převod mezi symbolickou a číselnou reprezentací oprávnění souborů systému "
-"UNIX"
+"Převádějte mezi symbolickou a číselnou reprezentací unixových oprávnění k souborům"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:14
 msgid "Use toggle buttons to update the symbolic and numeric fields"
 msgstr ""
-"K aktualizaci symbolických a číselných polí použijte přepínací tlačítka"
+"K aktualizaci symbolických a číselných kolonek použijte tlačítka přepínání"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:15
 msgid "Open a file to read it's permissions and convert them"
-msgstr "Otevření souboru a přečtení jeho oprávnění a jejich konverze"
+msgstr "Otevřením souboru načtěte oprávnění k němu a převeďte je"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:16
 msgid "Open the help dialog to read and understand the UNIX permissions system"
 msgstr ""
-"Otevřete dialogové okno nápovědy a přečtěte si systém oprávnění systému UNIX"
+"Otevřete dialogové okno nápovědy a přečtěte si o systému unixových oprávnění"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:30
 msgid ""
 "Application main page converting between numeric and symbolic permission"
 msgstr ""
-"Hlavní stránka aplikace pro převod mezi číselným a symbolickým oprávněním"
+"Hlavní stránka aplikace pro převod mezi číselným a symbolickým vyjádřením oprávnění"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:34
 msgid "Application help page, explaining unix permissions"
-msgstr "Stránka nápovědy k aplikaci, vysvětlující Unixová oprávnění"
+msgstr "Stránka nápovědy k aplikaci, vysvětlující unixová oprávnění"
 
 #: data/io.github.ronniedroid.concessio.metainfo.xml.in:38
-#, fuzzy
 msgid ""
 "Application umask page, calculating the umask value for a base permission"
 msgstr ""
-"Hlavní stránka aplikace pro převod mezi číselným a symbolickým oprávněním"
+"Stránka aplikace ohledně tzv. umask, vypočítávající hodnotu masky oprávnění při vytváření souborů"
 
 #: src/shortcuts-dialog.blp:7
 msgid "Quit App"
@@ -114,19 +111,19 @@ msgstr "vikdevelop <vikdevelop@proton.me>"
 
 #: src/application.vala:76
 msgid "Embellish"
-msgstr ""
+msgstr "Embellish"
 
 #: src/application.vala:76
 msgid "Install nerd fonts"
-msgstr ""
+msgstr "Instalujte písma pro nerdy"
 
 #: src/application.vala:77
 msgid "Sitra"
-msgstr ""
+msgstr "Sitra"
 
 #: src/application.vala:77
 msgid "Get fonts from online sources"
-msgstr ""
+msgstr "Získávejte písma ze zdrojů online"
 
 #: src/application.vala:78
 msgid "Special thanks to"
@@ -135,29 +132,28 @@ msgstr "Zvláštní poděkování patří"
 #: src/window.vala:53
 #, c-format
 msgid "Copied “%s”"
-msgstr ""
+msgstr "Zkopírováno „%s“"
 
 #: src/window.vala:60
 #, c-format
 msgid "Permissions for “%s” updated to %s"
-msgstr ""
+msgstr "Oprávnění pro „%“ zaktualizováno na %s"
 
 #: src/window.vala:65
 msgid "Undo"
-msgstr ""
+msgstr "Zpět"
 
 #: src/window.vala:133 src/window.vala:188
 msgid "Failed to open file."
-msgstr "Nepodařilo se otevřít souboru."
+msgstr "Soubor se nepodařilo otevřít."
 
 #: src/window.vala:159
 msgid "Drop one file at a time"
-msgstr ""
+msgstr "Nepřetahujte sem více souborů naráz"
 
 #: src/window.vala:160 src/window.blp:128
-#, fuzzy
 msgid "Drop to view permissions"
-msgstr "Porozumějte oprávněním souborů"
+msgstr "Pro zobrazení oprávnění přetáhněte sem"
 
 #: src/window.blp:68
 msgid "Get started"
@@ -168,68 +164,61 @@ msgid "Main Menu"
 msgstr "Hlavní nabídka"
 
 #: src/window.blp:118
-#, fuzzy
 msgid "Permissions"
-msgstr "Unixová oprávnění"
+msgstr "Oprávnění"
 
 #: src/window.blp:156 src/umask.blp:19 src/umask.blp:64
 msgid "Umask"
-msgstr ""
+msgstr "Umask"
 
 #: src/window.blp:185 src/help-dialog.blp:5 src/help-dialog.blp:15
 msgid "Help"
-msgstr "Pomoc"
+msgstr "Nápověda"
 
 #: src/window.blp:195
 msgid "About"
 msgstr "O aplikaci"
 
 #: src/permissions.vala:393
-#, fuzzy
 msgid "Could Not Apply Permissions"
-msgstr "Porozumějte oprávněním souborů"
+msgstr "Oprávnění nebylo možné uplatnit"
 
 #: src/permissions.vala:397
-#, fuzzy
 msgid "Close"
-msgstr "Zavřít okno"
+msgstr "Zavřít"
 
 #. Use "Document Portal" as fallback
 #: src/permissions.vala:454
 msgid "Document Portal"
-msgstr ""
+msgstr "Portál „Dokumenty“"
 
 #: src/permissions.blp:25 src/permissions.blp:33
 msgid "Open File"
 msgstr "Otevřít soubor"
 
 #: src/permissions.blp:38 src/permissions.blp:47
-#, fuzzy
 msgid "Open a file to view its permissions"
-msgstr "Otevření souboru a přečtení jeho oprávnění a jejich konverze"
+msgstr "Otevřete soubor a zobrazte si oprávnění k němu"
 
 #: src/permissions.blp:54 src/permissions.blp:59
-#, fuzzy
 msgid "Open a file"
 msgstr "Otevřít soubor"
 
 #: src/permissions.blp:105 src/permissions.blp:110
 msgid "Open a different file"
-msgstr ""
+msgstr "Otevřít jiný soubor"
 
 #: src/permissions.blp:116 src/permissions.blp:121
-#, fuzzy
 msgid "Close file"
-msgstr "Zavřít okno"
+msgstr "Zavřít soubor"
 
 #: src/permissions.blp:127
-#, fuzzy
 msgid "Apply permission changes"
-msgstr "Zvláštní oprávnění"
+msgstr "Uplatnit změny oprávnění"
 
 #: src/permissions.blp:136
 msgid "Apply permission changes to file"
-msgstr ""
+msgstr "Uplatnit změny oprávnění na soubor"
 
 #: src/permissions.blp:153
 msgid "Numeric"
@@ -240,54 +229,49 @@ msgid "Copy value"
 msgstr "Zkopírovat hodnotu"
 
 #: src/permissions.blp:172
-#, fuzzy
 msgid "Copy numeric value"
-msgstr "Zkopírovat hodnotu"
+msgstr "Zkopírovat číselnou hodnotu"
 
 #: src/permissions.blp:181
-#, fuzzy
 msgid "Numeric permissions"
-msgstr "Unixová oprávnění"
+msgstr "Číselná oprávnění"
 
 #: src/permissions.blp:182
 msgid "Enter three or four octal digits, for example 0755"
-msgstr ""
+msgstr "Zadejte tři nebo čtyři osmičkové číslice, například 0755"
 
 #: src/permissions.blp:188 src/permissions.blp:245 src/umask.blp:46
 #: src/umask.blp:50
-#, fuzzy
 msgid "Apply value"
-msgstr "Zkopírovat hodnotu"
+msgstr "Uplatnit hodnotu"
 
 #: src/permissions.blp:192
-#, fuzzy
 msgid "Apply numeric value"
-msgstr "Zkopírovat hodnotu"
+msgstr "Uplatnit číselnou hodnotu"
 
 #: src/permissions.blp:204
 msgid "Symbolic"
 msgstr "Symbolické"
 
 #: src/permissions.blp:223
-#, fuzzy
 msgid "Copy symbolic value"
-msgstr "Zkopírovat hodnotu"
+msgstr "Zkopírovat symbolickou hodnotu"
 
 #: src/permissions.blp:232
-#, fuzzy
 msgid "Symbolic permissions"
-msgstr "Unixová oprávnění"
+msgstr "Symbolická oprávnění"
 
 #: src/permissions.blp:234
 msgid ""
 "Enter nine characters representing read, write, and execute permissions for "
 "user, group, and others, for example rwxr-xr-x"
 msgstr ""
+"Zadejte devět znaků představujících oprávnění pro čtení, zápis a spouštění "
+"pro uživatele, skupinu a ostatní – například rwxr-x-r-x"
 
 #: src/permissions.blp:249
-#, fuzzy
 msgid "Apply symbolic value"
-msgstr "Zkopírovat hodnotu"
+msgstr "Zkopírovat symbolickou hodnotu"
 
 #: src/permissions.blp:264 src/help-dialog.blp:148
 msgid "User"
@@ -298,103 +282,96 @@ msgid "Read"
 msgstr "Přečíst"
 
 #: src/permissions.blp:276
-#, fuzzy
 msgid "User read permission"
-msgstr "Porozumějte oprávněním souborů"
+msgstr "Oprávnění ke čtení pro uživatele"
 
 #: src/permissions.blp:290 src/permissions.blp:408 src/permissions.blp:526
 msgid "Write"
 msgstr "Zapsat"
 
 #: src/permissions.blp:293
-#, fuzzy
 msgid "User write permission"
-msgstr "Porozumějte oprávněním souborů"
+msgstr "Oprávnění k zápisu pro uživatele"
 
 #: src/permissions.blp:307 src/permissions.blp:425 src/permissions.blp:543
 msgid "Execute"
 msgstr "Provést"
 
 #: src/permissions.blp:310
-#, fuzzy
 msgid "User execute permission"
-msgstr "Porozumějte oprávněním souborů"
+msgstr "Oprávnění k provedení pro uživatele"
 
 #: src/permissions.blp:329
 msgid "Set user ID SUID options"
-msgstr ""
+msgstr "Možnosti nastavení SUID pro identifikátor uživatele"
 
 #: src/permissions.blp:363
 msgid "Set user ID SUID switch"
-msgstr ""
+msgstr "Přepínač nastavit SUID pro identifikátor uživatele"
 
 #: src/permissions.blp:369 src/help-dialog.blp:392
 msgid ""
 "Executes the file with the permissions of the file owner, not the user "
 "running it."
 msgstr ""
-"Spustí soubor s právy vlastníka souboru, nikoli uživatele který jej spouští."
+"Spustí soubor s oprávněními vlastníka souboru, nikoli uživatele který "
+"jej spouští."
 
 #: src/permissions.blp:382 src/help-dialog.blp:160
 msgid "Group"
 msgstr "Skupina"
 
 #: src/permissions.blp:394
-#, fuzzy
 msgid "Group read permission"
-msgstr "Zvláštní oprávnění"
+msgstr "Oprávnění ke čtení pro skupinu"
 
 #: src/permissions.blp:411
-#, fuzzy
 msgid "Group write permission"
-msgstr "Porozumějte oprávněním souborů"
+msgstr "Oprávnění k zápisu pro skupinu"
 
 #: src/permissions.blp:428
-#, fuzzy
 msgid "Group execute permission"
-msgstr "Zvláštní oprávnění"
+msgstr "Oprávnění k vykonání pro skupinu
 
 #: src/permissions.blp:447
 msgid "Set group ID SGID options"
-msgstr ""
+msgstr "Možnosti nastavení SGID identifikátoru skupiny"
 
 #: src/permissions.blp:481
 msgid "Set group ID SGID switch"
-msgstr ""
+msgstr "Přepínač nastavení SGID pro identifikátor skupiny"
 
 #: src/permissions.blp:487 src/help-dialog.blp:400
 msgid ""
 "Executes the file with the permissions of the file's group, or ensures new "
 "files in a directory inherit the group."
 msgstr ""
-"Spustí soubor s právy skupiny souboru nebo zajistí nové soubory v adresáři "
-"zdědí tuto skupinu."
+"Spustí soubor s oprávněními skupiny souboru nebo zajistí, že nové soubory "
+"v adresáři zdědí tuto skupinu."
 
 #: src/permissions.blp:500 src/help-dialog.blp:172
 msgid "Others"
 msgstr "Ostatní"
 
 #: src/permissions.blp:512
-#, fuzzy
 msgid "Other users read permission"
-msgstr "Druhy oprávnění jsou:"
+msgstr "Oprávnění ke čtení pro ostatní uživatele"
 
 #: src/permissions.blp:529
-#, fuzzy
 msgid "Other users write permission"
-msgstr "Porozumějte oprávněním souborů"
+msgstr "Oprávnění k zápisu pro ostatní uživatele"
 
 #: src/permissions.blp:546
 msgid "Other users execute permission"
-msgstr ""
+msgstr "Oprávnění k vykonání pro ostatní uživatele"
 
 #: src/permissions.blp:565
 msgid "Sticky bit options"
-msgstr ""
+msgstr "Možnosti tzv. „lepkavého“ bitu"
 
 #: src/permissions.blp:599
 msgid "Sticky bit switch"
-msgstr ""
+msgstr "Přepínač „lepkavého“ bitu"
 
 #: src/permissions.blp:605 src/help-dialog.blp:408
 msgid ""
@@ -402,12 +379,13 @@ msgid ""
 "directory, even if others have write permissions. Only applies to "
 "directories and has no effect on files."
 msgstr ""
-"Umožňuje mazat soubory v adresáři, i když ostatní mají oprávnění k zápisu. "
-"Platí pouze pro adresáře a nemá vliv na soubory."
+"V daném adresáři umožňuje mazat soubory pouze vlastníkům souborů (nebo "
+"adresáře) a to přesto že ostatní třeba mají oprávnění k zápisu. Nastavování "
+"má smysl pouze na adresáře – nastavení přímo na soubor nemá žádný účinek."
 
 #: src/help-dialog.blp:44
 msgid "Table of Contents"
-msgstr ""
+msgstr "Obsah"
 
 #: src/help-dialog.blp:61 src/help-dialog.blp:107
 msgid "Unix Permissions"
@@ -418,21 +396,20 @@ msgid "Special Permissions"
 msgstr "Zvláštní oprávnění"
 
 #: src/help-dialog.blp:87 src/help-dialog.blp:596
-#, fuzzy
 msgid "umask"
-msgstr "O aplikaci"
+msgstr "umask"
 
 #: src/help-dialog.blp:118
 msgid ""
 "The Unix permissions system is used to grant granulated access to file and "
 "directories on a Unix-like operating system"
 msgstr ""
-"Systém oprávnění systému Unix se používá k udělování granulovaného přístupu "
-"k souborům a adresářům v operačním systému podobném Unixu"
+"Unixový systém oprávnění Unix slouží k udělování odstupňovaně členěnému "
+"přístupu k souborům a adresářům v unixových operačních systémech"
 
 #: src/help-dialog.blp:131
 msgid "Permissions are granted to three groups:"
-msgstr "Oprávnění jsou garantovaná pro tři skupiny:"
+msgstr "Oprávnění jsou udělována pro tři skupiny:"
 
 #: src/help-dialog.blp:149
 msgid "The owner of the file"
@@ -452,15 +429,15 @@ msgstr "Druhy oprávnění jsou:"
 
 #: src/help-dialog.blp:208
 msgid "Read (Symbolic: r, Numeric: 4)"
-msgstr "Číst (Symbolický: r, číselný: 4"
+msgstr "Číst (symbolově: r, číselně: 4)"
 
 #: src/help-dialog.blp:209
 msgid "Allows viewing the file's contents or listing a directory's contents"
-msgstr "Umožňuje zobrazení obsahu souboru nebo zobrazení obsahu adresáře"
+msgstr "Umožňuje zobrazení obsahu souboru nebo vypsání obsahu adresáře"
 
 #: src/help-dialog.blp:220
 msgid "Write (Symbolically: w, Numerically: 2)"
-msgstr "Zapisovat (Symbolicky: w, Číselně: 2)"
+msgstr "Zapisovat (symbolově: w, číselně: 2)"
 
 #: src/help-dialog.blp:222
 msgid ""
@@ -471,7 +448,7 @@ msgstr ""
 
 #: src/help-dialog.blp:234
 msgid "Execute (Symbolically: x, Numerically: 1)"
-msgstr "Provést: (Symbolicky: x, Číselně: 1)"
+msgstr "Provést: (symbolově: x, číselně: 1)"
 
 #: src/help-dialog.blp:235
 msgid "Allows running the file as a program"
@@ -483,7 +460,7 @@ msgid ""
 "permissions are represented as a string of ten characters, and numeric is "
 "represented by three numbers (octal notation) for Example:"
 msgstr ""
-"Oprávnění mohou být reprezentována buď symbolicky, nebo číselně. Symbolické "
+"Oprávnění mohou být reprezentována buď symbolicky, nebo číselně. Symbolická "
 "oprávnění jsou reprezentována jako řetězec deseti znaků a číselná jsou "
 "reprezentována třemi čísly (osmičková notace), například:"
 
@@ -513,7 +490,7 @@ msgid ""
 "which translated to 4+2+1 and adds to 7"
 msgstr ""
 "Oprávnění ke čtení, zápisu a spuštění pro uživatele, zde máme 'rwx', což je "
-"v překladu 4+2+1 a dává to 7"
+"v překladu 4+2+1, což je dohromady 7"
 
 #: src/help-dialog.blp:298
 msgid "Second three positions"
@@ -525,7 +502,7 @@ msgid ""
 "which translated to 4+0+1 and adds to 5"
 msgstr ""
 "Oprávnění ke čtení, zápisu a spuštění pro skupinu, zde máme 'r-x', což se "
-"přeloží jako 4+0+1 a přičte se k číslu 5"
+"přeloží jako 4+0+1, což je dohromady 5"
 
 #: src/help-dialog.blp:306
 msgid "Last three positions"
@@ -537,11 +514,11 @@ msgid ""
 "which translated to 4+0+0 and adds to 4"
 msgstr ""
 "Oprávnění ke čtení, zápisu a spuštění pro ostatní uživatele, zde máme 'r--', "
-"což se přeloží jako 4+0+0 a přičte se k číslu 4"
+"což se přeloží jako 4+0+0, což je dohromady 4"
 
 #: src/help-dialog.blp:322 src/help-dialog.blp:707
 msgid "Example command"
-msgstr "Příklad příkazu"
+msgstr "Ukázka příkazu"
 
 #: src/help-dialog.blp:360
 msgid ""
@@ -550,7 +527,7 @@ msgid ""
 "permission sets"
 msgstr ""
 "Speciální oprávnění tvoří čtvrtou úroveň přístupu vedle uživatelské, skupiny "
-"a dalších, umožňují další oprávnění nad rámec standardních sady oprávnění"
+"a dalších, umožňující další oprávnění nad rámec standardních sad oprávnění"
 
 #: src/help-dialog.blp:373
 msgid "The three special permissions are:"
@@ -569,8 +546,8 @@ msgid ""
 "They are denoted as an extra digit before the user, group and others "
 "permissions. Can Either be 0, 4, 2, 1 or any combination of them."
 msgstr ""
-"Označují se jako další číslice před uživatelem, skupinou a dalšími "
-"oprávnění. Mohou být buď 0, 4, 2, 1 nebo jejich libovolná kombinace."
+"Označují se jako další číslice před uživatelem, skupinou a oprávněními "
+"ostatních. Mohou být buď 0, 4, 2, 1 nebo jejich libovolná kombinace."
 
 #: src/help-dialog.blp:459
 msgid "Symbolical representation:"
@@ -578,15 +555,15 @@ msgstr "Symbolické znázornění:"
 
 #: src/help-dialog.blp:477
 msgid "Goes where 'x' normally is for the user"
-msgstr "Přejde na místo, kde se pro uživatele obvykle nachází 'x'"
+msgstr "Přijde na místo, kde se pro uživatele obvykle nachází 'x'"
 
 #: src/help-dialog.blp:483
 msgid "Goes where 'x' normally is for the group"
-msgstr "Přejde na místo, kde se pro skupinu obvykle nachází 'x'"
+msgstr "Přijde na místo, kde se pro skupinu obvykle nachází 'x'"
 
 #: src/help-dialog.blp:489
 msgid "Goes where 'x' normally is for others"
-msgstr "Přejde na místo, kde se pro ostatní uživatele obvykle nachází 'x'"
+msgstr "Přijde na místo, kde se pro ostatní uživatele obvykle nachází 'x'"
 
 #: src/help-dialog.blp:496
 msgid "Symbolic: -rwsr-Sr-t"
@@ -601,33 +578,32 @@ msgid ""
 "Represented as '4' numerically. Symbolically, it is either 's' if the owner "
 "has execute permissions or 'S' if not."
 msgstr ""
-"Číselně vyjádřeno jako '4'. Symbolicky je to buď 's', pokud je vlastník má "
-"oprávnění ke spuštění, nebo 'S', pokud nemá."
+"Číselně vyjádřeno jako '4'. Symbolicky je to buď 's' (pokud vlastník má "
+"oprávnění ke spuštění), nebo 'S' (pokud nemá)."
 
 #: src/help-dialog.blp:534
 msgid ""
 "Represented as '2' numerically. Symbolically, it is either 's' if the group "
 "has execute permissions or 'S' if not."
 msgstr ""
-"číselně vyjádřeno jako '2'. Symbolicky je to buď 's', pokud je skupina má "
-"oprávnění ke spuštění, nebo 'S', pokud nemá."
+"Číselně vyjádřeno jako '2'. Symbolicky je to buď 's' (pokud skupina má "
+"oprávnění ke spuštění), nebo 'S' (pokud nemá)."
 
 #: src/help-dialog.blp:542
 msgid ""
 "Represented as '1' numerically. Symbolically, it is either 't' if the others "
 "have execute permissions or 'T' if not."
 msgstr ""
-"číselně vyjádřeno jako '1'. Symbolicky je to buď 't', pokud ostatní mají "
-"oprávnění k provádění, nebo 'T', pokud nemají."
+"Číselně vyjádřeno jako '1'. Symbolicky je to buď 't' (pokud ostatní mají "
+"oprávnění k provádění), nebo 'T' (pokud nemají)."
 
 #: src/help-dialog.blp:556
 msgid "Example commands"
-msgstr "Příklady příkazů"
+msgstr "Ukázky příkazů"
 
 #: src/help-dialog.blp:580
-#, fuzzy
 msgid "Further reading about special permissions"
-msgstr "Třemi zvláštními oprávněními jsou:"
+msgstr "Další materiály k přečtení ohledně zvláštních oprávnění"
 
 #: src/help-dialog.blp:607
 msgid ""
@@ -635,163 +611,172 @@ msgid ""
 "new files and directories. It acts as a filter that 'masks out' specific "
 "bits from the base permissions."
 msgstr ""
+"Maska (maska vytváření souborů uživatelem) určuje výchozí oprávnění pro nové "
+"soubory a adresáře. Slouží jako filtr, který „vymaskovává“ konkrétní bity "
+"ze základních oprávnění."
 
 #: src/help-dialog.blp:620
-#, fuzzy
 msgid "Typical base permissions:"
-msgstr "Zvláštní oprávnění"
+msgstr "Typická zvláštní oprávnění"
 
 #: src/help-dialog.blp:637
 msgid "Directories (Base: 777)"
-msgstr ""
+msgstr "Adresáře (základ: 777)"
 
 #: src/help-dialog.blp:638
 msgid "Full read, write, and execute permissions by default"
-msgstr ""
+msgstr "Čtení, zápis a provádění pro všechny"
 
 #: src/help-dialog.blp:643
 msgid "Files (Base: 666)"
-msgstr ""
+msgstr "Soubory (základ: 666)"
 
 #: src/help-dialog.blp:644
 msgid "Read and write permissions by default; execute is excluded for security"
-msgstr ""
+msgstr "Ve výchozím stavu čtení a zápis pro všechny. Spouštění je kvůli "
+"bezpečnosti vynecháno"
 
 #: src/help-dialog.blp:657
 msgid "Calculation logic:"
-msgstr ""
+msgstr "Logika výpočtu:"
 
 #: src/help-dialog.blp:669
 msgid ""
 "The final permission is calculated by taking the base and removing the bits "
 "set in the umask."
 msgstr ""
+"Výsledné oprávnění je vypočítáno vzetím základu a odebráním těch bitů, které "
+"nastavení v umask."
 
 #: src/help-dialog.blp:687
 msgid "umask 022"
-msgstr ""
+msgstr "umask 022"
 
 #: src/help-dialog.blp:688
 msgid ""
 "Removes write access for group and others. (Result: 755 for dirs, 644 for "
 "files)"
 msgstr ""
+"Odebere přístup k zápisu pro skupinu a ostatní. (Výsledek: 755 pro adresáře, "
+"644 pro soubory)"
 
 #: src/help-dialog.blp:693
 msgid "umask 077"
-msgstr ""
+msgstr "umask 077"
 
 #: src/help-dialog.blp:694
 msgid ""
 "Removes all access for group and others. (Result: 700 for dirs, 600 for "
 "files)"
 msgstr ""
+"Odebere veškerý přístup skupině a ostatním. (Výsledek: 700 pro adresáře, "
+"600 pro soubory)"
 
 #: src/help-dialog.blp:730
 msgid ""
 "Note: The umask command only lasts for the current session. You need to set "
 "the command in your bashrc or equivalent to make it permanent."
 msgstr ""
+"Pozn.: příkaz umask má platnost pouze pro stávající relaci. Pokud ho chcete "
+"mít natrvalo, je třeba ho nastavit ve svém bashrc (nebo ekvivalentu)."
 
 #: src/help-dialog.blp:744
-#, fuzzy
 msgid "Further reading about umask"
-msgstr "Další čtení"
+msgstr "Další materiály k přečtení ohledně umask"
 
 #: src/umask.vala:75
-#, fuzzy
 msgid "File permissions"
-msgstr "Unixová oprávnění"
+msgstr "Oprávnění k souborům"
 
 #: src/umask.vala:80
-#, fuzzy
 msgid "Directory permissions"
-msgstr "Unixová oprávnění"
+msgstr "Oprávnění k adresářům"
 
 #: src/umask.vala:85 src/umask.blp:39
 msgid "Umask value"
-msgstr ""
+msgstr "Hodnota umask"
 
 #: src/umask.vala:98
 msgid "Enter an octal value from 000 to 777."
-msgstr ""
+msgstr "Zadejte osmičkovou hodnotu od 000 po 777."
 
 #: src/umask.vala:105
 msgid "A umask cannot add execute permission to new files."
-msgstr ""
+msgstr "Umask nemůže novým souborům přidávat oprávnění pro spouštění."
 
 #: src/umask.blp:20 src/umask.blp:108
-#, fuzzy
 msgid "Files"
-msgstr "Soubor"
+msgstr "Soubory"
 
 #: src/umask.blp:21 src/umask.blp:152
 msgid "Directories"
-msgstr ""
+msgstr "Adresáře"
 
 #: src/umask.blp:26
 msgid "Choose the value you know"
-msgstr ""
+msgstr "Zvolte hodnotu, kterou znáte"
 
 #: src/umask.blp:29
-#, fuzzy
 msgid "Known value"
-msgstr "Zkopírovat hodnotu"
+msgstr "Známá hodnota"
 
 #: src/umask.blp:30
 msgid ""
 "Choose whether to enter a umask, file permissions, or directory permissions."
 msgstr ""
+"Zvolte zda zadat umask, oprávnění k souborům nebo adresářům."
 
 #: src/umask.blp:40
 msgid "Enter an octal value from 000 to 777 for the selected input type."
-msgstr ""
+msgstr "Pro vybraný typ vstupu zadejte osmičkovou hodnotu od 000 po 777."
 
 #: src/umask.blp:65
-#, fuzzy
 msgid "Umask needed for these permissions"
-msgstr "Porozumějte oprávněním souborů"
+msgstr "Umask potřebná pro tato oprávnění"
 
 #: src/umask.blp:71 src/umask.blp:78
-#, fuzzy
 msgid "About umask"
-msgstr "O aplikaci"
+msgstr "O umask"
 
 #: src/umask.blp:84
 msgid ""
 "A umask specifies which permissions are removed when new files and "
 "directories are created."
 msgstr ""
+"umask určuje které oprávnění budou odebrána při vytváření nových "
+"souborů a adresářů."
 
 #: src/umask.blp:109
 msgid "New files will be created with this permission"
-msgstr ""
+msgstr "Nové soubory budou vytvářeny s těmito oprávněními"
 
 #: src/umask.blp:115 src/umask.blp:122
-#, fuzzy
 msgid "About file permissions"
-msgstr "Porozumějte oprávněním souborů"
+msgstr "O oprávnění k souborům"
 
 #: src/umask.blp:128
 msgid ""
 "New files start with permission 666. A umask can remove permissions, but "
 "cannot add execute permission."
 msgstr ""
+"Nové soubory začínají s oprávněním 666. umask může odebírat oprávnění, ale "
+"nemůže přidávat oprávnění ke spouštění."
 
 #: src/umask.blp:153
 msgid "New directories will be created with this permission"
-msgstr ""
+msgstr "Nové adresáře budou vytvářeny s těmito oprávněními"
 
 #: src/umask.blp:159 src/umask.blp:166
-#, fuzzy
 msgid "About directory permissions"
-msgstr "Unixová oprávnění"
+msgstr "O oprávněních k adresářům"
 
 #: src/umask.blp:172
 msgid ""
 "New directories start with permission 777. A umask can remove read, write, "
 "and execute permissions."
 msgstr ""
+"Nové adresáře začínají s oprávněním 777. umask může odebírat oprávnění ke "
+"čtení, zápisu a provádění."
 
 #~ msgid "chmod 754 (file name)"
 #~ msgstr "chmod 754 (název souboru)"
@@ -799,13 +784,11 @@ msgstr ""
 #~ msgid "chmod 7745 (file name)"
 #~ msgstr "chmod 7745 (název souboru)"
 
-#, fuzzy
 #~ msgid "Copy umask value"
-#~ msgstr "Zkopírovat hodnotu"
+#~ msgstr "Zkopírovat hodnotu umask"
 
-#, fuzzy
 #~ msgid "Apply umask value"
-#~ msgstr "Zkopírovat hodnotu"
+#~ msgstr "Uplatnit hodnotu umask"
 
 #~ msgid "Open"
 #~ msgstr "Otevřít"
